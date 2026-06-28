@@ -1,7 +1,6 @@
 name: securiport-proj1
 
 channels:
-  - pytorch
   - conda-forge
   - defaults
 
@@ -9,17 +8,25 @@ dependencies:
   - python=3.11
   - pip
   - pytest
+  - pandas
   - pip:
-      # Data Collection & Scraping
-      - requests
-      - beautifulsoup4
-      - trafilatura
-      
-      # NLP & Hugging Face
-      - torch
-      - transformers
-      
-      # Utilities & Configuration
-      - python-dotenv
-      - pydantic
-      - pandas
+    # Data Collection & Scraping
+    - requests
+    - beautifulsoup4
+    - trafilatura
+
+    # NLP & Hugging Face
+    - transformers
+    - sentencepiece
+    - accelerate
+
+    # Text preprocessing
+    - nltk
+
+    # API
+    - fastapi
+    - uvicorn
+
+    # Utilities & Configuration
+    - python-dotenv
+    - pydantic
