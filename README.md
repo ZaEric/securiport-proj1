@@ -9,8 +9,31 @@ conda activate securiport-proj1
 
 ## Directory Setup
 
+```
+data/
+├── curated/
+│   └── curated_urls.json
+├── synthetic/
+│   ├── index.json
+│   └── passengers/
+│       ├── synthetic_negative_001.json
+│       ├── synthetic_positive_001.json
+│       └── synthetic_neutral_001.json
+└── runs/
+    └── 2026-06-27_001_jane_doe/
+        ├── input.json
+        ├── sources.json
+        ├── chunks.json
+        ├── evidence.json
+        ├── aggregation.json
+        └── final_report.json
+```
+
 data/
 - stores local data, curated/ holds manual urls, synthetic/ is for our made up data, output/ to store final JSON reports
+
+data/runs
+- store generated outputs from running the pipeline
 
 src/collections/
 - web scraping stack, handle search engine API calls, URL filtering, HTML text extraction
@@ -27,3 +50,5 @@ src/api/
 tests/
 - unit tests
 
+## JSON Schemas
+check schema.json

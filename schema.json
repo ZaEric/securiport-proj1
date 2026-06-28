@@ -1,0 +1,258 @@
+## Just for reference for us
+# Schema for synthetic dataset, 1 json per passenger name
+{
+  "run_id": "synthetic_negative_001",
+  "target_name": "John Doe",
+  "expected_overall_sentiment": "negative",
+  "case_notes": "Short human-readable note about what this case tests.",
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "synthetic://synthetic_negative_001/src_001",
+      "title": "Synthetic Source Title",
+      "expected_source_sentiment": "negative",
+      "article_text": "Synthetic article text goes here."
+    },
+    {
+        "source_id": "src_002",
+        "url": "synthetic://synthetic_negative_001/src_002",
+        "title": "Synthetic Source Title 2",
+        "expected_source_sentiment": "negative",
+        "article_text": "Synthetic article text goes here."
+    },
+    ...
+  ]
+}
+
+# might add these labels later when testing edge cases
+{
+  "difficulty_tags": ["multiple_people", "ambiguous_pronoun", "mixed_sentiment"],
+  "expected_failure_modes": ["may_assign John Smith's conviction to John Doe"],
+}
+
+# Curated URLS (curated_urls.json)
+{
+  "John Doe": [
+    "https://example-news.com/article1",
+    "https://example-blog.com/post2"
+  ],
+  "John Smith": [
+    "https://example-news.com/article3",
+    "https://example-blog.com/post4"
+  ]
+}
+
+# can maybe have evaluation labels for curated urls as separate file (evaluation_labels.json)
+{
+  "John Doe": {
+    "expected_overall_sentiment": "negative",
+    "notes": "Curated case expected to produce mostly negative evidence."
+  },
+  "John Smith": {
+    "expected_overall_sentiment": "positive",
+    "notes": "Curated case expected to produce mostly positive evidence."
+  }
+}
+
+# Schema to store in data/runs/passengername
+
+# basic info about each run (input.json)
+
+# example curated url run:
+{
+  "run_id": "2026-06-27_001_john_doe",
+  "created_at": "2026-06-27T18:42:00Z",
+  "target_name": "John Doe",
+  "input_mode": "curated_urls",
+  "curated_urls_file": "data/curated/curated_urls.json",
+  "requested_urls": [
+    "https://example-news.com/article1",
+    "https://example-blog.com/post2"
+  ],
+  "notes": "Run using manually curated URLs for early testing."
+}
+
+# example search api run:
+{
+  "run_id": "2026-06-27_002_john_doe",
+  "created_at": "2026-06-27T19:10:00Z",
+  "target_name": "John Doe",
+  "input_mode": "search_api",
+  "search_provider": "bing",
+  "search_query": "\"John Doe\" news",
+  "max_urls": 10,
+  "notes": "Run using live URL discovery."
+}
+
+# example synthetic dataset run:
+{
+  "run_id": "2026-06-27_003_synthetic_negative_001",
+  "created_at": "2026-06-27T19:30:00Z",
+  "target_name": "John Doe",
+  "input_mode": "synthetic",
+  "synthetic_case_file": "data/synthetic/passengers/synthetic_negative_001.json",
+  "expected_overall_sentiment": "negative",
+  "notes": "Synthetic case used for controlled pipeline testing."
+}
+
+# store all sources in one file (sources.json)
+{
+  "run_id": "run_2026_06_27_001",
+  "target_name": "John Doe",
+  "source_origin": "curated", # or public or synthetic
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "https://example.com/article",
+      "title": "Article About John Doe",
+      "retrieved_at": "2026-06-12T10:30:00Z",
+      "article_text": "Full extracted article text..."
+    },
+    {
+      "source_id": "src_002",
+      "url": "https://example.com/profile",
+      "title": "John Doe Community Profile",
+      "retrieved_at": "2026-06-12T10:31:00Z",
+      "article_text": "Full extracted article text..."
+    }
+  ]
+}
+
+# source schema for scraped vs synthetic
+
+# Scraped source schema (curated and public)
+{
+  "source_id": "src_001",
+  "url": "https://example.com/article",
+  "title": "Article About John Doe",
+  "retrieved_at": "2026-06-12T10:30:00Z",
+  "article_text": "Full extracted article text..."
+}
+
+# Synthetic source schema
+{
+  "source_id": "src_001",
+  "url": "synthetic://synthetic_negative_001/src_001",
+  "title": "Synthetic Source Title",
+  "expected_source_sentiment": "negative",
+  "article_text": "Synthetic article text goes here."
+}
+
+# store all chunks in one file (chunks.json)
+{
+  "run_id": "run_2026_06_27_001",
+  "target_name": "John Doe",
+  "chunks": [
+    {
+      "chunk_id": "src_001_chunk_001",
+      "source_id": "src_001",
+      "text": "John Doe received an award for organizing a local food donation program.",
+      "sentence_start": 0,
+      "sentence_end": 0
+    },
+    {
+      "chunk_id": "src_001_chunk_002",
+      "source_id": "src_001",
+      "text": "John Doe was mentioned in connection with an investigation. He was later convicted of assault and sentenced to 3 years in prison.",
+      "sentence_start": 1,
+      "sentence_end": 1
+    }
+  ]
+}
+
+# store all extracted evidence snippets (evidence.json)
+{
+  "run_id": "2026-06-27_001_john_doe",
+  "target_name": "John Doe",
+  "evidence_extraction_method": "llm_quote_extraction",
+  "evidence": [
+    {
+      "evidence_id": "ev_001",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_002",
+      "quote": "John Doe was mentioned in connection with an investigation.",
+      "sentiment": "negative",
+      "confidence": null #null if LLM, score if sentiment classifier
+    }
+  ]
+}
+
+# aggregate sentiment score/counting across evidence and sources (aggregation.json)
+{
+  "run_id": "2026-06-27_001_john_doe",
+  "target_name": "John Doe",
+  "aggregation_method": "label_count_majority",
+  "source_results": [
+    {
+      "source_id": "src_001",
+      "source_sentiment": "negative",
+      "source_confidence": null,
+      "sentiment_counts": {
+        "positive": 0,
+        "neutral": 0,
+        "negative": 2
+      },
+      "evidence_ids": ["ev_001", "ev_002"]
+    }
+  ],
+  "overall_result": {
+    "overall_sentiment": "negative",
+    "overall_confidence": null,
+    "source_sentiment_counts": {
+      "positive": 1,
+      "neutral": 1,
+      "negative": 1
+    },
+    "evidence_sentiment_counts": {
+      "positive": 1,
+      "neutral": 1,
+      "negative": 2
+    },
+    "mixed_evidence": true,
+    "insufficient_evidence": false
+  }
+}
+
+
+# final report (final_report.json)
+{
+  "run_id": "2026-06-27_001_john_doe",
+  "target_name": "John Doe",
+  "overall_sentiment": "negative",
+  "overall_confidence": 0.74,
+  "one_line_summary": "Public sources contain both positive community-related coverage and significant negative legal findings concerning John Doe.",
+  "extended_summary": "The analyzed sources present a mixed public profile for John Doe. One source reports that he was involved in an investigation and was later convicted of assault and sentenced to three years in prison. Another source describes positive community involvement. The overall sentiment is negative because the legal conviction and prison sentence represent stronger negative evidence.",
+  "key_findings": [
+    "John Doe was mentioned in connection with an investigation.",
+    "He was later convicted of assault and sentenced to three years in prison.",
+    "John Doe received an award for organizing a local food donation program."
+  ],
+  "justification": "The overall sentiment is negative because the strongest negative source reports a criminal conviction and prison sentence. Although positive evidence is present, the negative legal evidence carries greater weight. Conflicting sources reduce the confidence score.",
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "https://example-news.com/article",
+      "title": "Article About John Doe",
+      "source_sentiment": "negative",
+      "source_confidence": 0.91,
+      "extracted_evidence": [
+        "John Doe was mentioned in connection with an investigation. He was later convicted of assault and sentenced to 3 years in prison."
+      ]
+    },
+    {
+      "source_id": "src_002",
+      "url": "https://example-community.org/profile",
+      "title": "John Doe Recognized for Community Service",
+      "source_sentiment": "positive",
+      "source_confidence": 0.83,
+      "extracted_evidence": [
+        "John Doe received an award for organizing a local food donation program."
+      ]
+    }
+  ],
+  "limitations": [
+    "Only publicly available sources were analyzed.",
+    "The system may miss relevant context if a page cannot be scraped or if the target is referenced only indirectly.",
+    "The result should be treated as decision support rather than a final determination."
+  ]
+}
