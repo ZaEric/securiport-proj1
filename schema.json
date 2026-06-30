@@ -69,7 +69,6 @@
     "https://example-news.com/article1",
     "https://example-blog.com/post2"
   ],
-  "notes": "Run using manually curated URLs for early testing."
 }
 
 # example search api run:
@@ -80,8 +79,7 @@
   "input_mode": "search_api",
   "search_provider": "bing",
   "search_query": "\"John Doe\" news",
-  "max_urls": 10,
-  "notes": "Run using live URL discovery."
+  "max_urls": 5,
 }
 
 # example synthetic dataset run:
@@ -92,14 +90,15 @@
   "input_mode": "synthetic",
   "synthetic_case_file": "data/synthetic/passengers/synthetic_negative_001.json",
   "expected_overall_sentiment": "negative",
-  "notes": "Synthetic case used for controlled pipeline testing."
+  "notes": "Short human-readable note about what this case tests.",
+  "difficulty_tags": ["multiple_people", "non_criminal_negative"],
+  "expected_failure_modes": [],
 }
 
 # store all sources in one file (sources.json)
 {
   "run_id": "run_2026_06_27_001",
   "target_name": "John Doe",
-  "source_origin": "curated", # or public or synthetic
   "sources": [
     {
       "source_id": "src_001",
@@ -115,12 +114,16 @@
       "retrieved_at": "2026-06-12T10:31:00Z",
       "article_text": "Full extracted article text..."
     }
-  ]
+  ],
+  "metadata": {
+    "source_mode": "synthetic", # or search_api or curated_urls
+    "source_count": 3
+  }
 }
 
 # source schema for scraped vs synthetic
 
-# Scraped source schema (curated and public)
+# Scraped source schema (search_api or curated_urls)
 {
   "source_id": "src_001",
   "url": "https://example.com/article",
@@ -138,6 +141,14 @@
   "article_text": "Synthetic article text goes here."
 }
 
+# chunking schema for each chunk:
+{
+  "chunk_id": "src_001_chunk_001",
+  "source_id": "src_001",
+  "text": "...",
+  "word_count": 123
+}
+
 # store all chunks in one file (chunks.json)
 {
   "run_id": "run_2026_06_27_001",
@@ -146,18 +157,33 @@
     {
       "chunk_id": "src_001_chunk_001",
       "source_id": "src_001",
-      "text": "John Doe received an award for organizing a local food donation program.",
-      "sentence_start": 0,
-      "sentence_end": 0
+      "text": "...",
+      "word_count": 123
     },
     {
       "chunk_id": "src_001_chunk_002",
       "source_id": "src_001",
-      "text": "John Doe was mentioned in connection with an investigation. He was later convicted of assault and sentenced to 3 years in prison.",
-      "sentence_start": 1,
-      "sentence_end": 1
-    }
-  ]
+      "text": "...",
+      "word_count": 123
+    },
+    ...
+  ],
+  "metadata": {
+    "chunking_strategy": "paragraph_aware",
+    "target_chunk_words": 600,
+    "max_chunk_words": 700,
+    "overlap_paragraphs": 1,
+  }
+}
+
+# chunking.json if using sentiment classifier (just change metadata part)
+{
+  "metadata": {
+    "chunking_strategy": "sentence_window",
+    "window_before": 1,
+    "window_after": 1,
+    "evidence_unit": "target_sentence"
+  }
 }
 
 # store all extracted evidence snippets (evidence.json)
@@ -172,8 +198,9 @@
       "chunk_id": "src_001_chunk_002",
       "quote": "John Doe was mentioned in connection with an investigation.",
       "sentiment": "negative",
-      "confidence": null #null if LLM, score if sentiment classifier
-    }
+      "confidence": null #null if LLM, confidence score if sentiment classifier
+    },
+    ...
   ]
 }
 
@@ -193,7 +220,8 @@
         "negative": 2
       },
       "evidence_ids": ["ev_001", "ev_002"]
-    }
+    },
+    ...
   ],
   "overall_result": {
     "overall_sentiment": "negative",
@@ -219,7 +247,7 @@
   "run_id": "2026-06-27_001_john_doe",
   "target_name": "John Doe",
   "overall_sentiment": "negative",
-  "overall_confidence": 0.74,
+  "overall_confidence": null # null if LLM, confidence score if sentiment classifier
   "one_line_summary": "Public sources contain both positive community-related coverage and significant negative legal findings concerning John Doe.",
   "extended_summary": "The analyzed sources present a mixed public profile for John Doe. One source reports that he was involved in an investigation and was later convicted of assault and sentenced to three years in prison. Another source describes positive community involvement. The overall sentiment is negative because the legal conviction and prison sentence represent stronger negative evidence.",
   "key_findings": [

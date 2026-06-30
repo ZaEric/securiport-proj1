@@ -19,6 +19,7 @@ dependencies:
     - transformers
     - sentencepiece
     - accelerate
+    - ollama
 
     # Text preprocessing
     - nltk
