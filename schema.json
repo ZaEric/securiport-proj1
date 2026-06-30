@@ -191,6 +191,7 @@
   "run_id": "2026-06-27_001_john_doe",
   "target_name": "John Doe",
   "evidence_extraction_method": "llm_quote_extraction",
+  "num_evidence": 3,
   "evidence": [
     {
       "evidence_id": "ev_001",

@@ -198,6 +198,15 @@ class EvidenceClassifierRequest(BaseModel):
         }
     )
 
+class EvidenceResponse(BaseModel):
+    run_id: str
+    target_name: str
+    run_dir: str
+    chunks_path: str
+    evidence_path: str
+    num_evidence: int
+    status: str
+
 
 # -------------------------
 # Aggregation requests
