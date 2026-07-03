@@ -72,15 +72,15 @@
       "evidence_id": "ev_009",
       "source_id": "src_002",
       "chunk_id": "src_002_chunk_001",
-      "quote": "Several partners reported that they had to postpone outreach events because they could not get reliable information from Doe's office.",
-      "sentiment": "negative",
+      "quote": "Doe said in a written response that the project faced staffing shortages and changing cost estimates, and he argued that some delays were outside his control.",
+      "sentiment": "neutral",
       "confidence": null
     },
     {
       "evidence_id": "ev_010",
       "source_id": "src_002",
       "chunk_id": "src_002_chunk_001",
-      "quote": "Doe said in a written response that the project faced staffing shortages and changing cost estimates, and he argued that some delays were outside his control.",
+      "quote": "The nonprofit said Doe will remain with the organization in a limited advisory position while a new project director is selected.",
       "sentiment": "neutral",
       "confidence": null
     },
@@ -104,15 +104,15 @@
       "evidence_id": "ev_013",
       "source_id": "src_003",
       "chunk_id": "src_003_chunk_001",
-      "quote": "Doe received at least four internal messages about unresolved inspection concerns but did not forward those concerns to senior project leadership.",
+      "quote": "The audit also found that Doe failed to escalate repeated warnings from field inspectors who questioned whether some platform repairs met the project specifications.",
       "sentiment": "negative",
       "confidence": null
     },
     {
       "evidence_id": "ev_014",
       "source_id": "src_003",
-      "chunk_id": "src_003_chunk_002",
-      "quote": "She said Doe's role was especially concerning because his approvals were supposed to be one of the safeguards against premature payments.",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Auditors wrote that Doe's files did not consistently show when milestone approvals were reviewed, who provided supporting documentation, or whether inspection concerns had been resolved.",
       "sentiment": "negative",
       "confidence": null
     },

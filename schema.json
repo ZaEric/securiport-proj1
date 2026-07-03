@@ -207,37 +207,40 @@
 
 # aggregate sentiment score/counting across evidence and sources (aggregation.json)
 {
-  "run_id": "2026-06-27_001_john_doe",
+  "run_id": "2026-06-29_1642_john_doe",
   "target_name": "John Doe",
-  "aggregation_method": "label_count_majority",
+  "aggregation_method": "label_count_summary",
+  "mixed_evidence_threshold": 0.25,
+  "minimum_evidence_count": 1,
   "source_results": [
     {
       "source_id": "src_001",
-      "source_sentiment": "negative",
-      "source_confidence": null,
+      "baseline_sentiment": "negative",
       "sentiment_counts": {
-        "positive": 0,
+        "positive": 1,
         "neutral": 0,
-        "negative": 2
+        "negative": 3
       },
-      "evidence_ids": ["ev_001", "ev_002"]
-    },
-    ...
+      "mixed_evidence": true,
+      "opposing_sentiment_ratio": 0.25,
+      "insufficient_evidence": false,
+      "evidence_ids": ["ev_001", "ev_002", "ev_003", "ev_004"]
+    }
   ],
   "overall_result": {
-    "overall_sentiment": "negative",
-    "overall_confidence": null,
-    "source_sentiment_counts": {
+    "baseline_sentiment": "negative",
+    "sentiment_counts": {
       "positive": 1,
-      "neutral": 1,
-      "negative": 1
+      "neutral": 3,
+      "negative": 14
     },
-    "evidence_sentiment_counts": {
-      "positive": 1,
-      "neutral": 1,
-      "negative": 2
+    "source_baseline_sentiment_counts": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 3
     },
-    "mixed_evidence": true,
+    "mixed_evidence": false,
+    "opposing_sentiment_ratio": 0.067,
     "insufficient_evidence": false
   }
 }

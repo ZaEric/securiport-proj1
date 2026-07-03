@@ -2,16 +2,20 @@ from pathlib import Path
 
 from fastapi import APIRouter, HTTPException
 
-from src.api.io import read_json, write_json
+from src.api.io import read_json, write_json, path_to_api_str
 from src.api.schemas import (
     AggregationRequest,
+    AggregationResponse,
     EvidenceClassifierRequest,
     EvidenceLLMRequest,
     EvidenceResponse,
     StatusResponse,
 )
 from src.nlp.models import EvidenceExtractionConfig
-from src.nlp.pipeline import process_chunks_for_evidence_llm
+from src.nlp.pipeline import (
+    process_chunks_for_evidence_llm,
+    process_evidence_for_aggregation_llm,
+)
 
 
 router = APIRouter(prefix="/nlp", tags=["nlp"])
@@ -77,9 +81,9 @@ def extract_evidence_llm(request: EvidenceLLMRequest) -> EvidenceResponse:
     return EvidenceResponse(
         run_id=evidence_json["run_id"],
         target_name=evidence_json["target_name"],
-        run_dir=str(run_dir),
-        chunks_path=str(chunks_path),
-        evidence_path=str(evidence_path),
+        run_dir=path_to_api_str(run_dir),
+        chunks_path=path_to_api_str(chunks_path),
+        evidence_path=path_to_api_str(evidence_path),
         num_evidence=evidence_json["num_evidence"],
         status="created",
     )
@@ -93,11 +97,69 @@ def extract_evidence_classifier(request: EvidenceClassifierRequest) -> StatusRes
     )
 
 
-@router.post("/aggregate-llm", response_model=StatusResponse)
-def aggregate_llm(request: AggregationRequest) -> StatusResponse:
-    return StatusResponse(
-        status="not_implemented",
-        message="Endpoint contract reserved. Future behavior: LLM evidence.json -> label-count aggregation.json.",
+@router.post("/aggregate-llm", response_model=AggregationResponse)
+def aggregate_llm(request: AggregationRequest) -> AggregationResponse:
+    run_dir = Path("data/runs") / request.run_id
+    evidence_path = Path(request.evidence_path) if request.evidence_path else run_dir / "evidence.json"
+    aggregation_path = run_dir / "aggregation.json"
+
+    if not evidence_path.exists():
+        raise HTTPException(
+            status_code=404,
+            detail=f"Evidence file not found: {evidence_path}",
+        )
+
+    try:
+        evidence_json = read_json(evidence_path)
+    except Exception as exc:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Failed to read evidence file: {exc}",
+        ) from exc
+
+    required_keys = {"run_id", "target_name", "evidence"}
+    missing_keys = required_keys - evidence_json.keys()
+
+    if missing_keys:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Evidence JSON missing required keys: {sorted(missing_keys)}",
+        )
+
+    if evidence_json["run_id"] != request.run_id:
+        raise HTTPException(
+            status_code=400,
+            detail=(
+                f"Run ID mismatch: request run_id={request.run_id}, "
+                f"evidence_json run_id={evidence_json['run_id']}"
+            ),
+        )
+
+    try:
+        aggregation_json = process_evidence_for_aggregation_llm(
+            evidence_json=evidence_json,
+            mixed_evidence_threshold=request.mixed_evidence_threshold,
+            baseline_tie_threshold=request.baseline_tie_threshold,
+            minimum_evidence_count=request.minimum_evidence_count,
+        )
+    except Exception as exc:
+        raise HTTPException(
+            status_code=500,
+            detail=f"LLM aggregation failed: {exc}",
+        ) from exc
+
+    write_json(aggregation_path, aggregation_json)
+
+    return AggregationResponse(
+        run_id=aggregation_json["run_id"],
+        target_name=aggregation_json["target_name"],
+        run_dir=path_to_api_str(run_dir),
+        evidence_path=path_to_api_str(evidence_path),
+        aggregation_path=path_to_api_str(aggregation_path),
+        baseline_sentiment=aggregation_json["overall_result"]["baseline_sentiment"],
+        num_sources=len(aggregation_json["source_results"]),
+        num_evidence=aggregation_json["num_evidence"],
+        status="created",
     )
 
 
