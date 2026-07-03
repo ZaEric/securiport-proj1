@@ -3,7 +3,7 @@ from typing import Any
 
 from fastapi import APIRouter, HTTPException
 
-from src.api.io import read_json, write_json
+from src.api.io import read_json, write_json, path_to_api_str
 from src.api.schemas import (
     ChunkClassifierRequest,
     ChunkLLMRequest,
@@ -64,9 +64,9 @@ def chunk_llm(request: ChunkLLMRequest) -> ChunkResponse:
     return ChunkResponse(
         run_id=request.run_id,
         target_name=sources_json["target_name"],
-        run_dir=str(run_dir),
-        sources_path=str(sources_path),
-        chunks_path=str(chunks_path),
+        run_dir=path_to_api_str(run_dir),
+        sources_path=path_to_api_str(sources_path),
+        chunks_path=path_to_api_str(chunks_path),
         num_sources=len(sources_json["sources"]),
         num_chunks=len(chunks_json["chunks"]),
         status="created",

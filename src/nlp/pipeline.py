@@ -4,6 +4,7 @@ from src.nlp.evidence_extraction import extract_evidence_from_chunk_llm
 from src.nlp.llm_client import LLMClient, get_default_llm_client
 from src.nlp.models import EvidenceExtractionConfig
 from src.nlp.quote_verification import normalize_whitespace
+from src.nlp.aggregation import aggregate_evidence_llm
 
 
 def process_chunks_for_evidence_llm(
@@ -89,3 +90,23 @@ def dedupe_evidence_by_exact_quote(
         deduped_items.append(item)
 
     return deduped_items
+
+
+def process_evidence_for_aggregation_llm(
+    evidence_json: dict[str, Any],
+    mixed_evidence_threshold: float = 0.25,
+    baseline_tie_threshold: float = 0.10,
+    minimum_evidence_count: int = 1,
+) -> dict[str, Any]:
+    """
+    Stage wrapper for LLM aggregation.
+
+    Aggregation summarizes evidence counts and baseline sentiment. Final nuanced
+    interpretation is left for final report generation.
+    """
+    return aggregate_evidence_llm(
+        evidence_json=evidence_json,
+        mixed_evidence_threshold=mixed_evidence_threshold,
+        baseline_tie_threshold=baseline_tie_threshold,
+        minimum_evidence_count=minimum_evidence_count,
+    )

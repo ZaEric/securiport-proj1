@@ -3,7 +3,7 @@ from typing import Any
 
 from fastapi import APIRouter, HTTPException
 
-from src.api.io import read_json, write_json
+from src.api.io import read_json, write_json, path_to_api_str
 from src.api.run_artifacts import (
     build_synthetic_input_json,
     build_sources_json_from_synthetic,
@@ -76,9 +76,9 @@ def create_sources_from_synthetic(request: FromSyntheticRequest) -> SourceCreati
     return SourceCreationResponse(
         run_id=run_id,
         target_name=target_name,
-        run_dir=str(run_dir),
-        input_path=str(input_path),
-        sources_path=str(sources_path),
+        run_dir=path_to_api_str(run_dir),
+        input_path=path_to_api_str(input_path),
+        sources_path=path_to_api_str(sources_path),
         num_sources=len(dataset["sources"]),
         status="created",
     )

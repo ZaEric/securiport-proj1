@@ -218,15 +218,46 @@ class AggregationRequest(BaseModel):
         default=None,
         description="Optional path to evidence.json. Defaults to data/runs/<run_id>/evidence.json.",
     )
+    mixed_evidence_threshold: float = Field(
+        default=0.25,
+        ge=0.0,
+        le=0.5,
+        description="Minimum opposing sentiment ratio needed to mark evidence as meaningfully mixed.",
+    )
+    baseline_tie_threshold: float = Field(
+        default=0.10,
+        ge=0.0,
+        le=0.5,
+        description="If positive and negative counts are within this difference ratio, baseline sentiment becomes neutral.",
+    )
+    minimum_evidence_count: int = Field(
+        default=1,
+        ge=0,
+        description="Minimum number of evidence snippets required before evidence is considered sufficient.",
+    )
 
     model_config = ConfigDict(
         json_schema_extra={
             "example": {
                 "run_id": CURRENT_RUN_ID,
                 "evidence_path": None,
+                "mixed_evidence_threshold": 0.25,
+                "baseline_tie_threshold": 0.10,
+                "minimum_evidence_count": 1,
             }
         }
     )
+
+class AggregationResponse(BaseModel):
+    run_id: str
+    target_name: str
+    run_dir: str
+    evidence_path: str
+    aggregation_path: str
+    baseline_sentiment: str
+    num_sources: int
+    num_evidence: int
+    status: str
 
 
 # -------------------------
