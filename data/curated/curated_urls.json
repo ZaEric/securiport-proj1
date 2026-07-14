@@ -1,0 +1,72 @@
+[
+  {
+    "person": "Simone Biles",
+    "expected_sentiment": "positive",
+    "urls": [
+      {
+        "url": "https://apnews.com/article/a3aaf6453d62916b7ccc49b5123ecac7",
+        "source_type": "AP News",
+        "notes": "Simone Biles wins 6th all-around title and becomes most decorated gymnast in history"
+      },
+      {
+        "url": "https://www.ap.org/news-highlights/spotlights/2024/everything-simone-biles-did-at-the-paris-olympics-was-amplified-she-thrived-in-the-spotlight/",
+        "source_type": "AP News",
+        "notes": "Olympic achievements, medals, and positive public impact"
+      },
+      {
+        "url": "https://www.wptv.com/sports/olympics/rio-2016/simone-biles-takes-all-around-individual-gold-medal",
+        "source_type": "Associated Press syndicated",
+        "notes": "Olympic gold medal achievement"
+      }
+    ]
+  },
+  {
+    "person": "Malala Yousafzai",
+    "expected_sentiment": "positive",
+    "urls": [
+      {
+        "url": "https://news.trust.org/item/20141010100615-dsrgu",
+        "source_type": "Reuters",
+        "notes": "Malala Yousafzai wins Nobel Peace Prize"
+      }
+    ]
+  },
+  {
+    "person": "Elizabeth Holmes",
+    "expected_sentiment": "negative",
+    "urls": [
+      {
+        "url": "https://apnews.com/article/193bb0a0bfe306e796acd13c151e705c",
+        "source_type": "AP News",
+        "notes": "Theranos fraud conviction and failed appeal"
+      },
+      {
+        "url": "https://abcnews.go.com/US/elizabeth-holmes-trial-jury-unable-unanimous-verdict-counts/story?id=82055043",
+        "source_type": "ABC News",
+        "notes": "Theranos fraud trial conviction"
+      }
+    ]
+  },
+  {
+    "person": "Sam Bankman-Fried",
+    "expected_sentiment": "negative",
+    "urls": [
+      {
+        "url": "https://www.japantimes.co.jp/business/2024/03/29/bankman-fried-prison-ftx/",
+        "source_type": "News",
+        "notes": "FTX collapse and sentencing"
+      }
+    ]
+  },
+  {
+    "person": "Albert Einstein",
+    "expected_sentiment": "neutral",
+    "urls": [
+      {
+        "url": "https://www.nobelprize.org/laureate/26",
+        "source_type": "Nobel Prize official profile",
+        "notes": "Biography, Nobel Prize facts, and scientific background information"
+      }
+    ]
+  }
+]

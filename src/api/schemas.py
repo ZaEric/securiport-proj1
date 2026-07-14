@@ -2,7 +2,9 @@ from enum import Enum
 from pydantic import BaseModel, Field, ConfigDict
 
 
-CURRENT_RUN_ID = "2026-06-29_1642_john_doe"
+# TODO: hold
+# CURRENT_RUN_ID = "2026-06-29_1642_john_doe"
+CURRENT_RUN_ID = "2026-07-09_1809_elizabeth_holmes"
 CURRENT_RUN_DIR = f"data/runs/{CURRENT_RUN_ID}"
 
 
@@ -46,6 +48,11 @@ class FromSyntheticRequest(BaseModel):
 class FromCuratedUrlsRequest(BaseModel):
     target_name: str
     curated_urls_file: str
+    max_urls: int | None = Field(
+        default=None,
+        ge=1,
+        description="Optional maximum number of curated URLs to fetch.",
+    )
     run_id: str | None = Field(
         default=None,
         description="Optional run ID. If omitted, generated from datetime + target name.",
@@ -54,9 +61,10 @@ class FromCuratedUrlsRequest(BaseModel):
     model_config = ConfigDict(
         json_schema_extra={
             "example": {
-                "target_name": "John Doe",
+                "target_name": "Elizabeth Holmes",
                 "curated_urls_file": "data/curated/curated_urls.json",
-                "run_id": CURRENT_RUN_ID,
+                "max_urls": 2,
+                "run_id": None,
             }
         }
     )

@@ -11,28 +11,30 @@ conda activate securiport-proj1
 
 ```
 data/
-├── curated/
-│   └── curated_urls.json
-├── synthetic/
-│   ├── index.json
-│   └── passengers/
-│       ├── synthetic_negative_001.json
-│       ├── synthetic_positive_001.json
-│       └── synthetic_neutral_001.json
-└── runs/
-    └── 2026-06-27_001_jane_doe/
-        ├── input.json
-        ├── sources.json
-        ├── chunks.json
-        ├── evidence.json
-        ├── aggregation.json
-        └── final_report.json
-    ...
+  curated/
+    curated_urls.json
+  synthetic/
+    passengers/
+      synthetic_negative_001.json
+  runs/
+    <run_id>/
+      input.json
+      sources.json
+      chunks.json
+      evidence.json
+      aggregation.json
+      final_report.json
+docs/
+  check_curated_scraping.md
+  evaluate_curated_runs.md
+scripts/
+  check_curated_scraping.py
+  evaluate_curated_runs.py
 src/
-├── api/
-├── collection/
-├── nlp/
-└── processing/
+  api/
+  collection/
+  nlp/
+  processing/
 ```
 
 data/
