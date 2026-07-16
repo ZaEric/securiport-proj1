@@ -5,6 +5,7 @@ from src.nlp.llm_client import LLMClient, get_default_llm_client
 from src.nlp.models import EvidenceExtractionConfig
 from src.nlp.quote_verification import normalize_whitespace
 from src.nlp.aggregation import aggregate_evidence_llm
+from src.nlp.report_generation import generate_final_report_llm
 
 
 def process_chunks_for_evidence_llm(
@@ -109,4 +110,26 @@ def process_evidence_for_aggregation_llm(
         mixed_evidence_threshold=mixed_evidence_threshold,
         baseline_tie_threshold=baseline_tie_threshold,
         minimum_evidence_count=minimum_evidence_count,
+    )
+
+def process_final_report_llm(
+    sources_json: dict[str, Any],
+    evidence_json: dict[str, Any],
+    aggregation_json: dict[str, Any],
+    config: EvidenceExtractionConfig | None = None,
+    llm_client: LLMClient | None = None,
+    max_evidence_examples: int = 7,
+) -> dict[str, Any]:
+    """
+    Stage wrapper for final report generation.
+    """
+    llm_client = llm_client or get_default_llm_client()
+
+    return generate_final_report_llm(
+        sources_json=sources_json,
+        evidence_json=evidence_json,
+        aggregation_json=aggregation_json,
+        llm_client=llm_client,
+        config=config,
+        max_evidence_examples=max_evidence_examples,
     )

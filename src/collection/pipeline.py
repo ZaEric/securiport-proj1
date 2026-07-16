@@ -6,6 +6,8 @@ from src.collection.fetching import FetchError, fetch_html
 from src.collection.models import CuratedUrl, ExtractedPage
 from src.collection.url_filtering import filter_curated_urls
 
+MIN_ARTICLE_WORDS = 50
+
 
 def build_sources_json_from_curated_urls(
     *,
@@ -27,6 +29,16 @@ def build_sources_json_from_curated_urls(
         try:
             page = fetch_html(item.url)
             extracted_page = extract_page_text(page)
+            if len(extracted_page.article_text.split()) < MIN_ARTICLE_WORDS:
+                fetch_errors.append(
+                    build_fetch_error_item(
+                        curated_url=item,
+                        error=f"extracted article text was too short to use: fewer than {MIN_ARTICLE_WORDS} words",
+                        status_code=extracted_page.status_code,
+                        content_type=extracted_page.content_type,
+                    )
+                )
+                continue
         except FetchError as exc:
             fetch_errors.append(
                 build_fetch_error_item(
@@ -80,11 +92,17 @@ def build_sources_json_from_curated_urls(
         },
     }
 
-
+# changed relevance checking to be more generous, check full name plus last name
 def is_relevant_to_target(page: ExtractedPage, target_name: str) -> bool:
-    target = target_name.strip().lower()
+    normalized_name = target_name.strip().lower()
+    name_parts = normalized_name.split()
+    last_name = name_parts[-1] if name_parts else ""
+
     combined_text = f"{page.title}\n{page.article_text}".lower()
-    return target in combined_text
+
+    return normalized_name in combined_text or (
+        len(last_name) >= 3 and last_name in combined_text
+    )
 
 
 def build_source_item(

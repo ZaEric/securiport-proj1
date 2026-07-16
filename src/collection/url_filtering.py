@@ -58,4 +58,3 @@ def filter_curated_urls(
 def has_blocked_extension(url: str) -> bool:
     path = urlparse(url).path.lower()
     return any(path.endswith(extension) for extension in BLOCKED_EXTENSIONS)
-

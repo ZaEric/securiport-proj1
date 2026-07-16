@@ -5,8 +5,6 @@ from pydantic import BaseModel, Field, ConfigDict
 # TODO: hold
 # CURRENT_RUN_ID = "2026-06-29_1642_john_doe"
 CURRENT_RUN_ID = "2026-07-09_1809_elizabeth_holmes"
-CURRENT_RUN_DIR = f"data/runs/{CURRENT_RUN_ID}"
-
 
 class InputMode(str, Enum):
     synthetic = "synthetic"
@@ -274,28 +272,29 @@ class AggregationResponse(BaseModel):
 
 class ReportGenerateRequest(BaseModel):
     run_id: str
-    sources_path: str | None = Field(
-        default=None,
-        description="Optional path to sources.json. Defaults to data/runs/<run_id>/sources.json.",
-    )
-    evidence_path: str | None = Field(
-        default=None,
-        description="Optional path to evidence.json. Defaults to data/runs/<run_id>/evidence.json.",
-    )
-    aggregation_path: str | None = Field(
-        default=None,
-        description="Optional path to aggregation.json. Defaults to data/runs/<run_id>/aggregation.json.",
-    )
     model_name: str | None = None
+    max_evidence_examples: int = Field(
+        default=7,
+        ge=1,
+        le=10,
+        description="Maximum number of evidence examples included in final_report.json.",
+    )
 
     model_config = ConfigDict(
         json_schema_extra={
             "example": {
                 "run_id": CURRENT_RUN_ID,
-                "sources_path": None,
-                "evidence_path": None,
-                "aggregation_path": None,
                 "model_name": None,
+                "max_evidence_examples": 7,
             }
         }
     )
+
+class ReportGenerateResponse(BaseModel):
+    run_id: str
+    target_name: str
+    run_dir: str
+    final_report_path: str
+    overall_sentiment: str | None
+    num_evidence_examples: int
+    status: str

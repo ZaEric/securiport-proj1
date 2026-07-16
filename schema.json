@@ -80,6 +80,12 @@
   "search_provider": "bing",
   "search_query": "\"John Doe\" news",
   "max_urls": 5,
+  "requested_urls": [
+    "https://example.com/article1",
+    "https://example.com/article2",
+    "https://example.com/file.pdf",
+    "https://blocked-site.com/article"
+  ]
 }
 
 # example synthetic dataset run:
