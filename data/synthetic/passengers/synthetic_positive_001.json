@@ -1,0 +1,37 @@
+{
+  "run_id": "synthetic_positive_001",
+  "target_name": "John Smith",
+  "expected_overall_sentiment": "positive",
+  "case_notes": "Tests a positive case with one straightforward achievement source, one community/volunteer recognition source, and one longer multi-person article where praise for other people could be misattributed to the target.",
+  "difficulty_tags": [
+    "multiple_people",
+    "misattributed_praise"
+  ],
+  "expected_failure_modes": [
+    "may assign positive evidence about another person to the target",
+    "may miss positive evidence that is understated or expressed as indirect praise rather than an explicit award"
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "synthetic://synthetic_positive_001/src_001",
+      "title": "Local Engineer John Smith Named Employee of the Year",
+      "expected_source_sentiment": "positive",
+      "article_text": "John Smith, a structural engineer at Kestrel Bridge Works, was named Employee of the Year at the company's annual recognition dinner on Thursday. Smith was honored for leading the redesign of the Millbrook Creek pedestrian bridge, a project that came in under budget and was completed two months ahead of schedule.\n\nColleagues praised Smith for catching a design flaw during an early review that could have caused costly delays later in construction. According to the company, Smith proposed an alternative support configuration that reduced material costs by nearly 15 percent without compromising the bridge's safety rating.\n\nIn addition to his technical work, Smith was recognized for mentoring three junior engineers over the past year. Company leadership said his willingness to walk newer staff through complex load calculations had noticeably improved the team's overall output.\n\nAccepting the award, Smith said he was proud of the team's work and credited open communication between the engineering and construction crews for keeping the project on track. 'None of this happens without people trusting each other enough to flag problems early,' he said."
+    },
+    {
+      "source_id": "src_002",
+      "url": "synthetic://synthetic_positive_001/src_002",
+      "title": "Riverside Food Bank Honors Volunteer John Smith for Five Years of Service",
+      "expected_source_sentiment": "positive",
+      "article_text": "The Riverside Food Bank held a small ceremony on Saturday to thank longtime volunteer John Smith for five years of weekly service sorting and delivering food donations. Organizers said Smith has rarely missed a Saturday shift since he began volunteering and has taken on increasing responsibility over that time, including training new volunteers and coordinating the delivery schedule for homebound seniors.\n\nFood bank director Priya Nair said Smith's reliability made him one of the organization's most trusted volunteers. 'When John says he'll be here, he's here, and that consistency matters more than people realize when you're trying to run a distribution schedule that serves hundreds of families,' Nair said.\n\nSeveral seniors who receive deliveries through the program said Smith often checked in on them beyond simply dropping off groceries, and that they had come to see his visits as a welcome part of their week. Smith said he started volunteering after retiring from a desk job and wanted to stay connected to his community. 'It's given me more than I've given it, honestly,' he said."
+    },
+    {
+      "source_id": "src_003",
+      "url": "synthetic://synthetic_positive_001/src_003",
+      "title": "City Report Praises Turnaround of Delayed Northgate Library Renovation",
+      "expected_source_sentiment": "positive",
+      "article_text": "A city progress report released Monday credited a small team of staff and contractors with turning around the long-delayed Northgate Library renovation, which had fallen more than a year behind schedule before a management change brought the project back on track. The report reviewed the final eight months of construction, during which the project moved from repeated missed deadlines to an on-time reopening celebrated by residents last month.\n\nThe Northgate Library renovation was originally approved as a ten-month project to modernize the building's reading rooms, replace aging electrical systems, and add a new community meeting space. Early delays were caused by permitting issues and a change in the original contractor, and by the time city officials intervened, the project was widely seen as at risk of stalling indefinitely.\n\nAccording to the report, project coordinator John Smith was brought in to reorganize the construction schedule and improve communication between the city, the new contractor, and neighborhood stakeholders. Auditors wrote that Smith introduced a weekly reporting system that gave city officials clear visibility into which tasks were on track and which needed attention, replacing an informal process that had previously left gaps of several weeks between updates.\n\nThe report also found that Smith worked directly with inspectors to resolve a backlog of pending sign-offs that had been slowing progress on the electrical and accessibility upgrades. By meeting with inspectors on site rather than relying solely on written requests, Smith was able to clear several outstanding items within a few weeks, according to the report.\n\nOther team members were credited as well. Contractor lead Angela Reyes was praised for reorganizing the construction crew's schedule to work around the library's partial operating hours, allowing some services to continue during the final phase of renovation. City liaison David Kim was noted for keeping neighborhood associations informed through regular updates, which the report said reduced complaints and built goodwill with residents who had grown frustrated with the earlier delays.\n\nThe report singled out Smith's reporting system as the change that had the broadest impact on the project's recovery. Auditors wrote that before Smith's involvement, city officials often learned about delays only after they had already affected downstream tasks, making it difficult to intervene early. After the new reporting system was introduced, potential slippages were flagged an average of two weeks earlier, giving the team time to adjust before problems compounded.\n\nCity Council members reacted positively to the report during Tuesday's public meeting. Councilmember Elena Garcia said the Northgate renovation had become a model for how a struggling project could be brought back on schedule without cutting corners. She specifically credited Smith's coordination work, saying his reporting system should be considered for use on other stalled city projects.\n\nLibrary patrons interviewed after the reopening said they were pleased with the finished space, particularly the new community meeting room, which has already been booked for several neighborhood events. Library director Thomas Lee said the renovation's successful completion had restored confidence among residents who had grown skeptical that the project would ever finish.\n\nThe report recommended that the city formally document Smith's reporting process so that other project teams could adopt a similar approach. It concluded that while several people contributed to the project's recovery, the shift toward consistent, early communication was the single factor auditors identified as most responsible for turning the project around."
+    }
+  ]
+}

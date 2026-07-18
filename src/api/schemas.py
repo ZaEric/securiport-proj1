@@ -70,12 +70,12 @@ class FromCuratedUrlsRequest(BaseModel):
 
 class FromSearchApiRequest(BaseModel):
     target_name: str
-    search_provider: str = "bing"
+    search_provider: str = "tavily"
     search_query: str | None = Field(
         default=None,
-        description="Optional search query. If omitted, one can be generated from target_name.",
+        description="Optional search query. If omitted, one is generated from target_name.",
     )
-    max_urls: int = Field(default=10, ge=1)
+    max_urls: int = Field(default=3, ge=1)
     run_id: str | None = Field(
         default=None,
         description="Optional run ID. If omitted, generated from datetime + target name.",
@@ -85,9 +85,9 @@ class FromSearchApiRequest(BaseModel):
         json_schema_extra={
             "example": {
                 "target_name": "John Doe",
-                "search_provider": "bing",
+                "search_provider": "tavily",
                 "search_query": "\"John Doe\" news",
-                "max_urls": 10,
+                "max_urls": 3,
                 "run_id": CURRENT_RUN_ID,
             }
         }
