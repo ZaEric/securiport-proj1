@@ -2,9 +2,9 @@ from enum import Enum
 from pydantic import BaseModel, Field, ConfigDict
 
 
-CURRENT_RUN_ID = "2026-06-29_1642_john_doe"
-CURRENT_RUN_DIR = f"data/runs/{CURRENT_RUN_ID}"
-
+# TODO: hold
+# CURRENT_RUN_ID = "2026-06-29_1642_john_doe"
+CURRENT_RUN_ID = "2026-07-09_1809_elizabeth_holmes"
 
 class InputMode(str, Enum):
     synthetic = "synthetic"
@@ -46,6 +46,11 @@ class FromSyntheticRequest(BaseModel):
 class FromCuratedUrlsRequest(BaseModel):
     target_name: str
     curated_urls_file: str
+    max_urls: int | None = Field(
+        default=None,
+        ge=1,
+        description="Optional maximum number of curated URLs to fetch.",
+    )
     run_id: str | None = Field(
         default=None,
         description="Optional run ID. If omitted, generated from datetime + target name.",
@@ -54,9 +59,10 @@ class FromCuratedUrlsRequest(BaseModel):
     model_config = ConfigDict(
         json_schema_extra={
             "example": {
-                "target_name": "John Doe",
+                "target_name": "Elizabeth Holmes",
                 "curated_urls_file": "data/curated/curated_urls.json",
-                "run_id": CURRENT_RUN_ID,
+                "max_urls": 2,
+                "run_id": None,
             }
         }
     )
@@ -64,12 +70,12 @@ class FromCuratedUrlsRequest(BaseModel):
 
 class FromSearchApiRequest(BaseModel):
     target_name: str
-    search_provider: str = "bing"
+    search_provider: str = "tavily"
     search_query: str | None = Field(
         default=None,
-        description="Optional search query. If omitted, one can be generated from target_name.",
+        description="Optional search query. If omitted, one is generated from target_name.",
     )
-    max_urls: int = Field(default=10, ge=1)
+    max_urls: int = Field(default=3, ge=1)
     run_id: str | None = Field(
         default=None,
         description="Optional run ID. If omitted, generated from datetime + target name.",
@@ -79,9 +85,9 @@ class FromSearchApiRequest(BaseModel):
         json_schema_extra={
             "example": {
                 "target_name": "John Doe",
-                "search_provider": "bing",
+                "search_provider": "tavily",
                 "search_query": "\"John Doe\" news",
-                "max_urls": 10,
+                "max_urls": 3,
                 "run_id": CURRENT_RUN_ID,
             }
         }
@@ -266,28 +272,29 @@ class AggregationResponse(BaseModel):
 
 class ReportGenerateRequest(BaseModel):
     run_id: str
-    sources_path: str | None = Field(
-        default=None,
-        description="Optional path to sources.json. Defaults to data/runs/<run_id>/sources.json.",
-    )
-    evidence_path: str | None = Field(
-        default=None,
-        description="Optional path to evidence.json. Defaults to data/runs/<run_id>/evidence.json.",
-    )
-    aggregation_path: str | None = Field(
-        default=None,
-        description="Optional path to aggregation.json. Defaults to data/runs/<run_id>/aggregation.json.",
-    )
     model_name: str | None = None
+    max_evidence_examples: int = Field(
+        default=7,
+        ge=1,
+        le=10,
+        description="Maximum number of evidence examples included in final_report.json.",
+    )
 
     model_config = ConfigDict(
         json_schema_extra={
             "example": {
                 "run_id": CURRENT_RUN_ID,
-                "sources_path": None,
-                "evidence_path": None,
-                "aggregation_path": None,
                 "model_name": None,
+                "max_evidence_examples": 7,
             }
         }
     )
+
+class ReportGenerateResponse(BaseModel):
+    run_id: str
+    target_name: str
+    run_dir: str
+    final_report_path: str
+    overall_sentiment: str | None
+    num_evidence_examples: int
+    status: str

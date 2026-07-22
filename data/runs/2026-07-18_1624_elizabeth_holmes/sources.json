@@ -1,0 +1,44 @@
+{
+  "run_id": "2026-07-18_1624_elizabeth_holmes",
+  "target_name": "Elizabeth Holmes",
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "https://www.theguardian.com/us-news/2026/jan/21/elizabeth-holmes-trump-fraud-sentence",
+      "title": "Theranos founder Elizabeth Holmes asks Trump to commute prison sentence | US news | The Guardian",
+      "retrieved_at": "2026-07-18T23:24:35Z",
+      "article_text": "Theranos founder Elizabeth Holmes has asked Donald Trump to commute her sentence after she was convicted of defrauding investors in her now-defunct blood-testing startup that was once valued at $9bn, a notice on the US Department of Justice website showed.\nThe justice department’s office of the pardon attorney lists the status of her commutation request, which was made last year, as pending.\nThe White House did not immediately respond to a request for comment.\nHolmes, 37, founder of the collapsed blood-testing company Theranos, was convicted of four counts of defrauding investors and, in November 2022, was sentenced to serve more than 11 years in prison.\nA university dropout with no medical training, Holmes had fooled regulators and some of the world’s richest people, including Rupert Murdoch, Henry Kissinger and Larry Ellison, into believing she had figured out a way to test for a range of health conditions with just a pinprick of blood.\nShe filed a patent for the technology that aimed to perform a wide range of tests on a small amount of blood, a development that would eliminate the need for large blood samples for diagnostics.\nThe downfall began with a 2015 article by Wall Street Journal reporter John Carreyrou that revealed Theranos’s revolutionary technology wasn’t exactly what it seemed. Over the succeeding months, Carreyrou exposed how the testing devices Holmes said could perform a variety of medical tests with just a drop of blood were not actually being used to perform most of the analyses.\nAfter scrutiny from regulators, Theranos started to retract its tests and recall its machines. Holmes stepped down as CEO in June 2018, with the company dissolving soon after. That same year, the US government charged Holmes and her co-executive Sunny Balwani with defrauding both investors and patients, and making false claims about the effectiveness of the company’s technology.\nTrump has granted clemency to more than 1,600 people since beginning his second term, most for their involvement in the January 6 attack on the US Capitol. In his first term, he issued just 237 pardons and commutations.",
+      "source_type": "search_result",
+      "notes": "Theranos founder Elizabeth Holmes asks Trump to commute prison sentence | US news | The Guardian",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8"
+    }
+  ],
+  "metadata": {
+    "source_mode": "search_api",
+    "search_provider": "tavily",
+    "search_query": "\"Elizabeth Holmes\" news",
+    "source_count": 1,
+    "requested_url_count": 3,
+    "failed_url_count": 2,
+    "blocked_url_count": 1,
+    "fetch_errors": [
+      {
+        "url": "https://www.cbsnews.com/sanfrancisco/tag/elizabeth-holmes",
+        "source_type": "search_result",
+        "notes": "Elizabeth Holmes news - Today's latest updates",
+        "status_code": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "error": "extracted article text was too short to use: fewer than 50 words"
+      },
+      {
+        "url": "https://www.wsj.com/topics/person/elizabeth-holmes",
+        "source_type": "search_result",
+        "notes": "Elizabeth Holmes - Latest News and Updates",
+        "status_code": 401,
+        "content_type": "text/html;charset=utf-8",
+        "error": "site blocked access to this URL. Use another public URL or a syndicated copy for reproducible scraping."
+      }
+    ]
+  }
+}

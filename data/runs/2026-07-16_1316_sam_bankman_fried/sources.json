@@ -1,0 +1,26 @@
+{
+  "run_id": "2026-07-16_1316_sam_bankman_fried",
+  "target_name": "Sam Bankman-Fried",
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "https://www.japantimes.co.jp/business/2024/03/29/bankman-fried-prison-ftx/",
+      "title": "Sam Bankman-Fried sentenced to 25 years over FTX collapse - The Japan Times",
+      "retrieved_at": "2026-07-16T20:16:36Z",
+      "article_text": "FTX co-founder Sam Bankman-Fried was sentenced to 25 years in prison for stealing billions of dollars from customers, marking the final chapter in a case that has upended the crypto industry.\nU.S. District Judge Lewis A. Kaplan delivered the sentence in federal court in Manhattan moments after Bankman-Fried said he was “sorry about what happened at every stage.” He was convicted last year of seven offenses, including fraud and conspiracy.\nThe one-time billionaire became a symbol of malfeasance and greed in the crypto world after his hugely popular FTX exchange collapsed, exposing a yearslong fraud that swindled about $10 billion from customers, investors and lenders. Bankman-Fried, 32, had denied knowingly committing fraud and claimed he and his crypto empire were victims of market downturns in 2022.",
+      "source_type": "News",
+      "notes": "FTX collapse and sentencing",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8"
+    }
+  ],
+  "metadata": {
+    "source_mode": "curated_urls",
+    "source_count": 1,
+    "requested_url_count": 1,
+    "failed_url_count": 0,
+    "blocked_url_count": 0,
+    "expected_overall_sentiment": "negative",
+    "fetch_errors": []
+  }
+}

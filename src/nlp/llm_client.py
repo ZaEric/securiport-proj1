@@ -1,9 +1,21 @@
 import os
 from dataclasses import dataclass
+from typing import Any
 from typing import Protocol
 
-from dotenv import load_dotenv
-from ollama import Client, ResponseError
+try:
+    from dotenv import load_dotenv
+except ImportError:
+    def load_dotenv() -> bool:
+        return False
+
+try:
+    from ollama import Client, ResponseError
+except ImportError:
+    Client = None  # type: ignore[assignment]
+
+    class ResponseError(Exception):
+        pass
 
 
 class LLMClient(Protocol):
@@ -49,7 +61,13 @@ class OllamaChatClient:
             api_key=api_key,
         )
 
-    def _build_client(self) -> Client:
+    def _build_client(self) -> Any:
+        if Client is None:
+            raise RuntimeError(
+                "The ollama package is not installed. "
+                "Install project dependencies before running LLM endpoints."
+            )
+
         headers: dict[str, str] = {}
 
         if self.api_key:

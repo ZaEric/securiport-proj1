@@ -1,0 +1,37 @@
+{
+  "run_id": "2026-07-16_1316_elizabeth_holmes",
+  "target_name": "Elizabeth Holmes",
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "https://apnews.com/article/193bb0a0bfe306e796acd13c151e705c",
+      "title": "Elizabeth Holmes fails to overturn her Theranos fraud conviction | AP News",
+      "retrieved_at": "2026-07-16T20:16:35Z",
+      "article_text": "Elizabeth Holmes fails to overturn her Theranos fraud conviction\nElizabeth Holmes fails to overturn her Theranos fraud conviction\nSAN FRANCISCO (AP) — Elizabeth Holmes, the disgraced founder of Theranos, will remain in prison after losing a bid Monday to overturn her fraud conviction, with a federal appeals court saying she hadn’t proved there were legal missteps during her trial for defrauding investors with false claims of what her blood-testing startup could achieve.\nThe three-judge panel in San Francisco also upheld the fraud conviction of Holmes’ former business partner and lover Ramesh “Sunny” Balwani — as well as a lower’s court order for the two to pay $452 million in restitution.\nHolmes was CEO throughout Theranos’ turbulent 15-year history, claimed her startup had developed a revolutionary medical device that could detect a multitude of diseases and conditions from a few drops of blood. But the technology never worked, and the claims were false.\nA 41-year-old mother of two small children, Holmes began serving her 11-year sentence in May 2023 at a federal prison in Texas. Her listed release date at the Federal Bureau of Prisons is currently March 19, 2032.\nBalwani, 59, was sentenced to nearly 13 years in prison in California for his role in the scam and is set to be released in 2033.\nThe pair alleged in their appeal that legal errors were committed during their separate trials in 2022 when the court allowed some testimony, including that of a former Theranos employee, and improperly prohibited other testimony.\nJudge Jacqueline Nguyen rejected the claims, writing in the 54-page ruling that they failed to prove any violations or major errors by the lower court.\nAttorneys for Holmes and Balwani did not immediately respond to emails seeking comment by The Associated Press.\nHolmes saw a meteoric rise in Silicon Valley that landed her on the covers of business magazines that hailed her as the next Steve Jobs and raised nearly $1 billion in investments from software magnate Larry Ellison, media mogul Rupert Murdoch and the Walton family behind Walmart, and many others.\nWhile wooing investors, Holmes leveraged a high-powered Theranos board that included former Defense Secretary James Mattis, who testified against her during her trial, and two former secretaries of state, Henry Kissinger and the late George Shultz, whose son, Alexander submitted a statement blasting Holmes for concocting a scheme that played Shultz “for the fool.”\nThe deception came to light in 2015 after a series of explosive articles in The Wall Street Journal and a regulatory audit of Theranos uncovered potentially dangerous flaws in the company’s technology, leading to its eventual collapse.\nOne of Silicon Valley’s biggest scandals, the pair’s blood-testing hoax has been dissected in a book, an HBO documentary and an award-winning TV series.",
+      "source_type": "AP News",
+      "notes": "Theranos fraud conviction and failed appeal",
+      "status_code": 200,
+      "content_type": "text/html;charset=UTF-8"
+    },
+    {
+      "source_id": "src_002",
+      "url": "https://abcnews.go.com/US/elizabeth-holmes-trial-jury-unable-unanimous-verdict-counts/story?id=82055043",
+      "title": "Theranos founder Elizabeth Holmes convicted on 4 counts of fraud - ABC News",
+      "retrieved_at": "2026-07-16T20:16:36Z",
+      "article_text": "Theranos founder Elizabeth Holmes convicted on 4 counts of fraud\nShe was found guilty on four counts of wire fraud for defrauding investors.\nA jury has convicted Theranos founder Elizabeth Holmes on four counts of fraud on their seventh day of deliberations. She was acquitted on another four, and a mistrial was declared on the remaining three counts.\nHolmes was found guilty on one count of conspiracy to commit wire fraud against Theranos investors and three other counts of wire fraud against investors. She was acquitted on all four counts of wire fraud against patients. The jury deadlocked on three counts of fraud against investors.\nJudge Edward J. Davila, who presided over the trial, is expected to sentence the fallen entrepreneur at a later date. The 37-year-old could face decades behind bars.\nHolmes showed no visible emotion as the deputy court clerk read the verdict aloud.\n\"The jurors in this 15-week trial navigated a complex case amid a pandemic and scheduling obstacles,\" U.S. Attorney Stephanie Hinds told reporters Monday evening. \"I thank the jurors for their thoughtful and determined service that ensured verdicts could be reached. The guilty verdicts in this case reflect Ms. Holmes’ culpability in this large-scale investor fraud, and she must now face sentencing for her crimes.\"\nHolmes was not taken into custody after being convicted.\nHer ex-boyfriend and former company COO, Ramesh \"Sunny\" Balwani, who is also her co-defendant in the case, had his trial severed from Holmes earlier this year after learning her lawyers might use abuse claims as part of their defense. He has firmly denied those allegations and is expected to stand trial in February.\nHolmes, who had vowed to revolutionize the health care industry with technology that could run any test from a just a few drops of blood, was convicted of defrauding investors, in the rare criminal takedown of a Silicon Valley CEO.\nDuring his rebuttal on Dec. 17, prosecutor John Bostic told jurors that Holmes' motive to commit fraud was not to cash in, but to bolster the company she had built.\n\"She committed these crimes because she was desperate for the company to succeed,\" Bostic said.\nHolmes conviction comes after the jury in the trial, following over 45 hours of deliberation, said Monday morning that they were \"unable to come to a unanimous verdict on three of the counts,\" and would need more time to reach a decision.\nDavila read the jury a deadlock instruction, reiterated Holmes' presumption of innocence, and sent the 12 back to the deliberation room to continue weighing the three counts of fraud on which they could not agree.\nThe jurors are tasked with weighing 11 fraud charges leveled against Holmes following weeks of witness testimony from insiders who worked at the blood-testing startup, and patients and investors who prosecutors say were defrauded by the Theranos founder once lauded as the next Steve Jobs.\nHolmes, 37, was initially charged with nine counts of wire fraud and two counts of conspiracy to commit wire fraud.\nThe jury began deliberating on Dec. 20. In the two weeks since, which included some time off for holidays, they have been largely quiet.",
+      "source_type": "ABC News",
+      "notes": "Theranos fraud trial conviction",
+      "status_code": 200,
+      "content_type": "text/html; charset=utf-8"
+    }
+  ],
+  "metadata": {
+    "source_mode": "curated_urls",
+    "source_count": 2,
+    "requested_url_count": 2,
+    "failed_url_count": 0,
+    "blocked_url_count": 0,
+    "expected_overall_sentiment": "negative",
+    "fetch_errors": []
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "run_id": "2026-07-16_1316_simone_biles",
+  "created_at": "2026-07-16T20:16:33Z",
+  "target_name": "Simone Biles",
+  "input_mode": "curated_urls",
+  "curated_urls_file": "data/curated/curated_urls.json",
+  "requested_urls": [
+    "https://apnews.com/article/a3aaf6453d62916b7ccc49b5123ecac7",
+    "https://www.ap.org/news-highlights/spotlights/2024/everything-simone-biles-did-at-the-paris-olympics-was-amplified-she-thrived-in-the-spotlight/",
+    "https://www.wptv.com/sports/olympics/rio-2016/simone-biles-takes-all-around-individual-gold-medal"
+  ],
+  "expected_overall_sentiment": "positive"
+}

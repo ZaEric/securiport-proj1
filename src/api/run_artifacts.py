@@ -40,6 +40,7 @@ def build_curated_urls_input_json(
     target_name: str,
     curated_urls_file: str,
     requested_urls: list[str],
+    expected_overall_sentiment: str | None = None,
 ) -> dict[str, Any]:
     return {
         "run_id": run_id,
@@ -48,6 +49,7 @@ def build_curated_urls_input_json(
         "input_mode": "curated_urls",
         "curated_urls_file": curated_urls_file,
         "requested_urls": requested_urls,
+        "expected_overall_sentiment": expected_overall_sentiment,
     }
 
 
