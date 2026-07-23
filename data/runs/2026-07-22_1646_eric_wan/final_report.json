@@ -1,0 +1,81 @@
+{
+  "run_id": "2026-07-22_1646_eric_wan",
+  "target_name": "Eric Wan",
+  "overall_sentiment": "neutral",
+  "overall_confidence": null,
+  "aggregation_baseline_sentiment": "positive",
+  "one_line_summary": "Eric Wan is a veteran Hong Kong television actor best known for his role in the “My Date with a Vampire” series and has recently spoken publicly about the death of director Billy Tang.",
+  "extended_summary": "Eric Wan Tin‑chiu (born 28 October 1964) built his career after graduating from the ATV Training Course in 1983, beginning as a children’s programme host before moving into drama. He is most recognized for portraying Fong Tin‑yau in the “My Date with a Vampire” trilogy and has appeared in numerous films and series such as *Century of the Dragon* and *Fist of Fury*. In 2024 he publicly expressed sadness over the passing of director Billy Tang, recalling the director’s kindness and laughter. His professional profile also lists academic credentials (MPH, MBA) and a role as a pharma strategist.",
+  "key_findings": [
+    "Eric Wan is a long‑standing Hong Kong television actor, best known for his lead role in the “My Date with a Vampire” series.",
+    "His career began after completing ATV’s training program, starting as a children’s show host and expanding to many TV and film credits.",
+    "He recently expressed sadness and shared positive memories about director Billy Tang following the director’s death."
+  ],
+  "justification": "The majority of extracted evidence describes factual, neutral information about Eric Wan’s career and background, while a single positive quote reflects his respectful remembrance of a colleague. No negative statements are present, so the overall tone is best characterized as neutral.",
+  "evidence_examples": [
+    {
+      "source_id": "src_001",
+      "quote": "Eric Wan Tin-chiu (born 28 October 1964) is a Hong Kong television actor best known for his role as \"Fong Tin-yau\" in the My Date with a Vampire television series trilogy produced by the Hong Kong television network ATV.",
+      "sentiment": "neutral",
+      "why_selected": "Identifies his most notable role and establishes his public profile."
+    },
+    {
+      "source_id": "src_001",
+      "quote": "Wan began his acting career after graduating from the ATV Training Course in 1983.",
+      "sentiment": "neutral",
+      "why_selected": "Provides crucial career‑starting information."
+    },
+    {
+      "source_id": "src_001",
+      "quote": "He started as a host in television programmes for children before entering the drama department.",
+      "sentiment": "neutral",
+      "why_selected": "Shows early career path and versatility."
+    },
+    {
+      "source_id": "src_001",
+      "quote": "He has since acted in many films and television series, including Century of the Dragon, Horoscope One: Voices from Hell, Ransom Express, 2 Reincarnated 2, Fist of Fury, and DNA.",
+      "sentiment": "neutral",
+      "why_selected": "Demonstrates breadth of his acting work."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "Eric Wan recently expressed his sadness over the passing of director Billy Tang, who passed away earlier this month.",
+      "sentiment": "neutral",
+      "why_selected": "Shows recent public commentary and emotional response."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "\"Billy was a good director. People who didn't really know him would have been surprised to find that he really liked to laugh. He laughed a lot,\" he said.",
+      "sentiment": "positive",
+      "why_selected": "Provides a positive, personal recollection of the deceased director."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "Eric Wan, MPH MBA",
+      "sentiment": "neutral",
+      "why_selected": "Highlights his academic qualifications, adding context to his professional identity."
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "https://en.wikipedia.org/wiki/Eric_Wan",
+      "title": "Eric Wan - Wikipedia"
+    },
+    {
+      "source_id": "src_002",
+      "url": "https://sg.style.yahoo.com/eric-wan-saddened-date-vampire-062600399.html",
+      "title": "Eric Wan saddened by \"My Date with a Vampire\" director's death - Yahoo Life Singapore"
+    },
+    {
+      "source_id": "src_003",
+      "url": "https://x.com/ericlwan?lang=en",
+      "title": "Eric Wan, MPH MBA (@ericlwan) / X"
+    }
+  ],
+  "limitations": [
+    "The analysis is limited to the eight extracted quotes; no deeper biographical or career details beyond those sources were considered.",
+    "Sentiment assessment relies on the provided labeling; nuanced tone or additional context not captured in the quotes may affect interpretation."
+  ],
+  "report_generation_issues": []
+}

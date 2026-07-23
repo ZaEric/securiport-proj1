@@ -1,0 +1,30 @@
+{
+  "run_id": "2026-07-22_1646_eric_wan",
+  "target_name": "Eric Wan",
+  "chunks": [
+    {
+      "chunk_id": "src_001_chunk_001",
+      "source_id": "src_001",
+      "text": "Eric Wan\nAppearance\n\nEric Wan Tin-chiu (born 28 October 1964) is a Hong Kong television actor best known for his role as \"Fong Tin-yau\" in the My Date with a Vampire television series trilogy produced by the Hong Kong television network ATV. Wan began his acting career after graduating from the ATV Training Course in 1983. He started as a host in television programmes for children before entering the drama department. He has since acted in many films and television series, including Century of the Dragon, Horoscope One: Voices from Hell, Ransom Express, 2 Reincarnated 2, Fist of Fury, and DNA.\nFilmography\n[edit]Feature films\n[edit]- Century Hero (Bruce Lee Bio) (1999)\n- Horoscope One: Voices from Hell (1999)\n- House of the Dammed (1999)\n- Century of the Dragon (1999)\n- Ransom Express (2000)\n- Ghost Promise (2000)\n- Sharp Guns (2001)\n- Yao Wu Yang Wei – Fantasy of Hero (2002)\n- Shanghai Knights (30s cameo) (2003)\n- My Honeymoon with a Vampire (2003)\n- The Peeper Story 2 – The Escape Partner (2003)\n- The Prince of Storm (2003)\n- The Reporter (2003)\n- Mission X (2004)\n- Missing Link (unknown year)\n- Faces (unknown year)\n- Run for Life (unknown year)\nTelemovies\n[edit]- My Death Project (unknown year)\n- Hong Kong Criminal Archives – Gang AK47 (1992)\nTelevision\n[edit]- Empress Wu (1984)\n- Bitter Conflict (1984)\n- Ten Brothers (1985)\n- The Legendary Prime Minister – Zhuge Liang (1985)\n- Sensational Cases of the Late Qing Period (1986)\n- Heroes of Shaolin (1986)\n- Buddha Jin 2 (1986)\n- Xi Shih (1986)\n- The Duel (1987)\n- The Merry Young Boxer (1987)\n- The Devil Twin (1987)\n- The Rise and Fall of Qing Dynasty (1987)\n- The Rise and Fall of Qing Dynasty 2 (1988)\n- Court Secret Agent (1988)\n- Wordless Kung Fu Scripture (1989)\n- Thunder Knight (1989)\n- City of Swordsman (1989)\n- The Blood Sword (1990)\n- The God of Sword (1990)\n- Legend of Long Quan Ling (1991)\n- The Solitary Swordsman (1991)\n- Police Story (1992)\n- Mythical Crane Magical Needle (1992)\n- Gamblers Dream (1993)\n- Shanghai Godfather (1993)\n- 2 Reincarnated 2 (1993)\n- The Legend of Yue Fei (1994)\n- Fist of Fury (1995)\n- I have a Date with Spring (1995)\n- Vampire Expert 2 (1996)\n- Who is the Killer (1996)\n- The Swordsman (1996)\n- Coincidentally (1997)\n- 97 The Year of Chameleon (1997)\n- My Date with a Vampire (1998)\n- A Lawyer can be Good (1998)\n- The Lost Prince (1999)\n- DNA (2001)\n- My Date with a Vampire 2 (2001)\n- Lady Stealer (2002)\n- Thunder Cops (2003)\n- My Date with a Vampire 3 (2004)",
+      "word_count": 394
+    },
+    {
+      "chunk_id": "src_002_chunk_001",
+      "source_id": "src_002",
+      "text": "Eric Wan saddened by \"My Date with a Vampire\" director's death\n16 Jul - ATV actor Eric Wan recently expressed his sadness over the passing of director Billy Tang, who passed away earlier this month.\nAs reported on Mingpao, Eric, who worked with Billy in the hit drama, \"My Date with a Vampire\", was recently seen at the funeral of the said director before the body was cremated at Cape Collinson, saying that he wanted to bid Billy his last farewell.\n\"Billy was a good director. People who didn't really know him would have been surprised to find that he really liked to laugh. He laughed a lot,\" he said.\nTalking about Billy's condition prior to his death, Eric stated that the director was battling throat cancer and was told by the doctor that he would only last four to five years. However, he persisted for seven to eight years.\n\"I once told him not to keep working, but he said that he was happier when he was working,\" he added.\nEric also admitted that he remained in contact with Billy throughout the last months of his life, and that the director left surrounded by his family.\n\"He loved his daughter and wife the most. I told him that he should not push himself too hard. In the end, he left in peace,\" he added.\nBilly Tang was 69.\n(Photo Source: Mingpao)",
+      "word_count": 231
+    },
+    {
+      "chunk_id": "src_003_chunk_001",
+      "source_id": "src_003",
+      "text": "X\nEric Wan, MPH MBA\nLog in\nSign up\nEric Wan, MPH MBA\n8,389 posts\nEric Wan, MPH MBA\n@ericlwan\nPharma strategist ➡️\n@GUMedicine\nRY | Physician leadership, ophthalmology, innovative therapies, global health | AI\n@TheLens_oph\n| 🥍 fan |\n@JohnsHopkins\nx3\nWashington, DC\nlinkedin.com/in/ericleewan/\nJoined March 2014\n1,476\nFollowing\n1,044\nFollowers\nPosts\nPosts\nReplies\nReplies\nMedia\nMedia\nDon't miss what's happening\nPeople on X are the first to know.\nLog in\nSign up\n@ericlwan hasn’t posted\nWhen they do, their posts will show up here.",
+      "word_count": 80
+    }
+  ],
+  "metadata": {
+    "chunking_strategy": "paragraph_aware",
+    "target_chunk_words": 600,
+    "max_chunk_words": 700,
+    "overlap_paragraphs": 1
+  }
+}

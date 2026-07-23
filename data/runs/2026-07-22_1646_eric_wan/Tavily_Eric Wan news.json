@@ -1,0 +1,45 @@
+{
+  "query": "Eric Wan news",
+  "follow_up_questions": null,
+  "answer": null,
+  "images": [],
+  "results": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Eric_Wan",
+      "title": "Eric Wan",
+      "content": "Eric Wan Tin-chiu (born 28 October 1964) is a Hong Kong television actor best known for his role as \"Fong Tin-yau\" in the My Date with a Vampire television",
+      "score": 0.70847535,
+      "raw_content": null
+    },
+    {
+      "url": "https://www.imdb.com/name/nm5681742",
+      "title": "Eric Wan",
+      "content": "Eric Wan is known for Cold War (2012), Badges of Fury (2013) and The White Storm 2: Drug Lords (2019). More at IMDbPro · Contact info · Agent info.",
+      "score": 0.68798697,
+      "raw_content": null
+    },
+    {
+      "url": "https://sg.style.yahoo.com/eric-wan-saddened-date-vampire-062600399.html",
+      "title": "Eric Wan saddened by \"My Date with a Vampire\" director's ...",
+      "content": "ATV actor Eric Wan recently expressed his sadness over the passing of director Billy Tang, who passed away earlier this month.",
+      "score": 0.68344116,
+      "raw_content": null
+    },
+    {
+      "url": "https://x.com/ericlwan?lang=en",
+      "title": "Eric Wan, MPH MBA (@ericlwan) / Posts / X",
+      "content": "We've announced a new pilot program that can slash the FDA's drug review time from 10 to 12 months to just 1-2 months. #BREAKING Three heart surgeons at BSL",
+      "score": 0.6388584,
+      "raw_content": null
+    },
+    {
+      "url": "https://www.researchgate.net/profile/Eric-Wan-3",
+      "title": "Eric WAN | Medical student | Georgetown University ...",
+      "content": "A third-year medical student at Georgetown interested in ophthalmology, improving access to care nationally and globally, and life science innovation.",
+      "score": 0.5533369,
+      "raw_content": null
+    }
+  ],
+  "response_time": 1.6,
+  "request_id": "80fd8957-45d3-428d-9596-35a48f82278e"
+}

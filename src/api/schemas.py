@@ -21,6 +21,24 @@ class StatusResponse(BaseModel):
     status: str
     message: str
 
+class DebugRunInfo(BaseModel):
+    run_id: str
+    run_dir: str
+    has_input: bool
+    has_sources: bool
+    has_chunks: bool
+    has_evidence: bool
+    has_aggregation: bool
+    has_final_report: bool
+    num_sources: int | None = None
+    num_chunks: int | None = None
+    num_evidence: int | None = None
+    overall_sentiment: str | None = None
+
+
+class DebugRunsResponse(BaseModel):
+    runs: list[DebugRunInfo]
+
 
 # -------------------------
 # Source creation requests
@@ -297,4 +315,112 @@ class ReportGenerateResponse(BaseModel):
     final_report_path: str
     overall_sentiment: str | None
     num_evidence_examples: int
+    status: str
+
+# -------------------------
+# Full pipeline requests
+# -------------------------
+
+class SyntheticLLMRunRequest(BaseModel):
+    synthetic_case_file: str
+    run_id: str | None = Field(
+        default=None,
+        description="Optional run ID. If omitted, generated from datetime + target name.",
+    )
+    model_name: str | None = None
+    max_evidence_examples: int = Field(
+        default=7,
+        ge=1,
+        le=10,
+        description="Maximum number of evidence examples included in final_report.json.",
+    )
+
+    model_config = ConfigDict(
+        json_schema_extra={
+            "example": {
+                "synthetic_case_file": "data/synthetic/passengers/synthetic_negative_001.json",
+                "run_id": None,
+                "model_name": None,
+                "max_evidence_examples": 7,
+            }
+        }
+    )
+
+class CuratedLLMRunRequest(BaseModel):
+    target_name: str
+    curated_urls_file: str
+    max_urls: int | None = Field(
+        default=None,
+        ge=1,
+        description="Optional maximum number of curated URLs to fetch.",
+    )
+    run_id: str | None = Field(
+        default=None,
+        description="Optional run ID. If omitted, generated from datetime + target name.",
+    )
+    model_name: str | None = None
+    max_evidence_examples: int = Field(
+        default=7,
+        ge=1,
+        le=10,
+        description="Maximum number of evidence examples included in final_report.json.",
+    )
+
+    model_config = ConfigDict(
+        json_schema_extra={
+            "example": {
+                "target_name": "Elizabeth Holmes",
+                "curated_urls_file": "data/curated/curated_urls.json",
+                "max_urls": 3,
+                "run_id": None,
+                "model_name": None,
+                "max_evidence_examples": 7,
+            }
+        }
+    )
+
+
+class SearchLLMRunRequest(BaseModel):
+    target_name: str
+    search_provider: str = "tavily"
+    search_query: str | None = Field(
+        default=None,
+        description="Optional search query. If omitted, one is generated from target_name.",
+    )
+    max_urls: int = Field(default=3, ge=1)
+    run_id: str | None = Field(
+        default=None,
+        description="Optional run ID. If omitted, generated from datetime + target name.",
+    )
+    model_name: str | None = None
+    max_evidence_examples: int = Field(
+        default=7,
+        ge=1,
+        le=10,
+        description="Maximum number of evidence examples included in final_report.json.",
+    )
+
+    model_config = ConfigDict(
+        json_schema_extra={
+            "example": {
+                "target_name": "Elizabeth Holmes",
+                "search_provider": "tavily",
+                "search_query": "\"Elizabeth Holmes\" news",
+                "max_urls": 3,
+                "run_id": None,
+                "model_name": None,
+                "max_evidence_examples": 7,
+            }
+        }
+    )
+
+    
+class FullPipelineResponse(BaseModel):
+    run_id: str
+    target_name: str
+    run_dir: str
+    num_sources: int
+    num_chunks: int
+    num_evidence: int
+    overall_sentiment: str | None
     status: str

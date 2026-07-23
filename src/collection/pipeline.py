@@ -1,3 +1,4 @@
+from pathlib import Path
 from typing import Any
 
 from src.collection.curated import load_curated_person_entry
@@ -115,9 +116,15 @@ def build_sources_json_from_search_api(
     search_provider: str,
     search_query: str,
     max_urls: int,
+    run_dir: Path,
 ) -> dict[str, Any]:
     try:
-        search_results = search_web(search_query, max_results=max_urls)
+        search_results = search_web(
+            search_provider=search_provider,
+            query=search_query,
+            max_results=max_urls,
+            run_dir=run_dir,
+        )
     except SearchError as exc:
         return {
             "run_id": run_id,

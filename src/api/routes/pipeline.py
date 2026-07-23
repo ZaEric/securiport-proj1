@@ -3,7 +3,7 @@ from typing import Any
 
 from fastapi import APIRouter, HTTPException
 
-from src.api.io import read_json, write_json, path_to_api_str
+from src.api.io import path_to_api_str, read_json, write_json
 from src.api.run_artifacts import (
     build_curated_urls_input_json,
     build_search_api_input_json,
@@ -12,21 +12,40 @@ from src.api.run_artifacts import (
 )
 from src.api.run_ids import generate_run_id
 from src.api.schemas import (
-    FromSyntheticRequest,
-    FromCuratedUrlsRequest,
-    FromSearchApiRequest,
-    SourceCreationResponse,
+    CuratedLLMRunRequest,
+    FullPipelineResponse,
+    SearchLLMRunRequest,
+    SyntheticLLMRunRequest,
 )
 from src.collection.curated import load_curated_person_entry
 from src.collection.pipeline import build_sources_json_from_curated_urls, build_sources_json_from_search_api
 from src.collection.search import build_search_query
 from src.collection.url_filtering import filter_curated_urls
+from src.nlp.models import EvidenceExtractionConfig
+from src.nlp.pipeline import (
+    process_chunks_for_evidence_llm,
+    process_evidence_for_aggregation_llm,
+    process_final_report_llm,
+)
+from src.processing.chunking import LLMChunkingConfig
+from src.processing.pipeline import process_sources_for_nlp_llm
 
-router = APIRouter(prefix="/sources", tags=["sources"])
+
+# Full-run defaults
+DEFAULT_TARGET_CHUNK_WORDS = 600
+DEFAULT_MAX_CHUNK_WORDS = 700
+DEFAULT_OVERLAP_PARAGRAPHS = 1
+
+DEFAULT_MIXED_EVIDENCE_THRESHOLD = 0.25
+DEFAULT_BASELINE_TIE_THRESHOLD = 0.10
+DEFAULT_MINIMUM_EVIDENCE_COUNT = 1
 
 
-@router.post("/from-synthetic", response_model=SourceCreationResponse)
-def create_sources_from_synthetic(request: FromSyntheticRequest) -> SourceCreationResponse:
+router = APIRouter(prefix="/pipeline", tags=["pipeline"])
+
+
+@router.post("/run-synthetic-llm", response_model=FullPipelineResponse)
+def run_synthetic_llm(request: SyntheticLLMRunRequest) -> FullPipelineResponse:
     synthetic_path = Path(request.synthetic_case_file)
 
     if not synthetic_path.exists():
@@ -69,28 +88,45 @@ def create_sources_from_synthetic(request: FromSyntheticRequest) -> SourceCreati
         notes=dataset.get("case_notes"),
     )
 
+    write_json(input_path, input_json)
+
     sources_json = build_sources_json_from_synthetic(
         run_id=run_id,
         target_name=target_name,
         sources=dataset["sources"],
     )
 
-    write_json(input_path, input_json)
     write_json(sources_path, sources_json)
 
-    return SourceCreationResponse(
+    try:
+        chunks_json, evidence_json, aggregation_json, final_report_json = run_llm_analysis_stages(
+            run_id=run_id,
+            target_name=target_name,
+            run_dir=run_dir,
+            sources_json=sources_json,
+            model_name=request.model_name,
+            max_evidence_examples=request.max_evidence_examples,
+        )
+    except Exception as exc:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Full synthetic LLM pipeline failed: {exc}",
+        ) from exc
+
+    return FullPipelineResponse(
         run_id=run_id,
         target_name=target_name,
         run_dir=path_to_api_str(run_dir),
-        input_path=path_to_api_str(input_path),
-        sources_path=path_to_api_str(sources_path),
-        num_sources=len(dataset["sources"]),
+        num_sources=len(sources_json["sources"]),
+        num_chunks=len(chunks_json["chunks"]),
+        num_evidence=evidence_json["num_evidence"],
+        overall_sentiment=final_report_json["overall_sentiment"],
         status="created",
     )
 
 
-@router.post("/from-curated-urls", response_model=SourceCreationResponse)
-def create_sources_from_curated_urls(request: FromCuratedUrlsRequest) -> SourceCreationResponse:
+@router.post("/run-curated-llm", response_model=FullPipelineResponse)
+def run_curated_llm(request: CuratedLLMRunRequest) -> FullPipelineResponse:
     curated_path = Path(request.curated_urls_file)
 
     if not curated_path.exists():
@@ -129,7 +165,7 @@ def create_sources_from_curated_urls(request: FromCuratedUrlsRequest) -> SourceC
     )
 
     write_json(input_path, input_json)
-    
+
     try:
         sources_json = build_sources_json_from_curated_urls(
             run_id=run_id,
@@ -143,30 +179,47 @@ def create_sources_from_curated_urls(request: FromCuratedUrlsRequest) -> SourceC
             detail=f"Failed to create sources from curated URLs: {exc}",
         ) from exc
 
+    write_json(sources_path, sources_json)
+
     if not sources_json["sources"]:
         raise HTTPException(
             status_code=502,
             detail=(
                 "No usable sources were created from curated URLs. "
+                f"Run artifacts were saved to {path_to_api_str(run_dir)}. "
                 f"Fetch errors: {sources_json['metadata']['fetch_errors']}"
             ),
         )
 
-    write_json(sources_path, sources_json)
+    try:
+        chunks_json, evidence_json, aggregation_json, final_report_json = run_llm_analysis_stages(
+            run_id=run_id,
+            target_name=curated_entry.person,
+            run_dir=run_dir,
+            sources_json=sources_json,
+            model_name=request.model_name,
+            max_evidence_examples=request.max_evidence_examples,
+        )
+    except Exception as exc:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Full curated LLM pipeline failed: {exc}",
+        ) from exc
 
-    return SourceCreationResponse(
+    return FullPipelineResponse(
         run_id=run_id,
         target_name=curated_entry.person,
         run_dir=path_to_api_str(run_dir),
-        input_path=path_to_api_str(input_path),
-        sources_path=path_to_api_str(sources_path),
         num_sources=len(sources_json["sources"]),
+        num_chunks=len(chunks_json["chunks"]),
+        num_evidence=evidence_json["num_evidence"],
+        overall_sentiment=final_report_json["overall_sentiment"],
         status="created",
     )
 
 
-@router.post("/from-search-api", response_model=SourceCreationResponse)
-def create_sources_from_search_api(request: FromSearchApiRequest) -> SourceCreationResponse:
+@router.post("/run-search-llm", response_model=FullPipelineResponse)
+def run_search_llm(request: SearchLLMRunRequest) -> FullPipelineResponse:
     run_id = request.run_id or generate_run_id(request.target_name)
     run_dir = Path("data/runs") / run_id
     input_path = run_dir / "input.json"
@@ -211,12 +264,90 @@ def create_sources_from_search_api(request: FromSearchApiRequest) -> SourceCreat
             ),
         )
 
-    return SourceCreationResponse(
+    try:
+        chunks_json, evidence_json, aggregation_json, final_report_json = run_llm_analysis_stages(
+            run_id=run_id,
+            target_name=request.target_name,
+            run_dir=run_dir,
+            sources_json=sources_json,
+            model_name=request.model_name,
+            max_evidence_examples=request.max_evidence_examples,
+        )
+    except Exception as exc:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Full search LLM pipeline failed: {exc}",
+        ) from exc
+
+    return FullPipelineResponse(
         run_id=run_id,
         target_name=request.target_name,
         run_dir=path_to_api_str(run_dir),
-        input_path=path_to_api_str(input_path),
-        sources_path=path_to_api_str(sources_path),
         num_sources=len(sources_json["sources"]),
+        num_chunks=len(chunks_json["chunks"]),
+        num_evidence=evidence_json["num_evidence"],
+        overall_sentiment=final_report_json["overall_sentiment"],
         status="created",
     )
+
+
+def run_llm_analysis_stages(
+    *,
+    run_id: str,
+    target_name: str,
+    run_dir: Path,
+    sources_json: dict[str, Any],
+    model_name: str | None,
+    max_evidence_examples: int,
+) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any], dict[str, Any]]:
+    chunks_path = run_dir / "chunks.json"
+    evidence_path = run_dir / "evidence.json"
+    aggregation_path = run_dir / "aggregation.json"
+    final_report_path = run_dir / "final_report.json"
+
+    chunking_config = LLMChunkingConfig(
+        target_chunk_words=DEFAULT_TARGET_CHUNK_WORDS,
+        max_chunk_words=DEFAULT_MAX_CHUNK_WORDS,
+        overlap_paragraphs=DEFAULT_OVERLAP_PARAGRAPHS,
+    )
+
+    chunks_json = process_sources_for_nlp_llm(
+        raw_sources=sources_json["sources"],
+        run_id=run_id,
+        target_name=target_name,
+        config=chunking_config,
+    )
+
+    write_json(chunks_path, chunks_json)
+
+    llm_config = EvidenceExtractionConfig(
+        model_name=model_name if model_name else EvidenceExtractionConfig().model_name,
+    )
+
+    evidence_json = process_chunks_for_evidence_llm(
+        chunks_json=chunks_json,
+        config=llm_config,
+    )
+
+    write_json(evidence_path, evidence_json)
+
+    aggregation_json = process_evidence_for_aggregation_llm(
+        evidence_json=evidence_json,
+        mixed_evidence_threshold=DEFAULT_MIXED_EVIDENCE_THRESHOLD,
+        baseline_tie_threshold=DEFAULT_BASELINE_TIE_THRESHOLD,
+        minimum_evidence_count=DEFAULT_MINIMUM_EVIDENCE_COUNT,
+    )
+
+    write_json(aggregation_path, aggregation_json)
+
+    final_report_json = process_final_report_llm(
+        sources_json=sources_json,
+        evidence_json=evidence_json,
+        aggregation_json=aggregation_json,
+        config=llm_config,
+        max_evidence_examples=max_evidence_examples,
+    )
+
+    write_json(final_report_path, final_report_json)
+
+    return chunks_json, evidence_json, aggregation_json, final_report_json

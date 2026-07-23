@@ -134,11 +134,11 @@ Reads `chunks.json` and creates `evidence.json`.
 
 `POST /nlp/evidence-llm`
 
-Later endpoint. Uses an LLM to extract exact evidence quotes and sentiment labels.
+Uses an LLM to extract exact evidence quotes and quote-level sentiment labels.
 
 `POST /nlp/evidence-classifier`
 
-Later endpoint. Uses a sentiment classifier to label sentence/window chunks.
+Later endpoint. Uses a sentiment classifier to label sentence/window chunks. Might skip entirely tbh
 
 ### Aggregation
 
@@ -146,15 +146,15 @@ Reads `evidence.json` and creates `aggregation.json`.
 
 `POST /nlp/aggregate-llm`
 
-Later endpoint. Aggregates LLM evidence using label counts.
+Aggregates LLM evidence using label counts, provide basic summary.
 
 `POST /nlp/aggregate-classifier`
 
-Later endpoint. Aggregates classifier evidence using confidence-weighted voting.
+Later endpoint. Aggregates classifier evidence using confidence-weighted voting. Might skip entirely tbh
 
 ### Final Report
 
-Reads `evidence.json`, and `aggregation.json`, then creates `final_report.json`.
+Reads `sources.json`, `evidence.json`, and `aggregation.json`, then creates `final_report.json`.
 
 `POST /report/generate`
 
@@ -162,10 +162,25 @@ Later endpoint.
 
 ### Full Pipeline
 
-Convenience endpoints for running the whole pipeline in one call.
+Endpoints for running the whole pipeline in one call.
 
-`POST /pipeline/run-llm`
 
-`POST /pipeline/run-classifier`
+`POST /pipeline/run-synthetic-llm`
 
-Later endpoints.
+Runs the full LLM pipeline from a synthetic case file.
+
+`POST /pipeline/run-curated-llm`
+
+Runs the full LLM pipeline from curated URLs.
+
+`POST /pipeline/run-search-llm`
+
+Runs the full LLM pipeline from a passenger name.
+
+Classifier full-pipeline endpoints are not implemented yet. Might skip entirely tbh
+
+### Debugging
+
+`GET /debug/runs`
+
+Lists existing run folders under `data/runs/` and shows which artifacts exist for each run.

@@ -1,0 +1,112 @@
+{
+  "run_id": "2026-07-22_1634_john_smith",
+  "target_name": "John Smith",
+  "evidence_extraction_method": "llm_quote_extraction",
+  "num_evidence": 13,
+  "evidence": [
+    {
+      "evidence_id": "ev_001",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "John Smith, a structural engineer at Kestrel Bridge Works, was named Employee of the Year at the company's annual recognition dinner on Thursday.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_002",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Smith was honored for leading the redesign of the Millbrook Creek pedestrian bridge, a project that came in under budget and was completed two months ahead of schedule.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_003",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Colleagues praised Smith for catching a design flaw during an early review that could have caused costly delays later in construction.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_004",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "According to the company, Smith proposed an alternative support configuration that reduced material costs by nearly 15 percent without compromising the bridge's safety rating.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_005",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "In addition to his technical work, Smith was recognized for mentoring three junior engineers over the past year.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_006",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "The Riverside Food Bank held a small ceremony on Saturday to thank longtime volunteer John Smith for five years of weekly service sorting and delivering food donations.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_007",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Organizers said Smith has rarely missed a Saturday shift since he began volunteering and has taken on increasing responsibility over that time, including training new volunteers and coordinating the delivery schedule for homebound seniors.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_008",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "'When John says he'll be here, he's here, and that consistency matters more than people realize when you're trying to run a distribution schedule that serves hundreds of families,' Nair said.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_009",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Several seniors who receive deliveries through the program said Smith often checked in on them beyond simply dropping off groceries, and that they had come to see his visits as a welcome part of their week.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_010",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "'It's given me more than I've given it, honestly,' he said.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_011",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "According to the report, project coordinator John Smith was brought in to reorganize the construction schedule and improve communication between the city, the new contractor, and neighborhood stakeholders.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_012",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Auditors wrote that Smith introduced a weekly reporting system that gave city officials clear visibility into which tasks were on track and which needed attention, replacing an informal process that had previously left gaps of several weeks between updates.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_013",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "She specifically credited Smith's coordination work, saying his reporting system should be considered for use on other stalled city projects.",
+      "sentiment": "positive",
+      "confidence": null
+    }
+  ]
+}
