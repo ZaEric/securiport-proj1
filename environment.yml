@@ -28,6 +28,7 @@ dependencies:
     # API
     - fastapi
     - uvicorn
+    - streamlit
 
     # Utilities & Configuration
     - python-dotenv

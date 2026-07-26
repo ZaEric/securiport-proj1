@@ -80,6 +80,27 @@ TAVILY_API_KEY=your_key_here
 ```
 Free tier: 1,000 searches/month. Get a key at https://tavily.com.
 
+## Streamlit Dashboard
+
+A simple Streamlit frontend is available for running the full pipeline and viewing generated run artifacts without using Swagger or manually opening files from `data/runs`.
+
+In a second terminal, run the Streamlit dashboard from the project root:
+
+```bash
+streamlit run src/frontend/app.py
+```
+
+Open the Streamlit app in the browser. By default, Streamlit usually runs at:
+
+```bash
+http://localhost:8501
+```
+
+The dashboard assumes the FastAPI backend is running at:
+```bash
+http://127.0.0.1:8000
+```
+
 ## FastAPI Endpoints
 
 Run the API server from the project root:
