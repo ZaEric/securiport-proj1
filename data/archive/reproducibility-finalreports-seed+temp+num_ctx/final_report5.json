@@ -1,0 +1,87 @@
+{
+  "run_id": "2026-07-27_1928_john_doe",
+  "target_name": "John Doe",
+  "overall_sentiment": "negative",
+  "overall_confidence": null,
+  "aggregation_baseline_sentiment": "negative",
+  "one_line_summary": "John Doe has repeatedly engaged in misconduct, from submitting false records to approving payments without proper documentation, leading to legal penalties and removal from leadership roles.",
+  "extended_summary": "The evidence shows that John Doe admitted to submitting false records to obtain payments, was sentenced for this conduct, and was removed from a leadership position due to repeated oversight failures. Auditors found that he approved milestone reports lacking supporting documentation and ignored internal messages about inspection concerns. These actions damaged public trust, increased project costs, and weakened internal controls, underscoring a pattern of poor management and unethical behavior.",
+  "key_findings": [
+    "Doe admitted to submitting false records to obtain payments from a city contractor.",
+    "He was removed from a project leadership role after an internal review cited repeated missed deadlines and poor communication.",
+    "Auditors documented that Doe approved milestone reports without adequate inspection records and failed to forward unresolved concerns to senior leadership."
+  ],
+  "justification": "The majority of the evidence (9 out of 13) is explicitly negative, describing illegal and unethical actions such as submitting false records, approving payments without documentation, and ignoring inspection concerns. These quotes collectively demonstrate a consistent pattern of misconduct that outweighs the neutral statements. No positive evidence is present, so the overall sentiment is negative.",
+  "evidence_examples": [
+    {
+      "source_id": "src_001",
+      "quote": "John Doe, a local businessman and former purchasing consultant, was sentenced Tuesday after admitting that he submitted false records to obtain payments from a city contractor.",
+      "sentiment": "negative",
+      "why_selected": "Shows admission of illegal activity and legal consequence."
+    },
+    {
+      "source_id": "src_001",
+      "quote": "During the hearing, the judge said Doe's conduct damaged public trust and created unnecessary costs for the project.",
+      "sentiment": "negative",
+      "why_selected": "Highlights the broader impact of his misconduct."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "John Doe has been removed from his leadership role on the Westbridge Housing Initiative after an internal review criticized his handling of project oversight, staff communication, and budget planning.",
+      "sentiment": "negative",
+      "why_selected": "Demonstrates organizational response to repeated failures."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "The review found that Doe repeatedly missed reporting deadlines and failed to provide clear explanations for delays in vendor payments.",
+      "sentiment": "negative",
+      "why_selected": "Provides specific examples of poor management."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "Auditors found that Doe approved several milestone reports even though supporting inspection records were missing or incomplete.",
+      "sentiment": "negative",
+      "why_selected": "Shows direct evidence of approving payments without proper documentation."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "Doe received at least four internal messages about unresolved inspection concerns but did not forward those concerns to senior project leadership.",
+      "sentiment": "negative",
+      "why_selected": "Illustrates neglect of internal communication and oversight."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "The audit said Doe's failure to consistently document milestone reviews weakened the city's internal controls and increased the risk that unsupported payment requests would be approved.",
+      "sentiment": "negative",
+      "why_selected": "Summarizes the systemic risk created by his actions."
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "synthetic://synthetic_negative_001/src_001",
+      "title": "Local Businessman John Doe Sentenced After False Records Case"
+    },
+    {
+      "source_id": "src_002",
+      "url": "synthetic://synthetic_negative_001/src_002",
+      "title": "John Doe Removed From Project Leadership After Internal Review"
+    },
+    {
+      "source_id": "src_003",
+      "url": "synthetic://synthetic_negative_001/src_003",
+      "title": "Audit Report Finds Oversight Failures in Rivergate Transit Expansion"
+    }
+  ],
+  "limitations": [
+    "The analysis is based solely on the provided evidence; no additional context or external sources were considered.",
+    "All evidence is negative or neutral; absence of positive evidence limits the ability to assess any mitigating factors."
+  ],
+  "report_generation_issues": [],
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42,
+    "max_evidence_examples": 7
+  }
+}

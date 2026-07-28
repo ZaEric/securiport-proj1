@@ -4,7 +4,7 @@ from fastapi import APIRouter, HTTPException
 
 from src.api.io import path_to_api_str, read_json, write_json
 from src.api.schemas import ReportGenerateRequest, ReportGenerateResponse
-from src.nlp.models import EvidenceExtractionConfig
+from src.nlp.models import ReportGenerationConfig
 from src.nlp.pipeline import process_final_report_llm
 
 
@@ -39,9 +39,13 @@ def generate_report(request: ReportGenerateRequest) -> ReportGenerateResponse:
     validate_run_id(request.run_id, evidence_json, "evidence.json")
     validate_run_id(request.run_id, aggregation_json, "aggregation.json")
 
-    # Optional model override. If omitted, EvidenceExtractionConfig uses the default model.
-    config = EvidenceExtractionConfig(
-        model_name=request.model_name if request.model_name else EvidenceExtractionConfig().model_name,
+    # Optional model override. If omitted, ReportGenerationConfig uses OLLAMA_REPORT_MODEL.
+    default_config = ReportGenerationConfig()
+
+    config = ReportGenerationConfig(
+        model_name=request.model_name or default_config.model_name,
+        temperature=default_config.temperature,
+        seed=default_config.seed,
     )
 
     try:

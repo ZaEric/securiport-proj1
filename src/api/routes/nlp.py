@@ -59,10 +59,12 @@ def extract_evidence_llm(request: EvidenceLLMRequest) -> EvidenceResponse:
             ),
         )
 
-    model_name = request.model_name
+    default_config = EvidenceExtractionConfig()
 
     config = EvidenceExtractionConfig(
-        model_name=model_name if model_name else EvidenceExtractionConfig().model_name,
+        model_name=request.model_name or default_config.model_name,
+        temperature=default_config.temperature,
+        seed=default_config.seed,
     )
 
     try:

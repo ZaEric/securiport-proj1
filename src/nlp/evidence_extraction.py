@@ -28,6 +28,7 @@ def extract_evidence_from_chunk_llm(
         model=config.model_name,
         prompt=prompt,
         temperature=config.temperature,
+        seed=config.seed,
     )
 
     parsed = parse_llm_json_response(raw_response)

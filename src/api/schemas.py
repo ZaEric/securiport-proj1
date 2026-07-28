@@ -191,7 +191,10 @@ class EvidenceLLMRequest(BaseModel):
         default=None,
         description="Optional path to chunks.json. Defaults to data/runs/<run_id>/chunks.json.",
     )
-    model_name: str | None = None
+    model_name: str | None = Field(
+        default=None,
+        description="Optional evidence extraction model override. If omitted, uses OLLAMA_EVIDENCE_MODEL.",
+    )
 
     model_config = ConfigDict(
         json_schema_extra={
@@ -290,7 +293,10 @@ class AggregationResponse(BaseModel):
 
 class ReportGenerateRequest(BaseModel):
     run_id: str
-    model_name: str | None = None
+    model_name: str | None = Field(
+        default=None,
+        description="Optional final report model override. If omitted, uses OLLAMA_REPORT_MODEL.",
+    )
     max_evidence_examples: int = Field(
         default=7,
         ge=1,
@@ -327,7 +333,14 @@ class SyntheticLLMRunRequest(BaseModel):
         default=None,
         description="Optional run ID. If omitted, generated from datetime + target name.",
     )
-    model_name: str | None = None
+    evidence_model_name: str | None = Field(
+        default=None,
+        description="Optional override for the evidence extraction LLM. If omitted, uses OLLAMA_EVIDENCE_MODEL.",
+    )
+    report_model_name: str | None = Field(
+        default=None,
+        description="Optional override for the final report LLM. If omitted, uses OLLAMA_REPORT_MODEL.",
+    )
     max_evidence_examples: int = Field(
         default=7,
         ge=1,
@@ -340,7 +353,8 @@ class SyntheticLLMRunRequest(BaseModel):
             "example": {
                 "synthetic_case_file": "data/synthetic/passengers/synthetic_negative_001.json",
                 "run_id": None,
-                "model_name": None,
+                "evidence_model_name": None,
+                "report_model_name": None,
                 "max_evidence_examples": 7,
             }
         }
@@ -358,7 +372,14 @@ class CuratedLLMRunRequest(BaseModel):
         default=None,
         description="Optional run ID. If omitted, generated from datetime + target name.",
     )
-    model_name: str | None = None
+    evidence_model_name: str | None = Field(
+        default=None,
+        description="Optional override for the evidence extraction LLM. If omitted, uses OLLAMA_EVIDENCE_MODEL.",
+    )
+    report_model_name: str | None = Field(
+        default=None,
+        description="Optional override for the final report LLM. If omitted, uses OLLAMA_REPORT_MODEL.",
+    )
     max_evidence_examples: int = Field(
         default=7,
         ge=1,
@@ -373,7 +394,8 @@ class CuratedLLMRunRequest(BaseModel):
                 "curated_urls_file": "data/curated/curated_urls.json",
                 "max_urls": 3,
                 "run_id": None,
-                "model_name": None,
+                "evidence_model_name": None,
+                "report_model_name": None,
                 "max_evidence_examples": 7,
             }
         }
@@ -392,7 +414,14 @@ class SearchLLMRunRequest(BaseModel):
         default=None,
         description="Optional run ID. If omitted, generated from datetime + target name.",
     )
-    model_name: str | None = None
+    evidence_model_name: str | None = Field(
+        default=None,
+        description="Optional override for the evidence extraction LLM. If omitted, uses OLLAMA_EVIDENCE_MODEL.",
+    )
+    report_model_name: str | None = Field(
+        default=None,
+        description="Optional override for the final report LLM. If omitted, uses OLLAMA_REPORT_MODEL.",
+    )
     max_evidence_examples: int = Field(
         default=7,
         ge=1,
@@ -408,7 +437,8 @@ class SearchLLMRunRequest(BaseModel):
                 "search_query": "\"Elizabeth Holmes\" news",
                 "max_urls": 3,
                 "run_id": None,
-                "model_name": None,
+                "evidence_model_name": None,
+                "report_model_name": None,
                 "max_evidence_examples": 7,
             }
         }

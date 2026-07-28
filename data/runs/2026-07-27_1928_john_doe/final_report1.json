@@ -1,0 +1,81 @@
+{
+  "run_id": "2026-07-27_1928_john_doe",
+  "target_name": "John Doe",
+  "overall_sentiment": "negative",
+  "overall_confidence": null,
+  "aggregation_baseline_sentiment": "negative",
+  "one_line_summary": "John Doe faced legal sentencing, removal from leadership, and audit‑identified oversight failures that collectively portray a pattern of misconduct.",
+  "extended_summary": "The evidence shows that John Doe was sentenced for submitting false records, removed from his leadership role after an internal review criticized his management, and approved milestone reports without proper inspection documentation. These actions damaged public trust, created unnecessary costs, and weakened internal controls, indicating a consistent negative pattern across multiple contexts.",
+  "key_findings": [
+    "John Doe was sentenced after admitting to submitting false records to obtain payments.",
+    "He was removed from his leadership position due to a pattern of poor management and missed deadlines.",
+    "Audit findings reveal that Doe's approvals lacked proper documentation, weakening safeguards against unsupported payments."
+  ],
+  "justification": "The majority of extracted quotes are explicitly negative, emphasizing legal consequences, leadership removal, and audit‑identified failures. These quotes collectively illustrate a clear negative narrative about Doe's conduct, outweighing the neutral statements and supporting an overall negative sentiment.",
+  "evidence_examples": [
+    {
+      "source_id": "src_001",
+      "quote": "John Doe, a local businessman and former purchasing consultant, was sentenced Tuesday after admitting that he submitted false records to obtain payments from a city contractor.",
+      "sentiment": "negative",
+      "why_selected": "Direct legal outcome highlighting misconduct."
+    },
+    {
+      "source_id": "src_001",
+      "quote": "During the hearing, the judge said Doe's conduct damaged public trust and created unnecessary costs for the project.",
+      "sentiment": "negative",
+      "why_selected": "Emphasizes reputational and financial harm caused by Doe."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "John Doe has been removed from his leadership role on the Westbridge Housing Initiative after an internal review criticized his handling of project oversight, staff communication, and budget planning.",
+      "sentiment": "negative",
+      "why_selected": "Shows organizational response to perceived poor management."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "Auditors found that Doe approved several milestone reports even though supporting inspection records were missing or incomplete.",
+      "sentiment": "negative",
+      "why_selected": "Demonstrates procedural failures and lack of oversight."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "Doe received at least four internal messages about unresolved inspection concerns but did not forward those concerns to senior project leadership.",
+      "sentiment": "negative",
+      "why_selected": "Illustrates neglect of critical safety/quality issues."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "The audit said Doe's failure to consistently document milestone reviews weakened the city's internal controls and increased the risk that unsupported payment requests would be approved.",
+      "sentiment": "negative",
+      "why_selected": "Highlights systemic impact of Doe's actions on governance."
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "synthetic://synthetic_negative_001/src_001",
+      "title": "Local Businessman John Doe Sentenced After False Records Case"
+    },
+    {
+      "source_id": "src_002",
+      "url": "synthetic://synthetic_negative_001/src_002",
+      "title": "John Doe Removed From Project Leadership After Internal Review"
+    },
+    {
+      "source_id": "src_003",
+      "url": "synthetic://synthetic_negative_001/src_003",
+      "title": "Audit Report Finds Oversight Failures in Rivergate Transit Expansion"
+    }
+  ],
+  "limitations": [
+    "Only a subset of the 13 evidence items is used, potentially omitting nuanced neutral statements.",
+    "Evidence is drawn from synthetic sources, which may not fully reflect real‑world complexity."
+  ],
+  "report_generation_issues": [],
+  "llm_metadata": {
+    "model_name": "nemotron-3-nano:30b",
+    "temperature": 0.0,
+    "seed": 42,
+    "max_evidence_examples": 7
+  }
+}

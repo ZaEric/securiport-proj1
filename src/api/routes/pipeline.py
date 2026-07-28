@@ -7,8 +7,8 @@ from src.api.io import path_to_api_str, read_json, write_json
 from src.api.run_artifacts import (
     build_curated_urls_input_json,
     build_search_api_input_json,
-    build_synthetic_input_json,
     build_sources_json_from_synthetic,
+    build_synthetic_input_json,
 )
 from src.api.run_ids import generate_run_id
 from src.api.schemas import (
@@ -18,10 +18,13 @@ from src.api.schemas import (
     SyntheticLLMRunRequest,
 )
 from src.collection.curated import load_curated_person_entry
-from src.collection.pipeline import build_sources_json_from_curated_urls, build_sources_json_from_search_api
+from src.collection.pipeline import (
+    build_sources_json_from_curated_urls,
+    build_sources_json_from_search_api,
+)
 from src.collection.search import build_search_query
 from src.collection.url_filtering import filter_curated_urls
-from src.nlp.models import EvidenceExtractionConfig
+from src.nlp.models import EvidenceExtractionConfig, ReportGenerationConfig
 from src.nlp.pipeline import (
     process_chunks_for_evidence_llm,
     process_evidence_for_aggregation_llm,
@@ -29,7 +32,6 @@ from src.nlp.pipeline import (
 )
 from src.processing.chunking import LLMChunkingConfig
 from src.processing.pipeline import process_sources_for_nlp_llm
-
 
 # Full-run defaults
 DEFAULT_TARGET_CHUNK_WORDS = 600
@@ -104,7 +106,8 @@ def run_synthetic_llm(request: SyntheticLLMRunRequest) -> FullPipelineResponse:
             target_name=target_name,
             run_dir=run_dir,
             sources_json=sources_json,
-            model_name=request.model_name,
+            evidence_model_name=request.evidence_model_name,
+            report_model_name=request.report_model_name,
             max_evidence_examples=request.max_evidence_examples,
         )
     except Exception as exc:
@@ -197,7 +200,8 @@ def run_curated_llm(request: CuratedLLMRunRequest) -> FullPipelineResponse:
             target_name=curated_entry.person,
             run_dir=run_dir,
             sources_json=sources_json,
-            model_name=request.model_name,
+            evidence_model_name=request.evidence_model_name,
+            report_model_name=request.report_model_name,
             max_evidence_examples=request.max_evidence_examples,
         )
     except Exception as exc:
@@ -270,7 +274,8 @@ def run_search_llm(request: SearchLLMRunRequest) -> FullPipelineResponse:
             target_name=request.target_name,
             run_dir=run_dir,
             sources_json=sources_json,
-            model_name=request.model_name,
+            evidence_model_name=request.evidence_model_name,
+            report_model_name=request.report_model_name,
             max_evidence_examples=request.max_evidence_examples,
         )
     except Exception as exc:
@@ -297,7 +302,8 @@ def run_llm_analysis_stages(
     target_name: str,
     run_dir: Path,
     sources_json: dict[str, Any],
-    model_name: str | None,
+    evidence_model_name: str | None,
+    report_model_name: str | None,
     max_evidence_examples: int,
 ) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any], dict[str, Any]]:
     chunks_path = run_dir / "chunks.json"
@@ -320,13 +326,24 @@ def run_llm_analysis_stages(
 
     write_json(chunks_path, chunks_json)
 
-    llm_config = EvidenceExtractionConfig(
-        model_name=model_name if model_name else EvidenceExtractionConfig().model_name,
+    default_evidence_config = EvidenceExtractionConfig()
+    default_report_config = ReportGenerationConfig()
+
+    evidence_config = EvidenceExtractionConfig(
+        model_name=evidence_model_name or default_evidence_config.model_name,
+        temperature=default_evidence_config.temperature,
+        seed=default_evidence_config.seed,
+    )
+
+    report_config = ReportGenerationConfig(
+        model_name=report_model_name or default_report_config.model_name,
+        temperature=default_report_config.temperature,
+        seed=default_report_config.seed,
     )
 
     evidence_json = process_chunks_for_evidence_llm(
         chunks_json=chunks_json,
-        config=llm_config,
+        config=evidence_config,
     )
 
     write_json(evidence_path, evidence_json)
@@ -344,7 +361,7 @@ def run_llm_analysis_stages(
         sources_json=sources_json,
         evidence_json=evidence_json,
         aggregation_json=aggregation_json,
-        config=llm_config,
+        config=report_config,
         max_evidence_examples=max_evidence_examples,
     )
 

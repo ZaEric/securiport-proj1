@@ -3,7 +3,7 @@ import re
 from typing import Any
 
 from src.nlp.llm_client import LLMClient
-from src.nlp.models import EvidenceExtractionConfig
+from src.nlp.models import ReportGenerationConfig, build_llm_metadata
 from src.nlp.prompts import build_final_report_prompt
 
 
@@ -25,7 +25,7 @@ def generate_final_report_llm(
     evidence_json: dict[str, Any],
     aggregation_json: dict[str, Any],
     llm_client: LLMClient,
-    config: EvidenceExtractionConfig | None = None,
+    config: ReportGenerationConfig | None = None,
     max_evidence_examples: int = 7,
 ) -> dict[str, Any]:
     """
@@ -34,7 +34,7 @@ def generate_final_report_llm(
     The LLM writes the narrative report, but selected evidence examples are
     validated against evidence.json after generation.
     """
-    config = config or EvidenceExtractionConfig()
+    config = config or ReportGenerationConfig()
 
     run_id = evidence_json["run_id"]
     target_name = evidence_json["target_name"]
@@ -57,6 +57,7 @@ def generate_final_report_llm(
         model=config.model_name,
         prompt=prompt,
         temperature=config.temperature,
+        seed=config.seed,
     )
 
     parsed_report = parse_llm_json_response(raw_response)
@@ -68,6 +69,7 @@ def generate_final_report_llm(
         sources_summary=sources_summary,
         evidence_json=evidence_json,
         aggregation_json=aggregation_json,
+        config=config,
         max_evidence_examples=max_evidence_examples,
     )
 
@@ -123,6 +125,7 @@ def normalize_final_report(
     sources_summary: list[dict[str, Any]],
     evidence_json: dict[str, Any],
     aggregation_json: dict[str, Any],
+    config: ReportGenerationConfig,
     max_evidence_examples: int,
 ) -> dict[str, Any]:
     """
@@ -131,7 +134,7 @@ def normalize_final_report(
     Does not silently invent fallback sentiment. If required fields are missing
     or invalid, the issue is recorded in report_generation_issues.
     """
-    report_generation_issues = validate_report_output(parsed_report)
+    report_generation_issues: list[Any] = validate_report_output(parsed_report)
 
     overall_sentiment = normalize_required_overall_sentiment(
         parsed_report.get("overall_sentiment"),
@@ -159,12 +162,16 @@ def normalize_final_report(
         "sources": normalize_sources(parsed_report.get("sources"), sources_summary),
         "limitations": normalize_string_list(parsed_report.get("limitations")),
         "report_generation_issues": report_generation_issues,
+        "llm_metadata": {
+            **build_llm_metadata(config),
+            "max_evidence_examples": max_evidence_examples,
+        },
     }
 
 
 def normalize_required_overall_sentiment(
     value: Any,
-    report_generation_issues: list[str],
+    report_generation_issues: list[Any],
 ) -> str | None:
     """
     Validates required overall_sentiment.
@@ -201,13 +208,16 @@ def validate_evidence_examples(
     raw_examples: Any,
     evidence_json: dict[str, Any],
     max_evidence_examples: int,
-    report_generation_issues: list[str],
+    report_generation_issues: list[Any],
 ) -> list[dict[str, Any]]:
     """
     Keeps only evidence examples that match real evidence quotes.
 
     Final report examples do not expose evidence_id because it is internal.
     Validation can match by evidence_id if provided, or by exact quote.
+
+    Rejected examples are recorded in report_generation_issues so hallucinated
+    or malformed evidence can be inspected later.
     """
     if not isinstance(raw_examples, list):
         report_generation_issues.append("evidence_examples was missing or not a list.")
@@ -216,19 +226,26 @@ def validate_evidence_examples(
     evidence_by_id = {
         item["evidence_id"]: item
         for item in evidence_json.get("evidence", [])
+        if isinstance(item, dict) and "evidence_id" in item
     }
     evidence_by_quote = {
         item["quote"]: item
         for item in evidence_json.get("evidence", [])
+        if isinstance(item, dict) and "quote" in item
     }
 
     validated_examples: list[dict[str, Any]] = []
     seen_quotes: set[str] = set()
-    invalid_example_count = 0
+    rejected_examples: list[dict[str, Any]] = []
 
     for example in raw_examples:
         if not isinstance(example, dict):
-            invalid_example_count += 1
+            rejected_examples.append(
+                {
+                    "reason": "example was not a JSON object",
+                    "example": example,
+                }
+            )
             continue
 
         source_evidence = find_matching_evidence_example(
@@ -238,12 +255,31 @@ def validate_evidence_examples(
         )
 
         if source_evidence is None:
-            invalid_example_count += 1
+            rejected_examples.append(
+                {
+                    "reason": "no matching evidence_id or exact quote found in evidence.json",
+                    "evidence_id": example.get("evidence_id"),
+                    "source_id": example.get("source_id"),
+                    "quote": example.get("quote"),
+                    "sentiment": example.get("sentiment"),
+                    "why_selected": example.get("why_selected"),
+                }
+            )
             continue
 
         quote = source_evidence["quote"]
 
         if quote in seen_quotes:
+            rejected_examples.append(
+                {
+                    "reason": "duplicate evidence quote",
+                    "evidence_id": example.get("evidence_id"),
+                    "source_id": example.get("source_id"),
+                    "quote": example.get("quote"),
+                    "sentiment": example.get("sentiment"),
+                    "why_selected": example.get("why_selected"),
+                }
+            )
             continue
 
         validated_examples.append(
@@ -259,9 +295,12 @@ def validate_evidence_examples(
         if len(validated_examples) >= max_evidence_examples:
             break
 
-    if invalid_example_count > 0:
+    if rejected_examples:
         report_generation_issues.append(
-            f"Rejected {invalid_example_count} invalid or unverified evidence example(s)."
+            {
+                "issue": f"Rejected {len(rejected_examples)} invalid, duplicate, or unverified evidence example(s).",
+                "rejected_examples": rejected_examples,
+            }
         )
 
     if not validated_examples:

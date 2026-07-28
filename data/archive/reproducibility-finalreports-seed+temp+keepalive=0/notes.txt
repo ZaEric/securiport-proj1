@@ -1,0 +1,5 @@
+Testing just the generate report, using the same run (same source, input, chunks, evidence, aggregation). Reports 1-4 identical, closed vscode and tried again, next 2 reports (5-6) identical to each other but different from first 4. Closed uvicorn from terminal, ran the server again, next 4 reports (7-10) identical to each other and first 4.
+
+Closed uvicorn server and started it again, now reports 11-12 identical to reports 5-6, but report 13 identical to others. I did not close vscode or the server from between reports 12-13. Just ran another report 14, which is different from any of the ones before.
+
+Changed llm_client.py a bit too add more detailed logging, not expecting much change in results, but might provide more details.3 more tests, 15-17, completely different from each other and all previous reports. Not sure what was causing reports 1-13 to have consecutive sequences of identical reports.

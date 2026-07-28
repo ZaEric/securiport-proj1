@@ -3,6 +3,12 @@ from dataclasses import dataclass
 from typing import Any
 from typing import Protocol
 
+# logging, trying to make outputs completely deterministic (might be impossible with Ollama, but gonna test it anyways)
+import hashlib
+import json
+from datetime import datetime, timezone
+from pathlib import Path
+
 try:
     from dotenv import load_dotenv
 except ImportError:
@@ -31,6 +37,7 @@ class LLMClient(Protocol):
         model: str,
         prompt: str,
         temperature: float = 0.0,
+        seed: int | None = 42,
     ) -> str:
         ...
 
@@ -83,33 +90,102 @@ class OllamaChatClient:
         model: str,
         prompt: str,
         temperature: float = 0.0,
+        seed: int | None = 42,
     ) -> str:
         client = self._build_client()
 
         try:
-            response = client.chat(
+            # options: dict[str, float | int] = {
+            #     "temperature": temperature,
+            #     "top_k": 1,
+            #     "top_p": 1.0,
+            #     "num_ctx": 8192,
+            #     "num_thread": 1,
+            # }
+
+            # if seed is not None:
+            #     options["seed"] = seed
+
+            # hardcode temp and seed just to make sure
+            options = {
+                "temperature": 0.0,
+                "seed": 42,
+                "num_ctx": 8192,
+                "top_k": 1,
+                "top_p": 1.0,
+            }
+
+            # keep_alive = "30m" # unload model after every request, see if it helps make outputs deterministic (at cost of increased runtime)
+
+            response = client.generate(
                 model=model,
-                messages=[
-                    {
-                        "role": "user",
-                        "content": prompt,
-                    }
-                ],
+                prompt=prompt,
                 format="json",
                 stream=False,
-                options={
-                    "temperature": temperature,
-                },
+                options=options,
             )
+
+            write_ollama_debug_log(
+                model=model,
+                prompt=prompt,
+                response=response,
+                options=options,
+                keep_alive=None,
+            )
+        
         except ResponseError as exc:
             raise RuntimeError(f"Ollama API error: {exc}") from exc
         except Exception as exc:
             raise RuntimeError(f"Ollama request failed: {exc}") from exc
 
         try:
-            return response["message"]["content"]
+            return response["response"]
         except KeyError as exc:
-            raise RuntimeError(f"Ollama response missing message content: {response}") from exc
+            raise RuntimeError(f"Ollama response missing response content: {response}") from exc
+
+
+def write_ollama_debug_log(
+    *,
+    model: str,
+    prompt: str,
+    response: dict[str, Any],
+    options: dict[str, Any],
+    keep_alive: Any,
+) -> None:
+    """
+    Appends Ollama request/response metadata to data/logs/ollama_requests.jsonl.
+
+    Does not log the full prompt or full response text by default.
+    Instead, logs hashes so repeated identical prompts/outputs can be compared.
+    """
+    logs_dir = Path("data/logs")
+    logs_dir.mkdir(parents=True, exist_ok=True)
+
+    response_text = response.get("response", "")
+
+    log_entry = {
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "model_requested": model,
+        "model_returned": response.get("model"),
+        "prompt_sha256": hashlib.sha256(prompt.encode("utf-8")).hexdigest(),
+        "response_sha256": hashlib.sha256(str(response_text).encode("utf-8")).hexdigest(),
+        "options": options,
+        "keep_alive": keep_alive,
+        "created_at": response.get("created_at"),
+        "done": response.get("done"),
+        "done_reason": response.get("done_reason"),
+        "total_duration": response.get("total_duration"),
+        "load_duration": response.get("load_duration"),
+        "prompt_eval_count": response.get("prompt_eval_count"),
+        "prompt_eval_duration": response.get("prompt_eval_duration"),
+        "eval_count": response.get("eval_count"),
+        "eval_duration": response.get("eval_duration"),
+    }
+
+    log_path = logs_dir / "ollama_requests.jsonl"
+
+    with log_path.open("a", encoding="utf-8") as file:
+        file.write(json.dumps(log_entry, ensure_ascii=False) + "\n")
 
 
 def get_default_llm_client() -> LLMClient:

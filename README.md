@@ -33,6 +33,7 @@ scripts/
 src/
   api/
   collection/
+  frontend/
   nlp/
   processing/
 ```
@@ -55,6 +56,9 @@ src/nlp/
 src/api/
 - API layer
 
+src/frontend/
+- simple frontend webapp for improved usability
+
 tests/
 - unit tests
 
@@ -63,11 +67,13 @@ check schema.json
 
 ## Model Hosting
 
-I'm using Ollama API, just went on Ollama and made a free API key for now. Need to create a .env file with this to work:
+Create an .env file in root to setup OLLAMA. Just go into their website, create an account and get a free api key. I'm using gpt-oss:20b for the model.
+
 ```
 OLLAMA_BASE_URL=https://ollama.com
 OLLAMA_API_KEY=your_key_here
-OLLAMA_MODEL=whatever_model_we_choose (I'm using gpt-oss:20b)
+OLLAMA_EVIDENCE_MODEL=gpt-oss:20b
+OLLAMA_REPORT_MODEL=gpt-oss:20b
 ```
 
 Note: Ollama free tier usage limits is pretty generous. Ran evidence extraction 3 times, used like 0.6% of weekly limit (usage limits resets every week).
