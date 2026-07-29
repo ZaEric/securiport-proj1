@@ -7,21 +7,24 @@ You are extracting evidence about a target person from a text chunk.
 Target person: {target_name}
 
 Task:
-Extract the most relevant distinct evidence quotes about the target person from the provided text.
+Extract the most relevant distinct evidence spans about the target person from the provided text.
 
 Rules:
 - Use only the provided text.
-- Extract exact quotes only.
-- Do not paraphrase.
+- Each evidence span must be copied exactly from the text.
+- Each evidence span must be one continuous substring from the text.
+- Do not paraphrase, summarize, shorten, or rewrite evidence.
+- Do not add attribution, names, punctuation, or context that is not part of the selected text span.
+- Do not use ellipses (...) or (…) to skip words inside an evidence span.
+- Do not stitch together separate parts of the text into one evidence span.
 - Ignore evidence about people other than the target person.
-- Each quote must be copied exactly from the text.
-- Each quote must have its own sentiment label.
+- Each evidence span must have its own sentiment label.
 - Sentiment must be one of: positive, neutral, negative.
 - Do not include confidence scores.
 - Do not extract every relevant sentence.
 - Focus on the strongest evidence that would help justify a sentiment judgment.
-- Avoid repetitive, overlapping, or minor detail quotes.
-- Return multiple quotes only when they capture distinct important facts or distinct sentiment.
+- Avoid repetitive, overlapping, or minor detail evidence.
+- Return multiple evidence spans only when they capture distinct important facts or distinct sentiment.
 - If there is no relevant evidence, return an empty evidence list.
 - Return JSON only.
 
@@ -34,7 +37,7 @@ Required JSON format:
 {{
   "evidence": [
     {{
-      "quote": "exact quote from the text",
+      "quote": "one exact continuous text span copied from the text",
       "sentiment": "positive | neutral | negative"
     }}
   ]
