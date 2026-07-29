@@ -1,0 +1,165 @@
+{
+  "run_id": "2026-07-28_2059_simone_biles",
+  "target_name": "Simone Biles",
+  "evidence_extraction_method": "llm_quote_extraction",
+  "num_evidence": 16,
+  "num_evidence_extraction_issues": 3,
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42
+  },
+  "evidence": [
+    {
+      "evidence_id": "ev_001",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Biles overcame a late blip in her floor routine after an otherwise dominant performance to win the individual all-around title at the world championships for the sixth time on Friday.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_002",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "That made her the most decorated gymnast in history, two years after she put her career on hold to focus on her mental health following the Tokyo Olympics.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_003",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "She was expected to repeat as individual all-around champion in Tokyo but removed herself from competition to focus on her mental well-being.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_004",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "She said the therapy sessions and the breathing and visualization exercises she has been doing on a regular basis since have helped her recover.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_005",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Biles’ only blip came right at the end, as she was about to wrap up her floor routine. After a near-flawless display, she tripped near the end of her routine as she was about to enter a sequence of leaps. But she recovered in style, and it didn’t cost her enough of a points deduction to rob her of the gold.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_006",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Biles scored 58.399 points across the balance beam, floor, vault and uneven bars to beat Rebeca Andrade, the Brazilian defending champion, by 1.633 points.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_007",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Biles is the most decorated gymnast of all-time and America’s golden girl.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_008",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "She uses her platform to normalize discussions about mental health and opened the topic to widespread conversation at the Tokyo Games when she pulled out of some events over concern about her headspace.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_009",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "She’s shown an ability to withstand every setback despite the pressures of constant scrutiny",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_010",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "She was widely supported in doing so, but a recent clip re-emerged of JD Vance, Trump’s selection for vice president on the Republican ticket, criticizing the praise Biles received.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_011",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "She was taken from a foster care situation and adopted by her grandparents, she didn’t come from privilege,",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_012",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Simone Biles is immune to all of it.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_013",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Dynamic on vault. Effortless on beam. Jaw-dropping on floor. Brilliant all over. And now, finally, an Olympic champion.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_014",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Biles became the fourth straight American woman to win the all-around title and fifth overall while cementing her reputation as the best of her generation and perhaps ever.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_015",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Biles has spent the last three years dominating her sport, winning 15 world championship medals — including 10 gold — with routines so astonishing in their mix of ambition and precision that 1984 Olympic champion Mary Lou Retton called her \"the greatest gymnast I've ever seen.\"",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_016",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "She hasn't lost an all-around competition since the summer of 2013, a winning streak that should go for as long as Biles wants it to.",
+      "sentiment": "positive",
+      "confidence": null
+    }
+  ],
+  "evidence_extraction_issues": [
+    {
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "Biles said. “We had our Black podium of girls,” Biles said. “So I thought that was amazing. Black girl magic. So, hopefully it just teaches all the young girls out there that you can do anything.”",
+      "sentiment": "positive"
+    },
+    {
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "Considering what she went through in Tokyo, when people attacked her not only as weak, but as a traitor, and there were racial overtones to those attacks, she had seemed to be someone who kept a lot of her personal opinions personal.",
+      "sentiment": "negative"
+    },
+    {
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "The 19-year-old American ... all-around title ... Her total of 62.198 was well clear of silver medalist and \"Final Five\" teammate Aly Raisman and Russian bronze medalist Aliya Mustafina.",
+      "sentiment": "positive"
+    }
+  ]
+}

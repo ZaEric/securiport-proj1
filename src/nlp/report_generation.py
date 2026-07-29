@@ -5,6 +5,10 @@ from typing import Any
 from src.nlp.llm_client import LLMClient
 from src.nlp.models import ReportGenerationConfig, build_llm_metadata
 from src.nlp.prompts import build_final_report_prompt
+from src.nlp.quote_verification import (
+    normalize_quote_for_matching,
+    normalize_quote_for_punctuation_insensitive_matching,
+)
 
 
 VALID_SENTIMENTS = {"positive", "neutral", "negative"}
@@ -119,7 +123,6 @@ def build_evidence_summary(
                 "chunk_id": item.get("chunk_id", ""),
                 "quote": item.get("quote", ""),
                 "sentiment": item.get("sentiment", ""),
-                "confidence": item.get("confidence"),
             }
             for item in evidence_json.get("evidence", [])
             if isinstance(item, dict)
@@ -257,11 +260,21 @@ def validate_evidence_examples(
         for item in evidence_json.get("evidence", [])
         if isinstance(item, dict) and "evidence_id" in item
     }
-    evidence_by_quote = {
-        item["quote"]: item
-        for item in evidence_json.get("evidence", [])
-        if isinstance(item, dict) and "quote" in item
-    }
+    evidence_by_quote: dict[str, dict[str, Any]] = {}
+    evidence_by_punctuation_insensitive_quote: dict[str, dict[str, Any]] = {}
+
+    for item in evidence_json.get("evidence", []):
+        if isinstance(item, dict) and isinstance(item.get("quote"), str):
+            normalized_quote = normalize_quote_for_matching(item["quote"])
+            punctuation_insensitive_quote = normalize_quote_for_punctuation_insensitive_matching(
+                item["quote"]
+            )
+
+            evidence_by_quote.setdefault(normalized_quote, item)
+            evidence_by_punctuation_insensitive_quote.setdefault(
+                punctuation_insensitive_quote,
+                item,
+            )
 
     validated_examples: list[dict[str, Any]] = []
     seen_quotes: set[str] = set()
@@ -281,6 +294,7 @@ def validate_evidence_examples(
             example=example,
             evidence_by_id=evidence_by_id,
             evidence_by_quote=evidence_by_quote,
+            evidence_by_punctuation_insensitive_quote=evidence_by_punctuation_insensitive_quote,
         )
 
         if source_evidence is None:
@@ -344,6 +358,7 @@ def find_matching_evidence_example(
     example: dict[str, Any],
     evidence_by_id: dict[str, dict[str, Any]],
     evidence_by_quote: dict[str, dict[str, Any]],
+    evidence_by_punctuation_insensitive_quote: dict[str, dict[str, Any]],
 ) -> dict[str, Any] | None:
     """
     Matches LLM-selected evidence against real evidence.
@@ -357,8 +372,16 @@ def find_matching_evidence_example(
 
     quote = example.get("quote")
 
-    if isinstance(quote, str) and quote in evidence_by_quote:
-        return evidence_by_quote[quote]
+    if isinstance(quote, str):
+        normalized_quote = normalize_quote_for_matching(quote)
+
+        if normalized_quote in evidence_by_quote:
+            return evidence_by_quote[normalized_quote]
+
+        punctuation_insensitive_quote = normalize_quote_for_punctuation_insensitive_matching(quote)
+
+        if punctuation_insensitive_quote in evidence_by_punctuation_insensitive_quote:
+            return evidence_by_punctuation_insensitive_quote[punctuation_insensitive_quote]
 
     return None
 

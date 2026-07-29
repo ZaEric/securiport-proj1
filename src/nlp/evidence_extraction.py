@@ -126,7 +126,7 @@ def parse_evidence_item_with_issue(item: Any) -> tuple[ExtractedQuote | None, di
     return ExtractedQuote(
         quote=normalized_quote,
         sentiment=normalized_sentiment,  # type: ignore[arg-type]
-    )
+    ), None
 
 def parse_evidence_item(item: Any) -> ExtractedQuote | None:
     """
