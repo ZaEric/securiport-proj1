@@ -108,11 +108,11 @@ class OllamaChatClient:
 
             # hardcode temp and seed just to make sure
             options = {
-                "temperature": 0.0,
-                "seed": 42,
-                "num_ctx": 8192,
-                "top_k": 1,
-                "top_p": 1.0,
+                "temperature": temperature,
+                "seed": seed,
+                # "num_ctx": 8192,
+                "top_k": 1, # top_k is supposed to enforce greedy decoding which should make outputs deterministic, but it seem to be working
+                # "top_p": 1.0,
             }
 
             # keep_alive = "30m" # unload model after every request, see if it helps make outputs deterministic (at cost of increased runtime)

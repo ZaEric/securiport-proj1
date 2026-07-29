@@ -4,56 +4,56 @@
   "overall_sentiment": "negative",
   "overall_confidence": null,
   "aggregation_baseline_sentiment": "negative",
-  "one_line_summary": "John Doe faced legal sentencing, removal from leadership, and audit‑identified oversight failures that collectively portray a pattern of misconduct.",
-  "extended_summary": "The evidence shows that John Doe was sentenced for submitting false records, removed from his leadership role due to criticized management, and approved incomplete milestone reports despite missing inspection data. These actions damaged public trust, caused unnecessary costs, and weakened internal controls, indicating significant misconduct.",
+  "one_line_summary": "John Doe’s actions, including submitting false records, poor project oversight, and approving incomplete milestone reports, led to legal penalties and removal from leadership roles.",
+  "extended_summary": "The evidence shows that John Doe admitted to falsifying records to obtain payments, resulting in a court sentence and criticism of his conduct for damaging public trust. In addition, an internal review found repeated missed deadlines, unclear explanations for vendor payment delays, and a pattern of poor management that slowed a housing initiative and strained community relations. An audit further revealed that Doe approved milestone reports without supporting inspection records and failed to forward unresolved concerns, weakening the city’s internal controls and increasing the risk of unsupported payments. These findings collectively portray a negative assessment of Doe’s professional conduct.",
   "key_findings": [
-    "John Doe was sentenced for submitting false records to obtain payments.",
-    "He was removed from leadership after an internal review criticized his oversight and communication.",
-    "Audit findings reveal repeated failures in documentation and approval processes, increasing financial risk."
+    "Doe admitted to submitting false records and was sentenced for the misconduct.",
+    "He was removed from a leadership role after an internal review highlighted repeated oversight failures and poor communication.",
+    "Audit findings indicate that Doe approved incomplete milestone reports and did not address unresolved inspection concerns, compromising project controls."
   ],
-  "justification": "The majority of extracted quotes are negative, highlighting legal sentencing, removal from leadership, and audit‑identified failures in documentation and approval. These quotes collectively demonstrate misconduct and loss of public trust, leading to a negative overall sentiment.",
+  "justification": "The majority of the evidence (9 out of 13) is explicitly negative, describing legal penalties, removal from leadership, and audit failures. The quotes selected provide clear, unambiguous examples of wrongdoing and its consequences, outweighing the neutral statements. No positive evidence is present, so the overall sentiment is confidently negative.",
   "evidence_examples": [
     {
       "source_id": "src_001",
       "quote": "John Doe, a local businessman and former purchasing consultant, was sentenced Tuesday after admitting that he submitted false records to obtain payments from a city contractor.",
       "sentiment": "negative",
-      "why_selected": "Clear admission of wrongdoing that directly indicates misconduct."
+      "why_selected": "Direct admission of wrongdoing and legal sentencing."
     },
     {
       "source_id": "src_001",
       "quote": "During the hearing, the judge said Doe's conduct damaged public trust and created unnecessary costs for the project.",
       "sentiment": "negative",
-      "why_selected": "Judge's statement underscores the negative impact on public trust and finances."
+      "why_selected": "Judge’s condemnation highlights the broader impact of the misconduct."
     },
     {
       "source_id": "src_002",
       "quote": "John Doe has been removed from his leadership role on the Westbridge Housing Initiative after an internal review criticized his handling of project oversight, staff communication, and budget planning.",
       "sentiment": "negative",
-      "why_selected": "Demonstrates formal removal due to criticized management performance."
+      "why_selected": "Removal from leadership underscores serious management failures."
     },
     {
       "source_id": "src_002",
       "quote": "The review found that Doe repeatedly missed reporting deadlines and failed to provide clear explanations for delays in vendor payments.",
       "sentiment": "negative",
-      "why_selected": "Shows a pattern of mismanagement and lack of accountability."
+      "why_selected": "Specific examples of missed deadlines and lack of explanation."
     },
     {
       "source_id": "src_003",
       "quote": "Auditors found that Doe approved several milestone reports even though supporting inspection records were missing or incomplete.",
       "sentiment": "negative",
-      "why_selected": "Highlights oversight failures and acceptance of incomplete documentation."
+      "why_selected": "Approval of incomplete reports indicates procedural negligence."
     },
     {
       "source_id": "src_003",
       "quote": "Doe received at least four internal messages about unresolved inspection concerns but did not forward those concerns to senior project leadership.",
       "sentiment": "negative",
-      "why_selected": "Illustrates neglect of communication that could have averted issues."
+      "why_selected": "Failure to communicate critical concerns demonstrates lack of accountability."
     },
     {
       "source_id": "src_003",
       "quote": "The audit said Doe's failure to consistently document milestone reviews weakened the city's internal controls and increased the risk that unsupported payment requests would be approved.",
       "sentiment": "negative",
-      "why_selected": "Emphasizes systemic risk created by Doe's documentation lapses."
+      "why_selected": "Highlights systemic risk created by Doe’s actions."
     }
   ],
   "sources": [
@@ -74,12 +74,12 @@
     }
   ],
   "limitations": [
-    "Evidence is derived from synthetic sources, which may not fully represent real‑world contexts.",
-    "Only quoted excerpts are used, so nuance or mitigating statements may be omitted."
+    "All available evidence is negative; no positive or mitigating evidence is present.",
+    "The report is based solely on the supplied quotes and does not include broader context or external verification."
   ],
   "report_generation_issues": [],
   "llm_metadata": {
-    "model_name": "nemotron-3-nano:30b",
+    "model_name": "gpt-oss:20b",
     "temperature": 0.0,
     "seed": 42,
     "max_evidence_examples": 7

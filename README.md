@@ -76,6 +76,11 @@ OLLAMA_EVIDENCE_MODEL=gpt-oss:20b
 OLLAMA_REPORT_MODEL=gpt-oss:20b
 ```
 
+All available cloud models Ollama provides can be found on https://ollama.com/search?c=cloud, or with this command in powershell:
+```
+(Invoke-RestMethod "https://ollama.com/api/tags").models | Select-Object name, size, modified_at
+```
+
 Note: Ollama free tier usage limits is pretty generous. Ran evidence extraction 3 times, used like 0.6% of weekly limit (usage limits resets every week).
 
 ## Search API (for `/sources/from-search-api`)

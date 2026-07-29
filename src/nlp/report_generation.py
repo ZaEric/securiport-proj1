@@ -40,15 +40,16 @@ def generate_final_report_llm(
     target_name = evidence_json["target_name"]
 
     sources_summary = build_sources_summary(sources_json=sources_json)
+    evidence_summary = build_evidence_summary(evidence_json=evidence_json)
     aggregation_summary = build_aggregation_summary(
-        evidence_json=evidence_json,
+    evidence_json=evidence_json,
         aggregation_json=aggregation_json,
     )
 
     prompt = build_final_report_prompt(
         target_name=target_name,
         sources_summary=sources_summary,
-        evidence_json=evidence_json,
+        evidence_json=evidence_summary,
         aggregation_summary=aggregation_summary,
         max_evidence_examples=max_evidence_examples,
     )
@@ -96,6 +97,34 @@ def build_sources_summary(
         )
 
     return sources_summary
+
+def build_evidence_summary(
+    evidence_json: dict[str, Any],
+) -> dict[str, Any]:
+    """
+    Builds evidence data for the final report prompt.
+
+    Excludes LLM metadata, evidence extraction issues, debugging fields,
+    and other audit-only information.
+    """
+    return {
+        "run_id": evidence_json.get("run_id"),
+        "target_name": evidence_json.get("target_name"),
+        "evidence_extraction_method": evidence_json.get("evidence_extraction_method"),
+        "num_evidence": evidence_json.get("num_evidence", len(evidence_json.get("evidence", []))),
+        "evidence": [
+            {
+                "evidence_id": item.get("evidence_id", ""),
+                "source_id": item.get("source_id", ""),
+                "chunk_id": item.get("chunk_id", ""),
+                "quote": item.get("quote", ""),
+                "sentiment": item.get("sentiment", ""),
+                "confidence": item.get("confidence"),
+            }
+            for item in evidence_json.get("evidence", [])
+            if isinstance(item, dict)
+        ],
+    }
 
 def build_aggregation_summary(
     evidence_json: dict[str, Any],
