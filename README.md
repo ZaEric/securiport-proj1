@@ -11,6 +11,7 @@ conda activate securiport-proj1
 
 ```
 data/
+  archive/
   curated/
     curated_urls.json
   synthetic/
@@ -36,15 +37,19 @@ src/
   frontend/
   nlp/
   processing/
+test/
 ```
 
 data/
-- stores local data, curated/ holds manual urls, synthetic/ is for our made up data, output/ to store final JSON reports
+- stores local data, curated/ holds manual urls and synthetic/ is for our made up data
 
 data/runs
 - store generated outputs from running the pipeline
 
-src/collections/
+data/archive
+- store older runs for archival purposes, put them here so they don't bloat up the /runs folder
+
+src/collection/
 - web scraping stack, handle search engine API calls, URL filtering, HTML text extraction
 
 src/processing/

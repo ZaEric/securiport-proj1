@@ -144,11 +144,12 @@ def render_search_pipeline_form(api_base_url: str) -> None:
     st.subheader("Search API Full Run")
 
     target_name = st.text_input("Target name", value="Elizabeth Holmes")
-    search_provider = st.text_input("Search provider", value="tavily")
+    # search_provider = st.text_input("Search provider", value="tavily")
+    search_provider = "tavily"
     max_urls = st.number_input(
         "Max URLs",
         min_value=1,
-        value=3,
+        value=5,
     )
     max_evidence_examples = st.slider(
         "Max evidence examples",

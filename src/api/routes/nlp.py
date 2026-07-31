@@ -91,12 +91,12 @@ def extract_evidence_llm(request: EvidenceLLMRequest) -> EvidenceResponse:
     )
 
 
-@router.post("/evidence-classifier", response_model=StatusResponse)
-def extract_evidence_classifier(request: EvidenceClassifierRequest) -> StatusResponse:
-    return StatusResponse(
-        status="not_implemented",
-        message="Endpoint contract reserved. Future behavior: classifier chunks -> sentiment labels/confidence -> evidence.json.",
-    )
+# @router.post("/evidence-classifier", response_model=StatusResponse)
+# def extract_evidence_classifier(request: EvidenceClassifierRequest) -> StatusResponse:
+#     return StatusResponse(
+#         status="not_implemented",
+#         message="Endpoint contract reserved. Future behavior: classifier chunks -> sentiment labels/confidence -> evidence.json.",
+#     )
 
 
 @router.post("/aggregate-llm", response_model=AggregationResponse)
@@ -165,9 +165,9 @@ def aggregate_llm(request: AggregationRequest) -> AggregationResponse:
     )
 
 
-@router.post("/aggregate-classifier", response_model=StatusResponse)
-def aggregate_classifier(request: AggregationRequest) -> StatusResponse:
-    return StatusResponse(
-        status="not_implemented",
-        message="Endpoint contract reserved. Future behavior: classifier evidence.json -> confidence-weighted aggregation.json.",
-    )
+# @router.post("/aggregate-classifier", response_model=StatusResponse)
+# def aggregate_classifier(request: AggregationRequest) -> StatusResponse:
+#     return StatusResponse(
+#         status="not_implemented",
+#         message="Endpoint contract reserved. Future behavior: classifier evidence.json -> confidence-weighted aggregation.json.",
+#     )
