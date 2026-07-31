@@ -111,7 +111,7 @@ class OllamaChatClient:
                 "temperature": temperature,
                 "seed": seed,
                 # "num_ctx": 8192,
-                "top_k": 1, # top_k is supposed to enforce greedy decoding which should make outputs deterministic, but it seem to be working
+                # "top_k": 1, # top_k is supposed to enforce greedy decoding which should make outputs deterministic, but it seem to be working
                 # "top_p": 1.0,
             }
 

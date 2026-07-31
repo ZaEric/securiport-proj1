@@ -1,0 +1,92 @@
+{
+  "run_id": "2026-07-30_1503_elizabeth_holmes",
+  "target_name": "Elizabeth Holmes",
+  "overall_sentiment": "negative",
+  "overall_confidence": null,
+  "aggregation_baseline_sentiment": "negative",
+  "one_line_summary": "Elizabeth Holmes was convicted of fraud and is serving an 11‑year prison sentence.",
+  "extended_summary": "The evidence shows that Elizabeth Holmes, founder of Theranos, was charged and convicted of multiple counts of fraud, including wire fraud and conspiracy to commit wire fraud. She was ordered to pay $452 million in restitution, forfeited shares, and received a 10‑year ban from serving as an officer or director of a public company. Holmes was sentenced to more than 11 years in federal prison, with her conviction upheld on appeal. The sources also note that she has requested a commutation of her sentence and that the company dissolved after her resignation as CEO.",
+  "key_findings": [
+    "Holmes was convicted of fraud and multiple wire‑fraud counts.",
+    "She was sentenced to more than 11 years in federal prison.",
+    "She was ordered to pay $452 million in restitution to victims."
+  ],
+  "justification": "All 14 supplied evidence items carry a negative sentiment and describe criminal convictions, sentencing, restitution, and company dissolution. No positive or neutral evidence is present, so the overall sentiment is unequivocally negative.",
+  "evidence_examples": [
+    {
+      "source_id": "src_002",
+      "quote": "Elizabeth Anne Holmes (born February 3, 1984) is an American biotechnology entrepreneur who was convicted of fraud in connection with her health technology company Theranos.",
+      "sentiment": "negative",
+      "why_selected": "Direct statement of conviction."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "In 2018, the U.S. Securities and Exchange Commission (SEC) charged Theranos, Holmes, and former Theranos chief operating officer (COO) Ramesh \"Sunny\" Balwani with raising $700 million from investors through a fraud involving false or exaggerated claims about the accuracy of the company's blood-testing technology; Holmes settled the charges by paying a $500,000 no admit no deny (NAND) fine, returning 18.9 million shares to the company, relinquishing her voting control of Theranos, and accepting a ten-year ban from serving as an officer or director of a public company.",
+      "sentiment": "negative",
+      "why_selected": "Shows the scope of the fraud and regulatory penalties."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "She was sentenced to serve 11+1⁄4 years at Federal Prison Camp, Bryan, beginning on May 30, 2023.",
+      "sentiment": "negative",
+      "why_selected": "Specifies the prison sentence."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "She and Balwani were ordered to pay $452 million in restitution to the victims of the fraud.",
+      "sentiment": "negative",
+      "why_selected": "Highlights the financial penalty imposed."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "On January 3, 2022, the jury found Holmes guilty on four of the seven counts related to defrauding investors: three counts of wire fraud, and one of conspiracy to commit wire fraud.",
+      "sentiment": "negative",
+      "why_selected": "Details the specific criminal convictions."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "Fortune named her in its feature article on \"The World's 19 Most Disappointing Leaders\".",
+      "sentiment": "negative",
+      "why_selected": "Illustrates public perception of her leadership failure."
+    },
+    {
+      "source_id": "src_004",
+      "quote": "She was ultimately convicted of wire fraud and is currently serving an 11-year sentence (reduced to nine years for good behavior) in federal prison.",
+      "sentiment": "negative",
+      "why_selected": "Confirms conviction and current incarceration status."
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "https://apnews.com/hub/elizabeth-holmes",
+      "title": "Elizabeth Holmes | AP News"
+    },
+    {
+      "source_id": "src_002",
+      "url": "https://en.wikipedia.org/wiki/Elizabeth_Holmes",
+      "title": "Elizabeth Holmes - Wikipedia"
+    },
+    {
+      "source_id": "src_003",
+      "url": "https://www.theguardian.com/us-news/2026/jan/21/elizabeth-holmes-trump-fraud-sentence",
+      "title": "Theranos founder Elizabeth Holmes asks Trump to commute prison sentence | US news | The Guardian"
+    },
+    {
+      "source_id": "src_004",
+      "url": "https://people.com/elizabeth-holmes-today-now-what-to-know-11890295",
+      "title": "Where Is Elizabeth Holmes Now? Inside the Theranos Founder’s Life in Prison"
+    }
+  ],
+  "limitations": [
+    "All evidence provided is negative; no positive or neutral evidence is available to balance the assessment.",
+    "The report is limited to the supplied sources and does not incorporate any external information."
+  ],
+  "report_generation_issues": [],
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42,
+    "max_evidence_examples": 7
+  }
+}

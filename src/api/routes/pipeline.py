@@ -34,8 +34,8 @@ from src.processing.chunking import LLMChunkingConfig
 from src.processing.pipeline import process_sources_for_nlp_llm
 
 # Full-run defaults
-DEFAULT_TARGET_CHUNK_WORDS = 600
-DEFAULT_MAX_CHUNK_WORDS = 700
+DEFAULT_TARGET_CHUNK_WORDS = 3500
+DEFAULT_MAX_CHUNK_WORDS = 4000
 DEFAULT_OVERLAP_PARAGRAPHS = 1
 
 DEFAULT_MIXED_EVIDENCE_THRESHOLD = 0.25

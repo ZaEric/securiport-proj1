@@ -132,8 +132,8 @@ class ChunkLLMRequest(BaseModel):
         default=None,
         description="Optional path to sources.json. Defaults to data/runs/<run_id>/sources.json.",
     )
-    target_chunk_words: int = Field(default=600, ge=1)
-    max_chunk_words: int = Field(default=700, ge=1)
+    target_chunk_words: int = Field(default=3500, ge=1)
+    max_chunk_words: int = Field(default=4000, ge=1)
     overlap_paragraphs: int = Field(default=1, ge=0)
 
     model_config = ConfigDict(
@@ -141,8 +141,8 @@ class ChunkLLMRequest(BaseModel):
             "example": {
                 "run_id": CURRENT_RUN_ID,
                 "sources_path": None,
-                "target_chunk_words": 600,
-                "max_chunk_words": 700,
+                "target_chunk_words": 3500,
+                "max_chunk_words": 4000,
                 "overlap_paragraphs": 1,
             }
         }

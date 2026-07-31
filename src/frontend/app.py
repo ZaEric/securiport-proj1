@@ -185,7 +185,7 @@ def call_pipeline_endpoint(
 
     with st.spinner("Running pipeline... this may take a while."):
         try:
-            response = requests.post(url, json=payload, timeout=300)
+            response = requests.post(url, json=payload, timeout=600)
         except requests.RequestException as exc:
             st.error(f"Failed to call API: {exc}")
             return

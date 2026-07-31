@@ -11,20 +11,25 @@ Extract the most relevant distinct evidence spans about the target person from t
 
 Rules:
 - Use only the provided text.
-- Each evidence span must be copied exactly from the text.
-- Each evidence span must be one continuous substring from the text.
+- For the "quote" field, behave like a copy-paste tool.
+- Each quote must be copied exactly from the text.
+- Each quote must be one continuous substring from the text.
+- Preserve exact casing, punctuation, wording, and verb tense.
 - Do not paraphrase, summarize, shorten, or rewrite evidence.
 - Do not add attribution, names, punctuation, or context that is not part of the selected text span.
-- Do not use ellipses (...) or (…) to skip words inside an evidence span.
-- Do not stitch together separate parts of the text into one evidence span.
+- Do not use ellipses (...) or (…) to skip words inside a quote.
+- Do not stitch together separate parts of the text into one quote.
+- Do not combine the beginning of one sentence with the end of another sentence.
+- Prefer complete sentences as evidence quotes.
+- Do not return sentence fragments unless the fragment is self-contained and clearly meaningful.
 - Ignore evidence about people other than the target person.
-- Each evidence span must have its own sentiment label.
+- Each quote must have its own sentiment label.
 - Sentiment must be one of: positive, neutral, negative.
 - Do not include confidence scores.
 - Do not extract every relevant sentence.
 - Focus on the strongest evidence that would help justify a sentiment judgment.
 - Avoid repetitive, overlapping, or minor detail evidence.
-- Return multiple evidence spans only when they capture distinct important facts or distinct sentiment.
+- Return multiple quotes only when they capture distinct important facts or distinct sentiment.
 - If there is no relevant evidence, return an empty evidence list.
 - Return JSON only.
 
@@ -33,11 +38,18 @@ Sentiment guidance:
 - Label praise, awards, achievements, community support, or clearly favorable actions as positive.
 - Label background, procedural details, explanations, denials, or role descriptions as neutral unless they clearly support positive or negative sentiment.
 
+Invalid quote examples:
+- Do not change casing: "over the next year" if the text says "Over the next year"
+- Do not change wording: "fool" if the text says "fooled"
+- Do not change quotation marks: 'example' if the text says "example"
+- Do not stitch text together: "In 2015, Forbes revised..." if "In 2015" and "Forbes revised" appear in separate sentences
+- Do not use ellipses: "John Doe ... was convicted"
+
 Required JSON format:
 {{
   "evidence": [
     {{
-      "quote": "one exact continuous text span copied from the text",
+      "quote": "one exact continuous text span copied character-for-character from the text",
       "sentiment": "positive | neutral | negative"
     }}
   ]

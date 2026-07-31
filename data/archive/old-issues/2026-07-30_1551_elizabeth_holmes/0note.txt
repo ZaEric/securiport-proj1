@@ -1,0 +1,1 @@
+Fixed chunking, but now super long sources bloating up evidence and increasing runtime, increase chunking limits by a lot. The LLM models that Ollama cloud provides should be more than able to handle very long articles.
