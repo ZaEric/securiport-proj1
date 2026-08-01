@@ -1,0 +1,98 @@
+{
+  "run_id": "2026-08-01_1149_eric_wan",
+  "target_name": "Eric Wan",
+  "aggregation_method": "label_count_summary",
+  "num_evidence": 15,
+  "mixed_evidence_threshold": 0.25,
+  "baseline_tie_threshold": 0.1,
+  "minimum_evidence_count": 1,
+  "source_results": [
+    {
+      "source_id": "src_001",
+      "baseline_sentiment": "neutral",
+      "sentiment_counts": {
+        "positive": 0,
+        "neutral": 3,
+        "negative": 0
+      },
+      "mixed_evidence": false,
+      "opposing_sentiment_ratio": 0.0,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_001",
+        "ev_002",
+        "ev_003"
+      ]
+    },
+    {
+      "source_id": "src_002",
+      "baseline_sentiment": "neutral",
+      "sentiment_counts": {
+        "positive": 0,
+        "neutral": 3,
+        "negative": 0
+      },
+      "mixed_evidence": false,
+      "opposing_sentiment_ratio": 0.0,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_004",
+        "ev_005",
+        "ev_006"
+      ]
+    },
+    {
+      "source_id": "src_004",
+      "baseline_sentiment": "positive",
+      "sentiment_counts": {
+        "positive": 3,
+        "neutral": 0,
+        "negative": 0
+      },
+      "mixed_evidence": false,
+      "opposing_sentiment_ratio": 0.0,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_007",
+        "ev_008",
+        "ev_009"
+      ]
+    },
+    {
+      "source_id": "src_005",
+      "baseline_sentiment": "positive",
+      "sentiment_counts": {
+        "positive": 5,
+        "neutral": 1,
+        "negative": 0
+      },
+      "mixed_evidence": false,
+      "opposing_sentiment_ratio": 0.0,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_010",
+        "ev_011",
+        "ev_012",
+        "ev_013",
+        "ev_014",
+        "ev_015"
+      ]
+    }
+  ],
+  "overall_result": {
+    "baseline_sentiment": "positive",
+    "sentiment_counts": {
+      "positive": 8,
+      "neutral": 7,
+      "negative": 0
+    },
+    "source_baseline_sentiment_counts": {
+      "positive": 2,
+      "neutral": 2,
+      "negative": 0
+    },
+    "mixed_evidence": false,
+    "opposing_sentiment_ratio": 0.0,
+    "insufficient_evidence": false
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "run_id": "2026-08-01_1149_eric_wan",
+  "target_name": "Eric Wan",
+  "overall_sentiment": "positive",
+  "overall_confidence": null,
+  "aggregation_baseline_sentiment": "positive",
+  "one_line_summary": "Eric Wan is a highly accomplished professional with a strong track record in acting, entrepreneurship, and public health, consistently recognized for his persistence, adaptability, and leadership.",
+  "extended_summary": "The evidence portrays Eric Wan as a multifaceted individual who has excelled in several domains. He began his career as a television actor, gaining recognition for his role in the popular series \"My Date with a Vampire.\" Transitioning into technology, he co‑founded and successfully sold Frankie AI, demonstrating entrepreneurial acumen. More recently, he has pursued advanced education, earning an MPH and MBA, and has applied his expertise in public health through research at NIH and consulting for government agencies. His current role as Chief Operating Officer at Whole Systems Healthcare underscores his strategic leadership. Across all sources, the tone is consistently positive, highlighting his persistence, adaptability, and commitment to impactful work.",
+  "key_findings": [
+    "Successful career transition from television acting to technology entrepreneurship.",
+    "Consistent recognition for persistence, adaptability, and leadership.",
+    "Advanced academic credentials in public health and business administration.",
+    "Active involvement in research, consulting, and strategic operations in healthcare."
+  ],
+  "justification": "The majority of the evidence (8 out of 15) is explicitly positive, citing Eric Wan’s achievements, leadership qualities, and professional milestones. The quotes selected illustrate his persistence, entrepreneurial success, academic pursuits, and consulting work, all of which contribute to a predominantly positive portrayal. No negative or contradictory evidence is present, and the neutral statements do not offset the overall positive narrative.",
+  "evidence_examples": [
+    {
+      "source_id": "src_004",
+      "quote": "My Co-Founder Bunty Agrawal ☁ (He/Him) and I are super excited to announce the successful sale of Frankie AI. Frankie has been acquired by a San Fran…",
+      "sentiment": "positive",
+      "why_selected": "Demonstrates entrepreneurial achievement and successful exit."
+    },
+    {
+      "source_id": "src_004",
+      "quote": "Excited to share that I have started a new opportunity with Elara Caring, one of the nation’s largest home care providers, and we are hiring! If you…",
+      "sentiment": "positive",
+      "why_selected": "Shows continued professional growth and leadership in healthcare."
+    },
+    {
+      "source_id": "src_005",
+      "quote": "He is earning his Master of Public Health from the Bloomberg School of Public Health and his Master of Business Administration from the Carey Business School at Johns Hopkins.",
+      "sentiment": "positive",
+      "why_selected": "Illustrates advanced academic credentials and commitment to education."
+    },
+    {
+      "source_id": "src_005",
+      "quote": "He received Bachelor of Science in Molecular and Cellular Biology from Johns Hopkins University, where he was on a prestigious 4-year research fellowship.",
+      "sentiment": "positive",
+      "why_selected": "Shows strong scientific background and early research experience."
+    },
+    {
+      "source_id": "src_005",
+      "quote": "Eric joined the National Institutes of Health on a research training award.",
+      "sentiment": "positive",
+      "why_selected": "Highlights prestigious research affiliation and expertise."
+    },
+    {
+      "source_id": "src_005",
+      "quote": "He frequently consults for inter-governmental agencies and nonprofits in order to provide technical expertise in evidence generation.",
+      "sentiment": "positive",
+      "why_selected": "Demonstrates applied expertise and service to public sector."
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "https://sg.style.yahoo.com/eric-wan-saddened-date-vampire-062600399.html",
+      "title": "Eric Wan saddened by \"My Date with a Vampire\" director's death - Yahoo Life Singapore"
+    },
+    {
+      "source_id": "src_002",
+      "url": "https://en.wikipedia.org/wiki/Eric_Wan",
+      "title": "Eric Wan - Wikipedia"
+    },
+    {
+      "source_id": "src_003",
+      "url": "https://www.pdx.edu/profile/eric-wan",
+      "title": "Eric Wan | Portland State University"
+    },
+    {
+      "source_id": "src_004",
+      "url": "https://www.linkedin.com/in/ericwan311",
+      "title": "Eric Wan - App Developer | LinkedIn"
+    },
+    {
+      "source_id": "src_005",
+      "url": "https://wshcare.org/our-team/eric-wan",
+      "title": "Eric Wan, MPH, MBA | Whole Systems Healthcare"
+    }
+  ],
+  "limitations": [
+    "Evidence focuses primarily on professional achievements; personal life details are limited.",
+    "No negative or contradictory information is present, so the assessment may not capture a full spectrum of public perception.",
+    "The sample size of 15 evidence items may not represent all available information about Eric Wan."
+  ],
+  "report_generation_issues": [
+    {
+      "issue": "Rejected 1 invalid, duplicate, or unverified evidence example(s).",
+      "rejected_examples": [
+        {
+          "reason": "no matching evidence_id or exact quote found in evidence.json",
+          "evidence_id": null,
+          "source_id": "src_004",
+          "quote": "Eric is one of the most persistent people I've met. I initially met him when he just had a concept. Many people in that stage talk about ideas and never go anywhere. In the middle of the summer, he and his co-founders produced the idea and kept on iterating on the idea. He was working on this part time at Stanford, and I've seen the site evolve from an idea to 3 successive versions, and he's continually iterating on the core idea. He's both persistent and willing to change direction. In my opinion, these two characteristics: persistence and the willingness to adapt are critical for success in any endeavor.",
+          "sentiment": "positive",
+          "why_selected": "Highlights personal traits of persistence and adaptability, key to his success."
+        }
+      ]
+    }
+  ],
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42,
+    "max_evidence_examples": 7
+  }
+}

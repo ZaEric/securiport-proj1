@@ -1,0 +1,322 @@
+{
+  "run_id": "2026-08-01_1354_elizabeth_holmes",
+  "target_name": "Elizabeth Holmes",
+  "evidence_extraction_method": "llm_quote_extraction",
+  "num_evidence": 33,
+  "num_evidence_extraction_issues": 6,
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42
+  },
+  "evidence": [
+    {
+      "evidence_id": "ev_001",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Elizabeth Anne Holmes (born February 3, 1984) is an American biotechnology entrepreneur who was convicted of fraud in connection with her health technology company Theranos.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_002",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "In 2018, the U.S. Securities and Exchange Commission (SEC) charged Theranos, Holmes, and former Theranos chief operating officer (COO) Ramesh \"Sunny\" Balwani with raising $700 million from investors through a fraud involving false or exaggerated claims about the accuracy of the company's blood-testing technology; Holmes settled the charges by paying a $500,000 no admit no deny (NAND) fine, returning 18.9 million shares to the company, relinquishing her voting control of Theranos, and accepting a ten-year ban from serving as an officer or director of a public company.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_003",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "She was sentenced to serve 11+1⁄4 years at Federal Prison Camp, Bryan, beginning on May 30, 2023.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_004",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "In 2015, Forbes had named Holmes the youngest and wealthiest self-made female billionaire in the United States on the basis of a $9-billion valuation of her company.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_005",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Holmes was awarded the 2015 Horatio Alger Award of the Horatio Alger Association of Distinguished Americans, making her its youngest recipient in history.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_006",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Holmes was an admirer of Apple founder Steve Jobs, and deliberately copied his style, frequently dressing in a black turtleneck sweater, as Jobs did.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_007",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_002",
+      "quote": "It portrays the claims and promises made by Holmes in the last years of Theranos and how ultimately the company was brought down by the weight of many falsehoods.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_008",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_002",
+      "quote": "Holmes and Balwani indicted for multiple crimes.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_009",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_002",
+      "quote": "Elizabeth Holmes, Theranos founder, sentenced to 11.25 years in prison",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_010",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_002",
+      "quote": "Elizabeth Holmes is found guilty of four counts of fraud",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_011",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_002",
+      "quote": "One Woman's Drive to Revolutionize Medical Testing",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_012",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_003",
+      "quote": "Hulu Orders 'The Dropout' Limited Series Starring Kate McKinnon As Elizabeth Holmes From Fox Searchlight TV",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_013",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_003",
+      "quote": "Amanda Seyfried to Play Elizabeth Holmes in Hulu Series 'The Dropout,' Taking Over From Kate McKinnon",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_014",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_003",
+      "quote": "Elizabeth Holmes Breaks Her Silence in First Interview from Prison: 'It's Been Hell and Torture' (Exclusive)",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_015",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_003",
+      "quote": "American people convicted of fraud",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_016",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_003",
+      "quote": "American confidence tricksters",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_017",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_003",
+      "quote": "21st-century American criminals",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_018",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_003",
+      "quote": "People convicted for health fraud",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_019",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "After a lengthy trial in federal court in San Jose, California, a jury convicted Holmes in January 2022 on one count of conspiracy to commit wire fraud and three counts of wire fraud involving investors.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_020",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Federal prosecutors alleged Holmes knowingly misrepresented the capabilities of Theranos technology and misled investors about the company's financial condition, partnerships, and laboratory capabilities.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_021",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "In November 2022, Holmes received a sentence of 135 months in prison followed by three years of supervised release.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_022",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "She has performed thousands of hours assisting other incarcerated women.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_023",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "One of Holmes’ first actions upon arriving at FPC Bryan was to establish a separate, private area for nursing mothers.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_024",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "She was ultimately convicted of wire fraud and is currently serving an 11-year sentence (reduced to nine years for good behavior) in federal prison.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_025",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "It’s been hell and torture to be here,\" Holmes told PEOPLE in February 2025 of her incarceration.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_026",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "Holmes' enthusiasm and drive earned her Silicon Valley stardom, and she became famous for wearing a uniform of black turtlenecks, as well as for her trademark deep voice.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_027",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "Holmes was born on Feb. 3, 1984, in Washington, D.C., to mother Noel Anne Daoust, a Congressional committee staffer, and Enron executive father Christian Holmes.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_028",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "She dropped out of college in March 2004 after working at the Genome Institute of Singapore the previous summer, saying she wanted to start her own business.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_029",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "Theranos inked a deal with Walgreens to have their blood testing devices in stores, and the FDA approved Theranos for herpes testing.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_030",
+      "source_id": "src_005",
+      "chunk_id": "src_005_chunk_001",
+      "quote": "Theranos founder Elizabeth Holmes has asked Donald Trump to commute her sentence after she was convicted of defrauding investors in her now-defunct blood-testing startup that was once valued at $9bn",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_031",
+      "source_id": "src_005",
+      "chunk_id": "src_005_chunk_001",
+      "quote": "Holmes, 37, founder of the collapsed blood-testing company Theranos, was convicted of four counts of defrauding investors and, in November 2022, was sentenced to serve more than 11 years in prison.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_032",
+      "source_id": "src_005",
+      "chunk_id": "src_005_chunk_001",
+      "quote": "A university dropout with no medical training, Holmes had fooled regulators and some of the world’s richest people, including Rupert Murdoch, Henry Kissinger and Larry Ellison, into believing she had figured out a way to test for a range of health conditions with just a pinprick of blood.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_033",
+      "source_id": "src_005",
+      "chunk_id": "src_005_chunk_001",
+      "quote": "She filed a patent for the technology that aimed to perform a wide range of tests on a small amount of blood, a development that would eliminate the need for large blood samples for diagnostics.",
+      "sentiment": "neutral",
+      "confidence": null
+    }
+  ],
+  "evidence_extraction_issues": [
+    {
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_002",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "- In June 2016, Deadline Hollywood first reported that Jennifer Lawrence would play Holmes, in a film directed by Adam McKay, adapted from John Carreyrou's then-unpublished book Bad Blood: Secrets and Lies in a Silicon Valley Startup.",
+      "sentiment": "neutral"
+    },
+    {
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "She has maintained a spotless disciplinary record during her three years of incarceration.",
+      "sentiment": "positive"
+    },
+    {
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "Elizabeth Holmes was convicted of fraud in 2022 and reported to prison to begin serving her 11-year sentence in 2023.",
+      "sentiment": "negative"
+    },
+    {
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "In January 2026, CNN reported that she asked President Donald Trump to commute her sentence and be freed from prison.",
+      "sentiment": "negative"
+    },
+    {
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "She was named one of Forbes' richest women in America in 2014.",
+      "sentiment": "positive"
+    },
+    {
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "Holmes was charged with fraud after her blood testing startup Theranos' devices didn't work.",
+      "sentiment": "negative"
+    }
+  ]
+}

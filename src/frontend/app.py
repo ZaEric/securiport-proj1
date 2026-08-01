@@ -320,7 +320,7 @@ def render_final_report(final_report_json: dict[str, Any]) -> None:
     st.markdown("#### Summary")
     st.write(f"**Target:** {final_report_json.get('target_name', 'N/A')}")
     st.write(f"**Overall sentiment:** {final_report_json.get('overall_sentiment', 'N/A')}")
-    st.write(f"**Aggregation baseline sentiment:** {final_report_json.get('aggregation_baseline_sentiment', 'N/A')}")
+    st.write(f"**LLM sentiment:** {final_report_json.get('llm_sentiment', 'N/A')}")
     st.write(f"**One-line summary:** {final_report_json.get('one_line_summary', 'N/A')}")
 
     extended_summary = final_report_json.get("extended_summary")
@@ -351,6 +351,36 @@ def render_final_report(final_report_json: dict[str, Any]) -> None:
                 st.write(f"**Sentiment:** {evidence.get('sentiment', 'N/A')}")
                 st.write(f"**Quote:** {evidence.get('quote', 'N/A')}")
                 st.write(f"**Why selected:** {evidence.get('why_selected', 'N/A')}")
+
+    negative_evidence = final_report_json.get("negative_evidence", [])
+    if isinstance(negative_evidence, list) and negative_evidence:
+        st.markdown("#### Negative Evidence")
+        st.caption(
+            "All extracted negative evidence found by the pipeline, grouped by source. "
+            "In this system, negative sentiment means a review flag and does not necessarily imply wrongdoing."
+        )
+
+        for source_index, source_group in enumerate(negative_evidence, start=1):
+            if not isinstance(source_group, dict):
+                continue
+
+            title = source_group.get("title") or "Untitled source"
+            url = source_group.get("url") or "No URL"
+            evidence_items = source_group.get("evidence", [])
+
+            if not isinstance(evidence_items, list) or not evidence_items:
+                continue
+
+            with st.expander(f"Source {source_index}: {title}"):
+                st.write(f"**Title:** {title}")
+                st.write(f"**URL:** {url}")
+
+                for evidence_index, evidence in enumerate(evidence_items, start=1):
+                    if not isinstance(evidence, dict):
+                        continue
+
+                    st.markdown(f"**Negative evidence {evidence_index}**")
+                    st.write(evidence.get("quote", "N/A"))
 
     sources = final_report_json.get("sources", [])
     if isinstance(sources, list) and sources:

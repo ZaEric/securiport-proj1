@@ -1,0 +1,76 @@
+{
+  "run_id": "2026-08-01_1127_john_doe",
+  "target_name": "John Doe",
+  "overall_sentiment": "negative",
+  "overall_confidence": null,
+  "aggregation_baseline_sentiment": "negative",
+  "one_line_summary": "John Doe faced legal and professional repercussions due to false records, poor project oversight, and audit findings of incomplete documentation.",
+  "extended_summary": "The evidence shows that John Doe was sentenced for submitting false records to obtain payments, removed from a leadership role after an internal review citing poor management, and found by auditors to have approved milestone reports without proper documentation. These incidents reflect a pattern of misconduct and inadequate oversight.",
+  "key_findings": [
+    "John Doe was sentenced for submitting false records to obtain payments from a city contractor.",
+    "He was removed from his leadership role on the Westbridge Housing Initiative after an internal review criticized his handling of project oversight, staff communication, and budget planning.",
+    "Auditors discovered that Doe approved milestone reports without supporting inspection records and that his files lacked consistent documentation of review processes."
+  ],
+  "justification": "The majority of the evidence (5 out of 7) is explicitly negative, describing legal sentencing, removal from a leadership position, and audit failures. No positive or mitigating evidence is present, and the negative quotes directly indicate wrongdoing and poor management. Therefore, the overall sentiment is negative.",
+  "evidence_examples": [
+    {
+      "source_id": "src_001",
+      "quote": "John Doe, a local businessman and former purchasing consultant, was sentenced Tuesday after admitting that he submitted false records to obtain payments from a city contractor.",
+      "sentiment": "negative",
+      "why_selected": "Shows legal conviction for falsifying records."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "John Doe has been removed from his leadership role on the Westbridge Housing Initiative after an internal review criticized his handling of project oversight, staff communication, and budget planning.",
+      "sentiment": "negative",
+      "why_selected": "Indicates professional consequences for poor management."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "Board members said the issue was not a single mistake, but a pattern of poor management that slowed the housing initiative and created tension with community partners.",
+      "sentiment": "negative",
+      "why_selected": "Highlights repeated managerial failures."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "Auditors found that Doe approved several milestone reports even though supporting inspection records were missing or incomplete.",
+      "sentiment": "negative",
+      "why_selected": "Demonstrates audit findings of incomplete documentation."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "Auditors wrote that Doe's files did not consistently show when milestone approvals were reviewed, who provided supporting documentation, or whether inspection concerns had been resolved.",
+      "sentiment": "negative",
+      "why_selected": "Shows lack of proper record-keeping and oversight."
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "synthetic://synthetic_negative_001/src_001",
+      "title": "Local Businessman John Doe Sentenced After False Records Case"
+    },
+    {
+      "source_id": "src_002",
+      "url": "synthetic://synthetic_negative_001/src_002",
+      "title": "John Doe Removed From Project Leadership After Internal Review"
+    },
+    {
+      "source_id": "src_003",
+      "url": "synthetic://synthetic_negative_001/src_003",
+      "title": "Audit Report Finds Oversight Failures in Rivergate Transit Expansion"
+    }
+  ],
+  "limitations": [
+    "All evidence is negative; no positive or mitigating information is available.",
+    "The analysis is based on a limited set of three sources and may not capture the full context of John Doe's activities.",
+    "No external verification or additional sources were consulted."
+  ],
+  "report_generation_issues": [],
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42,
+    "max_evidence_examples": 7
+  }
+}

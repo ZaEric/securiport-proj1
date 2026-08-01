@@ -1,0 +1,90 @@
+{
+  "run_id": "2026-08-01_1350_john_doe",
+  "target_name": "John Doe",
+  "aggregation_method": "negative_flag_priority",
+  "num_evidence": 17,
+  "mixed_evidence_threshold": 0.25,
+  "baseline_tie_threshold": 0.1,
+  "minimum_evidence_count": 1,
+  "source_results": [
+    {
+      "source_id": "src_001",
+      "baseline_sentiment": "negative",
+      "sentiment_counts": {
+        "positive": 0,
+        "neutral": 1,
+        "negative": 6
+      },
+      "negative_evidence_present": true,
+      "mixed_evidence": false,
+      "opposing_sentiment_ratio": 0.0,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_001",
+        "ev_002",
+        "ev_003",
+        "ev_004",
+        "ev_005",
+        "ev_006",
+        "ev_007"
+      ]
+    },
+    {
+      "source_id": "src_002",
+      "baseline_sentiment": "negative",
+      "sentiment_counts": {
+        "positive": 0,
+        "neutral": 1,
+        "negative": 5
+      },
+      "negative_evidence_present": true,
+      "mixed_evidence": false,
+      "opposing_sentiment_ratio": 0.0,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_008",
+        "ev_009",
+        "ev_010",
+        "ev_011",
+        "ev_012",
+        "ev_013"
+      ]
+    },
+    {
+      "source_id": "src_003",
+      "baseline_sentiment": "negative",
+      "sentiment_counts": {
+        "positive": 0,
+        "neutral": 1,
+        "negative": 3
+      },
+      "negative_evidence_present": true,
+      "mixed_evidence": false,
+      "opposing_sentiment_ratio": 0.0,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_014",
+        "ev_015",
+        "ev_016",
+        "ev_017"
+      ]
+    }
+  ],
+  "overall_result": {
+    "baseline_sentiment": "negative",
+    "sentiment_counts": {
+      "positive": 0,
+      "neutral": 3,
+      "negative": 14
+    },
+    "source_baseline_sentiment_counts": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 3
+    },
+    "negative_evidence_present": true,
+    "mixed_evidence": false,
+    "opposing_sentiment_ratio": 0.0,
+    "insufficient_evidence": false
+  }
+}

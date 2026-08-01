@@ -9,6 +9,8 @@ Target person: {target_name}
 Task:
 Extract the most relevant distinct evidence spans about the target person from the provided text.
 
+For this project, negative sentiment means evidence that may require closer human review. Negative evidence does not always mean the target person did something wrong.
+
 Rules:
 - Use only the provided text.
 - For the "quote" field, behave like a copy-paste tool.
@@ -27,16 +29,19 @@ Rules:
 - Sentiment must be one of: positive, neutral, negative.
 - Do not include confidence scores.
 - Do not extract every relevant sentence.
-- Focus on the strongest evidence that would help justify a sentiment judgment.
+- Focus on the strongest evidence that would help justify a sentiment or review-flag judgment.
 - Avoid repetitive, overlapping, or minor detail evidence.
 - Return multiple quotes only when they capture distinct important facts or distinct sentiment.
 - If there is no relevant evidence, return an empty evidence list.
 - Return JSON only.
 
 Sentiment guidance:
-- Label misconduct, legal penalties, audit findings, sanctions, removal from role, failure, criticism, or reputational harm as negative.
+- Label evidence as negative if it may require closer officer or analyst review.
+- Label misconduct, criminal activity, fraud, legal penalties, audit findings, sanctions, removal from role, failure, criticism, security concerns, or reputational harm as negative.
+- Label evidence that the target person was a victim of crime, exploitation, trafficking, coercion, violence, threats, or other harmful circumstances as negative, because it may require further review or protection.
+- Do not imply wrongdoing when negative evidence only indicates that the target person may be a victim or affected party.
 - Label praise, awards, achievements, community support, or clearly favorable actions as positive.
-- Label background, procedural details, explanations, denials, or role descriptions as neutral unless they clearly support positive or negative sentiment.
+- Label background, procedural details, explanations, denials, or role descriptions as neutral unless they clearly support positive, negative, or review-relevant sentiment.
 
 Invalid quote examples:
 - Do not change casing: "over the next year" if the text says "Over the next year"
@@ -77,14 +82,21 @@ Target person: {target_name}
 Task:
 Use the supplied source metadata, extracted evidence, and evidence statistics to generate a final structured report.
 
+Important interpretation:
+- In this system, negative sentiment means a review flag.
+- Negative sentiment does not always mean the target person committed wrongdoing.
+- Negative evidence may indicate misconduct, legal concerns, reputational harm, security concerns, victimization, exploitation, threats, or other circumstances that may require closer human review.
+- If negative evidence only shows that the target person may be a victim or affected party, do not imply that the target person committed wrongdoing.
+
 Important rules:
 - Use only the supplied evidence.
 - Do not invent facts.
 - Do not use outside knowledge.
 - The final overall_sentiment must be one of: positive, neutral, negative.
 - Do not use "mixed" as the final overall_sentiment.
-- Base the final sentiment primarily on the evidence quotes, not only on raw counts.
-- Evidence statistics are provided only as summary context.
+- The final overall_sentiment should follow the supplied evidence statistics and review-flag logic.
+- If negative evidence is present, explain why the report is negative as a review flag.
+- Evidence statistics are provided to summarize the deterministic aggregation result.
 - Do not introduce stronger legal, safety, criminal, or misconduct terms than the evidence supports.
 - Use the same terminology as the evidence where possible.
 - Include at most {max_evidence_examples} evidence examples in the final output.
