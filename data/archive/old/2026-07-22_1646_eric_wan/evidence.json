@@ -1,0 +1,72 @@
+{
+  "run_id": "2026-07-22_1646_eric_wan",
+  "target_name": "Eric Wan",
+  "evidence_extraction_method": "llm_quote_extraction",
+  "num_evidence": 8,
+  "evidence": [
+    {
+      "evidence_id": "ev_001",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Eric Wan Tin-chiu (born 28 October 1964) is a Hong Kong television actor best known for his role as \"Fong Tin-yau\" in the My Date with a Vampire television series trilogy produced by the Hong Kong television network ATV.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_002",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Wan began his acting career after graduating from the ATV Training Course in 1983.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_003",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "He started as a host in television programmes for children before entering the drama department.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_004",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "He has since acted in many films and television series, including Century of the Dragon, Horoscope One: Voices from Hell, Ransom Express, 2 Reincarnated 2, Fist of Fury, and DNA.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_005",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Eric Wan recently expressed his sadness over the passing of director Billy Tang, who passed away earlier this month.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_006",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "\"Billy was a good director. People who didn't really know him would have been surprised to find that he really liked to laugh. He laughed a lot,\" he said.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_007",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Eric Wan, MPH MBA",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_008",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Pharma strategist ➡️ @GUMedicine",
+      "sentiment": "neutral",
+      "confidence": null
+    }
+  ]
+}

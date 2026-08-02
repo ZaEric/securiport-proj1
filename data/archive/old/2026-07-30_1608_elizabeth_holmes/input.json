@@ -1,0 +1,9 @@
+{
+  "run_id": "2026-07-30_1608_elizabeth_holmes",
+  "created_at": "2026-07-30T23:08:09Z",
+  "target_name": "Elizabeth Holmes",
+  "input_mode": "search_api",
+  "search_provider": "tavily",
+  "search_query": "\"Elizabeth Holmes\" news",
+  "max_urls": 7
+}

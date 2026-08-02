@@ -1,0 +1,143 @@
+{
+  "run_id": "2026-08-02_1530_kevin_bacon",
+  "target_name": "Kevin Bacon",
+  "evidence_extraction_method": "llm_quote_extraction",
+  "num_evidence": 15,
+  "num_evidence_extraction_issues": 1,
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42
+  },
+  "evidence": [
+    {
+      "evidence_id": "ev_001",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Kevin Bacon: It’s ‘really cool’ to be a hero in ‘Guardians of the Galaxy’",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_002",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Celebrating Kevin Bacon’s 64th birthday",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_003",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Kevin Bacon is haunted by ‘Footloose’ — and dreads this ‘worst nightmare’ becoming reality",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_004",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Kevin Bacon talks losing ‘most’ of fortune to Bernie Madoff: ‘There’s obvious life lessons’",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_005",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Watch Kevin Bacon perform the ‘Footloose’ theme song at Stagecoach",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_006",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Kevin Bacon returns to ‘Footloose’ high school for film’s 40th anniversary after student campaign",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_007",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Kevin Bacon destroyed haunted house on his farm over previous owner’s fears he’d get ‘possessed’",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_008",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Kyra Sedgwick and Kevin Bacon—who tied the knot in 1988—revealed to E! News what it was like working together onscreen for their new film The Best You Can.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_009",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Kevin Bacon Reveals His Darkest Six Degrees of Separation Yet",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_010",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "Kevin Bacon Says It Was 'Just Great' Directing 1st Movie in 20 Years Alongside Wife Kyra Sedgwick: 'She Was Right There' (Exclusive)",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_011",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "Kevin Bacon and Kyra Sedgwick Share 'Shockingly Wonderful' Experience Directing Film with Their Kids",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_012",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "Kevin Bacon Got Attacked by a Swarm of Bees While on a Hike — Watch His Daughter Sosie Reenact the Moment",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_013",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "Kevin Bacon Got Burned by a 'Grenade'-Like Hard-Boiled Egg While Touring with His Band",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_014",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "Kevin Bacon and Kyra Sedgwick Celebrate Their Son Travis' 36th Birthday with Rare Photos: 'I Love My Boy'",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_015",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "Kevin Bacon Says Working with Eddie Murphy Was a 'Bucket List Thing': 'One of Our Greatest Movie Stars' (Exclusive)",
+      "sentiment": "positive",
+      "confidence": null
+    }
+  ],
+  "evidence_extraction_issues": [
+    {
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "Kevin Bacon Reveals Dead Body Was Found by Movie Crew During Filming of Wild Things: ‘Saw a Floater’",
+      "sentiment": "negative"
+    }
+  ]
+}

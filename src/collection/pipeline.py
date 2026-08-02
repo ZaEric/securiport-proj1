@@ -1,31 +1,29 @@
+from pathlib import Path
 from typing import Any
 
 from src.collection.curated import load_curated_person_entry
 from src.collection.extraction import extract_page_text
 from src.collection.fetching import FetchError, fetch_html
 from src.collection.models import CuratedUrl, ExtractedPage
+from src.collection.search import SearchError, search_web
 from src.collection.url_filtering import filter_curated_urls
 
 MIN_ARTICLE_WORDS = 50
 
 
-def build_sources_json_from_curated_urls(
-    *,
-    run_id: str,
+def fetch_and_extract_sources(
+    urls: list[CuratedUrl],
     target_name: str,
-    curated_urls_file: str,
-    max_urls: int | None = None,
-) -> dict[str, Any]:
-    entry = load_curated_person_entry(
-        curated_urls_file=curated_urls_file,
-        target_name=target_name,
-    )
-    curated_urls = filter_curated_urls(entry.urls, max_urls=max_urls)
-
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    """
+    Shared fetch -> extract -> relevance-check loop used by both the curated-urls
+    and search-api source-creation flows, since they only differ in where the
+    candidate URLs come from.
+    """
     sources: list[dict[str, Any]] = []
     fetch_errors: list[dict[str, Any]] = []
 
-    for item in curated_urls:
+    for item in urls:
         try:
             page = fetch_html(item.url)
             extracted_page = extract_page_text(page)
@@ -77,6 +75,24 @@ def build_sources_json_from_curated_urls(
             )
         )
 
+    return sources, fetch_errors
+
+
+def build_sources_json_from_curated_urls(
+    *,
+    run_id: str,
+    target_name: str,
+    curated_urls_file: str,
+    max_urls: int | None = None,
+) -> dict[str, Any]:
+    entry = load_curated_person_entry(
+        curated_urls_file=curated_urls_file,
+        target_name=target_name,
+    )
+    curated_urls = filter_curated_urls(entry.urls, max_urls=max_urls)
+
+    sources, fetch_errors = fetch_and_extract_sources(curated_urls, target_name)
+
     return {
         "run_id": run_id,
         "target_name": target_name,
@@ -88,6 +104,64 @@ def build_sources_json_from_curated_urls(
             "failed_url_count": len(fetch_errors),
             "blocked_url_count": count_blocked_urls(fetch_errors),
             "expected_overall_sentiment": entry.expected_sentiment,
+            "fetch_errors": fetch_errors,
+        },
+    }
+
+
+def build_sources_json_from_search_api(
+    *,
+    run_id: str,
+    target_name: str,
+    search_provider: str,
+    search_query: str,
+    max_urls: int,
+    run_dir: Path,
+) -> dict[str, Any]:
+    try:
+        search_results = search_web(
+            search_provider=search_provider,
+            query=search_query,
+            max_results=max_urls,
+            run_dir=run_dir,
+        )
+    except SearchError as exc:
+        return {
+            "run_id": run_id,
+            "target_name": target_name,
+            "sources": [],
+            "metadata": {
+                "source_mode": "search_api",
+                "search_provider": search_provider,
+                "search_query": search_query,
+                "source_count": 0,
+                "requested_url_count": 0,
+                "failed_url_count": 0,
+                "blocked_url_count": 0,
+                "fetch_errors": [{"url": None, "source_type": "", "notes": "", "status_code": None, "content_type": "", "error": str(exc)}],
+            },
+        }
+
+    candidate_urls = [
+        CuratedUrl(url=item.url, source_type="search_result", notes=item.title)
+        for item in search_results
+    ]
+    filtered_urls = filter_curated_urls(candidate_urls, max_urls=max_urls)
+
+    sources, fetch_errors = fetch_and_extract_sources(filtered_urls, target_name)
+
+    return {
+        "run_id": run_id,
+        "target_name": target_name,
+        "sources": sources,
+        "metadata": {
+            "source_mode": "search_api",
+            "search_provider": search_provider,
+            "search_query": search_query,
+            "source_count": len(sources),
+            "requested_url_count": len(filtered_urls),
+            "failed_url_count": len(fetch_errors),
+            "blocked_url_count": count_blocked_urls(fetch_errors),
             "fetch_errors": fetch_errors,
         },
     }

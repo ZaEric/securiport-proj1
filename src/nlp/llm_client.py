@@ -3,6 +3,12 @@ from dataclasses import dataclass
 from typing import Any
 from typing import Protocol
 
+# logging, trying to make outputs completely deterministic (might be impossible with Ollama, but gonna test it anyways)
+import hashlib
+import json
+from datetime import datetime, timezone
+from pathlib import Path
+
 try:
     from dotenv import load_dotenv
 except ImportError:
@@ -31,6 +37,10 @@ class LLMClient(Protocol):
         model: str,
         prompt: str,
         temperature: float = 0.0,
+        seed: int | None = 42,
+        run_dir: Path | None = None,
+        stage: str | None = None,
+        chunk_id: str | None = None,
     ) -> str:
         ...
 
@@ -83,33 +93,91 @@ class OllamaChatClient:
         model: str,
         prompt: str,
         temperature: float = 0.0,
+        seed: int | None = 42,
+        run_dir: Path | None = None,
+        stage: str | None = None,
+        chunk_id: str | None = None,
     ) -> str:
         client = self._build_client()
 
         try:
-            response = client.chat(
+            # options: dict[str, float | int] = {
+            #     "temperature": temperature,
+            #     "top_k": 1,
+            #     "top_p": 1.0,
+            #     "num_ctx": 8192,
+            #     "num_thread": 1,
+            # }
+
+            # if seed is not None:
+            #     options["seed"] = seed
+
+            # hardcode temp and seed just to make sure
+            options = {
+                "temperature": temperature,
+                "seed": seed,
+                # "num_ctx": 8192,
+                # "top_k": 1, # top_k is supposed to enforce greedy decoding which should make outputs deterministic, but it seem to be working
+                # "top_p": 1.0,
+            }
+
+            # keep_alive = "30m" # unload model after every request, see if it helps make outputs deterministic (at cost of increased runtime)
+
+            response = client.generate(
                 model=model,
-                messages=[
-                    {
-                        "role": "user",
-                        "content": prompt,
-                    }
-                ],
+                prompt=prompt,
                 format="json",
                 stream=False,
-                options={
-                    "temperature": temperature,
-                },
+                options=options,
             )
+
+            if run_dir is not None:
+                write_llm_performance_event(
+                    run_dir=run_dir,
+                    stage=stage,
+                    model=response.get("model", model),
+                    response=response,
+                    chunk_id=chunk_id,
+                )
+        
         except ResponseError as exc:
             raise RuntimeError(f"Ollama API error: {exc}") from exc
         except Exception as exc:
             raise RuntimeError(f"Ollama request failed: {exc}") from exc
 
         try:
-            return response["message"]["content"]
+            return response["response"]
         except KeyError as exc:
-            raise RuntimeError(f"Ollama response missing message content: {response}") from exc
+            raise RuntimeError(f"Ollama response missing response content: {response}") from exc
+
+
+def write_llm_performance_event(
+    *,
+    run_dir: Path,
+    stage: str | None,
+    model: str,
+    response: dict[str, Any],
+    chunk_id: str | None = None,
+) -> None:
+    """
+    Appends lightweight LLM performance metadata to a run-local performance.jsonl.
+    """
+    log_path = run_dir / "performance.jsonl"
+
+    event: dict[str, Any] = {
+        "event_type": "llm_call",
+        "stage": stage,
+        "model": model,
+        "total_duration (nanoseconds)": response.get("total_duration"),
+        "prompt_eval_count": response.get("prompt_eval_count"),
+        "eval_count": response.get("eval_count"),
+    }
+
+    if chunk_id is not None:
+        event["chunk_id"] = chunk_id
+
+    with log_path.open("a", encoding="utf-8") as file:
+        file.write(json.dumps(event, ensure_ascii=False) + "\n")
 
 
 def get_default_llm_client() -> LLMClient:

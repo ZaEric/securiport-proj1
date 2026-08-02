@@ -1,0 +1,143 @@
+{
+  "run_id": "2026-08-01_1149_eric_wan",
+  "target_name": "Eric Wan",
+  "evidence_extraction_method": "llm_quote_extraction",
+  "num_evidence": 15,
+  "num_evidence_extraction_issues": 1,
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42
+  },
+  "evidence": [
+    {
+      "evidence_id": "ev_001",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Eric Wan recently expressed his sadness over the passing of director Billy Tang",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_002",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "I once told him not to keep working, but he said that he was happier when he was working,\" he added.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_003",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "He loved his daughter and wife the most. I told him that he should not push himself too hard. In the end, he left in peace,\" he added.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_004",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Eric Wan Tin-chiu (born 28 October 1964) is a Hong Kong television actor best known for his role as \"Fong Tin-yau\" in the My Date with a Vampire television series trilogy produced by the Hong Kong television network ATV.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_005",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Wan began his acting career after graduating from the ATV Training Course in 1983.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_006",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "He started as a host in television programmes for children before entering the drama department.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_007",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "“Eric is one of the most persistent people I've met. I initially met him when he just had a concept. Many people in that stage talk about ideas and never go anywhere. In the middle of the summer, he and his co-founders produced the idea and kept on iterating on the idea. He was working on this part time at Stanford, and I've seen the site evolve from an idea to 3 successive versions, and he's continually iterating on the core idea. He's both persistent and willing to change direction. In my opinion, these two characteristics: persistence and the willingness to adapt are critical for success in any endeavor.” About Engineer",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_008",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "My Co-Founder Bunty Agrawal ☁ (He/Him) and I are super excited to announce the successful sale of Frankie AI. Frankie has been acquired by a San Fran…",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_009",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "Excited to share that I have started a new opportunity with Elara Caring, one of the nation’s largest home care providers, and we are hiring! If you…",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_010",
+      "source_id": "src_005",
+      "chunk_id": "src_005_chunk_001",
+      "quote": "He is earning his Master of Public Health from the Bloomberg School of Public Health and his Master of Business Administration from the Carey Business School at Johns Hopkins.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_011",
+      "source_id": "src_005",
+      "chunk_id": "src_005_chunk_001",
+      "quote": "He received Bachelor of Science in Molecular and Cellular Biology from Johns Hopkins University, where he was on a prestigious 4-year research fellowship.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_012",
+      "source_id": "src_005",
+      "chunk_id": "src_005_chunk_001",
+      "quote": "Eric joined the National Institutes of Health on a research training award.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_013",
+      "source_id": "src_005",
+      "chunk_id": "src_005_chunk_001",
+      "quote": "He frequently consults for inter-governmental agencies and nonprofits in order to provide technical expertise in evidence generation.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_014",
+      "source_id": "src_005",
+      "chunk_id": "src_005_chunk_001",
+      "quote": "Eric strives to bring that same passion to his work at Whole Systems Healthcare as Chief Operating Officer, where his focus will be on strategy, market and patient access, and developing clinics and treatment centers.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_015",
+      "source_id": "src_005",
+      "chunk_id": "src_005_chunk_001",
+      "quote": "Eric Wan is not a medical provider.",
+      "sentiment": "neutral",
+      "confidence": null
+    }
+  ],
+  "evidence_extraction_issues": [
+    {
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "Eric, who worked with Billy in the hit drama, 'My Date with a Vampire', was recently seen at the funeral of the said director before the body was cremated at Cape Collinson, saying that he wanted to bid Billy his last farewell.",
+      "sentiment": "neutral"
+    }
+  ]
+}

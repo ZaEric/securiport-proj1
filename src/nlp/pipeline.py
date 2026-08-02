@@ -1,10 +1,15 @@
 from typing import Any
+from pathlib import Path
 
+from src.nlp.aggregation import aggregate_evidence_llm
 from src.nlp.evidence_extraction import extract_evidence_from_chunk_llm
 from src.nlp.llm_client import LLMClient, get_default_llm_client
-from src.nlp.models import EvidenceExtractionConfig
+from src.nlp.models import (
+    EvidenceExtractionConfig,
+    ReportGenerationConfig,
+    build_llm_metadata,
+)
 from src.nlp.quote_verification import normalize_whitespace
-from src.nlp.aggregation import aggregate_evidence_llm
 from src.nlp.report_generation import generate_final_report_llm
 
 
@@ -20,15 +25,29 @@ def process_chunks_for_evidence_llm(
     target_name = chunks_json["target_name"]
     chunks = chunks_json["chunks"]
 
+    run_dir = Path("data/runs") / run_id
+
     raw_evidence_items: list[dict[str, Any]] = []
+    evidence_extraction_issues: list[dict[str, Any]] = []
 
     for chunk in chunks:
-        chunk_quotes = extract_evidence_from_chunk_llm(
+        chunk_quotes, chunk_issues = extract_evidence_from_chunk_llm(
             target_name=target_name,
             chunk_text=chunk["text"],
             llm_client=llm_client,
             config=config,
+            run_dir=run_dir,
+            chunk_id=chunk["chunk_id"],
         )
+
+        for issue in chunk_issues:
+            evidence_extraction_issues.append(
+                {
+                    "source_id": chunk["source_id"],
+                    "chunk_id": chunk["chunk_id"],
+                    **issue,
+                }
+            )
 
         for extracted in chunk_quotes:
             raw_evidence_items.append(
@@ -62,7 +81,10 @@ def process_chunks_for_evidence_llm(
         "target_name": target_name,
         "evidence_extraction_method": config.evidence_extraction_method,
         "num_evidence": len(final_evidence_items),
+        "num_evidence_extraction_issues": len(evidence_extraction_issues),
+        "llm_metadata": build_llm_metadata(config),
         "evidence": final_evidence_items,
+        "evidence_extraction_issues": evidence_extraction_issues,
     }
 
 
@@ -116,7 +138,7 @@ def process_final_report_llm(
     sources_json: dict[str, Any],
     evidence_json: dict[str, Any],
     aggregation_json: dict[str, Any],
-    config: EvidenceExtractionConfig | None = None,
+    config: ReportGenerationConfig | None = None,
     llm_client: LLMClient | None = None,
     max_evidence_examples: int = 7,
 ) -> dict[str, Any]:

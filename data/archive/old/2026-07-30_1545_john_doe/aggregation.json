@@ -1,0 +1,82 @@
+{
+  "run_id": "2026-07-30_1545_john_doe",
+  "target_name": "John Doe",
+  "aggregation_method": "label_count_summary",
+  "num_evidence": 13,
+  "mixed_evidence_threshold": 0.25,
+  "baseline_tie_threshold": 0.1,
+  "minimum_evidence_count": 1,
+  "source_results": [
+    {
+      "source_id": "src_001",
+      "baseline_sentiment": "negative",
+      "sentiment_counts": {
+        "positive": 0,
+        "neutral": 0,
+        "negative": 4
+      },
+      "mixed_evidence": false,
+      "opposing_sentiment_ratio": 0.0,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_001",
+        "ev_002",
+        "ev_003",
+        "ev_004"
+      ]
+    },
+    {
+      "source_id": "src_002",
+      "baseline_sentiment": "negative",
+      "sentiment_counts": {
+        "positive": 0,
+        "neutral": 2,
+        "negative": 3
+      },
+      "mixed_evidence": false,
+      "opposing_sentiment_ratio": 0.0,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_005",
+        "ev_006",
+        "ev_007",
+        "ev_008",
+        "ev_009"
+      ]
+    },
+    {
+      "source_id": "src_003",
+      "baseline_sentiment": "negative",
+      "sentiment_counts": {
+        "positive": 0,
+        "neutral": 1,
+        "negative": 3
+      },
+      "mixed_evidence": false,
+      "opposing_sentiment_ratio": 0.0,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_010",
+        "ev_011",
+        "ev_012",
+        "ev_013"
+      ]
+    }
+  ],
+  "overall_result": {
+    "baseline_sentiment": "negative",
+    "sentiment_counts": {
+      "positive": 0,
+      "neutral": 3,
+      "negative": 10
+    },
+    "source_baseline_sentiment_counts": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 3
+    },
+    "mixed_evidence": false,
+    "opposing_sentiment_ratio": 0.0,
+    "insufficient_evidence": false
+  }
+}

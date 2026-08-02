@@ -1,0 +1,156 @@
+{
+  "run_id": "2026-07-30_1503_elizabeth_holmes",
+  "target_name": "Elizabeth Holmes",
+  "evidence_extraction_method": "llm_quote_extraction",
+  "num_evidence": 14,
+  "num_evidence_extraction_issues": 4,
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42
+  },
+  "evidence": [
+    {
+      "evidence_id": "ev_001",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Elizabeth Anne Holmes (born February 3, 1984) is an American biotechnology entrepreneur who was convicted of fraud in connection with her health technology company Theranos.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_002",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "In 2018, the U.S. Securities and Exchange Commission (SEC) charged Theranos, Holmes, and former Theranos chief operating officer (COO) Ramesh \"Sunny\" Balwani with raising $700 million from investors through a fraud involving false or exaggerated claims about the accuracy of the company's blood-testing technology; Holmes settled the charges by paying a $500,000 no admit no deny (NAND) fine, returning 18.9 million shares to the company, relinquishing her voting control of Theranos, and accepting a ten-year ban from serving as an officer or director of a public company.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_003",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "She was sentenced to serve 11+1⁄4 years at Federal Prison Camp, Bryan, beginning on May 30, 2023.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_004",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "She and Balwani were ordered to pay $452 million in restitution to the victims of the fraud.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_005",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "On January 3, 2022, the jury found Holmes guilty on four of the seven counts related to defrauding investors: three counts of wire fraud, and one of conspiracy to commit wire fraud.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_006",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Fortune named her in its feature article on \"The World's 19 Most Disappointing Leaders\".",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_007",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Holmes has asked Donald Trump to commute her sentence after she was convicted of defrauding investors",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_008",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "sentenced to serve more than 11 years in prison",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_009",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Holmes stepped down as CEO in June 2018, with the company dissolving soon after",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_010",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "the US government charged Holmes and her co-executive Sunny Balwani with defrauding both investors and patients, and making false claims about the effectiveness of the company’s technology",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_011",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "Elizabeth Holmes was convicted of fraud in 2022 and reported to prison to begin serving her 11-year sentence in 2023",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_012",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "Holmes' appeal was heard in June 2024, but her conviction was ultimately upheld",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_013",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "Theranos' devices didn't work",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_014",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "She was ultimately convicted of wire fraud and is currently serving an 11-year sentence (reduced to nine years for good behavior) in federal prison.",
+      "sentiment": "negative",
+      "confidence": null
+    }
+  ],
+  "evidence_extraction_issues": [
+    {
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "fool regulators and some of the world’s richest people",
+      "sentiment": "negative"
+    },
+    {
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "the downfall began with a 2015 article by Wall Street Journal reporter John Carreyrou that revealed Theranos’s revolutionary technology wasn’t exactly what it seemed",
+      "sentiment": "negative"
+    },
+    {
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "over the succeeding months, Carreyrou exposed how the testing devices Holmes said could perform a variety of medical tests with just a drop of blood were not actually being used to perform most of the analyses",
+      "sentiment": "negative"
+    },
+    {
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "after scrutiny from regulators, Theranos started to retract its tests and recall its machines",
+      "sentiment": "negative"
+    }
+  ]
+}

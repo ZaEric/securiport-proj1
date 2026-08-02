@@ -1,0 +1,63 @@
+{
+  "run_id": "2026-07-26_1326_elizabeth_holmes",
+  "target_name": "Elizabeth Holmes",
+  "overall_sentiment": "negative",
+  "overall_confidence": null,
+  "aggregation_baseline_sentiment": "negative",
+  "one_line_summary": "Elizabeth Holmes, once celebrated as a biotech wunderkind, is now serving a lengthy prison sentence after convictions for fraud.",
+  "extended_summary": "Holmes founded Theranos and gained early fame and accolades, including being named a billionaire and receiving the Horatio Alger Award. However, investigations revealed false claims about the company's blood‑testing technology, leading to SEC charges, a criminal conviction on multiple counts of wire fraud, and a sentence of over 11 years in federal prison. While she has maintained a clean disciplinary record and contributed positively to prison programs, her overall narrative is dominated by the fraudulent activities and legal consequences.",
+  "key_findings": [
+    "Holmes was convicted on multiple counts of wire fraud and sentenced to more than 11 years in prison.",
+    "Prior to her downfall, she received significant recognition, such as being named the youngest self‑made female billionaire and receiving the Horatio Alger Award.",
+    "In prison, Holmes has kept a spotless disciplinary record and participates in educational programs, but she continues to describe her experience as extremely distressing."
+  ],
+  "justification": "The majority of the extracted evidence emphasizes Holmes' criminal convictions, fraud allegations, and lengthy sentence, which outweigh the fewer positive references to her earlier achievements and current prison conduct. Therefore, the overall sentiment is judged negative.",
+  "evidence_examples": [
+    {
+      "source_id": "src_001",
+      "quote": "Holmes, 37, founder of the collapsed blood-testing company Theranos, was convicted of four counts of defrauding investors and, in November 2022, was sentenced to serve more than 11 years in prison.",
+      "sentiment": "negative",
+      "why_selected": "Clearly states the conviction and length of prison term, highlighting the core negative outcome."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "According to Evans, Holmes has maintained a spotless disciplinary record during her three years of incarceration.",
+      "sentiment": "positive",
+      "why_selected": "Shows a positive aspect of her conduct while serving her sentence."
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "https://www.theguardian.com/us-news/2026/jan/21/elizabeth-holmes-trump-fraud-sentence",
+      "title": "Theranos founder Elizabeth Holmes asks Trump to commute prison sentence | US news | The Guardian"
+    },
+    {
+      "source_id": "src_002",
+      "url": "https://apnews.com/hub/elizabeth-holmes",
+      "title": "Elizabeth Holmes | AP News"
+    },
+    {
+      "source_id": "src_003",
+      "url": "https://www.forbes.com/sites/walterpavlo/2026/06/30/elizabeth-holmes-doing-her-time-and-contributing-to-prison-community",
+      "title": "Elizabeth Holmes Doing Her Time And Contributing To Prison Community"
+    },
+    {
+      "source_id": "src_004",
+      "url": "https://en.wikipedia.org/wiki/Elizabeth_Holmes",
+      "title": "Elizabeth Holmes - Wikipedia"
+    },
+    {
+      "source_id": "src_005",
+      "url": "https://people.com/elizabeth-holmes-today-now-what-to-know-11890295",
+      "title": "Where Is Elizabeth Holmes Now? Inside the Theranos Founder’s Life in Prison"
+    }
+  ],
+  "limitations": [
+    "The analysis relies solely on the supplied excerpts and may omit broader context from the full articles.",
+    "Quotes reflect the perspectives of the source publications and may not capture the entirety of Holmes' actions or motivations."
+  ],
+  "report_generation_issues": [
+    "Rejected 4 invalid or unverified evidence example(s)."
+  ]
+}

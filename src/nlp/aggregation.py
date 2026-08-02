@@ -48,10 +48,10 @@ def aggregate_evidence_llm(
     return {
         "run_id": run_id,
         "target_name": target_name,
-        "aggregation_method": "label_count_summary",
+        "aggregation_method": "negative_flag_priority",
         "num_evidence": len(evidence_items),
         "mixed_evidence_threshold": mixed_evidence_threshold,
-        "baseline_tie_threshold": baseline_tie_threshold,
+        #"baseline_tie_threshold": baseline_tie_threshold,
         "minimum_evidence_count": minimum_evidence_count,
         "source_results": source_results,
         "overall_result": overall_result,
@@ -99,6 +99,7 @@ def aggregate_source_evidence(
         "source_id": source_id,
         "baseline_sentiment": baseline_sentiment,
         "sentiment_counts": sentiment_counts,
+        "negative_evidence_present": sentiment_counts["negative"] > 0,
         "mixed_evidence": opposing_sentiment_ratio >= mixed_evidence_threshold,
         "opposing_sentiment_ratio": opposing_sentiment_ratio,
         "insufficient_evidence": is_insufficient_evidence(
@@ -135,6 +136,7 @@ def aggregate_overall_evidence(
         "baseline_sentiment": baseline_sentiment,
         "sentiment_counts": sentiment_counts,
         "source_baseline_sentiment_counts": source_baseline_sentiment_counts,
+        "negative_evidence_present": sentiment_counts["negative"] > 0,
         "mixed_evidence": opposing_sentiment_ratio >= mixed_evidence_threshold,
         "opposing_sentiment_ratio": opposing_sentiment_ratio,
         "insufficient_evidence": is_insufficient_evidence(
@@ -181,32 +183,25 @@ def decide_baseline_sentiment(
     baseline_tie_threshold: float,
 ) -> str:
     """
-    Chooses a simple baseline sentiment.
+    Chooses baseline sentiment using review-flag logic.
 
-    Positive/negative evidence takes priority over neutral background evidence.
-    If positive and negative are close enough, return neutral.
-
-    Example with threshold 0.10:
-    18 positive vs 19 negative -> neutral because the difference is small.
+    In this project, negative sentiment functions as a review flag.
+    Any negative evidence takes priority over positive or neutral evidence.
     """
     positive_count = sentiment_counts["positive"]
     negative_count = sentiment_counts["negative"]
     neutral_count = sentiment_counts["neutral"]
 
-    non_neutral_total = positive_count + negative_count
+    if negative_count > 0:
+        return "negative"
 
-    if non_neutral_total == 0:
-        return "neutral" if neutral_count > 0 else "neutral"
-
-    difference_ratio = abs(positive_count - negative_count) / non_neutral_total
-
-    if difference_ratio <= baseline_tie_threshold:
-        return "neutral"
-
-    if positive_count > negative_count:
+    if positive_count > 0:
         return "positive"
 
-    return "negative"
+    if neutral_count > 0:
+        return "neutral"
+
+    return "neutral"
 
 
 def calculate_opposing_sentiment_ratio(

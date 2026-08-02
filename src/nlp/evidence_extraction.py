@@ -1,6 +1,7 @@
 import json
 import re
 from typing import Any
+from pathlib import Path
 
 from src.nlp.llm_client import LLMClient
 from src.nlp.models import EvidenceExtractionConfig, ExtractedQuote
@@ -16,7 +17,9 @@ def extract_evidence_from_chunk_llm(
     chunk_text: str,
     llm_client: LLMClient,
     config: EvidenceExtractionConfig | None = None,
-) -> list[ExtractedQuote]:
+    run_dir: Path | None = None,
+    chunk_id: str | None = None,
+) -> tuple[list[ExtractedQuote], list[dict[str, Any]]]:
     config = config or EvidenceExtractionConfig()
 
     prompt = build_evidence_extraction_prompt(
@@ -28,58 +31,130 @@ def extract_evidence_from_chunk_llm(
         model=config.model_name,
         prompt=prompt,
         temperature=config.temperature,
+        seed=config.seed,
+        run_dir=run_dir,
+        stage="evidence_extraction",
+        chunk_id=chunk_id,
     )
 
     parsed = parse_llm_json_response(raw_response)
     raw_items = parsed.get("evidence", [])
 
     if not isinstance(raw_items, list):
-        return []
+        return [], [
+            {
+                "reason": "raw_evidence_not_list",
+                "raw_evidence_type": type(raw_items).__name__,
+                "raw_evidence_preview": truncate_for_issue(raw_items),
+            }
+        ]
 
     extracted_quotes: list[ExtractedQuote] = []
+    extraction_issues: list[dict[str, Any]] = []
 
     for item in raw_items:
-        extracted = parse_evidence_item(item)
+        extracted, issue = parse_evidence_item_with_issue(item)
+
+        if issue is not None:
+            extraction_issues.append(issue)
+            continue
 
         if extracted is None:
+            extraction_issues.append(
+                {
+                    "reason": "unknown_parse_failure",
+                    "raw_item_preview": truncate_for_issue(item),
+                }
+            )
             continue
 
         if not quote_exists_in_text(extracted.quote, chunk_text):
+            extraction_issues.append(
+                {
+                    "reason": "quote_not_found_in_chunk",
+                    "quote": extracted.quote,
+                    "sentiment": extracted.sentiment,
+                }
+            )
             continue
 
         extracted_quotes.append(extracted)
 
-    return extracted_quotes
+    return extracted_quotes, extraction_issues
 
 
-def parse_evidence_item(item: Any) -> ExtractedQuote | None:
+def parse_evidence_item_with_issue(item: Any) -> tuple[ExtractedQuote | None, dict[str, Any] | None]:
     if not isinstance(item, dict):
-        return None
+        return None, {
+            "reason": "evidence_item_not_object",
+            "raw_item_type": type(item).__name__,
+            "raw_item_preview": truncate_for_issue(item),
+        }
 
     quote = item.get("quote")
     sentiment = item.get("sentiment")
 
     if not isinstance(quote, str):
-        return None
+        return None, {
+            "reason": "missing_or_invalid_quote",
+            "quote_type": type(quote).__name__,
+            "sentiment": sentiment,
+            "raw_item_preview": truncate_for_issue(item),
+        }
 
     if not isinstance(sentiment, str):
-        return None
+        return None, {
+            "reason": "missing_or_invalid_sentiment",
+            "quote": quote,
+            "sentiment_type": type(sentiment).__name__,
+            "raw_item_preview": truncate_for_issue(item),
+        }
 
-    sentiment = sentiment.strip().lower()
+    normalized_sentiment = sentiment.strip().lower()
 
-    if sentiment not in VALID_SENTIMENTS:
-        return None
+    if normalized_sentiment not in VALID_SENTIMENTS:
+        return None, {
+            "reason": "invalid_sentiment_label",
+            "quote": quote,
+            "sentiment": normalized_sentiment,
+            "valid_sentiments": sorted(VALID_SENTIMENTS),
+        }
 
-    quote = quote.strip()
+    normalized_quote = quote.strip()
 
-    if not quote:
-        return None
+    if not normalized_quote:
+        return None, {
+            "reason": "empty_quote",
+            "sentiment": normalized_sentiment,
+            "raw_item_preview": truncate_for_issue(item),
+        }
 
     return ExtractedQuote(
-        quote=quote,
-        sentiment=sentiment,  # type: ignore[arg-type]
-    )
+        quote=normalized_quote,
+        sentiment=normalized_sentiment,  # type: ignore[arg-type]
+    ), None
 
+def parse_evidence_item(item: Any) -> ExtractedQuote | None:
+    """
+    Backward-compatible parser for callers that only want the parsed quote.
+    """
+    extracted, _issue = parse_evidence_item_with_issue(item)
+    return extracted
+
+def truncate_for_issue(value: Any, max_chars: int = 500) -> str:
+    """
+    Keeps evidence_extraction_issues readable and prevents very large raw items
+    from making evidence.json noisy.
+    """
+    try:
+        text = json.dumps(value, ensure_ascii=False)
+    except TypeError:
+        text = str(value)
+
+    if len(text) <= max_chars:
+        return text
+
+    return text[:max_chars] + "...[truncated]"
 
 def parse_llm_json_response(raw_response: str) -> dict[str, Any]:
     """

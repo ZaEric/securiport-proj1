@@ -5,10 +5,9 @@ def normalize_article_text(text: str) -> str:
     """
     Normalize extracted article text while preserving paragraph boundaries.
 
-    Expected output style:
-    paragraph one
-
-    paragraph two
+    Handles both:
+    - blank-line paragraph style: paragraph one\\n\\nparagraph two
+    - single-newline paragraph style: paragraph one\\nparagraph two
     """
     if not text:
         return ""
@@ -18,25 +17,32 @@ def normalize_article_text(text: str) -> str:
     # Strip each line.
     lines = [line.strip() for line in text.split("\n")]
 
-    # Remove empty leading/trailing noise but preserve paragraph breaks.
-    normalized_lines: list[str] = []
-    previous_blank = False
+    # Remove leading/trailing empty lines.
+    while lines and not lines[0]:
+        lines.pop(0)
 
-    for line in lines:
-        if not line:
-            if not previous_blank:
-                normalized_lines.append("")
-            previous_blank = True
-        else:
-            normalized_lines.append(line)
-            previous_blank = False
+    while lines and not lines[-1]:
+        lines.pop()
 
-    text = "\n".join(normalized_lines).strip()
+    if not lines:
+        return ""
+
+    text = "\n".join(lines)
 
     # Convert 3+ newlines to exactly 2 newlines.
     text = re.sub(r"\n{3,}", "\n\n", text)
 
-    # Normalize weird internal whitespace, but not paragraph breaks.
+    # If the extractor produced single-newline paragraph breaks and no blank-line
+    # paragraph breaks, treat each non-empty line as a paragraph.
+    if "\n\n" not in text and "\n" in text:
+        paragraphs = [
+            re.sub(r"[ \t]+", " ", line.strip())
+            for line in text.split("\n")
+            if line.strip()
+        ]
+        return "\n\n".join(paragraphs)
+
+    # Otherwise, preserve existing blank-line paragraph structure.
     paragraphs = split_paragraphs(text)
     return "\n\n".join(paragraphs)
 
@@ -52,7 +58,9 @@ def split_paragraphs(text: str) -> list[str]:
     paragraphs = []
 
     for para in raw_paragraphs:
+        # Preserve sentence spacing but remove weird line-internal whitespace.
         para = re.sub(r"[ \t]+", " ", para.strip())
+        para = re.sub(r"\n+", " ", para)
         if para:
             paragraphs.append(para)
 

@@ -15,8 +15,8 @@ from src.processing.text_normalization import (
 
 @dataclass
 class LLMChunkingConfig:
-    target_chunk_words: int = 600
-    max_chunk_words: int = 700
+    target_chunk_words: int = 3500
+    max_chunk_words: int = 4000
     overlap_paragraphs: int = 1
     chunking_strategy: str = "paragraph_aware"
 

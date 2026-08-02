@@ -1,0 +1,224 @@
+{
+  "run_id": "2026-08-02_1533_henry_nowak",
+  "target_name": "Henry Nowak",
+  "overall_sentiment": "negative",
+  "llm_sentiment": "negative",
+  "one_line_summary": "Henry Nowak was murdered by a fellow student, and police actions during the incident have led to investigations for gross misconduct, resulting in a predominantly negative public perception.",
+  "extended_summary": "The evidence indicates that Henry Nowak, an 18‑year‑old university student, was stabbed to death by Vickrum Singh Digwa in Southampton. Body‑cam footage shows Nowak pleading for help while being handcuffed by police, who subsequently investigated for gross misconduct. The incident sparked protests, a formal apology from Hampshire police, and a full inquest. While the community mourned with memorials and charitable events, the overall narrative is dominated by the tragedy of the murder and the perceived mishandling by law enforcement.",
+  "key_findings": [
+    "Henry Nowak was murdered by a fellow student, Vickrum Singh Digwa.",
+    "Police officers handcuffed Nowak while he was dying, leading to investigations for gross misconduct.",
+    "The incident prompted public protests, a formal apology, and a planned inquest."
+  ],
+  "justification": "The evidence set contains 24 negative statements, 5 positive, and 2 neutral, with no mixed or insufficient evidence. The negative statements overwhelmingly describe the murder, the police misconduct, and the public outcry, which outweigh the limited positive memorials. Therefore the overall sentiment is negative, flagged as a review case due to the serious nature of the allegations and the impact on the victim’s reputation and safety.",
+  "evidence_examples": [
+    {
+      "source_id": "src_001",
+      "quote": "Henry Nowak, an 18‑year‑old university student, was murdered in Southampton, Hampshire, England, by 23‑year‑old Vickrum Singh Digwa.",
+      "sentiment": "negative",
+      "why_selected": "Directly states the murder of the target."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "Two police officers who handcuffed British student Henry Nowak before he died in Southampton, England, are being investigated for gross misconduct.",
+      "sentiment": "negative",
+      "why_selected": "Shows police misconduct investigation involving the target."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "The English and Welsh police watchdog, the Independent Office for Police Conduct (IOPC), said in a statement that evidence indicates that the two officers who were the first to arrive at the scene may have potentially breached professional behaviour standards of duties and responsibilities, use of force and discreditable conduct.",
+      "sentiment": "negative",
+      "why_selected": "Provides official assessment of police failures."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "Hampshire police has previously apologised to the Nowak family for the way Henry was treated by its officers.",
+      "sentiment": "positive",
+      "why_selected": "Shows a mitigating response from authorities."
+    },
+    {
+      "source_id": "src_004",
+      "quote": "Last December, Henry – aged just 18 – was a first-year university student with his life ahead of him. He was kind, hard-working, loved by his family and friends.",
+      "sentiment": "positive",
+      "why_selected": "Highlights the victim’s character and community impact."
+    },
+    {
+      "source_id": "src_001",
+      "quote": "Nowak's funeral took place at Brentwood Cathedral on 23 January 2026 and was attended by 650 people.",
+      "sentiment": "positive",
+      "why_selected": "Illustrates community mourning and support."
+    },
+    {
+      "source_id": "src_001",
+      "quote": "The following month, a football match between the two university teams he had played for was held in his memory and raised over £40,000 for 2Wish, a charity supporting those affected by the sudden death of a child or young adult.",
+      "sentiment": "positive",
+      "why_selected": "Shows charitable response to the tragedy."
+    }
+  ],
+  "negative_evidence": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Murder_of_Henry_Nowak",
+      "title": "Murder of Henry Nowak - Wikipedia",
+      "evidence": [
+        {
+          "quote": "Henry Nowak, an 18‑year‑old university student, was murdered in Southampton, Hampshire, England, by 23‑year‑old Vickrum Singh Digwa.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "Bodycam footage released on 2 June, with the permission of Nowak's family, showed Nowak repeatedly telling officers that he had been stabbed and could not breathe.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "These were his last words.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "Nowak was pronounced dead at 12:37 am.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "Nowak had been walking home when he encountered Digwa, who stabbed him five times with a 21 cm (8.3 in) dagger he claimed was carried for Sikh religious reasons.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "Digwa told his mother, Kiran Kaur, to take the knife and hide it at their home, which she did.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "In addition to the concealed kirpan required by his faith, Digwa carried a larger dagger in a sheath around his neck, which he used to kill Nowak.",
+          "sentiment": "negative"
+        }
+      ]
+    },
+    {
+      "url": "https://www.abc.net.au/news/2026-07-01/henry-nowak-police-investigated-gross-misconduct/106867474",
+      "title": "Police who handcuffed UK student Henry Nowak before he died being investigated for gross misconduct - ABC News",
+      "evidence": [
+        {
+          "quote": "Two police officers who handcuffed British student Henry Nowak before he died in Southampton, England, are being investigated for gross misconduct.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "Mr Nowak died after being stabbed in December while handcuffed after his killer falsely alleged a racist attack.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "He was handcuffed by police while he lay dying from stab wounds after his killer falsely alleged a racist attack.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "The English and Welsh police watchdog, the Independent Office for Police Conduct (IOPC), said in a statement that evidence indicates that the two officers who were the first to arrive at the scene may have potentially breached professional behaviour standards of duties and responsibilities, use of force and discreditable conduct.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "These relate to potential failures by the officers to recognise that Henry needed urgent medical attention, to immediately act after he said he had been stabbed and he couldn't breathe, and the decision to arrest and handcuff Henry rather than provide immediate first aid,\" the statement said.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "There's also an indication one of the officers may have breached the standard relating to authority, respect and courtesy, for appearing to dismiss Henry saying he had been stabbed.",
+          "sentiment": "negative"
+        }
+      ]
+    },
+    {
+      "url": "https://www.bbc.com/news/articles/cd6ezln069vo",
+      "title": "Two officers in Henry Nowak case investigated for gross misconduct",
+      "evidence": [
+        {
+          "quote": "Two police officers are being investigated for potential gross misconduct following the case of Henry Nowak, who was handcuffed and arrested as he lay dying, the police watchdog has said.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "The IOPC said the investigation relates to potential failures by the officers to recognise Henry Nowak needed urgent medical help and the decision to arrest and handcuff him rather than provide first aid.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "Protests erupted in Southampton on 2 June after police bodycam footage showing the two officers interactions with Henry as he lay dying was released.",
+          "sentiment": "negative"
+        }
+      ]
+    },
+    {
+      "url": "https://www.gov.uk/government/speeches/home-secretary-statement-on-henry-nowak",
+      "title": "Home Secretary response to Henry Nowak case - GOV.UK",
+      "evidence": [
+        {
+          "quote": "His murder – at the hands of Vickrum Digwa – was a horrifying act.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "People are rightly asking questions about how the situation was handled and they are shocked, and disquieted, to hear Henry’s words: “I can’t breathe.”",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "Yesterday, a sentence was handed down in court. I know it will never be enough. The loss felt by Henry Nowak’s family and friends will last forever. A wonderful young man will never enjoy the promise of the life that stretched out before him.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "Last night, they wrote that “no other family should experience the heartbreak and horror of losing a child to knife crime.”",
+          "sentiment": "negative"
+        }
+      ]
+    },
+    {
+      "url": "https://www.theguardian.com/uk-news/2026/jun/05/henry-nowak-controversy-behind-us-intervention-murder-case-britain",
+      "title": "How Britain was rocked by Henry Nowak’s murder – and why the US intervened | Crime | The Guardian",
+      "evidence": [
+        {
+          "quote": "Nowak was stabbed with what Digwa said was a ceremonial knife carried as part of his Sikh religion.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "Police initially arrested and handcuffed Nowak as he lay dying.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "In the wake of the attack, Digwa’s brother called the police and falsely claimed he and his brother had been subjected to a racially motivated attack by Nowak.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "Nowak’s father, Mark Nowak, condemned the “inhumane and degrading” treatment of his son by police, but said: “We do not want his death to be used to create further division, hatred or tension. We want his story to help make our streets safer for everyone.”",
+          "sentiment": "negative"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "https://en.wikipedia.org/wiki/Murder_of_Henry_Nowak",
+      "title": "Murder of Henry Nowak - Wikipedia"
+    },
+    {
+      "source_id": "src_002",
+      "url": "https://www.abc.net.au/news/2026-07-01/henry-nowak-police-investigated-gross-misconduct/106867474",
+      "title": "Police who handcuffed UK student Henry Nowak before he died being investigated for gross misconduct - ABC News"
+    },
+    {
+      "source_id": "src_003",
+      "url": "https://www.bbc.com/news/articles/cd6ezln069vo",
+      "title": "Two officers in Henry Nowak case investigated for gross misconduct"
+    },
+    {
+      "source_id": "src_004",
+      "url": "https://www.gov.uk/government/speeches/home-secretary-statement-on-henry-nowak",
+      "title": "Home Secretary response to Henry Nowak case - GOV.UK"
+    },
+    {
+      "source_id": "src_005",
+      "url": "https://www.theguardian.com/uk-news/2026/jun/05/henry-nowak-controversy-behind-us-intervention-murder-case-britain",
+      "title": "How Britain was rocked by Henry Nowak’s murder – and why the US intervened | Crime | The Guardian"
+    }
+  ],
+  "limitations": [
+    "The report is based solely on the supplied evidence and does not incorporate external information.",
+    "No inference beyond the explicit statements in the evidence is made."
+  ],
+  "report_generation_issues": [],
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42,
+    "max_evidence_examples": 7
+  }
+}

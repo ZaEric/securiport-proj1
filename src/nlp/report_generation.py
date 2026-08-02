@@ -1,10 +1,15 @@
 import json
 import re
 from typing import Any
+from pathlib import Path
 
 from src.nlp.llm_client import LLMClient
-from src.nlp.models import EvidenceExtractionConfig
+from src.nlp.models import ReportGenerationConfig, build_llm_metadata
 from src.nlp.prompts import build_final_report_prompt
+from src.nlp.quote_verification import (
+    normalize_quote_for_matching,
+    normalize_quote_for_punctuation_insensitive_matching,
+)
 
 
 VALID_SENTIMENTS = {"positive", "neutral", "negative"}
@@ -25,7 +30,7 @@ def generate_final_report_llm(
     evidence_json: dict[str, Any],
     aggregation_json: dict[str, Any],
     llm_client: LLMClient,
-    config: EvidenceExtractionConfig | None = None,
+    config: ReportGenerationConfig | None = None,
     max_evidence_examples: int = 7,
 ) -> dict[str, Any]:
     """
@@ -34,21 +39,24 @@ def generate_final_report_llm(
     The LLM writes the narrative report, but selected evidence examples are
     validated against evidence.json after generation.
     """
-    config = config or EvidenceExtractionConfig()
+    config = config or ReportGenerationConfig()
 
     run_id = evidence_json["run_id"]
     target_name = evidence_json["target_name"]
 
+    run_dir = Path("data/runs") / run_id
+
     sources_summary = build_sources_summary(sources_json=sources_json)
+    evidence_summary = build_evidence_summary(evidence_json=evidence_json)
     aggregation_summary = build_aggregation_summary(
-        evidence_json=evidence_json,
+    evidence_json=evidence_json,
         aggregation_json=aggregation_json,
     )
 
     prompt = build_final_report_prompt(
         target_name=target_name,
         sources_summary=sources_summary,
-        evidence_json=evidence_json,
+        evidence_json=evidence_summary,
         aggregation_summary=aggregation_summary,
         max_evidence_examples=max_evidence_examples,
     )
@@ -57,6 +65,9 @@ def generate_final_report_llm(
         model=config.model_name,
         prompt=prompt,
         temperature=config.temperature,
+        seed=config.seed,
+        run_dir=run_dir,
+        stage="final_report",
     )
 
     parsed_report = parse_llm_json_response(raw_response)
@@ -68,6 +79,7 @@ def generate_final_report_llm(
         sources_summary=sources_summary,
         evidence_json=evidence_json,
         aggregation_json=aggregation_json,
+        config=config,
         max_evidence_examples=max_evidence_examples,
     )
 
@@ -95,6 +107,33 @@ def build_sources_summary(
 
     return sources_summary
 
+def build_evidence_summary(
+    evidence_json: dict[str, Any],
+) -> dict[str, Any]:
+    """
+    Builds evidence data for the final report prompt.
+
+    Excludes LLM metadata, evidence extraction issues, debugging fields,
+    and other audit-only information.
+    """
+    return {
+        "run_id": evidence_json.get("run_id"),
+        "target_name": evidence_json.get("target_name"),
+        "evidence_extraction_method": evidence_json.get("evidence_extraction_method"),
+        "num_evidence": evidence_json.get("num_evidence", len(evidence_json.get("evidence", []))),
+        "evidence": [
+            {
+                "evidence_id": item.get("evidence_id", ""),
+                "source_id": item.get("source_id", ""),
+                "chunk_id": item.get("chunk_id", ""),
+                "quote": item.get("quote", ""),
+                "sentiment": item.get("sentiment", ""),
+            }
+            for item in evidence_json.get("evidence", [])
+            if isinstance(item, dict)
+        ],
+    }
+
 def build_aggregation_summary(
     evidence_json: dict[str, Any],
     aggregation_json: dict[str, Any],
@@ -102,18 +141,75 @@ def build_aggregation_summary(
     """
     Builds compact evidence statistics for the final report prompt.
 
-    Excludes baseline_sentiment, thresholds, source_results, and implementation details.
+    Includes the deterministic aggregation baseline sentiment because overall
+    sentiment is now treated as a review-flag result. Excludes thresholds,
+    source_results, and implementation details.
     """
     overall_result = aggregation_json.get("overall_result", {})
     sources = aggregation_json.get("source_results", [])
 
     return {
+        "baseline_sentiment": overall_result.get("baseline_sentiment"),
         "num_evidence": evidence_json.get("num_evidence", len(evidence_json.get("evidence", []))),
         "source_count": len(sources),
         "sentiment_counts": overall_result.get("sentiment_counts", {}),
+        "source_baseline_sentiment_counts": overall_result.get("source_baseline_sentiment_counts", {}),
+        "negative_evidence_present": overall_result.get("negative_evidence_present"),
         "mixed_evidence": overall_result.get("mixed_evidence"),
         "insufficient_evidence": overall_result.get("insufficient_evidence"),
     }
+
+def build_negative_evidence(
+    evidence_json: dict[str, Any],
+    sources_summary: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """
+    Builds a deterministic list of all negative evidence grouped by source.
+
+    This is not generated by the LLM. It is built directly from evidence.json
+    so analysts can review all negative/review-flag evidence.
+    """
+    source_lookup = {
+        source["source_id"]: {
+            "url": source.get("url", ""),
+            "title": source.get("title", ""),
+            "evidence": [],
+        }
+        for source in sources_summary
+    }
+
+    for item in evidence_json.get("evidence", []):
+        if not isinstance(item, dict):
+            continue
+
+        if item.get("sentiment") != "negative":
+            continue
+
+        source_id = item.get("source_id")
+        quote = item.get("quote")
+
+        if not isinstance(source_id, str) or not isinstance(quote, str):
+            continue
+
+        if source_id not in source_lookup:
+            source_lookup[source_id] = {
+                "url": "",
+                "title": "",
+                "evidence": [],
+            }
+
+        source_lookup[source_id]["evidence"].append(
+            {
+                "quote": quote,
+                "sentiment": "negative",
+            }
+        )
+
+    return [
+        source_data
+        for source_data in source_lookup.values()
+        if source_data["evidence"]
+    ]
 
 
 def normalize_final_report(
@@ -123,6 +219,7 @@ def normalize_final_report(
     sources_summary: list[dict[str, Any]],
     evidence_json: dict[str, Any],
     aggregation_json: dict[str, Any],
+    config: ReportGenerationConfig,
     max_evidence_examples: int,
 ) -> dict[str, Any]:
     """
@@ -131,12 +228,35 @@ def normalize_final_report(
     Does not silently invent fallback sentiment. If required fields are missing
     or invalid, the issue is recorded in report_generation_issues.
     """
-    report_generation_issues = validate_report_output(parsed_report)
+    report_generation_issues: list[Any] = validate_report_output(parsed_report)
 
-    overall_sentiment = normalize_required_overall_sentiment(
+    llm_sentiment = normalize_required_overall_sentiment(
         parsed_report.get("overall_sentiment"),
         report_generation_issues,
     )
+
+    aggregation_overall_sentiment = aggregation_json["overall_result"].get("baseline_sentiment")
+
+    if aggregation_overall_sentiment not in VALID_SENTIMENTS:
+        report_generation_issues.append(
+            "Missing or invalid aggregation baseline_sentiment. Expected one of: positive, neutral, negative."
+        )
+        overall_sentiment = None
+    else:
+        overall_sentiment = aggregation_overall_sentiment
+
+    if (
+        llm_sentiment is not None
+        and overall_sentiment is not None
+        and llm_sentiment != overall_sentiment
+    ):
+        report_generation_issues.append(
+            {
+                "issue": "LLM overall_sentiment differed from deterministic aggregation result.",
+                "llm_overall_sentiment": llm_sentiment,
+                "aggregation_overall_sentiment": overall_sentiment,
+            }
+        )
 
     evidence_examples = validate_evidence_examples(
         raw_examples=parsed_report.get("evidence_examples", []),
@@ -145,26 +265,36 @@ def normalize_final_report(
         report_generation_issues=report_generation_issues,
     )
 
+    negative_evidence = build_negative_evidence(
+        evidence_json=evidence_json,
+        sources_summary=sources_summary,
+    )
+
     return {
         "run_id": run_id,
         "target_name": target_name,
         "overall_sentiment": overall_sentiment,
-        "overall_confidence": None,
-        "aggregation_baseline_sentiment": aggregation_json["overall_result"].get("baseline_sentiment"),
+        #"overall_confidence": None,
+        "llm_sentiment": llm_sentiment,
         "one_line_summary": normalize_string(parsed_report.get("one_line_summary")),
         "extended_summary": normalize_string(parsed_report.get("extended_summary")),
         "key_findings": normalize_string_list(parsed_report.get("key_findings")),
         "justification": normalize_string(parsed_report.get("justification")),
         "evidence_examples": evidence_examples,
+        "negative_evidence": negative_evidence,
         "sources": normalize_sources(parsed_report.get("sources"), sources_summary),
         "limitations": normalize_string_list(parsed_report.get("limitations")),
         "report_generation_issues": report_generation_issues,
+        "llm_metadata": {
+            **build_llm_metadata(config),
+            "max_evidence_examples": max_evidence_examples,
+        },
     }
 
 
 def normalize_required_overall_sentiment(
     value: Any,
-    report_generation_issues: list[str],
+    report_generation_issues: list[Any],
 ) -> str | None:
     """
     Validates required overall_sentiment.
@@ -201,13 +331,16 @@ def validate_evidence_examples(
     raw_examples: Any,
     evidence_json: dict[str, Any],
     max_evidence_examples: int,
-    report_generation_issues: list[str],
+    report_generation_issues: list[Any],
 ) -> list[dict[str, Any]]:
     """
     Keeps only evidence examples that match real evidence quotes.
 
     Final report examples do not expose evidence_id because it is internal.
     Validation can match by evidence_id if provided, or by exact quote.
+
+    Rejected examples are recorded in report_generation_issues so hallucinated
+    or malformed evidence can be inspected later.
     """
     if not isinstance(raw_examples, list):
         report_generation_issues.append("evidence_examples was missing or not a list.")
@@ -216,34 +349,71 @@ def validate_evidence_examples(
     evidence_by_id = {
         item["evidence_id"]: item
         for item in evidence_json.get("evidence", [])
+        if isinstance(item, dict) and "evidence_id" in item
     }
-    evidence_by_quote = {
-        item["quote"]: item
-        for item in evidence_json.get("evidence", [])
-    }
+    evidence_by_quote: dict[str, dict[str, Any]] = {}
+    evidence_by_punctuation_insensitive_quote: dict[str, dict[str, Any]] = {}
+
+    for item in evidence_json.get("evidence", []):
+        if isinstance(item, dict) and isinstance(item.get("quote"), str):
+            normalized_quote = normalize_quote_for_matching(item["quote"])
+            punctuation_insensitive_quote = normalize_quote_for_punctuation_insensitive_matching(
+                item["quote"]
+            )
+
+            evidence_by_quote.setdefault(normalized_quote, item)
+            evidence_by_punctuation_insensitive_quote.setdefault(
+                punctuation_insensitive_quote,
+                item,
+            )
 
     validated_examples: list[dict[str, Any]] = []
     seen_quotes: set[str] = set()
-    invalid_example_count = 0
+    rejected_examples: list[dict[str, Any]] = []
 
     for example in raw_examples:
         if not isinstance(example, dict):
-            invalid_example_count += 1
+            rejected_examples.append(
+                {
+                    "reason": "example was not a JSON object",
+                    "example": example,
+                }
+            )
             continue
 
         source_evidence = find_matching_evidence_example(
             example=example,
             evidence_by_id=evidence_by_id,
             evidence_by_quote=evidence_by_quote,
+            evidence_by_punctuation_insensitive_quote=evidence_by_punctuation_insensitive_quote,
         )
 
         if source_evidence is None:
-            invalid_example_count += 1
+            rejected_examples.append(
+                {
+                    "reason": "no matching evidence_id or exact quote found in evidence.json",
+                    "evidence_id": example.get("evidence_id"),
+                    "source_id": example.get("source_id"),
+                    "quote": example.get("quote"),
+                    "sentiment": example.get("sentiment"),
+                    "why_selected": example.get("why_selected"),
+                }
+            )
             continue
 
         quote = source_evidence["quote"]
 
         if quote in seen_quotes:
+            rejected_examples.append(
+                {
+                    "reason": "duplicate evidence quote",
+                    "evidence_id": example.get("evidence_id"),
+                    "source_id": example.get("source_id"),
+                    "quote": example.get("quote"),
+                    "sentiment": example.get("sentiment"),
+                    "why_selected": example.get("why_selected"),
+                }
+            )
             continue
 
         validated_examples.append(
@@ -259,9 +429,12 @@ def validate_evidence_examples(
         if len(validated_examples) >= max_evidence_examples:
             break
 
-    if invalid_example_count > 0:
+    if rejected_examples:
         report_generation_issues.append(
-            f"Rejected {invalid_example_count} invalid or unverified evidence example(s)."
+            {
+                "issue": f"Rejected {len(rejected_examples)} invalid, duplicate, or unverified evidence example(s).",
+                "rejected_examples": rejected_examples,
+            }
         )
 
     if not validated_examples:
@@ -276,6 +449,7 @@ def find_matching_evidence_example(
     example: dict[str, Any],
     evidence_by_id: dict[str, dict[str, Any]],
     evidence_by_quote: dict[str, dict[str, Any]],
+    evidence_by_punctuation_insensitive_quote: dict[str, dict[str, Any]],
 ) -> dict[str, Any] | None:
     """
     Matches LLM-selected evidence against real evidence.
@@ -289,8 +463,16 @@ def find_matching_evidence_example(
 
     quote = example.get("quote")
 
-    if isinstance(quote, str) and quote in evidence_by_quote:
-        return evidence_by_quote[quote]
+    if isinstance(quote, str):
+        normalized_quote = normalize_quote_for_matching(quote)
+
+        if normalized_quote in evidence_by_quote:
+            return evidence_by_quote[normalized_quote]
+
+        punctuation_insensitive_quote = normalize_quote_for_punctuation_insensitive_matching(quote)
+
+        if punctuation_insensitive_quote in evidence_by_punctuation_insensitive_quote:
+            return evidence_by_punctuation_insensitive_quote[punctuation_insensitive_quote]
 
     return None
 

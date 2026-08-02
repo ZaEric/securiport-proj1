@@ -1,0 +1,192 @@
+{
+  "run_id": "2026-07-26_1326_elizabeth_holmes",
+  "target_name": "Elizabeth Holmes",
+  "evidence_extraction_method": "llm_quote_extraction",
+  "num_evidence": 23,
+  "evidence": [
+    {
+      "evidence_id": "ev_001",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Theranos founder Elizabeth Holmes has asked Donald Trump to commute her sentence after she was convicted of defrauding investors in her now-defunct blood-testing startup that was once valued at $9bn, a notice on the US Department of Justice website showed.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_002",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Holmes, 37, founder of the collapsed blood-testing company Theranos, was convicted of four counts of defrauding investors and, in November 2022, was sentenced to serve more than 11 years in prison.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_003",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "A university dropout with no medical training, Holmes had fooled regulators and some of the world’s richest people, including Rupert Murdoch, Henry Kissinger and Larry Ellison, into believing she had figured out a way to test for a range of health conditions with just a pinprick of blood.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_004",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "That same year, the US government charged Holmes and her co-executive Sunny Balwani with defrauding both investors and patients, and making false claims about the effectiveness of the company’s technology.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_005",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "She filed a patent for the technology that aimed to perform a wide range of tests on a small amount of blood, a development that would eliminate the need for large blood samples for diagnostics.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_006",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Once celebrated as Silicon Valley's youngest self-made female billionaire, Holmes became one of the most recognizable faces of corporate fraud after the collapse of Theranos, the blood testing company she founded at age nineteen.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_007",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "a jury convicted Holmes in January 2022 on one count of conspiracy to commit wire fraud and three counts of wire fraud involving investors.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_008",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Earlier this year, U.S. District Judge Edward Davila reduced that sentence to 123 months after applying retroactive sentencing guideline amendments for certain first time, nonviolent offenders.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_009",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "According to Evans, Holmes has maintained a spotless disciplinary record during her three years of incarceration.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_010",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "She had a resume class and taught women about ways to find a job, prepare for interviews and even how to determine a good job fit.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_011",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Elizabeth Holmes founded Theranos in 2003 after leaving Stanford University.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_012",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "In 2018, the U.S. Securities and Exchange Commission (SEC) charged Theranos, Holmes, and former Theranos chief operating officer (COO) Ramesh \"Sunny\" Balwani with raising $700 million from investors through a fraud involving false or exaggerated claims about the accuracy of the company's blood-testing technology; Holmes settled the charges by paying a $500,000 no admit no deny (NAND) fine, returning 18.9 million shares to the company, relinquishing her voting control of Theranos, and accepting a ten-year ban from serving as an officer or director of a public company.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_013",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "She was sentenced to serve 11+1⁄4 years at Federal Prison Camp, Bryan, beginning on May 30, 2023.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_014",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "In July 2016, CMS banned Holmes from owning, operating, or directing a blood-testing service for a period of two years.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_015",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "In 2015, Forbes had named Holmes the youngest and wealthiest self-made female billionaire in the United States on the basis of a $9-billion valuation of her company.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_016",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "Holmes was awarded the 2015 Horatio Alger Award of the Horatio Alger Association of Distinguished Americans, making her its youngest recipient in history.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_017",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "In 2002, Holmes attended Stanford, where she studied chemical engineering and worked as a student researcher and laboratory assistant in the School of Engineering.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_018",
+      "source_id": "src_005",
+      "chunk_id": "src_005_chunk_001",
+      "quote": "Elizabeth Holmes was convicted of fraud in 2022 and reported to prison to begin serving her 11-year sentence in 2023",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_019",
+      "source_id": "src_005",
+      "chunk_id": "src_005_chunk_001",
+      "quote": "Holmes made history as the founder of the blood-testing startup Theranos, leading her to be named one of Forbes' richest women in America in 2014",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_020",
+      "source_id": "src_005",
+      "chunk_id": "src_005_chunk_001",
+      "quote": "She was ultimately convicted of wire fraud and is currently serving an 11-year sentence (reduced to nine years for good behavior) in federal prison",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_021",
+      "source_id": "src_005",
+      "chunk_id": "src_005_chunk_001",
+      "quote": "Holmes initially denied the original Wall Street Journal article's claims, asserting on Mad Money, \"This is what happens when you work to change things, first they think you're crazy, then they fight you, and then all of a sudden you change the world.\"",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_022",
+      "source_id": "src_005",
+      "chunk_id": "src_005_chunk_001",
+      "quote": "\"It’s been hell and torture to be here,\" Holmes told PEOPLE in February 2025 of her incarceration",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_023",
+      "source_id": "src_005",
+      "chunk_id": "src_005_chunk_001",
+      "quote": "Holmes' appeal was heard in June 2024, but her conviction was ultimately upheld",
+      "sentiment": "negative",
+      "confidence": null
+    }
+  ]
+}

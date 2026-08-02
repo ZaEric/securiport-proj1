@@ -1,0 +1,81 @@
+{
+  "run_id": "2026-07-22_1634_john_smith",
+  "target_name": "John Smith",
+  "overall_sentiment": "positive",
+  "overall_confidence": null,
+  "aggregation_baseline_sentiment": "positive",
+  "one_line_summary": "John Smith is widely praised for outstanding engineering work, dedicated volunteerism, and effective city project coordination.",
+  "extended_summary": "Across multiple sources, John Smith is highlighted for leading a cost‑saving bridge redesign that finished early, catching critical design flaws, and mentoring junior engineers. He is also lauded for five years of reliable volunteer service at a food bank, consistently supporting seniors and training new volunteers. Additionally, his introduction of a transparent weekly reporting system revitalized a stalled city construction project, earning recommendations for broader adoption.",
+  "key_findings": [
+    "Smith earned Employee of the Year for engineering leadership and cost‑effective project delivery.",
+    "His long‑term volunteer work is noted for reliability, mentorship, and personal engagement with community members.",
+    "His coordination and reporting innovations significantly improved city project transparency and progress."
+  ],
+  "justification": "The evidence consists of twelve positive statements and one neutral statement, with no negative content. The positive quotes emphasize notable achievements and commendations, strongly supporting a positive overall assessment.",
+  "evidence_examples": [
+    {
+      "source_id": "src_001",
+      "quote": "John Smith, a structural engineer at Kestrel Bridge Works, was named Employee of the Year at the company's annual recognition dinner on Thursday.",
+      "sentiment": "positive",
+      "why_selected": "Highlights top professional recognition."
+    },
+    {
+      "source_id": "src_001",
+      "quote": "Smith was honored for leading the redesign of the Millbrook Creek pedestrian bridge, a project that came in under budget and was completed two months ahead of schedule.",
+      "sentiment": "positive",
+      "why_selected": "Demonstrates cost‑saving and timely project execution."
+    },
+    {
+      "source_id": "src_001",
+      "quote": "Colleagues praised Smith for catching a design flaw during an early review that could have caused costly delays later in construction.",
+      "sentiment": "positive",
+      "why_selected": "Shows proactive problem‑solving that prevented larger issues."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "The Riverside Food Bank held a small ceremony on Saturday to thank longtime volunteer John Smith for five years of weekly service sorting and delivering food donations.",
+      "sentiment": "positive",
+      "why_selected": "Recognizes sustained community volunteer commitment."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "'When John says he'll be here, he's here, and that consistency matters more than people realize when you're trying to run a distribution schedule that serves hundreds of families,' Nair said.",
+      "sentiment": "positive",
+      "why_selected": "Emphasizes reliability crucial to food‑bank operations."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "Auditors wrote that Smith introduced a weekly reporting system that gave city officials clear visibility into which tasks were on track and which needed attention, replacing an informal process that had previously left gaps of several weeks between updates.",
+      "sentiment": "positive",
+      "why_selected": "Illustrates effective project coordination improving transparency."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "She specifically credited Smith's coordination work, saying his reporting system should be considered for use on other stalled city projects.",
+      "sentiment": "positive",
+      "why_selected": "Shows broader impact and endorsement of his methods."
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "synthetic://synthetic_positive_001/src_001",
+      "title": "Local Engineer John Smith Named Employee of the Year"
+    },
+    {
+      "source_id": "src_002",
+      "url": "synthetic://synthetic_positive_001/src_002",
+      "title": "Riverside Food Bank Honors Volunteer John Smith for Five Years of Service"
+    },
+    {
+      "source_id": "src_003",
+      "url": "synthetic://synthetic_positive_001/src_003",
+      "title": "City Report Praises Turnaround of Delayed Northgate Library Renovation"
+    }
+  ],
+  "limitations": [
+    "All evidence comes from synthetic positive sources; no independent verification is available.",
+    "The neutral statement provides limited context about overall project challenges."
+  ],
+  "report_generation_issues": []
+}

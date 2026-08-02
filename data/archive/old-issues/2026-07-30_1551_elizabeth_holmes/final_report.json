@@ -1,0 +1,96 @@
+{
+  "run_id": "2026-07-30_1551_elizabeth_holmes",
+  "target_name": "Elizabeth Holmes",
+  "overall_sentiment": "negative",
+  "overall_confidence": null,
+  "aggregation_baseline_sentiment": "negative",
+  "one_line_summary": "Elizabeth Holmes is predominantly portrayed as a convicted fraudster serving a lengthy prison sentence, with only limited positive remarks about her early career and conduct in custody.",
+  "extended_summary": "The evidence overwhelmingly depicts Holmes as a founder of Theranos who was convicted of multiple counts of investor fraud and conspiracy, sentenced to more than 11 years in federal prison, and whose appeals were largely unsuccessful. While a few sources note her early accolades, such as the Horatio Alger Award, and commend her disciplined behavior in prison, these positive points are outweighed by the extensive negative coverage of her fraudulent activities, legal penalties, and the impact on investors and patients.",
+  "key_findings": [
+    "Holmes was convicted of four counts of investor fraud and conspiracy and sentenced to 135 months in prison.",
+    "U.S. appeals courts upheld her conviction, reinforcing the legal judgment against her.",
+    "Despite early recognition, the majority of evidence focuses on her fraudulent conduct and the resulting penalties."
+  ],
+  "justification": "The evidence set contains 49 negative, 5 positive, and 5 neutral quotes. The negative statements dominate, detailing convictions, sentencing, and allegations of fraud. Positive remarks are few and do not counterbalance the extensive negative coverage. Therefore, the overall sentiment is negative.",
+  "evidence_examples": [
+    {
+      "source_id": "src_002",
+      "quote": "Holmes was sentenced to more than 11 years in prison.",
+      "sentiment": "negative",
+      "why_selected": "Directly states the length of her prison sentence, underscoring the severity of her punishment."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "A U.S. appeals court has upheld the conviction of Theranos founder Elizabeth Holmes, who is serving more than 11 years in prison for defrauding investors with false claims about her company's blood-testing technology.",
+      "sentiment": "negative",
+      "why_selected": "Highlights the legal confirmation of her fraud and the continued enforcement of her sentence."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "Holmes, 41, was found guilty of four counts of investor fraud and conspiracy in January 2022 and sentenced to 135 months, or 11 1/4 years, in prison.",
+      "sentiment": "negative",
+      "why_selected": "Provides specific details of the charges and the exact sentence, reinforcing the negative narrative."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "Holmes was awarded the 2015 Horatio Alger Award of the Horatio Alger Association of Distinguished Americans, making her its youngest recipient in history.",
+      "sentiment": "positive",
+      "why_selected": "Shows early recognition of her achievements, offering a counterpoint to the negative evidence."
+    },
+    {
+      "source_id": "src_004",
+      "quote": "According to Evans, Holmes has maintained a spotless disciplinary record during her three years of incarceration.",
+      "sentiment": "positive",
+      "why_selected": "Demonstrates her conduct in prison, providing a limited positive perspective."
+    },
+    {
+      "source_id": "src_004",
+      "quote": "Federal prosecutors alleged Holmes knowingly misrepresented the capabilities of Theranos technology and misled investors about the company's financial condition, partnerships, and laboratory capabilities.",
+      "sentiment": "negative",
+      "why_selected": "Details the core allegations that led to her conviction, reinforcing the negative assessment."
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "https://apnews.com/hub/elizabeth-holmes",
+      "title": "Elizabeth Holmes | AP News"
+    },
+    {
+      "source_id": "src_002",
+      "url": "https://abcnews.com/Business/theranos-founder-elizabeth-holmes-conviction-upheld-us-appeals/story?id=119135714",
+      "title": "Theranos founder Elizabeth Holmes' conviction upheld by US appeals court - ABC News"
+    },
+    {
+      "source_id": "src_003",
+      "url": "https://en.wikipedia.org/wiki/Elizabeth_Holmes",
+      "title": "Elizabeth Holmes - Wikipedia"
+    },
+    {
+      "source_id": "src_004",
+      "url": "https://www.forbes.com/sites/walterpavlo/2026/06/30/elizabeth-holmes-doing-her-time-and-contributing-to-prison-community",
+      "title": "Elizabeth Holmes Doing Her Time And Contributing To Prison Community"
+    },
+    {
+      "source_id": "src_005",
+      "url": "https://www.theguardian.com/us-news/2026/jan/21/elizabeth-holmes-trump-fraud-sentence",
+      "title": "Theranos founder Elizabeth Holmes asks Trump to commute prison sentence | US news | The Guardian"
+    },
+    {
+      "source_id": "src_006",
+      "url": "https://people.com/elizabeth-holmes-today-now-what-to-know-11890295",
+      "title": "Where Is Elizabeth Holmes Now? Inside the Theranos Founder’s Life in Prison"
+    }
+  ],
+  "limitations": [
+    "The report relies solely on the supplied evidence and does not incorporate external information that could provide additional context.",
+    "Positive aspects of Holmes' life and conduct are limited in the evidence set, potentially skewing the overall sentiment toward negativity."
+  ],
+  "report_generation_issues": [],
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42,
+    "max_evidence_examples": 7
+  }
+}

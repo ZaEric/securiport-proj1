@@ -1,0 +1,4 @@
+- Negative sentiment is basically a flag, so analysts should look deeper
+- Pipeline should be more biased towards negative, so anything negative should heavily outweight everything
+- If individual is even a victim, should be flagged as negative to tell officer's to look deeper
+- Big Idea: Officers deal with millions of people trying to cross border, has to find criminals or victims, project should basically prioritize those people over positive or even neutral

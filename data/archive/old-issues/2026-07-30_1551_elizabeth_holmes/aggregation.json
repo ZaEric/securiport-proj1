@@ -1,0 +1,156 @@
+{
+  "run_id": "2026-07-30_1551_elizabeth_holmes",
+  "target_name": "Elizabeth Holmes",
+  "aggregation_method": "label_count_summary",
+  "num_evidence": 59,
+  "mixed_evidence_threshold": 0.25,
+  "baseline_tie_threshold": 0.1,
+  "minimum_evidence_count": 1,
+  "source_results": [
+    {
+      "source_id": "src_002",
+      "baseline_sentiment": "negative",
+      "sentiment_counts": {
+        "positive": 0,
+        "neutral": 0,
+        "negative": 5
+      },
+      "mixed_evidence": false,
+      "opposing_sentiment_ratio": 0.0,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_001",
+        "ev_002",
+        "ev_003",
+        "ev_004",
+        "ev_005"
+      ]
+    },
+    {
+      "source_id": "src_003",
+      "baseline_sentiment": "negative",
+      "sentiment_counts": {
+        "positive": 2,
+        "neutral": 4,
+        "negative": 31
+      },
+      "mixed_evidence": false,
+      "opposing_sentiment_ratio": 0.061,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_006",
+        "ev_007",
+        "ev_008",
+        "ev_009",
+        "ev_010",
+        "ev_011",
+        "ev_012",
+        "ev_013",
+        "ev_014",
+        "ev_015",
+        "ev_016",
+        "ev_017",
+        "ev_018",
+        "ev_019",
+        "ev_020",
+        "ev_021",
+        "ev_022",
+        "ev_023",
+        "ev_024",
+        "ev_025",
+        "ev_026",
+        "ev_027",
+        "ev_028",
+        "ev_029",
+        "ev_030",
+        "ev_031",
+        "ev_032",
+        "ev_033",
+        "ev_034",
+        "ev_035",
+        "ev_036",
+        "ev_037",
+        "ev_038",
+        "ev_039",
+        "ev_040",
+        "ev_041",
+        "ev_042"
+      ]
+    },
+    {
+      "source_id": "src_004",
+      "baseline_sentiment": "neutral",
+      "sentiment_counts": {
+        "positive": 3,
+        "neutral": 1,
+        "negative": 3
+      },
+      "mixed_evidence": true,
+      "opposing_sentiment_ratio": 0.5,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_043",
+        "ev_044",
+        "ev_045",
+        "ev_046",
+        "ev_047",
+        "ev_048",
+        "ev_049"
+      ]
+    },
+    {
+      "source_id": "src_005",
+      "baseline_sentiment": "negative",
+      "sentiment_counts": {
+        "positive": 0,
+        "neutral": 0,
+        "negative": 4
+      },
+      "mixed_evidence": false,
+      "opposing_sentiment_ratio": 0.0,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_050",
+        "ev_051",
+        "ev_052",
+        "ev_053"
+      ]
+    },
+    {
+      "source_id": "src_006",
+      "baseline_sentiment": "negative",
+      "sentiment_counts": {
+        "positive": 0,
+        "neutral": 0,
+        "negative": 6
+      },
+      "mixed_evidence": false,
+      "opposing_sentiment_ratio": 0.0,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_054",
+        "ev_055",
+        "ev_056",
+        "ev_057",
+        "ev_058",
+        "ev_059"
+      ]
+    }
+  ],
+  "overall_result": {
+    "baseline_sentiment": "negative",
+    "sentiment_counts": {
+      "positive": 5,
+      "neutral": 5,
+      "negative": 49
+    },
+    "source_baseline_sentiment_counts": {
+      "positive": 0,
+      "neutral": 1,
+      "negative": 4
+    },
+    "mixed_evidence": false,
+    "opposing_sentiment_ratio": 0.093,
+    "insufficient_evidence": false
+  }
+}

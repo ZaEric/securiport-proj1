@@ -4,18 +4,21 @@ from src.api.routes.sources import router as sources_router
 from src.api.routes.processing import router as processing_router
 from src.api.routes.nlp import router as nlp_router
 from src.api.routes.report import router as report_router
-
+from src.api.routes.debug import router as debug_router
+from src.api.routes.pipeline import router as pipeline_router
 
 app = FastAPI(
     title="Securiport Sentiment Analysis API",
     version="0.1.0",
-    description="API for running and debugging individual stages of the pipeline.",
+    description="API for running the full sentiment pipeline and debugging individual stages.",
 )
 
+app.include_router(debug_router)
 app.include_router(sources_router)
 app.include_router(processing_router)
 app.include_router(nlp_router)
 app.include_router(report_router)
+app.include_router(pipeline_router)
 
 
 @app.get("/")

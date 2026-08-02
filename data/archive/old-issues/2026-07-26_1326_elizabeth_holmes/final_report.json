@@ -1,0 +1,97 @@
+{
+  "run_id": "2026-07-26_1326_elizabeth_holmes",
+  "target_name": "Elizabeth Holmes",
+  "overall_sentiment": "negative",
+  "overall_confidence": null,
+  "aggregation_baseline_sentiment": "negative",
+  "one_line_summary": "Elizabeth Holmes, founder of Theranos, was convicted of fraud and is serving an 11‑year prison sentence, though she was once celebrated as a young billionaire and has contributed positively to her prison community.",
+  "extended_summary": "The evidence shows that Holmes founded Theranos in 2003 and quickly rose to prominence, earning titles such as the youngest self‑made female billionaire and receiving the Horatio Alger Award. However, her company collapsed after regulators and investors discovered that its blood‑testing technology was unreliable, leading to charges of fraud. Holmes was convicted on multiple counts of wire fraud and sentenced to more than 11 years in federal prison, a sentence later reduced for good behavior. While in prison, she has maintained a spotless disciplinary record and has taught women job‑search skills, indicating some positive engagement despite the overall negative context of her legal and professional downfall.",
+  "key_findings": [
+    "Holmes was convicted of multiple counts of fraud and is serving an 11‑year prison sentence.",
+    "She was once celebrated as a young billionaire and received prestigious awards.",
+    "In prison, she has maintained a clean record and contributed to the prison community."
+  ],
+  "justification": "The majority of the evidence (13 out of 23) is negative, describing Holmes’ fraud convictions, sentencing, and the collapse of Theranos. While there are positive mentions of her early achievements and recent community contributions, the negative evidence dominates the narrative, leading to an overall negative sentiment.",
+  "evidence_examples": [
+    {
+      "source_id": "src_001",
+      "quote": "Theranos founder Elizabeth Holmes has asked Donald Trump to commute her sentence after she was convicted of defrauding investors in her now-defunct blood-testing startup that was once valued at $9bn, a notice on the US Department of Justice website showed.",
+      "sentiment": "negative",
+      "why_selected": "Shows Holmes’ conviction and the seriousness of the fraud allegations."
+    },
+    {
+      "source_id": "src_001",
+      "quote": "Holmes, 37, founder of the collapsed blood-testing company Theranos, was convicted of four counts of defrauding investors and, in November 2022, was sentenced to serve more than 11 years in prison.",
+      "sentiment": "negative",
+      "why_selected": "Explicitly states the conviction and sentence."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "Once celebrated as Silicon Valley's youngest self-made female billionaire, Holmes became one of the most recognizable faces of corporate fraud after the collapse of Theranos, the blood testing company she founded at age nineteen.",
+      "sentiment": "negative",
+      "why_selected": "Highlights the transition from fame to notoriety."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "According to Evans, Holmes has maintained a spotless disciplinary record during her three years of incarceration.",
+      "sentiment": "positive",
+      "why_selected": "Shows a positive aspect of her prison conduct."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "She had a resume class and taught women about ways to find a job, prepare for interviews and even how to determine a good job fit.",
+      "sentiment": "positive",
+      "why_selected": "Illustrates her constructive contributions to the prison community."
+    },
+    {
+      "source_id": "src_004",
+      "quote": "In 2015, Forbes had named Holmes the youngest and wealthiest self-made female billionaire in the United States on the basis of a $9-billion valuation of her company.",
+      "sentiment": "positive",
+      "why_selected": "Provides evidence of her early success."
+    },
+    {
+      "source_id": "src_004",
+      "quote": "Holmes was awarded the 2015 Horatio Alger Award of the Horatio Alger Association of Distinguished Americans, making her its youngest recipient in history.",
+      "sentiment": "positive",
+      "why_selected": "Shows recognition of her achievements before the fraud allegations."
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "https://www.theguardian.com/us-news/2026/jan/21/elizabeth-holmes-trump-fraud-sentence",
+      "title": "Theranos founder Elizabeth Holmes asks Trump to commute prison sentence | US news | The Guardian"
+    },
+    {
+      "source_id": "src_002",
+      "url": "https://apnews.com/hub/elizabeth-holmes",
+      "title": "Elizabeth Holmes | AP News"
+    },
+    {
+      "source_id": "src_003",
+      "url": "https://www.forbes.com/sites/walterpavlo/2026/06/30/elizabeth-holmes-doing-her-time-and-contributing-to-prison-community",
+      "title": "Elizabeth Holmes Doing Her Time And Contributing To Prison Community"
+    },
+    {
+      "source_id": "src_004",
+      "url": "https://en.wikipedia.org/wiki/Elizabeth_Holmes",
+      "title": "Elizabeth Holmes - Wikipedia"
+    },
+    {
+      "source_id": "src_005",
+      "url": "https://people.com/elizabeth-holmes-today-now-what-to-know-11890295",
+      "title": "Where Is Elizabeth Holmes Now? Inside the Theranos Founder’s Life in Prison"
+    }
+  ],
+  "limitations": [
+    "The analysis is based solely on the supplied evidence and does not incorporate external information.",
+    "Sentiment determination may be influenced by the limited context of each quote and the overall distribution of evidence."
+  ],
+  "report_generation_issues": [],
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42,
+    "max_evidence_examples": 7
+  }
+}

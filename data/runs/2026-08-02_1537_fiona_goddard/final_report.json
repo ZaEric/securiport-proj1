@@ -1,0 +1,169 @@
+{
+  "run_id": "2026-08-02_1537_fiona_goddard",
+  "target_name": "Fiona Goddard",
+  "overall_sentiment": "negative",
+  "llm_sentiment": "negative",
+  "one_line_summary": "Fiona Goddard, a survivor of a Bradford grooming gang, has publicly expressed distress over perceived political interference, condescending language, and early release of offenders, highlighting ongoing trauma and concerns about the inquiry process.",
+  "extended_summary": "The evidence shows that Fiona Goddard, who was abused by an organised street gang in Bradford while living in a children’s home, has stepped down from a victims’ liaison panel due to concerns about political interference and condescending language used towards survivors. She has also voiced worries about conflict of interest in the inquiry’s leadership and the emotional toll of early release news for offenders. These statements underscore her ongoing trauma and her belief that the inquiry and justice system are not adequately respecting survivors’ experiences.",
+  "key_findings": [
+    "Goddard resigned from the survivors’ liaison panel over condescending language and political interference.",
+    "She highlighted a conflict of interest in the inquiry’s leadership, citing policing and social work backgrounds.",
+    "The early release of offenders has reopened her trauma, causing severe stress, anxiety, and a sense of unsafe living conditions."
+  ],
+  "justification": "The majority of the evidence (8 out of 15) is negative, with no single positive or neutral claim outweighing the concerns expressed by Goddard. The negative evidence directly reflects her distress, criticism of the inquiry process, and the impact of early release news. Therefore, the overall sentiment is negative, flagged for review.",
+  "evidence_examples": [
+    {
+      "source_id": "src_001",
+      "quote": "stepped down on Monday from the victims survivor liaison panel, voicing concern over political interference and the “condescending and controlling language used towards survivors” during the process.",
+      "sentiment": "negative",
+      "why_selected": "Shows direct criticism of the inquiry process and language used."
+    },
+    {
+      "source_id": "src_001",
+      "quote": "This is a disturbing conflict of interest, and I fear the lack of trust in services from years of failings and corruption will have a negative impact in survivor engagement with this inquiry.",
+      "sentiment": "negative",
+      "why_selected": "Emphasizes her fear of negative impact on survivor engagement."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "reopened old wounds and left her feeling that survivors' experiences are not being fully considered when decisions are made about sentencing and release.",
+      "sentiment": "negative",
+      "why_selected": "Shows emotional impact of early release decisions."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "only to face renewed fear and anxiety when they learn that those responsible may leave prison sooner than expected.",
+      "sentiment": "negative",
+      "why_selected": "Directly links early release news to her fear and anxiety."
+    },
+    {
+      "source_id": "src_005",
+      "quote": "Fiona describes the emotional toll the news has taken, saying she has struggled to sleep, feels unsafe in her own home, and has experienced severe stress and anxiety.",
+      "sentiment": "negative",
+      "why_selected": "Illustrates the personal toll of early release information."
+    }
+  ],
+  "negative_evidence": [
+    {
+      "url": "https://www.theguardian.com/society/2025/oct/20/grooming-gang-victim-quits-inquiry-panel-fiona-goddard",
+      "title": "Grooming gang victim quits inquiry panel over ‘condescending language towards survivors’ | Gangs | The Guardian",
+      "evidence": [
+        {
+          "quote": "stepped down on Monday from the victims survivor liaison panel, voicing concern over political interference and the “condescending and controlling language used towards survivors” during the process.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "The most concerning development of this inquiry has been the identities of the two perspective chairs. One has a background in policing and the other, a social worker,\" she wrote.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "This is a disturbing conflict of interest, and I fear the lack of trust in services from years of failings and corruption will have a negative impact in survivor engagement with this inquiry.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "I’m further concerned by the condescending and controlling language used towards survivors throughout this process who have had to fight every day just to be believed, and I think they deserve more respect than they have received,\" she said.",
+          "sentiment": "negative"
+        }
+      ]
+    },
+    {
+      "url": "https://www.switalskis.com/blog/fiona-goddard-speaks-out-over-early-release",
+      "title": "Fiona Goddard speaks out over early release of child sexual exploitation offenders | Switalskis",
+      "evidence": [
+        {
+          "quote": "reopened old wounds and left her feeling that survivors' experiences are not being fully considered when decisions are made about sentencing and release.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "only to face renewed fear and anxiety when they learn that those responsible may leave prison sooner than expected.",
+          "sentiment": "negative"
+        }
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/GBNewsOnline/videos/exclusive-grooming-gang-survivor-speaks-out-and-reveals-her-abusers-could-be-out/1992133624753787",
+      "title": "EXCLUSIVE: Grooming gang survivor SPEAKS OUT and reveals her abusers could be out of prison early\n\nEXCLUSIVE: Grooming gang survivor Fiona Goddard has spoken out about the devastating impact reports of early prison releases could have on victims, revealing that some of the men who abused her may be freed within months. Fiona describes the emotional toll the news has taken, saying she has struggled to sleep, feels unsafe in her own home, and has experienced severe stress and anxiety. She argues that victims continue to live with the consequences of abuse long after offenders have been sentenced, warning that early release risks undermining confidence in the justice system.\n\nSpeaking to GB News, Fiona explains why she believes rapists and child sex offenders should be excluded from any early release schemes. She says victims often spend years fighting for justice and then a lifetime dealing with the trauma caused by their abusers. Fiona argues that allowing offenders to leave prison earlier than expected sends the wrong message about the seriousness of child sexual exploitation and the lasting harm inflicted on survivors.\n\nGB News also hears reaction from Martin Daubney, who says many victims are being forced to relive their trauma as a result of the reports. He discusses the wider public concerns surrounding sentencing, victim support, and the government's approach to prison releases, as calls grow for ministers to reconsider whether serious sexual offenders should be eligible for early release arrangements.\n\n#groominggangs #exclusive #survivor | GB News",
+      "evidence": [
+        {
+          "quote": "Fiona describes the emotional toll the news has taken, saying she has struggled to sleep, feels unsafe in her own home, and has experienced severe stress and anxiety.",
+          "sentiment": "negative"
+        }
+      ]
+    },
+    {
+      "url": "https://www.channel4.com/news/grooming-gangs-victim-told-perpetrator-might-be-released-early",
+      "title": "Grooming gangs victim told perpetrator might be released early – Channel 4 News",
+      "evidence": [
+        {
+          "quote": "Seven men were convicted of grooming and sex abuse crimes against her and other child victims in 2019.",
+          "sentiment": "negative"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "https://www.theguardian.com/society/2025/oct/20/grooming-gang-victim-quits-inquiry-panel-fiona-goddard",
+      "title": "Grooming gang victim quits inquiry panel over ‘condescending language towards survivors’ | Gangs | The Guardian"
+    },
+    {
+      "source_id": "src_002",
+      "url": "https://www.switalskis.com/blog/fiona-goddard-speaks-out-over-early-release",
+      "title": "Fiona Goddard speaks out over early release of child sexual exploitation offenders | Switalskis"
+    },
+    {
+      "source_id": "src_003",
+      "url": "https://www.bbc.com/news/articles/c4g0ed1v82ro",
+      "title": "Bradford abuse victim 'insulted' by police compensation response"
+    },
+    {
+      "source_id": "src_004",
+      "url": "https://www.bbc.com/news/articles/cn8q3pyxnvwo",
+      "title": "Bradford grooming gang abuse survivor welcomes city inquiry"
+    },
+    {
+      "source_id": "src_005",
+      "url": "https://www.facebook.com/GBNewsOnline/videos/exclusive-grooming-gang-survivor-speaks-out-and-reveals-her-abusers-could-be-out/1992133624753787",
+      "title": "EXCLUSIVE: Grooming gang survivor SPEAKS OUT and reveals her abusers could be out of prison early\n\nEXCLUSIVE: Grooming gang survivor Fiona Goddard has spoken out about the devastating impact reports of early prison releases could have on victims, revealing that some of the men who abused her may be freed within months. Fiona describes the emotional toll the news has taken, saying she has struggled to sleep, feels unsafe in her own home, and has experienced severe stress and anxiety. She argues that victims continue to live with the consequences of abuse long after offenders have been sentenced, warning that early release risks undermining confidence in the justice system.\n\nSpeaking to GB News, Fiona explains why she believes rapists and child sex offenders should be excluded from any early release schemes. She says victims often spend years fighting for justice and then a lifetime dealing with the trauma caused by their abusers. Fiona argues that allowing offenders to leave prison earlier than expected sends the wrong message about the seriousness of child sexual exploitation and the lasting harm inflicted on survivors.\n\nGB News also hears reaction from Martin Daubney, who says many victims are being forced to relive their trauma as a result of the reports. He discusses the wider public concerns surrounding sentencing, victim support, and the government's approach to prison releases, as calls grow for ministers to reconsider whether serious sexual offenders should be eligible for early release arrangements.\n\n#groominggangs #exclusive #survivor | GB News"
+    },
+    {
+      "source_id": "src_006",
+      "url": "https://www.channel4.com/news/grooming-gangs-victim-told-perpetrator-might-be-released-early",
+      "title": "Grooming gangs victim told perpetrator might be released early – Channel 4 News"
+    }
+  ],
+  "limitations": [
+    "The report is based solely on publicly available statements and does not include independent verification of the claims.",
+    "Contextual information about the broader inquiry process or other stakeholders’ perspectives is limited."
+  ],
+  "report_generation_issues": [
+    {
+      "issue": "Rejected 2 invalid, duplicate, or unverified evidence example(s).",
+      "rejected_examples": [
+        {
+          "reason": "no matching evidence_id or exact quote found in evidence.json",
+          "evidence_id": null,
+          "source_id": "src_001",
+          "quote": "The most concerning development of this inquiry has been the identities of the two perspective chairs. One has a background in policing and the other, a social worker,",
+          "sentiment": "negative",
+          "why_selected": "Highlights perceived conflict of interest and lack of trust."
+        },
+        {
+          "reason": "no matching evidence_id or exact quote found in evidence.json",
+          "evidence_id": null,
+          "source_id": "src_001",
+          "quote": "I’m further concerned by the condescending and controlling language used towards survivors throughout this process who have had to fight every day just to be believed, and I think they deserve more respect than they have received,",
+          "sentiment": "negative",
+          "why_selected": "Reiterates her complaint about condescending language."
+        }
+      ]
+    }
+  ],
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42,
+    "max_evidence_examples": 7
+  }
+}

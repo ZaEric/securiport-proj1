@@ -1,0 +1,97 @@
+{
+  "run_id": "2026-07-30_1608_elizabeth_holmes",
+  "target_name": "Elizabeth Holmes",
+  "overall_sentiment": "negative",
+  "overall_confidence": null,
+  "aggregation_baseline_sentiment": "negative",
+  "one_line_summary": "Elizabeth Holmes is a convicted fraudster serving a lengthy prison sentence, though she has shown good conduct and low risk during incarceration.",
+  "extended_summary": "The evidence overwhelmingly portrays Elizabeth Holmes as a fraudster who founded Theranos, was indicted, convicted on multiple counts of wire fraud and conspiracy, and sentenced to more than eleven years in federal prison. She was ordered to pay $452 million in restitution. Despite these negative findings, recent prison reports highlight her spotless disciplinary record, low institutional risk rating, and proactive efforts to support other inmates, such as creating a private area for nursing mothers. Overall, the negative aspects dominate the narrative.",
+  "key_findings": [
+    "Holmes was convicted of multiple fraud charges and sentenced to 11+ years in federal prison.",
+    "She was ordered to pay $452 million in restitution to victims of the fraud.",
+    "During incarceration, Holmes has maintained a spotless record, low risk rating, and has taken positive actions to help other inmates."
+  ],
+  "justification": "The majority of the 33 evidence quotes (24 negative) describe Holmes’ conviction, sentencing, and restitution, establishing a clear negative overall sentiment. While a minority of quotes (5 positive) highlight her good conduct and low risk in prison, these do not outweigh the extensive negative evidence. Therefore, the overall sentiment is judged negative, with acknowledgment of the positive aspects noted in prison.",
+  "evidence_examples": [
+    {
+      "source_id": "src_002",
+      "quote": "Elizabeth Anne Holmes (born February 3, 1984) is an American biotechnology entrepreneur who was convicted of fraud in connection with her health technology company Theranos.",
+      "sentiment": "negative",
+      "why_selected": "Direct statement of conviction establishes the core negative finding."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "She was sentenced to serve 11+1⁄4 years at Federal Prison Camp, Bryan, beginning on May 30, 2023.",
+      "sentiment": "negative",
+      "why_selected": "Specifies the length of the prison term, reinforcing the negative outcome."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "She and Balwani were ordered to pay $452 million in restitution to the victims of the fraud.",
+      "sentiment": "negative",
+      "why_selected": "Highlights the financial penalty imposed, underscoring the seriousness of the fraud."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "Federal prosecutors alleged Holmes knowingly misrepresented the capabilities of Theranos technology and misled investors about the company's financial condition, partnerships, and laboratory capabilities.",
+      "sentiment": "negative",
+      "why_selected": "Shows the alleged deceptive conduct that led to the charges."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "According to Evans, Holmes has maintained a spotless disciplinary record during her three years of incarceration.",
+      "sentiment": "positive",
+      "why_selected": "Provides evidence of good conduct, offering a counterpoint to the negative narrative."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "She is classified at the BOP’s lowest institutional risk levels and her PATTERN Score, a measure of risk for violence or reoffending, is negligible.",
+      "sentiment": "positive",
+      "why_selected": "Indicates low risk, supporting the positive aspects of her prison behavior."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "One of Holmes’ first actions upon arriving at FPC Bryan was to establish a separate, private area for nursing mothers.",
+      "sentiment": "positive",
+      "why_selected": "Shows proactive, supportive actions toward fellow inmates."
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "https://apnews.com/hub/elizabeth-holmes",
+      "title": "Elizabeth Holmes | AP News"
+    },
+    {
+      "source_id": "src_002",
+      "url": "https://en.wikipedia.org/wiki/Elizabeth_Holmes",
+      "title": "Elizabeth Holmes - Wikipedia"
+    },
+    {
+      "source_id": "src_003",
+      "url": "https://www.forbes.com/sites/walterpavlo/2026/06/30/elizabeth-holmes-doing-her-time-and-contributing-to-prison-community",
+      "title": "Elizabeth Holmes Doing Her Time And Contributing To Prison Community"
+    },
+    {
+      "source_id": "src_004",
+      "url": "https://people.com/elizabeth-holmes-today-now-what-to-know-11890295",
+      "title": "Where Is Elizabeth Holmes Now? Inside the Theranos Founder’s Life in Prison"
+    },
+    {
+      "source_id": "src_005",
+      "url": "https://www.theguardian.com/us-news/2026/jan/21/elizabeth-holmes-trump-fraud-sentence",
+      "title": "Theranos founder Elizabeth Holmes asks Trump to commute prison sentence | US news | The Guardian"
+    }
+  ],
+  "limitations": [
+    "The analysis is based solely on the supplied evidence and does not incorporate any external information.",
+    "The evidence set is limited to 33 quotes, which may not capture the full complexity of Holmes’ actions and circumstances."
+  ],
+  "report_generation_issues": [],
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42,
+    "max_evidence_examples": 7
+  }
+}

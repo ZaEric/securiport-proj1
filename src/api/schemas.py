@@ -21,6 +21,24 @@ class StatusResponse(BaseModel):
     status: str
     message: str
 
+class DebugRunInfo(BaseModel):
+    run_id: str
+    run_dir: str
+    has_input: bool
+    has_sources: bool
+    has_chunks: bool
+    has_evidence: bool
+    has_aggregation: bool
+    has_final_report: bool
+    num_sources: int | None = None
+    num_chunks: int | None = None
+    num_evidence: int | None = None
+    overall_sentiment: str | None = None
+
+
+class DebugRunsResponse(BaseModel):
+    runs: list[DebugRunInfo]
+
 
 # -------------------------
 # Source creation requests
@@ -70,12 +88,12 @@ class FromCuratedUrlsRequest(BaseModel):
 
 class FromSearchApiRequest(BaseModel):
     target_name: str
-    search_provider: str = "bing"
+    search_provider: str = "tavily"
     search_query: str | None = Field(
         default=None,
-        description="Optional search query. If omitted, one can be generated from target_name.",
+        description="Optional search query. If omitted, one is generated from target_name.",
     )
-    max_urls: int = Field(default=10, ge=1)
+    max_urls: int = Field(default=3, ge=1)
     run_id: str | None = Field(
         default=None,
         description="Optional run ID. If omitted, generated from datetime + target name.",
@@ -85,9 +103,9 @@ class FromSearchApiRequest(BaseModel):
         json_schema_extra={
             "example": {
                 "target_name": "John Doe",
-                "search_provider": "bing",
+                "search_provider": "tavily",
                 "search_query": "\"John Doe\" news",
-                "max_urls": 10,
+                "max_urls": 3,
                 "run_id": CURRENT_RUN_ID,
             }
         }
@@ -114,8 +132,8 @@ class ChunkLLMRequest(BaseModel):
         default=None,
         description="Optional path to sources.json. Defaults to data/runs/<run_id>/sources.json.",
     )
-    target_chunk_words: int = Field(default=600, ge=1)
-    max_chunk_words: int = Field(default=700, ge=1)
+    target_chunk_words: int = Field(default=3500, ge=1)
+    max_chunk_words: int = Field(default=4000, ge=1)
     overlap_paragraphs: int = Field(default=1, ge=0)
 
     model_config = ConfigDict(
@@ -123,8 +141,8 @@ class ChunkLLMRequest(BaseModel):
             "example": {
                 "run_id": CURRENT_RUN_ID,
                 "sources_path": None,
-                "target_chunk_words": 600,
-                "max_chunk_words": 700,
+                "target_chunk_words": 3500,
+                "max_chunk_words": 4000,
                 "overlap_paragraphs": 1,
             }
         }
@@ -173,7 +191,10 @@ class EvidenceLLMRequest(BaseModel):
         default=None,
         description="Optional path to chunks.json. Defaults to data/runs/<run_id>/chunks.json.",
     )
-    model_name: str | None = None
+    model_name: str | None = Field(
+        default=None,
+        description="Optional evidence extraction model override. If omitted, uses OLLAMA_EVIDENCE_MODEL.",
+    )
 
     model_config = ConfigDict(
         json_schema_extra={
@@ -272,7 +293,10 @@ class AggregationResponse(BaseModel):
 
 class ReportGenerateRequest(BaseModel):
     run_id: str
-    model_name: str | None = None
+    model_name: str | None = Field(
+        default=None,
+        description="Optional final report model override. If omitted, uses OLLAMA_REPORT_MODEL.",
+    )
     max_evidence_examples: int = Field(
         default=7,
         ge=1,
@@ -297,4 +321,136 @@ class ReportGenerateResponse(BaseModel):
     final_report_path: str
     overall_sentiment: str | None
     num_evidence_examples: int
+    status: str
+
+# -------------------------
+# Full pipeline requests
+# -------------------------
+
+class SyntheticLLMRunRequest(BaseModel):
+    synthetic_case_file: str
+    run_id: str | None = Field(
+        default=None,
+        description="Optional run ID. If omitted, generated from datetime + target name.",
+    )
+    evidence_model_name: str | None = Field(
+        default=None,
+        description="Optional override for the evidence extraction LLM. If omitted, uses OLLAMA_EVIDENCE_MODEL.",
+    )
+    report_model_name: str | None = Field(
+        default=None,
+        description="Optional override for the final report LLM. If omitted, uses OLLAMA_REPORT_MODEL.",
+    )
+    max_evidence_examples: int = Field(
+        default=7,
+        ge=1,
+        le=10,
+        description="Maximum number of evidence examples included in final_report.json.",
+    )
+
+    model_config = ConfigDict(
+        json_schema_extra={
+            "example": {
+                "synthetic_case_file": "data/synthetic/passengers/synthetic_negative_001.json",
+                "run_id": None,
+                "evidence_model_name": None,
+                "report_model_name": None,
+                "max_evidence_examples": 7,
+            }
+        }
+    )
+
+class CuratedLLMRunRequest(BaseModel):
+    target_name: str
+    curated_urls_file: str
+    max_urls: int | None = Field(
+        default=None,
+        ge=1,
+        description="Optional maximum number of curated URLs to fetch.",
+    )
+    run_id: str | None = Field(
+        default=None,
+        description="Optional run ID. If omitted, generated from datetime + target name.",
+    )
+    evidence_model_name: str | None = Field(
+        default=None,
+        description="Optional override for the evidence extraction LLM. If omitted, uses OLLAMA_EVIDENCE_MODEL.",
+    )
+    report_model_name: str | None = Field(
+        default=None,
+        description="Optional override for the final report LLM. If omitted, uses OLLAMA_REPORT_MODEL.",
+    )
+    max_evidence_examples: int = Field(
+        default=7,
+        ge=1,
+        le=10,
+        description="Maximum number of evidence examples included in final_report.json.",
+    )
+
+    model_config = ConfigDict(
+        json_schema_extra={
+            "example": {
+                "target_name": "Elizabeth Holmes",
+                "curated_urls_file": "data/curated/curated_urls.json",
+                "max_urls": 3,
+                "run_id": None,
+                "evidence_model_name": None,
+                "report_model_name": None,
+                "max_evidence_examples": 7,
+            }
+        }
+    )
+
+
+class SearchLLMRunRequest(BaseModel):
+    target_name: str
+    search_provider: str = "tavily"
+    search_query: str | None = Field(
+        default=None,
+        description="Optional search query. If omitted, one is generated from target_name.",
+    )
+    max_urls: int = Field(default=3, ge=1)
+    run_id: str | None = Field(
+        default=None,
+        description="Optional run ID. If omitted, generated from datetime + target name.",
+    )
+    evidence_model_name: str | None = Field(
+        default=None,
+        description="Optional override for the evidence extraction LLM. If omitted, uses OLLAMA_EVIDENCE_MODEL.",
+    )
+    report_model_name: str | None = Field(
+        default=None,
+        description="Optional override for the final report LLM. If omitted, uses OLLAMA_REPORT_MODEL.",
+    )
+    max_evidence_examples: int = Field(
+        default=7,
+        ge=1,
+        le=10,
+        description="Maximum number of evidence examples included in final_report.json.",
+    )
+
+    model_config = ConfigDict(
+        json_schema_extra={
+            "example": {
+                "target_name": "Elizabeth Holmes",
+                "search_provider": "tavily",
+                "search_query": "\"Elizabeth Holmes\" news",
+                "max_urls": 3,
+                "run_id": None,
+                "evidence_model_name": None,
+                "report_model_name": None,
+                "max_evidence_examples": 7,
+            }
+        }
+    )
+
+    
+class FullPipelineResponse(BaseModel):
+    run_id: str
+    target_name: str
+    run_dir: str
+    num_sources: int
+    num_chunks: int
+    num_evidence: int
+    overall_sentiment: str | None
     status: str
