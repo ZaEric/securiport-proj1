@@ -1,4 +1,5 @@
 from typing import Any
+from pathlib import Path
 
 from src.nlp.aggregation import aggregate_evidence_llm
 from src.nlp.evidence_extraction import extract_evidence_from_chunk_llm
@@ -24,6 +25,8 @@ def process_chunks_for_evidence_llm(
     target_name = chunks_json["target_name"]
     chunks = chunks_json["chunks"]
 
+    run_dir = Path("data/runs") / run_id
+
     raw_evidence_items: list[dict[str, Any]] = []
     evidence_extraction_issues: list[dict[str, Any]] = []
 
@@ -33,6 +36,8 @@ def process_chunks_for_evidence_llm(
             chunk_text=chunk["text"],
             llm_client=llm_client,
             config=config,
+            run_dir=run_dir,
+            chunk_id=chunk["chunk_id"],
         )
 
         for issue in chunk_issues:

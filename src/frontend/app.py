@@ -1,5 +1,6 @@
 from pathlib import Path
 from typing import Any
+import json
 
 import requests
 import streamlit as st
@@ -264,6 +265,7 @@ def render_run_artifacts(run_id: str) -> None:
         return
 
     render_run_summary(run_dir)
+    render_performance_jsonl(run_dir)
 
     st.divider()
 
@@ -274,6 +276,24 @@ def render_run_artifacts(run_id: str) -> None:
             render_artifact(run_dir, artifact_name)
 
     render_extra_json_files(run_dir)
+
+
+def render_performance_jsonl(run_dir: Path) -> None:
+    performance_path = run_dir / "performance.jsonl"
+
+    if not performance_path.exists():
+        return
+
+    try:
+        performance_text = performance_path.read_text(encoding="utf-8")
+    except Exception:
+        st.error("Failed to read `performance.jsonl`.")
+        return
+
+    st.divider()
+    st.subheader("Performance Log")
+    st.caption(str(performance_path))
+    st.code(performance_text, language="json")
 
 
 def render_run_summary(run_dir: Path) -> None:
@@ -429,13 +449,8 @@ def read_json_if_exists(path: Path) -> Any | None:
     if not path.exists():
         return None
 
-    try:
-        import json
-
-        with path.open("r", encoding="utf-8") as file:
-            return json.load(file)
-    except Exception:
-        return None
+    with path.open("r", encoding="utf-8") as file:
+        return json.load(file)
 
 
 def count_list_field(data: Any, key: str) -> int | None:

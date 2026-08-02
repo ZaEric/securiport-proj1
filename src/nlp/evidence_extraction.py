@@ -1,6 +1,7 @@
 import json
 import re
 from typing import Any
+from pathlib import Path
 
 from src.nlp.llm_client import LLMClient
 from src.nlp.models import EvidenceExtractionConfig, ExtractedQuote
@@ -16,6 +17,8 @@ def extract_evidence_from_chunk_llm(
     chunk_text: str,
     llm_client: LLMClient,
     config: EvidenceExtractionConfig | None = None,
+    run_dir: Path | None = None,
+    chunk_id: str | None = None,
 ) -> tuple[list[ExtractedQuote], list[dict[str, Any]]]:
     config = config or EvidenceExtractionConfig()
 
@@ -29,6 +32,9 @@ def extract_evidence_from_chunk_llm(
         prompt=prompt,
         temperature=config.temperature,
         seed=config.seed,
+        run_dir=run_dir,
+        stage="evidence_extraction",
+        chunk_id=chunk_id,
     )
 
     parsed = parse_llm_json_response(raw_response)

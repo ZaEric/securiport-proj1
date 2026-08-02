@@ -1,5 +1,7 @@
 from pathlib import Path
 from typing import Any
+import json
+from time import perf_counter
 
 from fastapi import APIRouter, HTTPException
 
@@ -79,6 +81,7 @@ def run_synthetic_llm(request: SyntheticLLMRunRequest) -> FullPipelineResponse:
     run_dir = Path("data/runs") / run_id
     input_path = run_dir / "input.json"
     sources_path = run_dir / "sources.json"
+    pipeline_start = perf_counter()
 
     input_json = build_synthetic_input_json(
         run_id=run_id,
@@ -115,6 +118,19 @@ def run_synthetic_llm(request: SyntheticLLMRunRequest) -> FullPipelineResponse:
             status_code=500,
             detail=f"Full synthetic LLM pipeline failed: {exc}",
         ) from exc
+
+    append_performance_event(
+        run_dir=run_dir,
+        event={
+            "event_type": "pipeline_summary",
+            "total_runtime_seconds": round(perf_counter() - pipeline_start, 3),
+            "source_count": len(sources_json["sources"]),
+            "chunk_count": len(chunks_json["chunks"]),
+            "evidence_count": evidence_json["num_evidence"],
+            "negative_evidence_count": count_negative_evidence(evidence_json),
+            "llm_call_count": len(chunks_json["chunks"]) + 1,
+        },
+    )
 
     return FullPipelineResponse(
         run_id=run_id,
@@ -153,6 +169,7 @@ def run_curated_llm(request: CuratedLLMRunRequest) -> FullPipelineResponse:
     run_dir = Path("data/runs") / run_id
     input_path = run_dir / "input.json"
     sources_path = run_dir / "sources.json"
+    pipeline_start = perf_counter()
 
     filtered_urls = filter_curated_urls(
         urls=curated_entry.urls,
@@ -210,6 +227,19 @@ def run_curated_llm(request: CuratedLLMRunRequest) -> FullPipelineResponse:
             detail=f"Full curated LLM pipeline failed: {exc}",
         ) from exc
 
+    append_performance_event(
+        run_dir=run_dir,
+        event={
+            "event_type": "pipeline_summary",
+            "total_runtime_seconds": round(perf_counter() - pipeline_start, 3),
+            "source_count": len(sources_json["sources"]),
+            "chunk_count": len(chunks_json["chunks"]),
+            "evidence_count": evidence_json["num_evidence"],
+            "negative_evidence_count": count_negative_evidence(evidence_json),
+            "llm_call_count": len(chunks_json["chunks"]) + 1,
+        },
+    )
+
     return FullPipelineResponse(
         run_id=run_id,
         target_name=curated_entry.person,
@@ -228,6 +258,7 @@ def run_search_llm(request: SearchLLMRunRequest) -> FullPipelineResponse:
     run_dir = Path("data/runs") / run_id
     input_path = run_dir / "input.json"
     sources_path = run_dir / "sources.json"
+    pipeline_start = perf_counter()
 
     search_query = request.search_query or build_search_query(request.target_name)
 
@@ -283,6 +314,19 @@ def run_search_llm(request: SearchLLMRunRequest) -> FullPipelineResponse:
             status_code=500,
             detail=f"Full search LLM pipeline failed: {exc}",
         ) from exc
+
+    append_performance_event(
+        run_dir=run_dir,
+        event={
+            "event_type": "pipeline_summary",
+            "total_runtime_seconds": round(perf_counter() - pipeline_start, 3),
+            "source_count": len(sources_json["sources"]),
+            "chunk_count": len(chunks_json["chunks"]),
+            "evidence_count": evidence_json["num_evidence"],
+            "negative_evidence_count": count_negative_evidence(evidence_json),
+            "llm_call_count": len(chunks_json["chunks"]) + 1,
+        },
+    )
 
     return FullPipelineResponse(
         run_id=run_id,
@@ -368,3 +412,18 @@ def run_llm_analysis_stages(
     write_json(final_report_path, final_report_json)
 
     return chunks_json, evidence_json, aggregation_json, final_report_json
+
+
+def append_performance_event(run_dir: Path, event: dict[str, Any]) -> None:
+    log_path = run_dir / "performance.jsonl"
+
+    with log_path.open("a", encoding="utf-8") as file:
+        file.write(json.dumps(event, ensure_ascii=False) + "\n")
+
+
+def count_negative_evidence(evidence_json: dict[str, Any]) -> int:
+    return sum(
+        1
+        for item in evidence_json.get("evidence", [])
+        if isinstance(item, dict) and item.get("sentiment") == "negative"
+    )

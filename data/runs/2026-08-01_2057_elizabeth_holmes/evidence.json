@@ -1,0 +1,254 @@
+{
+  "run_id": "2026-08-01_2057_elizabeth_holmes",
+  "target_name": "Elizabeth Holmes",
+  "evidence_extraction_method": "llm_quote_extraction",
+  "num_evidence": 28,
+  "num_evidence_extraction_issues": 2,
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42
+  },
+  "evidence": [
+    {
+      "evidence_id": "ev_001",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Elizabeth Anne Holmes (born February 3, 1984) is an American biotechnology entrepreneur who was convicted of fraud in connection with her health technology company Theranos.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_002",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "In 2018, the U.S. Securities and Exchange Commission (SEC) charged Theranos, Holmes, and former Theranos chief operating officer (COO) Ramesh \"Sunny\" Balwani with raising $700 million from investors through a fraud involving false or exaggerated claims about the accuracy of the company's blood-testing technology; Holmes settled the charges by paying a $500,000 no admit no deny (NAND) fine, returning 18.9 million shares to the company, relinquishing her voting control of Theranos, and accepting a ten-year ban from serving as an officer or director of a public company.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_003",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "In June 2018, a federal grand jury indicted Holmes and Balwani on fraud charges.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_004",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "She was sentenced to serve 11+1⁄4 years at Federal Prison Camp, Bryan, beginning on May 30, 2023.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_005",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "She was also named Woman of the Year by Glamour and received an Honorary Doctor of Humane Letters from Pepperdine University.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_006",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Holmes was awarded the 2015 Horatio Alger Award of the Horatio Alger Association of Distinguished Americans, making her its youngest recipient in history.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_007",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_002",
+      "quote": "Holmes and Balwani indicted for multiple crimes",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_008",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_002",
+      "quote": "Elizabeth Holmes, Theranos founder, sentenced to 11.25 years in prison",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_009",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_002",
+      "quote": "Elizabeth Holmes is found guilty of four counts of fraud",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_010",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_002",
+      "quote": "Holmes gave her first interview in seven years to The New York Times. The interview was published while she was preparing to go to prison",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_011",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_002",
+      "quote": "In 2025, Holmes resurfaced with an interview from prison, in which she stated that she still intended to revolutionize the medical testing industry",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_012",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_003",
+      "quote": "Elizabeth Holmes Breaks Her Silence in First Interview from Prison: 'It's Been Hell and Torture' (Exclusive)",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_013",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_003",
+      "quote": "American confidence tricksters",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_014",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_003",
+      "quote": "American people convicted of fraud",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_015",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_003",
+      "quote": "People convicted for health fraud",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_016",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_003",
+      "quote": "21st-century prisoners and detainees of the United States federal government",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_017",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_003",
+      "quote": "21st-century American criminals",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_018",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_003",
+      "quote": "American company founders",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_019",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_003",
+      "quote": "American chief executives in the health care industry",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_020",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Theranos founder Elizabeth Holmes has asked Donald Trump to commute her sentence after she was convicted of defrauding investors in her now-defunct blood-testing startup that was once valued at $9bn, a notice on the US Department of Justice website showed.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_021",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Holmes, 37, founder of the collapsed blood-testing company Theranos, was convicted of four counts of defrauding investors and, in November 2022, was sentenced to serve more than 11 years in prison.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_022",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "Once celebrated as Silicon Valley's youngest self-made female billionaire, Holmes became one of the most recognizable faces of corporate fraud after the collapse of Theranos",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_023",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "Federal prosecutors alleged Holmes knowingly misrepresented the capabilities of Theranos technology and misled investors about the company's financial condition, partnerships, and laboratory capabilities.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_024",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "After a lengthy trial in federal court in San Jose, California, a jury convicted Holmes in January 2022 on one count of conspiracy to commit wire fraud and three counts of wire fraud involving investors.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_025",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "According to Evans, Holmes has maintained a spotless disciplinary record during her three years of incarceration.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_026",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "One of Holmes’ first actions upon arriving at FPC Bryan was to establish a separate, private area for nursing mothers.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_027",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "She had a resume class and taught women about ways to find a job, prepare for interviews and even how to determine a good job fit.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_028",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "Three years ago, Elizabeth Holmes walked through the gates of Federal Prison Camp Bryan in Texas and became an inmate with register number 24965-111",
+      "sentiment": "neutral",
+      "confidence": null
+    }
+  ],
+  "evidence_extraction_issues": [
+    {
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "In 2015, she was appointed a member of the Harvard Medical School Board of Fellows and was named one of Time magazine's \"Time 100 most influential people\".",
+      "sentiment": "positive"
+    },
+    {
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "She received the Under 30 Doers Award from Forbes and was ranked number 73 in its 2015 list of \"the world's most powerful women\".",
+      "sentiment": "positive"
+    }
+  ]
+}

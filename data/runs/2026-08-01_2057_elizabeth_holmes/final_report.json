@@ -1,0 +1,183 @@
+{
+  "run_id": "2026-08-01_2057_elizabeth_holmes",
+  "target_name": "Elizabeth Holmes",
+  "overall_sentiment": "negative",
+  "llm_sentiment": "negative",
+  "one_line_summary": "Elizabeth Holmes is primarily portrayed as a convicted fraudster whose actions led to a lengthy prison sentence.",
+  "extended_summary": "The evidence overwhelmingly depicts Elizabeth Holmes as a founder of Theranos who engaged in fraudulent activities, was indicted, convicted on multiple counts of fraud, and sentenced to more than eleven years in federal prison. While a few sources note her earlier accolades and recent positive contributions within prison, these are outweighed by the substantial negative evidence of legal wrongdoing and criminal conviction.",
+  "key_findings": [
+    "Holmes was convicted of fraud and sentenced to over eleven years in prison.",
+    "She was indicted and charged by the SEC for raising $700 million through false claims.",
+    "Post‑conviction, she has engaged in positive community work within prison, but this does not offset the legal findings."
+  ],
+  "justification": "The evidence set contains 18 negative, 5 neutral, and 5 positive items, with no mixed evidence. The majority of the evidence (18/28) is negative and directly references Holmes’s criminal convictions and sentencing. Therefore, the overall sentiment is negative, flagged for review due to the presence of serious legal misconduct.",
+  "evidence_examples": [
+    {
+      "source_id": "src_002",
+      "quote": "Elizabeth Anne Holmes (born February 3, 1984) is an American biotechnology entrepreneur who was convicted of fraud in connection with her health technology company Theranos.",
+      "sentiment": "negative",
+      "why_selected": "Direct statement of conviction for fraud."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "In 2018, the U.S. Securities and Exchange Commission (SEC) charged Theranos, Holmes, and former Theranos chief operating officer (COO) Ramesh \"Sunny\" Balwani with raising $700 million from investors through a fraud involving false or exaggerated claims about the accuracy of the company's blood-testing technology; Holmes settled the charges by paying a $500,000 no admit no deny (NAND) fine, returning 18.9 million shares to the company, relinquishing her voting control of Theranos, and accepting a ten-year ban from serving as an officer or director of a public company.",
+      "sentiment": "negative",
+      "why_selected": "Shows SEC charges and financial penalties."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "In June 2018, a federal grand jury indicted Holmes and Balwani on fraud charges.",
+      "sentiment": "negative",
+      "why_selected": "Indicates formal indictment."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "She was sentenced to serve 11+1⁄4 years at Federal Prison Camp, Bryan, beginning on May 30, 2023.",
+      "sentiment": "negative",
+      "why_selected": "Specifies prison sentence."
+    },
+    {
+      "source_id": "src_004",
+      "quote": "Once celebrated as Silicon Valley's youngest self-made female billionaire, Holmes became one of the most recognizable faces of corporate fraud after the collapse of Theranos",
+      "sentiment": "negative",
+      "why_selected": "Highlights transition from acclaim to fraud notoriety."
+    },
+    {
+      "source_id": "src_004",
+      "quote": "Federal prosecutors alleged Holmes knowingly misrepresented the capabilities of Theranos technology and misled investors about the company's financial condition, partnerships, and laboratory capabilities.",
+      "sentiment": "negative",
+      "why_selected": "Details alleged misrepresentations."
+    },
+    {
+      "source_id": "src_004",
+      "quote": "After a lengthy trial in federal court in San Jose, California, a jury convicted Holmes in January 2022 on one count of conspiracy to commit wire fraud and three counts of wire fraud involving investors.",
+      "sentiment": "negative",
+      "why_selected": "Describes specific convictions."
+    }
+  ],
+  "negative_evidence": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Elizabeth_Holmes",
+      "title": "Elizabeth Holmes - Wikipedia",
+      "evidence": [
+        {
+          "quote": "Elizabeth Anne Holmes (born February 3, 1984) is an American biotechnology entrepreneur who was convicted of fraud in connection with her health technology company Theranos.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "In 2018, the U.S. Securities and Exchange Commission (SEC) charged Theranos, Holmes, and former Theranos chief operating officer (COO) Ramesh \"Sunny\" Balwani with raising $700 million from investors through a fraud involving false or exaggerated claims about the accuracy of the company's blood-testing technology; Holmes settled the charges by paying a $500,000 no admit no deny (NAND) fine, returning 18.9 million shares to the company, relinquishing her voting control of Theranos, and accepting a ten-year ban from serving as an officer or director of a public company.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "In June 2018, a federal grand jury indicted Holmes and Balwani on fraud charges.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "She was sentenced to serve 11+1⁄4 years at Federal Prison Camp, Bryan, beginning on May 30, 2023.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "Holmes and Balwani indicted for multiple crimes",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "Elizabeth Holmes, Theranos founder, sentenced to 11.25 years in prison",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "Elizabeth Holmes is found guilty of four counts of fraud",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "Holmes gave her first interview in seven years to The New York Times. The interview was published while she was preparing to go to prison",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "Elizabeth Holmes Breaks Her Silence in First Interview from Prison: 'It's Been Hell and Torture' (Exclusive)",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "American confidence tricksters",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "American people convicted of fraud",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "People convicted for health fraud",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "21st-century prisoners and detainees of the United States federal government",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "21st-century American criminals",
+          "sentiment": "negative"
+        }
+      ]
+    },
+    {
+      "url": "https://www.theguardian.com/us-news/2026/jan/21/elizabeth-holmes-trump-fraud-sentence",
+      "title": "Theranos founder Elizabeth Holmes asks Trump to commute prison sentence | US news | The Guardian",
+      "evidence": [
+        {
+          "quote": "Holmes, 37, founder of the collapsed blood-testing company Theranos, was convicted of four counts of defrauding investors and, in November 2022, was sentenced to serve more than 11 years in prison.",
+          "sentiment": "negative"
+        }
+      ]
+    },
+    {
+      "url": "https://www.forbes.com/sites/walterpavlo/2026/06/30/elizabeth-holmes-doing-her-time-and-contributing-to-prison-community",
+      "title": "Elizabeth Holmes Doing Her Time And Contributing To Prison Community",
+      "evidence": [
+        {
+          "quote": "Once celebrated as Silicon Valley's youngest self-made female billionaire, Holmes became one of the most recognizable faces of corporate fraud after the collapse of Theranos",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "Federal prosecutors alleged Holmes knowingly misrepresented the capabilities of Theranos technology and misled investors about the company's financial condition, partnerships, and laboratory capabilities.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "After a lengthy trial in federal court in San Jose, California, a jury convicted Holmes in January 2022 on one count of conspiracy to commit wire fraud and three counts of wire fraud involving investors.",
+          "sentiment": "negative"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "https://apnews.com/hub/elizabeth-holmes",
+      "title": "Elizabeth Holmes | AP News"
+    },
+    {
+      "source_id": "src_002",
+      "url": "https://en.wikipedia.org/wiki/Elizabeth_Holmes",
+      "title": "Elizabeth Holmes - Wikipedia"
+    },
+    {
+      "source_id": "src_003",
+      "url": "https://www.theguardian.com/us-news/2026/jan/21/elizabeth-holmes-trump-fraud-sentence",
+      "title": "Theranos founder Elizabeth Holmes asks Trump to commute prison sentence | US news | The Guardian"
+    },
+    {
+      "source_id": "src_004",
+      "url": "https://www.forbes.com/sites/walterpavlo/2026/06/30/elizabeth-holmes-doing-her-time-and-contributing-to-prison-community",
+      "title": "Elizabeth Holmes Doing Her Time And Contributing To Prison Community"
+    }
+  ],
+  "limitations": [
+    "The report is based solely on the supplied evidence and does not incorporate external sources or updates beyond the provided data.",
+    "The evidence set may not capture all aspects of Holmes’s life, and the presence of positive actions within prison does not alter the overall negative assessment derived from the majority of evidence."
+  ],
+  "report_generation_issues": [],
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42,
+    "max_evidence_examples": 7
+  }
+}

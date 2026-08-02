@@ -38,6 +38,9 @@ class LLMClient(Protocol):
         prompt: str,
         temperature: float = 0.0,
         seed: int | None = 42,
+        run_dir: Path | None = None,
+        stage: str | None = None,
+        chunk_id: str | None = None,
     ) -> str:
         ...
 
@@ -91,6 +94,9 @@ class OllamaChatClient:
         prompt: str,
         temperature: float = 0.0,
         seed: int | None = 42,
+        run_dir: Path | None = None,
+        stage: str | None = None,
+        chunk_id: str | None = None,
     ) -> str:
         client = self._build_client()
 
@@ -125,13 +131,14 @@ class OllamaChatClient:
                 options=options,
             )
 
-            write_ollama_debug_log(
-                model=model,
-                prompt=prompt,
-                response=response,
-                options=options,
-                keep_alive=None,
-            )
+            if run_dir is not None:
+                write_llm_performance_event(
+                    run_dir=run_dir,
+                    stage=stage,
+                    model=response.get("model", model),
+                    response=response,
+                    chunk_id=chunk_id,
+                )
         
         except ResponseError as exc:
             raise RuntimeError(f"Ollama API error: {exc}") from exc
@@ -144,48 +151,33 @@ class OllamaChatClient:
             raise RuntimeError(f"Ollama response missing response content: {response}") from exc
 
 
-def write_ollama_debug_log(
+def write_llm_performance_event(
     *,
+    run_dir: Path,
+    stage: str | None,
     model: str,
-    prompt: str,
     response: dict[str, Any],
-    options: dict[str, Any],
-    keep_alive: Any,
+    chunk_id: str | None = None,
 ) -> None:
     """
-    Appends Ollama request/response metadata to data/logs/ollama_requests.jsonl.
-
-    Does not log the full prompt or full response text by default.
-    Instead, logs hashes so repeated identical prompts/outputs can be compared.
+    Appends lightweight LLM performance metadata to a run-local performance.jsonl.
     """
-    logs_dir = Path("data/logs")
-    logs_dir.mkdir(parents=True, exist_ok=True)
+    log_path = run_dir / "performance.jsonl"
 
-    response_text = response.get("response", "")
-
-    log_entry = {
-        "timestamp": datetime.now(timezone.utc).isoformat(),
-        "model_requested": model,
-        "model_returned": response.get("model"),
-        "prompt_sha256": hashlib.sha256(prompt.encode("utf-8")).hexdigest(),
-        "response_sha256": hashlib.sha256(str(response_text).encode("utf-8")).hexdigest(),
-        "options": options,
-        "keep_alive": keep_alive,
-        "created_at": response.get("created_at"),
-        "done": response.get("done"),
-        "done_reason": response.get("done_reason"),
-        "total_duration": response.get("total_duration"),
-        "load_duration": response.get("load_duration"),
+    event: dict[str, Any] = {
+        "event_type": "llm_call",
+        "stage": stage,
+        "model": model,
+        "total_duration (nanoseconds)": response.get("total_duration"),
         "prompt_eval_count": response.get("prompt_eval_count"),
-        "prompt_eval_duration": response.get("prompt_eval_duration"),
         "eval_count": response.get("eval_count"),
-        "eval_duration": response.get("eval_duration"),
     }
 
-    log_path = logs_dir / "ollama_requests.jsonl"
+    if chunk_id is not None:
+        event["chunk_id"] = chunk_id
 
     with log_path.open("a", encoding="utf-8") as file:
-        file.write(json.dumps(log_entry, ensure_ascii=False) + "\n")
+        file.write(json.dumps(event, ensure_ascii=False) + "\n")
 
 
 def get_default_llm_client() -> LLMClient:

@@ -1,6 +1,7 @@
 import json
 import re
 from typing import Any
+from pathlib import Path
 
 from src.nlp.llm_client import LLMClient
 from src.nlp.models import ReportGenerationConfig, build_llm_metadata
@@ -43,6 +44,8 @@ def generate_final_report_llm(
     run_id = evidence_json["run_id"]
     target_name = evidence_json["target_name"]
 
+    run_dir = Path("data/runs") / run_id
+
     sources_summary = build_sources_summary(sources_json=sources_json)
     evidence_summary = build_evidence_summary(evidence_json=evidence_json)
     aggregation_summary = build_aggregation_summary(
@@ -63,6 +66,8 @@ def generate_final_report_llm(
         prompt=prompt,
         temperature=config.temperature,
         seed=config.seed,
+        run_dir=run_dir,
+        stage="final_report",
     )
 
     parsed_report = parse_llm_json_response(raw_response)
