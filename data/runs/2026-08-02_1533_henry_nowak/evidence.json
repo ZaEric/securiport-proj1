@@ -1,0 +1,313 @@
+{
+  "run_id": "2026-08-02_1533_henry_nowak",
+  "target_name": "Henry Nowak",
+  "evidence_extraction_method": "llm_quote_extraction",
+  "num_evidence": 31,
+  "num_evidence_extraction_issues": 7,
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42
+  },
+  "evidence": [
+    {
+      "evidence_id": "ev_001",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Henry Nowak, an 18‑year‑old university student, was murdered in Southampton, Hampshire, England, by 23‑year‑old Vickrum Singh Digwa.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_002",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Bodycam footage released on 2 June, with the permission of Nowak's family, showed Nowak repeatedly telling officers that he had been stabbed and could not breathe.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_003",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "These were his last words.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_004",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Nowak was pronounced dead at 12:37 am.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_005",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Nowak's funeral took place at Brentwood Cathedral on 23 January 2026 and was attended by 650 people.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_006",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "The following month, a football match between the two university teams he had played for was held in his memory and raised over £40,000 for 2Wish, a charity supporting those affected by the sudden death of a child or young adult.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_007",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "On 27 June 2026, members of the Chafford Hundred Running Club organised a memorial run, with more than 200 people, including local MP Jen Craft, taking part.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_008",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Nowak had been walking home when he encountered Digwa, who stabbed him five times with a 21 cm (8.3 in) dagger he claimed was carried for Sikh religious reasons.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_009",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Digwa told his mother, Kiran Kaur, to take the knife and hide it at their home, which she did.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_010",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_002",
+      "quote": "In addition to the concealed kirpan required by his faith, Digwa carried a larger dagger in a sheath around his neck, which he used to kill Nowak.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_011",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Two police officers who handcuffed British student Henry Nowak before he died in Southampton, England, are being investigated for gross misconduct.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_012",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Mr Nowak died after being stabbed in December while handcuffed after his killer falsely alleged a racist attack.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_013",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "He was handcuffed by police while he lay dying from stab wounds after his killer falsely alleged a racist attack.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_014",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "The English and Welsh police watchdog, the Independent Office for Police Conduct (IOPC), said in a statement that evidence indicates that the two officers who were the first to arrive at the scene may have potentially breached professional behaviour standards of duties and responsibilities, use of force and discreditable conduct.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_015",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "These relate to potential failures by the officers to recognise that Henry needed urgent medical attention, to immediately act after he said he had been stabbed and he couldn't breathe, and the decision to arrest and handcuff Henry rather than provide immediate first aid,\" the statement said.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_016",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "There's also an indication one of the officers may have breached the standard relating to authority, respect and courtesy, for appearing to dismiss Henry saying he had been stabbed.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_017",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Pathologists found that Mr Nowak would have died of his injuries at the scene regardless of the emergency response and police later called an ambulance and performed CPR.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_018",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Two police officers are being investigated for potential gross misconduct following the case of Henry Nowak, who was handcuffed and arrested as he lay dying, the police watchdog has said.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_019",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "The IOPC said the investigation relates to potential failures by the officers to recognise Henry Nowak needed urgent medical help and the decision to arrest and handcuff him rather than provide first aid.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_020",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Hampshire police has previously apologised to the Nowak family for the way Henry was treated by its officers.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_021",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Protests erupted in Southampton on 2 June after police bodycam footage showing the two officers interactions with Henry as he lay dying was released.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_022",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "A full inquest into Henry Nowak's death is due to be held in Winchester next year.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_023",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "Last December, Henry – aged just 18 – was a first-year university student with his life ahead of him. He was kind, hard-working, loved by his family and friends.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_024",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "His murder – at the hands of Vickrum Digwa – was a horrifying act.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_025",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "People are rightly asking questions about how the situation was handled and they are shocked, and disquieted, to hear Henry’s words: “I can’t breathe.”",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_026",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "Yesterday, a sentence was handed down in court. I know it will never be enough. The loss felt by Henry Nowak’s family and friends will last forever. A wonderful young man will never enjoy the promise of the life that stretched out before him.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_027",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "Last night, they wrote that “no other family should experience the heartbreak and horror of losing a child to knife crime.”",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_028",
+      "source_id": "src_005",
+      "chunk_id": "src_005_chunk_001",
+      "quote": "Nowak was stabbed with what Digwa said was a ceremonial knife carried as part of his Sikh religion.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_029",
+      "source_id": "src_005",
+      "chunk_id": "src_005_chunk_001",
+      "quote": "Police initially arrested and handcuffed Nowak as he lay dying.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_030",
+      "source_id": "src_005",
+      "chunk_id": "src_005_chunk_001",
+      "quote": "In the wake of the attack, Digwa’s brother called the police and falsely claimed he and his brother had been subjected to a racially motivated attack by Nowak.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_031",
+      "source_id": "src_005",
+      "chunk_id": "src_005_chunk_001",
+      "quote": "Nowak’s father, Mark Nowak, condemned the “inhumane and degrading” treatment of his son by police, but said: “We do not want his death to be used to create further division, hatred or tension. We want his story to help make our streets safer for everyone.”",
+      "sentiment": "negative",
+      "confidence": null
+    }
+  ],
+  "evidence_extraction_issues": [
+    {
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "Nowak said, 'Please brother, I can't breathe'.",
+      "sentiment": "negative"
+    },
+    {
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "He called Henry's treatment by police 'inhumane and degrading'.",
+      "sentiment": "negative"
+    },
+    {
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "expressed 'heartfelt gratitude' to the murder investigation team.",
+      "sentiment": "positive"
+    },
+    {
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "He also said that he did not want Henry's death to be used 'to create further division, hatred, or tension'.",
+      "sentiment": "positive"
+    },
+    {
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "Police body cam footage shows Mr Nowak lying in the street, saying 'I've been stabbed' and 'I can't breathe' while an officer responds, 'I don't think you have, mate'.",
+      "sentiment": "negative"
+    },
+    {
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "After Digwa was sentenced, Mr Nowak's family said the way Henry was treated by police was 'inhumane and degrading' but that his death should not be 'used to create further division, hatred or tension'.",
+      "sentiment": "negative"
+    },
+    {
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "In a statement read outside court in June, Henry's father Mark Nowak compared his son's 'inhumane and degrading' treatment by police, to the 'decency' officers showed his murderer.",
+      "sentiment": "negative"
+    }
+  ]
+}

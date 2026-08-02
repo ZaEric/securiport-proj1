@@ -1,0 +1,9 @@
+{
+  "run_id": "2026-08-02_1533_henry_nowak",
+  "created_at": "2026-08-02T22:33:21Z",
+  "target_name": "Henry Nowak",
+  "input_mode": "search_api",
+  "search_provider": "tavily",
+  "search_query": "\"Henry Nowak\" news",
+  "max_urls": 7
+}

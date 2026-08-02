@@ -1,0 +1,9 @@
+{
+  "run_id": "2026-08-02_1530_kevin_bacon",
+  "created_at": "2026-08-02T22:30:14Z",
+  "target_name": "Kevin Bacon",
+  "input_mode": "search_api",
+  "search_provider": "tavily",
+  "search_query": "\"Kevin Bacon\" news",
+  "max_urls": 7
+}

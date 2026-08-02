@@ -1,0 +1,132 @@
+{
+  "run_id": "2026-08-02_1537_fiona_goddard",
+  "target_name": "Fiona Goddard",
+  "aggregation_method": "negative_flag_priority",
+  "num_evidence": 15,
+  "mixed_evidence_threshold": 0.25,
+  "minimum_evidence_count": 1,
+  "source_results": [
+    {
+      "source_id": "src_001",
+      "baseline_sentiment": "negative",
+      "sentiment_counts": {
+        "positive": 0,
+        "neutral": 2,
+        "negative": 4
+      },
+      "negative_evidence_present": true,
+      "mixed_evidence": false,
+      "opposing_sentiment_ratio": 0.0,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_001",
+        "ev_002",
+        "ev_003",
+        "ev_004",
+        "ev_005",
+        "ev_006"
+      ]
+    },
+    {
+      "source_id": "src_002",
+      "baseline_sentiment": "negative",
+      "sentiment_counts": {
+        "positive": 1,
+        "neutral": 1,
+        "negative": 2
+      },
+      "negative_evidence_present": true,
+      "mixed_evidence": true,
+      "opposing_sentiment_ratio": 0.333,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_007",
+        "ev_008",
+        "ev_009",
+        "ev_010"
+      ]
+    },
+    {
+      "source_id": "src_003",
+      "baseline_sentiment": "neutral",
+      "sentiment_counts": {
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0
+      },
+      "negative_evidence_present": false,
+      "mixed_evidence": false,
+      "opposing_sentiment_ratio": 0.0,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_011"
+      ]
+    },
+    {
+      "source_id": "src_004",
+      "baseline_sentiment": "positive",
+      "sentiment_counts": {
+        "positive": 1,
+        "neutral": 0,
+        "negative": 0
+      },
+      "negative_evidence_present": false,
+      "mixed_evidence": false,
+      "opposing_sentiment_ratio": 0.0,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_012"
+      ]
+    },
+    {
+      "source_id": "src_005",
+      "baseline_sentiment": "negative",
+      "sentiment_counts": {
+        "positive": 0,
+        "neutral": 0,
+        "negative": 1
+      },
+      "negative_evidence_present": true,
+      "mixed_evidence": false,
+      "opposing_sentiment_ratio": 0.0,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_013"
+      ]
+    },
+    {
+      "source_id": "src_006",
+      "baseline_sentiment": "negative",
+      "sentiment_counts": {
+        "positive": 0,
+        "neutral": 1,
+        "negative": 1
+      },
+      "negative_evidence_present": true,
+      "mixed_evidence": false,
+      "opposing_sentiment_ratio": 0.0,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_014",
+        "ev_015"
+      ]
+    }
+  ],
+  "overall_result": {
+    "baseline_sentiment": "negative",
+    "sentiment_counts": {
+      "positive": 2,
+      "neutral": 5,
+      "negative": 8
+    },
+    "source_baseline_sentiment_counts": {
+      "positive": 1,
+      "neutral": 1,
+      "negative": 4
+    },
+    "negative_evidence_present": true,
+    "mixed_evidence": false,
+    "opposing_sentiment_ratio": 0.2,
+    "insufficient_evidence": false
+  }
+}

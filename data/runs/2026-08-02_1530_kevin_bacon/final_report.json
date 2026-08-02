@@ -1,0 +1,125 @@
+{
+  "run_id": "2026-08-02_1530_kevin_bacon",
+  "target_name": "Kevin Bacon",
+  "overall_sentiment": "negative",
+  "llm_sentiment": "negative",
+  "one_line_summary": "Kevin Bacon’s public coverage is mixed, but the presence of negative incidents leads to a negative overall sentiment as a review flag.",
+  "extended_summary": "The evidence shows a blend of positive portrayals—highlighting Bacon’s roles, family life, and recent projects—and negative reports that include personal mishaps and financial losses. Because negative evidence is present and the baseline sentiment is negative, the report adopts a negative overall sentiment, flagging the need for closer human review.",
+  "key_findings": [
+    "Positive coverage emphasizes Bacon’s career achievements and family relationships.",
+    "Negative coverage highlights personal incidents such as financial loss, property disputes, and physical mishaps.",
+    "The mix of sentiments, with a baseline negative and the presence of negative evidence, warrants a negative overall sentiment as a review flag."
+  ],
+  "justification": "The evidence set contains five negative items and seven positive items, but the baseline sentiment is negative and negative evidence is present. According to the review‑flag logic, the presence of negative evidence requires the report to adopt a negative overall sentiment, even though positive coverage exists.",
+  "evidence_examples": [
+    {
+      "source_id": "src_001",
+      "quote": "Kevin Bacon is haunted by ‘Footloose’ — and dreads this ‘worst nightmare’ becoming reality",
+      "sentiment": "negative",
+      "why_selected": "Shows personal distress and potential reputational harm."
+    },
+    {
+      "source_id": "src_001",
+      "quote": "Kevin Bacon talks losing ‘most’ of fortune to Bernie Madoff: ‘There’s obvious life lessons’",
+      "sentiment": "negative",
+      "why_selected": "Indicates financial loss and victimization."
+    },
+    {
+      "source_id": "src_001",
+      "quote": "Kevin Bacon destroyed haunted house on his farm over previous owner’s fears he’d get ‘possessed’",
+      "sentiment": "negative",
+      "why_selected": "Highlights a potentially controversial action."
+    },
+    {
+      "source_id": "src_004",
+      "quote": "Kevin Bacon Got Attacked by a Swarm of Bees While on a Hike — Watch His Daughter Sosie Reenact the Moment",
+      "sentiment": "negative",
+      "why_selected": "Reports a physical incident that could affect public perception."
+    },
+    {
+      "source_id": "src_001",
+      "quote": "Kevin Bacon: It’s ‘really cool’ to be a hero in ‘Guardians of the Galaxy’",
+      "sentiment": "positive",
+      "why_selected": "Demonstrates positive media portrayal of his acting role."
+    },
+    {
+      "source_id": "src_004",
+      "quote": "Kevin Bacon Says It Was 'Just Great' Directing 1st Movie in 20 Years Alongside Wife Kyra Sedgwick: 'She Was Right There' (Exclusive)",
+      "sentiment": "positive",
+      "why_selected": "Shows positive personal and professional collaboration."
+    },
+    {
+      "source_id": "src_004",
+      "quote": "Kevin Bacon Says Working with Eddie Murphy Was a 'Bucket List Thing': 'One of Our Greatest Movie Stars' (Exclusive)",
+      "sentiment": "positive",
+      "why_selected": "Highlights a positive industry relationship."
+    }
+  ],
+  "negative_evidence": [
+    {
+      "url": "https://nypost.com/tag/kevin-bacon",
+      "title": "kevin bacon | Latest News | California Post",
+      "evidence": [
+        {
+          "quote": "Kevin Bacon is haunted by ‘Footloose’ — and dreads this ‘worst nightmare’ becoming reality",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "Kevin Bacon talks losing ‘most’ of fortune to Bernie Madoff: ‘There’s obvious life lessons’",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "Kevin Bacon destroyed haunted house on his farm over previous owner’s fears he’d get ‘possessed’",
+          "sentiment": "negative"
+        }
+      ]
+    },
+    {
+      "url": "https://people.com/tag/kevin-bacon",
+      "title": "Kevin Bacon",
+      "evidence": [
+        {
+          "quote": "Kevin Bacon Got Attacked by a Swarm of Bees While on a Hike — Watch His Daughter Sosie Reenact the Moment",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "Kevin Bacon Got Burned by a 'Grenade'-Like Hard-Boiled Egg While Touring with His Band",
+          "sentiment": "negative"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "https://nypost.com/tag/kevin-bacon",
+      "title": "kevin bacon | Latest News | California Post"
+    },
+    {
+      "source_id": "src_002",
+      "url": "https://www.tmz.com/people/kevin-bacon",
+      "title": "Kevin Bacon | Latest News and Updates | TMZ"
+    },
+    {
+      "source_id": "src_003",
+      "url": "https://www.eonline.com/news/kevin_bacon",
+      "title": "Kevin Bacon News, Pictures, and Videos"
+    },
+    {
+      "source_id": "src_004",
+      "url": "https://people.com/tag/kevin-bacon",
+      "title": "Kevin Bacon"
+    }
+  ],
+  "limitations": [
+    "The analysis is based solely on publicly available news excerpts and does not include deeper context or legal outcomes.",
+    "Sentiment classification is derived from the provided metadata and may not capture nuanced interpretations."
+  ],
+  "report_generation_issues": [],
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42,
+    "max_evidence_examples": 7
+  }
+}
