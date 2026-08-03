@@ -1,0 +1,19 @@
+{
+  "run_id": "tuned_mixed_majority_positive_robert_nguyen",
+  "created_at": "2026-08-03T00:19:29Z",
+  "target_name": "Robert Nguyen",
+  "input_mode": "synthetic",
+  "synthetic_case_file": "data/synthetic/passengers/synthetic_mixed_majority_positive_001.json",
+  "expected_overall_sentiment": "negative",
+  "difficulty_tags": [
+    "majority_positive_evidence",
+    "single_minor_negative_mention",
+    "outweigh_test"
+  ],
+  "expected_failure_modes": [
+    "may average sentiment across sources and default to positive because negative evidence is a small minority",
+    "may skip extracting the minor incident entirely because the extraction prompt favors the 'strongest' evidence and this article's strongest evidence is positive",
+    "may label the incident as neutral rather than negative because no charges were filed"
+  ],
+  "notes": "Tests whether a single brief negative/legal mention still flips the overall result to negative even when it is heavily outnumbered by strong positive evidence across multiple sources. The negative detail is deliberately brief, buried in an otherwise glowing article, and phrased in a way that could be read as exculpatory ('no charges were filed')."
+}

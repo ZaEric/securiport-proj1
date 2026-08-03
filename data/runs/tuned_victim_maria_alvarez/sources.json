@@ -1,0 +1,31 @@
+{
+  "run_id": "tuned_victim_maria_alvarez",
+  "target_name": "Maria Alvarez",
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "synthetic://synthetic_victim_001/src_001",
+      "title": "Local Shop Owner Maria Alvarez Robbed at Gunpoint While Closing Store",
+      "expected_source_sentiment": "negative",
+      "article_text": "Maria Alvarez, who owns Alvarez Family Grocers on Union Street, was robbed at gunpoint Tuesday night as she was closing the store, according to police. Investigators said a man entered through the front door just before closing, displayed a handgun, and demanded cash from the register.\n\nAlvarez told police she was alone in the store at the time and complied with the man's demands out of fear for her safety. She was not physically injured, but police described her as shaken and badly frightened after the encounter. The suspect fled on foot with an undetermined amount of cash and has not yet been located.\n\nPolice said this is the second armed robbery reported in the Union Street business corridor this month, and detectives are reviewing security footage from nearby stores. Anyone with information has been asked to contact the police department's robbery unit.\n\nAlvarez said she has owned the store for eleven years and has never experienced anything like this before. She said she is cooperating fully with investigators and hopes the suspect is caught soon so other shop owners in the area are not put at risk."
+    },
+    {
+      "source_id": "src_002",
+      "url": "synthetic://synthetic_victim_001/src_002",
+      "title": "Neighbors Rally Behind Maria Alvarez After Traumatic Robbery",
+      "expected_source_sentiment": "negative",
+      "article_text": "Neighbors and longtime customers gathered outside Alvarez Family Grocers on Saturday to show support for owner Maria Alvarez, a week after she was robbed at gunpoint while closing the store. Organizers set up a small donation table to help cover a new security system for the shop.\n\nCommunity organizer Denise Park said the goal of the gathering was simple: let Alvarez know the neighborhood has her back after a frightening ordeal. 'Nobody should have to go through what she went through, especially not someone who has given so much to this block for over a decade,' Park said.\n\nSeveral customers described Alvarez as a fixture of the neighborhood who has extended credit to families during hard times and always remembers her regulars by name. Alvarez thanked the crowd and said the support has helped her feel safe enough to keep the store open, though she admitted she still feels uneasy closing alone at night.\n\nAlvarez said she plans to install new cameras and a panic button near the register with money raised from the community effort. Police said the investigation into the robbery remains open and no suspect has been arrested."
+    },
+    {
+      "source_id": "src_003",
+      "url": "synthetic://synthetic_victim_001/src_003",
+      "title": "Maria Alvarez Warns Others After Losing Savings in Wire Fraud Scheme",
+      "expected_source_sentiment": "negative",
+      "article_text": "Maria Alvarez, a Union Street shop owner recently in the news after a robbery at her store, says she is now speaking publicly about a separate ordeal: losing nearly $18,000 in retirement savings to a wire fraud scheme earlier this year.\n\nAccording to Alvarez, she received a call from someone claiming to be a bank fraud investigator who convinced her that her account had been compromised and that she needed to transfer funds to a 'protected' account to keep them safe. Alvarez said the caller knew details about her real bank account that made the call seem legitimate, and she wired the money before realizing she had been deceived.\n\nAlvarez reported the fraud to her bank and to local police, but said she has been told it is unlikely the funds can be recovered. She has since partnered with a local consumer protection group to warn other small business owners about similar scams targeting people who keep irregular hours and are often distracted by running a business.\n\n'I want people to know this can happen to anyone, no matter how careful you think you are,' Alvarez said. Consumer protection advocates praised her willingness to share her story publicly, saying it will likely help other residents recognize the warning signs before it is too late."
+    }
+  ],
+  "metadata": {
+    "source_mode": "synthetic",
+    "source_count": 3
+  }
+}

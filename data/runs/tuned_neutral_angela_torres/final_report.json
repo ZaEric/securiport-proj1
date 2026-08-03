@@ -1,0 +1,63 @@
+{
+  "run_id": "tuned_neutral_angela_torres",
+  "target_name": "Angela Torres",
+  "overall_sentiment": "positive",
+  "llm_sentiment": "positive",
+  "one_line_summary": "Angela Torres is a local business owner actively engaged in community planning and operating a bakery with positive community impact.",
+  "extended_summary": "The evidence indicates that Angela Torres, owner of a bakery on Fifth Avenue, is a resident of Elm Street who participates in city council discussions about local zoning and traffic. She has established a bakery with regular operating hours, plans to source ingredients locally, and selects a location for its foot traffic and proximity to an elementary school. No negative or suspicious activity is reported in the available sources.",
+  "key_findings": [
+    "Angela Torres is a resident of Elm Street and participates in city council meetings regarding zoning and traffic.",
+    "She owns and operates a bakery on Fifth Avenue with defined business hours and local ingredient sourcing.",
+    "Her choice of location is strategic, aiming to benefit from foot traffic and serve the nearby elementary school community."
+  ],
+  "justification": "The evidence contains no negative or review‑flagged content; all statements are neutral or positive. The baseline sentiment is positive, and the evidence statistics confirm an equal split of positive and neutral statements with no negative evidence. Therefore, the overall sentiment is classified as positive.",
+  "evidence_examples": [
+    {
+      "source_id": "src_001",
+      "quote": "Torres told the council she had lived on Elm Street for six years and wanted more information about parking and traffic before the change was approved.",
+      "sentiment": "neutral",
+      "why_selected": "Shows community engagement and concern for local infrastructure."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "Owner Angela Torres said the shop will be open Tuesday through Sunday from 6 a.m. to 3 p.m.",
+      "sentiment": "positive",
+      "why_selected": "Demonstrates active business operations and service to the community."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "Torres said she plans to source flour from a regional mill and rotate a few seasonal pastry options each month.",
+      "sentiment": "positive",
+      "why_selected": "Highlights local sourcing and business planning."
+    }
+  ],
+  "negative_evidence": [],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "synthetic://synthetic_neutral_001/src_001",
+      "title": "City Council Hears Public Comment on Proposed Elm Street Rezoning"
+    },
+    {
+      "source_id": "src_002",
+      "url": "synthetic://synthetic_neutral_001/src_002",
+      "title": "Torres Family Bakery Opens on Fifth Avenue"
+    },
+    {
+      "source_id": "src_003",
+      "url": "synthetic://synthetic_neutral_001/src_003",
+      "title": "Neighborhood Business Directory Profile: Torres Family Bakery"
+    }
+  ],
+  "limitations": [
+    "The evidence set is limited to local news and business directory entries, providing no broader context.",
+    "No negative or review‑flagged information is present, so the assessment cannot identify potential risks or concerns."
+  ],
+  "report_generation_issues": [],
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42,
+    "max_evidence_examples": 7
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "run_id": "tuned_victim_maria_alvarez",
+  "target_name": "Maria Alvarez",
+  "evidence_extraction_method": "llm_quote_extraction",
+  "num_evidence": 11,
+  "num_evidence_extraction_issues": 1,
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42
+  },
+  "evidence": [
+    {
+      "evidence_id": "ev_001",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Maria Alvarez, who owns Alvarez Family Grocers on Union Street, was robbed at gunpoint Tuesday night as she was closing the store, according to police.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_002",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "She was not physically injured, but police described her as shaken and badly frightened after the encounter.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_003",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "a week after she was robbed at gunpoint while closing the store.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_004",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Neighbors and longtime customers gathered outside Alvarez Family Grocers on Saturday to show support for owner Maria Alvarez",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_005",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Alvarez thanked the crowd and said the support has helped her feel safe enough to keep the store open, though she admitted she still feels uneasy closing alone at night.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_006",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "losing nearly $18,000 in retirement savings to a wire fraud scheme earlier this year.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_007",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "she received a call from someone claiming to be a bank fraud investigator who convinced her that her account had been compromised and that she needed to transfer funds to a 'protected' account to keep them safe.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_008",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Alvarez reported the fraud to her bank and to local police, but said she has been told it is unlikely the funds can be recovered.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_009",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "She has since partnered with a local consumer protection group to warn other small business owners about similar scams targeting people who keep irregular hours and are often distracted by running a business.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_010",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "'I want people to know this can happen to anyone, no matter how careful you think you are,' Alvarez said.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_011",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Consumer protection advocates praised her willingness to share her story publicly, saying it will likely help other residents recognize the warning signs before it is too late.",
+      "sentiment": "positive",
+      "confidence": null
+    }
+  ],
+  "evidence_extraction_issues": [
+    {
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "Alvarez said she is cooperating fully with investigators and hopes the suspect is caught soon so other shop owners in the area are not put at risk.",
+      "sentiment": "neutral"
+    }
+  ]
+}
