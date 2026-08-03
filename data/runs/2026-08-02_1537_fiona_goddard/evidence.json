@@ -1,0 +1,220 @@
+{
+  "run_id": "2026-08-02_1537_fiona_goddard",
+  "target_name": "Fiona Goddard",
+  "evidence_extraction_method": "llm_quote_extraction",
+  "num_evidence": 15,
+  "num_evidence_extraction_issues": 12,
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42
+  },
+  "evidence": [
+    {
+      "evidence_id": "ev_001",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Fiona Goddard, who was abused by an organised street gang in Bradford while living in a children’s home",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_002",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "stepped down on Monday from the victims survivor liaison panel, voicing concern over political interference and the “condescending and controlling language used towards survivors” during the process.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_003",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "The most concerning development of this inquiry has been the identities of the two perspective chairs. One has a background in policing and the other, a social worker,\" she wrote.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_004",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "This is a disturbing conflict of interest, and I fear the lack of trust in services from years of failings and corruption will have a negative impact in survivor engagement with this inquiry.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_005",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "I’m further concerned by the condescending and controlling language used towards survivors throughout this process who have had to fight every day just to be believed, and I think they deserve more respect than they have received,\" she said.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_006",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Goddard, who was one of two girls abused in 2008 by a gang of men mainly of Pakistani origin, has waived her legal right to lifelong anonymity.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_007",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "reopened old wounds and left her feeling that survivors' experiences are not being fully considered when decisions are made about sentencing and release.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_008",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "only to face renewed fear and anxiety when they learn that those responsible may leave prison sooner than expected.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_009",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Fiona hopes that by continuing to speak publicly about her experiences, other survivors will feel less alone and more able to come forward.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_010",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Fiona was one of the victims in a major Bradford child sexual exploitation case, in which seven men were convicted in 2019 of serious sexual offences against children.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_011",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Fiona Goddard was 14 and living in a children's home in Bradford when the grooming and abuse began during the late 2000s.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_012",
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "quote": "\"a weight off my shoulders\" after years of campaigning for an inquiry",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_013",
+      "source_id": "src_005",
+      "chunk_id": "src_005_chunk_001",
+      "quote": "Fiona describes the emotional toll the news has taken, saying she has struggled to sleep, feels unsafe in her own home, and has experienced severe stress and anxiety.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_014",
+      "source_id": "src_006",
+      "chunk_id": "src_006_chunk_001",
+      "quote": "We spoke to the woman who received this letter, Fiona Goddard.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_015",
+      "source_id": "src_006",
+      "chunk_id": "src_006_chunk_001",
+      "quote": "Seven men were convicted of grooming and sex abuse crimes against her and other child victims in 2019.",
+      "sentiment": "negative",
+      "confidence": null
+    }
+  ],
+  "evidence_extraction_issues": [
+    {
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "described it as a 'slap in the face' for survivors who have already endured years of trauma and uncertainty.",
+      "sentiment": "negative"
+    },
+    {
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "Fiona has become a powerful advocate for survivors, speaking openly about the long-term effects of abuse and the need for systemic change.",
+      "sentiment": "positive"
+    },
+    {
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "Goddard, who has waived her right to anonymity, said it was 'really insulting' to see 'another level of dismissal' after she made a legal claim against West Yorkshire Police and Bradford Council.",
+      "sentiment": "negative"
+    },
+    {
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "In a letter sent to her solicitor, West Yorkshire Police said: 'The claims in negligence, misfeasance and conspiracy to injury are, with respect, entirely without merit.'",
+      "sentiment": "negative"
+    },
+    {
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "'Publicly to the media, they're accepting they failed, they're accepting that they did stuff wrong but in private they're trying to gaslight me,' she said.",
+      "sentiment": "negative"
+    },
+    {
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "'I was successful in school, I should have had a career but instead I spent a lot of years having to fight to prove I was abused and going through a five-year investigation.",
+      "sentiment": "positive"
+    },
+    {
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "Goddard said at the time these services had 'contributed most to the cover-up of the national mass rape and trafficking of children'.",
+      "sentiment": "negative"
+    },
+    {
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "\"We need accountability. It's one thing prosecuting the perpetrators of these crimes - that should have been a given - but the people that chose to go into safeguarding roles that made these decisions, that weren't just turning a blind eye to the child abuse, it aided and facilitated it. The decisions that were made directly contributed to further abuse.\"",
+      "sentiment": "negative"
+    },
+    {
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "\"Nine men were jailed in February 2019 at Bradford Crown Court after being convicted of sexual offences against Goddard.\"",
+      "sentiment": "negative"
+    },
+    {
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "\"Reacting to the news, Goddard, who resigned from the inquiry in October 2025 over concerns that two of the shortlisted chairs had backgrounds in policing and social services, said she and others had fought for an inquiry into grooming gangs in Bradford 'for a long time'.\"",
+      "sentiment": "neutral"
+    },
+    {
+      "source_id": "src_004",
+      "chunk_id": "src_004_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "\"Goddard said she believed Bradford had 'connections to all the other [CSE] locations around England'.\"",
+      "sentiment": "neutral"
+    },
+    {
+      "source_id": "src_005",
+      "chunk_id": "src_005_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "She argues that allowing offenders to leave prison earlier than expected sends the wrong message about the seriousness of child sexual exploitation and the lasting harm inflicted on survivors.",
+      "sentiment": "negative"
+    }
+  ]
+}

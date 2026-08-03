@@ -1,0 +1,9 @@
+{
+  "run_id": "2026-08-02_1537_fiona_goddard",
+  "created_at": "2026-08-02T22:37:45Z",
+  "target_name": "Fiona Goddard",
+  "input_mode": "search_api",
+  "search_provider": "tavily",
+  "search_query": "\"Fiona Goddard\" news",
+  "max_urls": 7
+}
