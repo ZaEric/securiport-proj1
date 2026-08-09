@@ -1,0 +1,46 @@
+{
+  "run_id": "2026-08-09_1609_emily_carter",
+  "target_name": "Emily Carter",
+  "overall_sentiment": "neutral",
+  "llm_sentiment": "neutral",
+  "one_line_summary": "No evidence was found regarding Emily Carter.",
+  "extended_summary": "The search returned no relevant evidence about Emily Carter, resulting in an insufficient data set. Consequently, no conclusions about her conduct or reputation can be drawn.",
+  "key_findings": [
+    "No evidence was retrieved for the target person.",
+    "No negative or positive sentiment was identified.",
+    "The evidence set is insufficient to support any assessment."
+  ],
+  "justification": "The evidence statistics indicate that no evidence was extracted (num_evidence: 0) and negative_evidence_present is false. Because the evidence set is empty, the report must reflect an insufficient data situation, leading to a neutral overall sentiment.",
+  "evidence_examples": [],
+  "negative_evidence": [],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "synthetic://synthetic_insufficient_001/src_001",
+      "title": "City Council Approves New Transit Funding Plan"
+    },
+    {
+      "source_id": "src_002",
+      "url": "synthetic://synthetic_insufficient_001/src_002",
+      "title": "Nonprofit Opens Community Resource Center"
+    },
+    {
+      "source_id": "src_003",
+      "url": "synthetic://synthetic_insufficient_001/src_003",
+      "title": "Audit Finds Documentation Problems in Public Works Contract"
+    }
+  ],
+  "limitations": [
+    "No evidence was extracted for the target person.",
+    "The data set is insufficient to draw any conclusions."
+  ],
+  "report_generation_issues": [
+    "No valid evidence examples were selected for the final report."
+  ],
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42,
+    "max_evidence_examples": 7
+  }
+}

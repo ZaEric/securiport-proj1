@@ -1,0 +1,30 @@
+{
+  "run_id": "2026-08-09_1609_emily_carter",
+  "target_name": "Emily Carter",
+  "chunks": [
+    {
+      "chunk_id": "src_001_chunk_001",
+      "source_id": "src_001",
+      "text": "The City Council approved a new transit funding plan on Tuesday after several weeks of public hearings and budget review sessions. The plan will provide additional money for bus maintenance, station repairs, and expanded evening service in several neighborhoods.\n\nTransportation officials said the funding package is intended to address delayed repairs and improve reliability for commuters. Several council members said the city had received repeated complaints about late buses, aging shelters, and unclear route-change notices.\n\nDuring the meeting, residents asked the city to publish clearer project timelines and provide more frequent updates as the work moves forward. Officials said the transportation department will release quarterly progress reports and hold public meetings before major route adjustments are finalized.\n\nThe council approved the measure by a wide margin. City staff said the first phase of the plan will begin later this year, with station maintenance and fleet inspections scheduled before any major service expansion.",
+      "word_count": 152
+    },
+    {
+      "chunk_id": "src_002_chunk_001",
+      "source_id": "src_002",
+      "text": "A local nonprofit opened a new community resource center on Friday to provide job-search assistance, after-school tutoring, and housing referral services. The center will operate five days a week and will be staffed by volunteers, case workers, and partner organizations.\n\nThe nonprofit's director said the center was created in response to growing demand for accessible neighborhood services. Families will be able to schedule appointments for resume help, benefits navigation, and school-readiness programs.\n\nCommunity leaders praised the opening and said the center could reduce pressure on other local service providers. Several volunteers said they hope the space will become a reliable point of contact for residents who need help but do not know which agency to approach.\n\nThe organization plans to track participation numbers and publish a yearly summary of program outcomes. Staff members said the first few months will focus on outreach, scheduling, and building partnerships with schools and housing groups.",
+      "word_count": 151
+    },
+    {
+      "chunk_id": "src_003_chunk_001",
+      "source_id": "src_003",
+      "text": "A municipal audit released Monday found documentation problems in a public works contract involving road repairs and equipment rentals. Auditors said several invoices lacked supporting records, and some project files did not clearly show who reviewed the payment requests before they were approved.\n\nThe report criticized the public works department for inconsistent recordkeeping and weak internal controls. Auditors said the department should require dated review notes, centralized file storage, and written confirmation before payments are released.\n\nDepartment officials said the problems were caused by staff turnover, outdated filing procedures, and a transition between software systems. They said the city has already begun revising its contract review process and will provide additional training for employees who handle project documentation.\n\nThe audit did not identify any individual employee as responsible for misconduct. However, it concluded that the lack of clear records made it harder for the city to verify whether all payments were properly supported.",
+      "word_count": 153
+    }
+  ],
+  "metadata": {
+    "chunking_strategy": "paragraph_aware",
+    "target_chunk_words": 3500,
+    "max_chunk_words": 4000,
+    "overlap_paragraphs": 1
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "run_id": "2026-08-09_1609_emily_carter",
+  "target_name": "Emily Carter",
+  "aggregation_method": "negative_flag_priority",
+  "num_evidence": 0,
+  "mixed_evidence_threshold": 0.25,
+  "minimum_evidence_count": 1,
+  "source_results": [],
+  "overall_result": {
+    "baseline_sentiment": "neutral",
+    "sentiment_counts": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0
+    },
+    "source_baseline_sentiment_counts": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0
+    },
+    "negative_evidence_present": false,
+    "mixed_evidence": false,
+    "opposing_sentiment_ratio": 0.0,
+    "insufficient_evidence": true
+  }
+}
