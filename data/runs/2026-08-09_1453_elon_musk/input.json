@@ -1,0 +1,9 @@
+{
+  "run_id": "2026-08-09_1453_elon_musk",
+  "created_at": "2026-08-09T21:53:42Z",
+  "target_name": "Elon Musk",
+  "input_mode": "search_api",
+  "search_provider": "tavily",
+  "search_query": "\"Elon Musk\" news",
+  "max_urls": 10
+}

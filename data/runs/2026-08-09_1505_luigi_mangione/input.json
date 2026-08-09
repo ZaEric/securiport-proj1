@@ -1,0 +1,9 @@
+{
+  "run_id": "2026-08-09_1505_luigi_mangione",
+  "created_at": "2026-08-09T22:05:01Z",
+  "target_name": "Luigi Mangione",
+  "input_mode": "search_api",
+  "search_provider": "tavily",
+  "search_query": "\"Luigi Mangione\" news",
+  "max_urls": 10
+}

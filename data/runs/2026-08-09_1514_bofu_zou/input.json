@@ -1,0 +1,9 @@
+{
+  "run_id": "2026-08-09_1514_bofu_zou",
+  "created_at": "2026-08-09T22:14:08Z",
+  "target_name": "Bofu Zou",
+  "input_mode": "search_api",
+  "search_provider": "tavily",
+  "search_query": "\"Bofu Zou\" news",
+  "max_urls": 10
+}

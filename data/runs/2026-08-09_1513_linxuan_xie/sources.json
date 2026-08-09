@@ -1,0 +1,100 @@
+{
+  "run_id": "2026-08-09_1513_linxuan_xie",
+  "target_name": "Linxuan Xie",
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "https://ki.se/en/people/linxuan-zhao",
+      "title": "Linxuan Zhao | Karolinska Institutet",
+      "retrieved_at": "2026-08-09T22:13:31Z",
+      "article_text": "Linxuan Zhao\n Phd Student\nE-mail: linxuan.zhao@ki.se\nVisiting address: Tomtebodavägen 23A (Gamma4), 17165 Solna\nPostal address: C1 Mikrobiologi, tumör- och cellbiologi, C1 SciLife Bienko, 171 77 Stockholm\nArticles\n- Article: CURRENT OPINION IN CELL BIOLOGY. 2024;90:102409Pedrotti S; Castiglioni I; Perez-Estrada C; Zhao L; Chen JP; Crosetto N; Bienko M\n- Article: CELL REPORTS. 2023;42(1):112021Luo Q; Pui H-P; Chen J; Yu L; Jannig PR; Pei Y; Zhao L; Chen X; Petropoulos S; Ruas JL; Wu J; Deng Q\n- Article: BIO-PROTOCOL. 2022;12(10):e4418Zhao L; Polavarapu VK; Yadav RP; Xing P; Chen X\n- Article: NATURE COMMUNICATIONS. 2022;13(1):2236Lu X; Maturi NP; Jarvius M; Yildirim I; Dang Y; Zhao L; Xie Y; Tan E-J; Xing P; Larsson R; Fryknas M; Uhrbom L; Chen X\n- Article: GENOME RESEARCH. 2022;32(1):150-161Zhang H; Polavarapu VK; Xing P; Zhao M; Mathot L; Zhao L; Rosen G; Swartling FJ; Sjoblom T; Chen X\n- Article: NUCLEIC ACIDS RESEARCH. 2021;49(21):e125Zhao L; Xing P; Polavarapu VK; Zhao M; Valero-Martinez B; Dang Y; Maturi N; Mathot L; Neves I; Yildirim I; Swartling FJ; Sjoblom T; Uhrbom L; Chen X\n- Article: NATURE COMMUNICATIONS. 2021;12(1):6489Zhao X-K; Xing P; Song X; Zhao M; Zhao L; Dang Y; Lei L-L; Xu R-H; Han W-L; Wang P-P; Yang M-M; Hu J-F; Zhong K; Zhou F-Y; Han X-N; Meng C-L; Ji J-J; Chen X; Wang L-D\nAll other publications\n- Review: CURRENT OPINION IN GENETICS & DEVELOPMENT. 2026;97:102447Bouwman BA; Zhao L; de Luca KL; Bienko M",
+      "source_type": "search_result",
+      "notes": "Linxuan Zhao | Karolinska Institutet",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8"
+    }
+  ],
+  "metadata": {
+    "source_mode": "search_api",
+    "search_provider": "tavily",
+    "search_query": "\"Linxuan Xie\" news",
+    "source_count": 1,
+    "requested_url_count": 10,
+    "failed_url_count": 9,
+    "blocked_url_count": 0,
+    "fetch_errors": [
+      {
+        "url": "https://www.linkedin.com/in/linxuan-xie-0a8530233",
+        "source_type": "search_result",
+        "notes": "Linxuan Xie - Student at University of Pennsylvania",
+        "status_code": 999,
+        "content_type": "text/html",
+        "error": "extracted article text was too short to use: fewer than 50 words"
+      },
+      {
+        "url": "https://www.linkedin.com/in/linxuan-xie-653bb427",
+        "source_type": "search_result",
+        "notes": "Linxuan Xie",
+        "status_code": 999,
+        "content_type": "text/html",
+        "error": "extracted article text was too short to use: fewer than 50 words"
+      },
+      {
+        "url": "https://www.linkedin.com/in/linxuanxie",
+        "source_type": "search_result",
+        "notes": "Linxuan Xie - 美国纽约大学",
+        "status_code": 999,
+        "content_type": "text/html",
+        "error": "extracted article text was too short to use: fewer than 50 words"
+      },
+      {
+        "url": "https://www.brandinginasia.com/one-under-30-linxuan-lyu",
+        "source_type": "search_result",
+        "notes": "One Under 30: Young Creative Spotlight - Linxuan Lyu | Branding in Asia",
+        "status_code": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "error": "extracted text did not mention target_name: Linxuan Xie"
+      },
+      {
+        "url": "https://www.linkedin.com/in/fan-linxuan-ab542a5b",
+        "source_type": "search_result",
+        "notes": "Fan Linxuan - --",
+        "status_code": 999,
+        "content_type": "text/html",
+        "error": "extracted article text was too short to use: fewer than 50 words"
+      },
+      {
+        "url": "https://sequoiagenetics.com/team-members/mr-linxuan-zhang",
+        "source_type": "search_result",
+        "notes": "Mr Linxuan Zhang | Sequoia Genetics",
+        "status_code": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "error": "extracted text did not mention target_name: Linxuan Xie"
+      },
+      {
+        "url": "https://www.linkedin.com/in/linxuan-zhang-773464159",
+        "source_type": "search_result",
+        "notes": "Linxuan Zhang",
+        "status_code": 999,
+        "content_type": "text/html",
+        "error": "extracted article text was too short to use: fewer than 50 words"
+      },
+      {
+        "url": "https://charlestoncompetition.com/performer-ethan-linxuan-zhang",
+        "source_type": "search_result",
+        "notes": "Ethan Linxuan Zhang - Charleston International Music Competition",
+        "status_code": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "error": "extracted text did not mention target_name: Linxuan Xie"
+      },
+      {
+        "url": "https://www.linkedin.com/pub/dir/Linxuan/Huang",
+        "source_type": "search_result",
+        "notes": "10+ \"Linxuan Huang\" profiles | LinkedIn",
+        "status_code": 999,
+        "content_type": "text/html",
+        "error": "extracted article text was too short to use: fewer than 50 words"
+      }
+    ]
+  }
+}

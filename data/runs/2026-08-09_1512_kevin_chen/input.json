@@ -1,0 +1,9 @@
+{
+  "run_id": "2026-08-09_1512_kevin_chen",
+  "created_at": "2026-08-09T22:12:50Z",
+  "target_name": "Kevin Chen",
+  "input_mode": "search_api",
+  "search_provider": "tavily",
+  "search_query": "\"Kevin Chen\" news",
+  "max_urls": 10
+}

@@ -1,0 +1,9 @@
+{
+  "run_id": "2026-08-09_1503_salvador_ramos",
+  "created_at": "2026-08-09T22:03:47Z",
+  "target_name": "Salvador Ramos",
+  "input_mode": "search_api",
+  "search_provider": "tavily",
+  "search_query": "\"Salvador Ramos\" news",
+  "max_urls": 10
+}
