@@ -1,0 +1,17 @@
+{
+  "run_id": "2026-08-09_1617_john_smith",
+  "created_at": "2026-08-09T23:17:53Z",
+  "target_name": "John Smith",
+  "input_mode": "synthetic",
+  "synthetic_case_file": "data/synthetic/passengers/synthetic_positive_001.json",
+  "expected_overall_sentiment": "positive",
+  "difficulty_tags": [
+    "multiple_people",
+    "misattributed_praise"
+  ],
+  "expected_failure_modes": [
+    "may assign positive evidence about another person to the target",
+    "may miss positive evidence that is understated or expressed as indirect praise rather than an explicit award"
+  ],
+  "notes": "Tests a positive case with one straightforward achievement source, one community/volunteer recognition source, and one longer multi-person article where praise for other people could be misattributed to the target."
+}

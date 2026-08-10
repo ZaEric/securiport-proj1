@@ -1,0 +1,108 @@
+{
+  "run_id": "2026-08-09_1632_simone_biles",
+  "target_name": "Simone Biles",
+  "overall_sentiment": "negative",
+  "llm_sentiment": "negative",
+  "one_line_summary": "Simone Biles is flagged for negative coverage surrounding her mental health disclosures, public criticism, and attacks.",
+  "extended_summary": "The evidence shows that Simone Biles withdrew from events in Tokyo citing mental health concerns, has been subjected to attacks that included racial overtones, and faced political criticism. These negative reports create a review flag, despite a larger volume of positive coverage about her achievements.",
+  "key_findings": [
+    "Biles withdrew from competition to focus on mental well‑being, indicating vulnerability.",
+    "She has been targeted by attacks that included racial overtones and accusations of weakness.",
+    "Political figures have criticized her, adding to the negative narrative."
+  ],
+  "justification": "The evidence statistics confirm the presence of negative evidence (5 out of 14 items). According to the system rules, any negative evidence triggers a negative overall sentiment regardless of the number of positive items. The selected negative quotes demonstrate potential victimization and public criticism, warranting a review flag.",
+  "evidence_examples": [
+    {
+      "source_id": "src_001",
+      "quote": "She was expected to repeat as individual all-around champion in Tokyo but removed herself from competition to focus on her mental well-being.",
+      "sentiment": "negative",
+      "why_selected": "Shows withdrawal due to mental health, indicating vulnerability."
+    },
+    {
+      "source_id": "src_001",
+      "quote": "I was so much more nervous for team finals because that’s when everything occurred (in Tokyo), so I was a little bit traumatized from that.",
+      "sentiment": "negative",
+      "why_selected": "Highlights trauma and mental strain."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "Considering what she went through in Tokyo, when people attacked her not only as weak, but as a traitor, and there were racial overtones to those attacks, she had seemed to be someone who kept a lot of her personal opinions personal,",
+      "sentiment": "negative",
+      "why_selected": "Describes attacks with racial overtones, indicating victimization."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "If Biles was stung by the attacks, she never let on, and her willingness to share her life on social media indicates she really doesn’t care what people think about her or her husband, Chicago Bears safety Jonathan Owens.",
+      "sentiment": "negative",
+      "why_selected": "Shows she was affected by attacks but did not publicly disclose it."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "She was widely supported in doing so, but a recent clip re-emerged of JD Vance, Trump’s selection for vice president on the Republican ticket, criticizing the praise Biles received.",
+      "sentiment": "negative",
+      "why_selected": "Illustrates political criticism contributing to negative coverage."
+    }
+  ],
+  "negative_evidence": [
+    {
+      "url": "https://apnews.com/article/a3aaf6453d62916b7ccc49b5123ecac7",
+      "title": "Simone Biles wins 6th all-around title at worlds to become most decorated gymnast in history | AP News",
+      "evidence": [
+        {
+          "quote": "She was expected to repeat as individual all-around champion in Tokyo but removed herself from competition to focus on her mental well-being.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "I was so much more nervous for team finals because that’s when everything occurred (in Tokyo), so I was a little bit traumatized from that.",
+          "sentiment": "negative"
+        }
+      ]
+    },
+    {
+      "url": "https://www.ap.org/news-highlights/spotlights/2024/everything-simone-biles-did-at-the-paris-olympics-was-amplified-she-thrived-in-the-spotlight/",
+      "title": "Everything Simone Biles did at the Paris Olympics was amplified. She thrived in the spotlight | The Associated Press",
+      "evidence": [
+        {
+          "quote": "Considering what she went through in Tokyo, when people attacked her not only as weak, but as a traitor, and there were racial overtones to those attacks, she had seemed to be someone who kept a lot of her personal opinions personal,",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "If Biles was stung by the attacks, she never let on, and her willingness to share her life on social media indicates she really doesn’t care what people think about her or her husband, Chicago Bears safety Jonathan Owens.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "She was widely supported in doing so, but a recent clip re-emerged of JD Vance, Trump’s selection for vice president on the Republican ticket, criticizing the praise Biles received.",
+          "sentiment": "negative"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "https://apnews.com/article/a3aaf6453d62916b7ccc49b5123ecac7",
+      "title": "Simone Biles wins 6th all-around title at worlds to become most decorated gymnast in history | AP News"
+    },
+    {
+      "source_id": "src_002",
+      "url": "https://www.ap.org/news-highlights/spotlights/2024/everything-simone-biles-did-at-the-paris-olympics-was-amplified-she-thrived-in-the-spotlight/",
+      "title": "Everything Simone Biles did at the Paris Olympics was amplified. She thrived in the spotlight | The Associated Press"
+    },
+    {
+      "source_id": "src_003",
+      "url": "https://www.wptv.com/sports/olympics/rio-2016/simone-biles-takes-all-around-individual-gold-medal",
+      "title": "Simone Biles wins all-around gold"
+    }
+  ],
+  "limitations": [
+    "The report is based solely on the supplied evidence and does not include external context.",
+    "No assessment of legal or criminal implications is provided; the focus is on review flag criteria."
+  ],
+  "report_generation_issues": [],
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42,
+    "max_evidence_examples": 7
+  }
+}

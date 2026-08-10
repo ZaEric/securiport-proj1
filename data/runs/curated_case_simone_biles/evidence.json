@@ -1,0 +1,135 @@
+{
+  "run_id": "2026-08-09_1632_simone_biles",
+  "target_name": "Simone Biles",
+  "evidence_extraction_method": "llm_quote_extraction",
+  "num_evidence": 14,
+  "num_evidence_extraction_issues": 1,
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42
+  },
+  "evidence": [
+    {
+      "evidence_id": "ev_001",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Biles wins 6th all-around title at worlds to become most decorated gymnast in history",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_002",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Biles scored 58.399 points across the balance beam, floor, vault and uneven bars to beat Rebeca Andrade, the Brazilian defending champion, by 1.633 points.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_003",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "But she recovered in style, and it didn’t cost her enough of a points deduction to rob her of the gold.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_004",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "She was expected to repeat as individual all-around champion in Tokyo but removed herself from competition to focus on her mental well-being.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_005",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "I was so much more nervous for team finals because that’s when everything occurred (in Tokyo), so I was a little bit traumatized from that.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_006",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Biles is the most decorated gymnast of all-time and America’s golden girl.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_007",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "She uses her platform to normalize discussions about mental health and opened the topic to widespread conversation at the Tokyo Games when she pulled out of some events over concern about her headspace.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_008",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Considering what she went through in Tokyo, when people attacked her not only as weak, but as a traitor, and there were racial overtones to those attacks, she had seemed to be someone who kept a lot of her personal opinions personal,",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_009",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "If Biles was stung by the attacks, she never let on, and her willingness to share her life on social media indicates she really doesn’t care what people think about her or her husband, Chicago Bears safety Jonathan Owens.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_010",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "She was widely supported in doing so, but a recent clip re-emerged of JD Vance, Trump’s selection for vice president on the Republican ticket, criticizing the praise Biles received.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_011",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Simone Biles is immune to all of it.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_012",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "And now, finally, an Olympic champion.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_013",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Biles became the fourth straight American woman to win the all-around title and fifth overall while cementing her reputation as the best of her generation and perhaps ever.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_014",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "She burst into tears when her final total was posted and her long journey to this moment ended.",
+      "sentiment": "positive",
+      "confidence": null
+    }
+  ],
+  "evidence_extraction_issues": [
+    {
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "The 19-year-old American soaring to the all-around title on Thursday, putting the gap between herself and the rest of the world on full display under the Olympic spotlight.",
+      "sentiment": "positive"
+    }
+  ]
+}

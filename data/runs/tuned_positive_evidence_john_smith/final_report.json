@@ -1,0 +1,87 @@
+{
+  "run_id": "2026-08-09_1617_john_smith",
+  "target_name": "John Smith",
+  "overall_sentiment": "positive",
+  "llm_sentiment": "positive",
+  "one_line_summary": "John Smith is consistently recognized for professional excellence and community service, with no evidence of wrongdoing.",
+  "extended_summary": "Across three independent sources, John Smith is highlighted for outstanding achievements in engineering, volunteerism, and project management. He earned Employee of the Year honors for leading a cost‑saving bridge redesign, was lauded for mentoring junior engineers, and received community praise for reliable volunteer service at a food bank. In a city report, he is credited with reorganizing a stalled library renovation, improving communication, and expediting regulatory approvals. All evidence is positive, with no indications of misconduct or victimization.",
+  "key_findings": [
+    "Employee of the Year for engineering excellence and leadership.",
+    "Volunteer recognition for consistent, reliable service and mentorship at a food bank.",
+    "Successful turnaround of a delayed public construction project through improved scheduling and stakeholder communication."
+  ],
+  "justification": "All 11 extracted evidence items are marked positive, with no negative or mixed sentiment present. The evidence consistently portrays John Smith as a competent professional and dedicated volunteer, and the absence of any negative or review‑flagged content supports a positive overall sentiment.",
+  "evidence_examples": [
+    {
+      "source_id": "src_001",
+      "quote": "John Smith, a structural engineer at Kestrel Bridge Works, was named Employee of the Year at the company's annual recognition dinner on Thursday.",
+      "sentiment": "positive",
+      "why_selected": "Shows formal recognition of professional excellence."
+    },
+    {
+      "source_id": "src_001",
+      "quote": "Smith was honored for leading the redesign of the Millbrook Creek pedestrian bridge, a project that came in under budget and was completed two months ahead of schedule.",
+      "sentiment": "positive",
+      "why_selected": "Highlights tangible project success and cost savings."
+    },
+    {
+      "source_id": "src_001",
+      "quote": "Colleagues praised Smith for catching a design flaw during an early review that could have caused costly delays later in construction.",
+      "sentiment": "positive",
+      "why_selected": "Demonstrates technical vigilance and proactive problem‑solving."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "Smith has rarely missed a Saturday shift since he began volunteering and has taken on increasing responsibility over that time, including training new volunteers and coordinating the delivery schedule for homebound seniors.",
+      "sentiment": "positive",
+      "why_selected": "Shows reliability and leadership in community service."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "'When John says he'll be here, he's here, and that consistency matters more than people realize when you're trying to run a distribution schedule that serves hundreds of families,' Nair said.",
+      "sentiment": "positive",
+      "why_selected": "Provides testimonial evidence of dependable volunteer work."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "According to the report, project coordinator John Smith was brought in to reorganize the construction schedule and improve communication between the city, the new contractor, and neighborhood stakeholders.",
+      "sentiment": "positive",
+      "why_selected": "Shows role in improving project management and stakeholder relations."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "Auditors wrote that Smith introduced a weekly reporting system that gave city officials clear visibility into which tasks were on track and which needed attention, replacing an informal process that had previously left gaps of several weeks between updates.",
+      "sentiment": "positive",
+      "why_selected": "Illustrates implementation of effective oversight mechanisms."
+    }
+  ],
+  "negative_evidence": [],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "synthetic://synthetic_positive_001/src_001",
+      "title": "Local Engineer John Smith Named Employee of the Year"
+    },
+    {
+      "source_id": "src_002",
+      "url": "synthetic://synthetic_positive_001/src_002",
+      "title": "Riverside Food Bank Honors Volunteer John Smith for Five Years of Service"
+    },
+    {
+      "source_id": "src_003",
+      "url": "synthetic://synthetic_positive_001/src_003",
+      "title": "City Report Praises Turnaround of Delayed Northgate Library Renovation"
+    }
+  ],
+  "limitations": [
+    "The report is based solely on three provided sources and may not reflect all public information about John Smith.",
+    "No negative or mixed evidence was found; absence of such evidence does not guarantee absence of undisclosed issues."
+  ],
+  "report_generation_issues": [],
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42,
+    "max_evidence_examples": 7
+  }
+}
