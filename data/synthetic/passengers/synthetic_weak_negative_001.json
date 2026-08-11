@@ -1,0 +1,41 @@
+{
+  "run_id": "synthetic_weak_negative_001",
+  "target_name": "Alicia Monroe",
+  "expected_overall_sentiment": "negative",
+  "case_notes": "Tests a weak negative case based on criticism and controversy rather than crime, a legal allegation, or victimization. Alicia Monroe is criticized for the way she handled a public redevelopment proposal and later faces a no-confidence vote from a neighborhood advisory board. The negative result is a review flag for reputational controversy only; the sources explicitly contain no criminal charge, civil claim, or finding of legal wrongdoing.",
+  "difficulty_tags": [
+    "weak_negative",
+    "public_criticism",
+    "non_criminal_controversy",
+    "reputational_risk"
+  ],
+  "expected_failure_modes": [
+    "may label the sources neutral because they contain no criminal or legal issue",
+    "may mistake broad criticism of the redevelopment proposal for criticism directed at Alicia Monroe",
+    "may overstate the controversy as misconduct or legal wrongdoing",
+    "may let the target's routine professional accomplishments erase the criticism from the final report"
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "synthetic://synthetic_weak_negative_001/src_001",
+      "title": "Residents Fault Alicia Monroe Over Late Notice for Market District Meeting",
+      "expected_source_sentiment": "negative",
+      "article_text": "Residents packed a tense meeting Tuesday night after learning that a public workshop on the Market District redevelopment plan had been announced only two days earlier. Alicia Monroe, the city's redevelopment coordinator, apologized for the short notice but said the meeting date had been set to keep a state grant application on schedule.\n\nSeveral speakers said the compressed timeline left renters and small-business owners without a meaningful chance to review the proposal. 'This is not consultation if the public hears about it after the decisions are already taking shape,' resident Joel Martin told the panel. Others questioned Monroe's decision to circulate only a summary of the plan rather than the full draft agreement.\n\nMonroe said the complete materials would be posted before the next workshop and that no final vote had been scheduled. City officials said no law had been broken and that the project remains in its early planning stages, but the meeting ended with residents calling for a different coordinator to oversee outreach."
+    },
+    {
+      "source_id": "src_002",
+      "url": "synthetic://synthetic_weak_negative_001/src_002",
+      "title": "Advisory Board Votes No Confidence in Monroe's Outreach Plan",
+      "expected_source_sentiment": "negative",
+      "article_text": "The Market District Neighborhood Advisory Board voted 7-2 Thursday to express no confidence in redevelopment coordinator Alicia Monroe's public-outreach plan, citing what members described as inconsistent communication and insufficient notice for key meetings. The vote is nonbinding and does not affect Monroe's employment, but board members said they wanted the city manager to reconsider how the project is being led.\n\nBoard chair Denise Park said the resolution was aimed at the process rather than an accusation of dishonesty or criminal conduct. 'We are saying the community has lost confidence in the way information is being shared,' Park said. 'That needs to change before the project moves ahead.'\n\nMonroe said she accepted the criticism and would publish a calendar of meetings, documents, and decision points within two weeks. The city manager said he would review the board's recommendations and stressed that no administrative or legal investigation is underway."
+    },
+    {
+      "source_id": "src_003",
+      "url": "synthetic://synthetic_weak_negative_001/src_003",
+      "title": "Alicia Monroe Presents Revised Market District Timeline",
+      "expected_source_sentiment": "neutral",
+      "article_text": "Redevelopment coordinator Alicia Monroe presented a revised Market District timeline at Monday's city council meeting, adding two public workshops and extending the written-comment period by 30 days. The changes followed complaints from residents that the original schedule had moved too quickly.\n\nMonroe said the revised timeline would give business owners, tenants, and property owners more time to review the proposal before the city submits its grant application. Council members asked staff to post meeting materials in multiple languages and make recordings available online.\n\nThe council took no action on the redevelopment plan itself. Monroe said the next workshop would focus on traffic and small-business displacement concerns raised during the earlier meetings."
+    }
+  ]
+}

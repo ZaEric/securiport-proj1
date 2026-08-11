@@ -1,0 +1,41 @@
+{
+  "run_id": "synthetic_exoneration_001",
+  "target_name": "Ethan Brooks",
+  "expected_overall_sentiment": "negative",
+  "case_notes": "Tests an allegation followed by exonerating information. Ethan Brooks is charged after an event at a community center, but later reporting says prosecutors dismissed the charge after video and witness evidence did not support the allegation. The overall result remains negative as a cautious review flag because a serious accusation appeared in public reporting, but any generated report must prominently state that the charge was dropped and must not characterize Brooks as guilty.",
+  "difficulty_tags": [
+    "exoneration",
+    "dismissed_charge",
+    "conflicting_evidence",
+    "negative_review_flag"
+  ],
+  "expected_failure_modes": [
+    "may report the initial charge without extracting the later dismissal",
+    "may treat dismissed charges as a conviction or confirmed wrongdoing",
+    "may label the later source purely positive and lose the contextual connection to the allegation",
+    "may let the exonerating information entirely suppress a review flag despite the serious public allegation"
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "synthetic://synthetic_exoneration_001/src_001",
+      "title": "Ethan Brooks Charged After Dispute at Eastside Community Center",
+      "expected_source_sentiment": "negative",
+      "article_text": "Ethan Brooks, a volunteer coach at the Eastside Community Center, was charged Monday with misdemeanor assault following a dispute after a youth basketball practice, according to police. A parent told officers that Brooks pushed him during an argument in a hallway near the gym.\n\nBrooks denied the allegation through an attorney, who said his client stepped between two adults after an argument became heated and did not strike or push anyone. The community center placed Brooks on temporary leave from coaching while the case was reviewed.\n\nA court date was set for next month. Police said the charge was based on the initial complaint and that investigators were seeking video from the building and statements from additional witnesses."
+    },
+    {
+      "source_id": "src_002",
+      "url": "synthetic://synthetic_exoneration_001/src_002",
+      "title": "Prosecutors Drop Assault Charge Against Ethan Brooks After Video Review",
+      "expected_source_sentiment": "negative",
+      "article_text": "Prosecutors dismissed the misdemeanor assault charge against Eastside Community Center volunteer coach Ethan Brooks on Thursday after reviewing hallway video and additional witness statements, court records show. The district attorney's office said the available evidence did not support proving the allegation beyond a reasonable doubt.\n\nThe video showed Brooks moving between two arguing adults and raising his hands to create space, according to a filing submitted with the dismissal. Two witnesses told investigators that they did not see Brooks push or strike the parent who made the complaint. Brooks's attorney said the dismissal confirmed that his client had acted to de-escalate the situation.\n\nThe community center said Brooks had been cleared to return to coaching after its own review reached the same conclusion. The parent who made the complaint did not respond to a request for comment."
+    },
+    {
+      "source_id": "src_003",
+      "url": "synthetic://synthetic_exoneration_001/src_003",
+      "title": "Eastside Community Center Restores Brooks to Youth Coaching Role",
+      "expected_source_sentiment": "neutral",
+      "article_text": "The Eastside Community Center has restored Ethan Brooks to his volunteer youth coaching role following the dismissal of an assault charge connected to a dispute last month. In a statement, the center said its internal review of security video and witness accounts found no basis for disciplinary action against Brooks.\n\nBrooks will return for the start of the summer basketball session, though the center said another staff member will handle parent check-ins at games while it revises its conflict-management procedures. Executive director Priya Nair said the policy change was intended to prevent future disputes, not to penalize Brooks.\n\nBrooks said he was grateful to be back with the team and hoped the attention could return to the students."
+    }
+  ]
+}
