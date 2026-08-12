@@ -1,0 +1,19 @@
+{
+  "run_id": "modelcompare_gptoss20b_daniel_kim",
+  "created_at": "2026-08-08T04:53:23Z",
+  "target_name": "Daniel Kim",
+  "input_mode": "synthetic",
+  "synthetic_case_file": "data/synthetic/passengers/synthetic_victim_subtle_001.json",
+  "expected_overall_sentiment": "negative",
+  "difficulty_tags": [
+    "subtle_victim_language",
+    "indirect_phrasing",
+    "distractor_positive_source"
+  ],
+  "expected_failure_modes": [
+    "may miss indirect or euphemistic victim language such as 'incident' or 'break-in' that never uses explicit crime words",
+    "may weight the unrelated positive volunteer source too heavily and produce an overall positive or neutral result",
+    "may treat 'recovering' and 'support' language as purely positive rather than as a signal of harm requiring review"
+  ],
+  "notes": "Tests whether the pipeline still flags victim status as negative when it is described indirectly with euphemistic language (an 'incident', someone 'shaken but unharmed', a break-in without the word crime), rather than explicit crime/legal terms, and when a distractor positive source is present that has nothing to do with the victimization."
+}

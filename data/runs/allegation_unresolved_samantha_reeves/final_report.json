@@ -1,0 +1,102 @@
+{
+  "run_id": "gptoss20b_allegation_unresolved_samantha_reeves",
+  "target_name": "Samantha Reeves",
+  "overall_sentiment": "negative",
+  "llm_sentiment": "negative",
+  "one_line_summary": "Samantha Reeves is under a formal city investigation for possible travel reimbursement irregularities, leading to administrative leave, despite positive departmental recognition.",
+  "extended_summary": "The city comptroller’s office has opened a formal investigation into travel reimbursement requests filed by Samantha Reeves, deputy director of the parks and recreation department, after an internal audit flagged a pattern of expense claims that could not be matched to corresponding travel records. Reeves has been placed on paid administrative leave while the investigation proceeds, a standard step the city takes whenever a department official is the subject of an active financial review. Although she has not been charged with any offense and has cooperated fully with the investigation, the presence of a formal inquiry and administrative leave constitutes negative review‑flag evidence. Concurrently, Reeves has received positive recognition within her department, being named Employee of the Year and credited with expanding after‑school programming and securing state grants. The overall assessment remains negative because the review‑flag evidence of an ongoing investigation outweighs the positive coverage, per the system’s policy.",
+  "key_findings": [
+    "A formal city investigation has been opened into Reeves’ travel reimbursement claims.",
+    "Reeves is on paid administrative leave while the investigation continues, though no charges have been filed.",
+    "Despite the investigation, Reeves has received positive departmental accolades for program expansion and grant acquisition."
+  ],
+  "justification": "The evidence includes two negative items that indicate a formal investigation and administrative leave, which are review‑flag indicators of potential misconduct. According to the system’s policy, any presence of negative evidence mandates a negative overall sentiment, regardless of the number of positive or neutral items. The negative evidence is not merely a suggestion of victimization; it reflects an active financial review that could imply wrongdoing. Therefore, the report is flagged negative.",
+  "evidence_examples": [
+    {
+      "source_id": "src_001",
+      "quote": "The city comptroller's office has opened a formal investigation into travel reimbursement requests filed by Samantha Reeves, deputy director of the parks and recreation department, after an internal audit flagged a pattern of expense claims that could not be matched to corresponding travel records.",
+      "sentiment": "negative",
+      "why_selected": "Shows formal investigation into possible financial misconduct."
+    },
+    {
+      "source_id": "src_001",
+      "quote": "Reeves has been placed on paid administrative leave while the investigation proceeds, a standard step the city said it takes whenever a department official is the subject of an active financial review.",
+      "sentiment": "negative",
+      "why_selected": "Indicates administrative leave due to active review, a review‑flag condition."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "Reeves remains on paid administrative leave and has not been charged with any offense.",
+      "sentiment": "neutral",
+      "why_selected": "Provides context that no charges have been filed yet."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "'Ms. Reeves has cooperated fully with every request from the comptroller's office, and we expect this to be resolved once they've had a chance to review what we've submitted,' Webb said.",
+      "sentiment": "neutral",
+      "why_selected": "Shows cooperation but does not negate the investigation."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "The parks and recreation department named deputy director Samantha Reeves its 2025 Employee of the Year at last December's staff recognition dinner, citing her work expanding the department's after-school sports programming to five additional neighborhoods.",
+      "sentiment": "positive",
+      "why_selected": "Highlights positive departmental recognition."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "Reeves, who has worked for the department for nine years, was credited with securing a state grant that funded new equipment for three community centers.",
+      "sentiment": "positive",
+      "why_selected": "Shows positive achievements in grant acquisition."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "Department director Thomas Lee said at the time that Reeves' organizational skills and attention to detail had made her one of the most reliable members of his leadership team.",
+      "sentiment": "positive",
+      "why_selected": "Provides positive testimonial of her reliability."
+    }
+  ],
+  "negative_evidence": [
+    {
+      "url": "synthetic://synthetic_allegation_unresolved_001/src_001",
+      "title": "City Opens Investigation Into Travel Reimbursements Filed by Samantha Reeves",
+      "evidence": [
+        {
+          "quote": "The city comptroller's office has opened a formal investigation into travel reimbursement requests filed by Samantha Reeves, deputy director of the parks and recreation department, after an internal audit flagged a pattern of expense claims that could not be matched to corresponding travel records.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "Reeves has been placed on paid administrative leave while the investigation proceeds, a standard step the city said it takes whenever a department official is the subject of an active financial review.",
+          "sentiment": "negative"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "synthetic://synthetic_allegation_unresolved_001/src_001",
+      "title": "City Opens Investigation Into Travel Reimbursements Filed by Samantha Reeves"
+    },
+    {
+      "source_id": "src_002",
+      "url": "synthetic://synthetic_allegation_unresolved_001/src_002",
+      "title": "Investigation Into Reeves' Travel Expenses Still Open, City Says"
+    },
+    {
+      "source_id": "src_003",
+      "url": "synthetic://synthetic_allegation_unresolved_001/src_003",
+      "title": "Parks Department Names Samantha Reeves 2025 Employee of the Year"
+    }
+  ],
+  "limitations": [
+    "The evidence reflects only public statements and does not include the outcome of the investigation.",
+    "No charges have been filed, so the investigation remains unresolved and the evidence does not confirm wrongdoing."
+  ],
+  "report_generation_issues": [],
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42,
+    "max_evidence_examples": 7
+  }
+}

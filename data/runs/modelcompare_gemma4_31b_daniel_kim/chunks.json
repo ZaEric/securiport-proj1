@@ -1,0 +1,30 @@
+{
+  "run_id": "modelcompare_gemma4_31b_daniel_kim",
+  "target_name": "Daniel Kim",
+  "chunks": [
+    {
+      "chunk_id": "src_001_chunk_001",
+      "source_id": "src_001",
+      "text": "Daniel Kim says the last few months have not been easy. Since an unsettling incident at his home back in March, he has been taking things one day at a time, leaning on a few close friends and a counselor he started seeing shortly afterward.\n\n'I used to not think twice about falling asleep with a window cracked open. That's just different for me now,' Kim said, describing how his sense of safety at home was upended almost overnight. He declined to go into detail about exactly what happened that night, saying only that it involved someone who was not supposed to be there.\n\nKim said he has appreciated the patience of his coworkers as he adjusted his schedule to make time for appointments related to his recovery. He said he is slowly starting to feel more like himself, though certain sounds at night still catch him off guard.\n\nFriends describe Kim as private but resilient, and say they have tried to check in regularly without pushing him to talk before he is ready.",
+      "word_count": 174
+    },
+    {
+      "chunk_id": "src_002_chunk_001",
+      "source_id": "src_002",
+      "text": "Residents of the Maple Street neighborhood are checking in on each other more often after a break-in at Daniel Kim's home last month left the longtime resident shaken but unharmed. Neighbors said Kim was home at the time and briefly confronted the intruder before the person fled through a back door.\n\nNeighbor Sarah Chen said the block has since started a group chat to share updates and keep an eye on each other's homes in the evenings. 'We just want Daniel to know people are paying attention and he's not dealing with this alone,' Chen said.\n\nKim has installed new locks and a doorbell camera since the incident. He declined to comment further, but a close friend said he has seemed more on edge than usual and has been taking some time before returning to his normal routine.",
+      "word_count": 138
+    },
+    {
+      "chunk_id": "src_003_chunk_001",
+      "source_id": "src_003",
+      "text": "Daniel Kim was recognized this week for completing three years as a weekly volunteer at the Westside Public Library, where he helps run the children's reading hour every Wednesday afternoon. Library staff said Kim rarely misses a session and has become a familiar, welcome face to families who attend regularly.\n\nBranch manager Louis Ferreira said Kim has a gift for keeping young children engaged during story time and often brings in props or simple crafts tied to that week's book. 'Parents specifically ask if Daniel is reading before they decide which day to come in,' Ferreira said.\n\nKim said he started volunteering as a way to give back after moving to the neighborhood and has enjoyed watching some of the same kids grow up over the past three years. The library plans to recognize Kim's contribution with a small certificate at its spring volunteer appreciation event.",
+      "word_count": 146
+    }
+  ],
+  "metadata": {
+    "chunking_strategy": "paragraph_aware",
+    "target_chunk_words": 3500,
+    "max_chunk_words": 4000,
+    "overlap_paragraphs": 1
+  }
+}

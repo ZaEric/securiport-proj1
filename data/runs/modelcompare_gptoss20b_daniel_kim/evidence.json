@@ -1,0 +1,87 @@
+{
+  "run_id": "modelcompare_gptoss20b_daniel_kim",
+  "target_name": "Daniel Kim",
+  "evidence_extraction_method": "llm_quote_extraction",
+  "num_evidence": 8,
+  "num_evidence_extraction_issues": 1,
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42
+  },
+  "evidence": [
+    {
+      "evidence_id": "ev_001",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Since an unsettling incident at his home back in March, he has been taking things one day at a time, leaning on a few close friends and a counselor he started seeing shortly afterward.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_002",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Friends describe Kim as private but resilient, and say they have tried to check in regularly without pushing him to talk before he is ready.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_003",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Residents of the Maple Street neighborhood are checking in on each other more often after a break-in at Daniel Kim's home last month left the longtime resident shaken but unharmed.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_004",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Neighbors said Kim was home at the time and briefly confronted the intruder before the person fled through a back door.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_005",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "a close friend said he has seemed more on edge than usual and has been taking some time before returning to his normal routine.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_006",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Daniel Kim was recognized this week for completing three years as a weekly volunteer at the Westside Public Library, where he helps run the children's reading hour every Wednesday afternoon.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_007",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Library staff said Kim rarely misses a session and has become a familiar, welcome face to families who attend regularly.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_008",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Branch manager Louis Ferreira said Kim has a gift for keeping young children engaged during story time and often brings in props or simple crafts tied to that week's book.",
+      "sentiment": "positive",
+      "confidence": null
+    }
+  ],
+  "evidence_extraction_issues": [
+    {
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "reason": "quote_not_found_in_chunk",
+      "quote": "I used to not think twice about falling asleep with a window cracked open. That's just different for me now,\" Kim said, describing how his sense of safety at home was upended almost overnight.",
+      "sentiment": "negative"
+    }
+  ]
+}

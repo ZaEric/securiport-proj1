@@ -1,0 +1,5 @@
+{"event_type": "llm_call", "stage": "evidence_extraction", "model": "gemma4:31b", "total_duration (nanoseconds)": 746990122, "prompt_eval_count": 1062, "eval_count": 169, "chunk_id": "src_001_chunk_001"}
+{"event_type": "llm_call", "stage": "evidence_extraction", "model": "gemma4:31b", "total_duration (nanoseconds)": 960632859, "prompt_eval_count": 1023, "eval_count": 145, "chunk_id": "src_002_chunk_001"}
+{"event_type": "llm_call", "stage": "evidence_extraction", "model": "gemma4:31b", "total_duration (nanoseconds)": 638105469, "prompt_eval_count": 1031, "eval_count": 168, "chunk_id": "src_003_chunk_001"}
+{"event_type": "llm_call", "stage": "final_report", "model": "gemma4:31b", "total_duration (nanoseconds)": 4354754191, "prompt_eval_count": 2052, "eval_count": 1008}
+{"event_type": "pipeline_summary", "total_runtime_seconds": 7.869, "source_count": 3, "chunk_count": 3, "evidence_count": 9, "negative_evidence_count": 5, "llm_call_count": 4}

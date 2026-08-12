@@ -1,0 +1,90 @@
+{
+  "run_id": "modelcompare_nemotron3nano30b_daniel_kim",
+  "target_name": "Daniel Kim",
+  "overall_sentiment": "negative",
+  "llm_sentiment": "negative",
+  "one_line_summary": "Negative sentiment flagged due to reports indicating personal distress after a break‑in, prompting a review flag.",
+  "extended_summary": "The evidence set contains two explicit negative statements about Daniel Kim’s experience following a home break‑in, which triggers a review flag. Although three positive items are present, policy requires that any negative evidence be weighted heavily enough to set the overall sentiment to negative.",
+  "key_findings": [
+    "Negative sentiment appears in two separate sources describing a break‑in and its emotional impact on Daniel Kim.",
+    "Positive coverage exists (volunteer recognition) but does not override the negative flag per system rules.",
+    "Mixed evidence (both negative and positive) necessitates careful interpretation and limits definitive conclusions."
+  ],
+  "justification": "A negative sentiment flag is triggered whenever any negative evidence is present, regardless of the volume of positive evidence. Evidence ev_001 and ev_002 directly reference a break‑in and resulting personal distress, establishing a clear negative context. Because negative_evidence_present is true, the overall sentiment must be negative per the system policy.",
+  "evidence_examples": [
+    {
+      "source_id": "src_001",
+      "quote": "I used to not think twice about falling asleep with a window cracked open. That's just different for me now,",
+      "sentiment": "negative",
+      "why_selected": "Illustrates personal safety concerns after the incident, supporting the negative flag."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "Residents of the Maple Street neighborhood are checking in on each other more often after a break-in at Daniel Kim's home last month left the longtime resident shaken but unharmed.",
+      "sentiment": "negative",
+      "why_selected": "Explicitly mentions a break‑in affecting Daniel Kim and communal concern, constituting a review‑flag event."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "Daniel Kim was recognized this week for completing three years as a weekly volunteer at the Westside Public Library, where he helps run the children's reading hour every Wednesday afternoon.",
+      "sentiment": "positive",
+      "why_selected": "Provides context of positive community contributions, showing mixed evidence composition."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "The library plans to recognize Kim's contribution with a small certificate at its spring volunteer appreciation event.",
+      "sentiment": "positive",
+      "why_selected": "Reinforces the presence of positive coverage alongside the negative incidents."
+    }
+  ],
+  "negative_evidence": [
+    {
+      "url": "synthetic://synthetic_victim_subtle_001/src_001",
+      "title": "Daniel Kim Reflects on a Difficult Spring and the Path Back to Normal",
+      "evidence": [
+        {
+          "quote": "I used to not think twice about falling asleep with a window cracked open. That's just different for me now,",
+          "sentiment": "negative"
+        }
+      ]
+    },
+    {
+      "url": "synthetic://synthetic_victim_subtle_001/src_002",
+      "title": "Maple Street Neighbors Rally After Break-In Leaves Resident Shaken",
+      "evidence": [
+        {
+          "quote": "Residents of the Maple Street neighborhood are checking in on each other more often after a break-in at Daniel Kim's home last month left the longtime resident shaken but unharmed.",
+          "sentiment": "negative"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "synthetic://synthetic_victim_subtle_001/src_001",
+      "title": "Daniel Kim Reflects on a Difficult Spring and the Path Back to Normal"
+    },
+    {
+      "source_id": "src_002",
+      "url": "synthetic://synthetic_victim_subtle_001/src_002",
+      "title": "Maple Street Neighbors Rally After Break-In Leaves Resident Shaken"
+    },
+    {
+      "source_id": "src_003",
+      "url": "synthetic://synthetic_victim_subtle_001/src_003",
+      "title": "Daniel Kim Marks Third Year Volunteering at Westside Public Library"
+    }
+  ],
+  "limitations": [
+    "Only five pieces of evidence are available; broader context may be missing.",
+    "Mixed sentiment requires caution in drawing conclusions about wrongdoing or victimization."
+  ],
+  "report_generation_issues": [],
+  "llm_metadata": {
+    "model_name": "nemotron-3-nano:30b",
+    "temperature": 0.0,
+    "seed": 42,
+    "max_evidence_examples": 7
+  }
+}

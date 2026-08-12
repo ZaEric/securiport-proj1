@@ -1,0 +1,71 @@
+{
+  "run_id": "gptoss20b_allegation_unresolved_samantha_reeves",
+  "target_name": "Samantha Reeves",
+  "evidence_extraction_method": "llm_quote_extraction",
+  "num_evidence": 7,
+  "num_evidence_extraction_issues": 0,
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42
+  },
+  "evidence": [
+    {
+      "evidence_id": "ev_001",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "The city comptroller's office has opened a formal investigation into travel reimbursement requests filed by Samantha Reeves, deputy director of the parks and recreation department, after an internal audit flagged a pattern of expense claims that could not be matched to corresponding travel records.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_002",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Reeves has been placed on paid administrative leave while the investigation proceeds, a standard step the city said it takes whenever a department official is the subject of an active financial review.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_003",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Reeves remains on paid administrative leave and has not been charged with any offense.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_004",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "'Ms. Reeves has cooperated fully with every request from the comptroller's office, and we expect this to be resolved once they've had a chance to review what we've submitted,' Webb said.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_005",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "The parks and recreation department named deputy director Samantha Reeves its 2025 Employee of the Year at last December's staff recognition dinner, citing her work expanding the department's after-school sports programming to five additional neighborhoods.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_006",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Reeves, who has worked for the department for nine years, was credited with securing a state grant that funded new equipment for three community centers.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_007",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Department director Thomas Lee said at the time that Reeves' organizational skills and attention to detail had made her one of the most reliable members of his leadership team.",
+      "sentiment": "positive",
+      "confidence": null
+    }
+  ],
+  "evidence_extraction_issues": []
+}

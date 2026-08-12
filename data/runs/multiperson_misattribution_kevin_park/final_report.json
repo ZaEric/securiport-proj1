@@ -1,0 +1,63 @@
+{
+  "run_id": "gptoss20b_multiperson_misattribution_kevin_park",
+  "target_name": "Kevin Park",
+  "overall_sentiment": "neutral",
+  "llm_sentiment": "neutral",
+  "one_line_summary": "Kevin Park is mentioned only in neutral contexts related to routine teller duties and a financial literacy class, with no evidence of wrongdoing or victimization.",
+  "extended_summary": "All extracted evidence indicates that Kevin Park was a teller at Lakeside Credit Union who participated in standard audit procedures and led a financial literacy class. He was interviewed as part of routine confirmation of till counts, provided a written statement about normal logging practices, and was not implicated in any embezzlement allegations. No negative or suspicious activity is associated with him in the available sources.",
+  "key_findings": [
+    "Kevin Park was interviewed during a routine audit and confirmed normal till counts.",
+    "He provided a written statement about standard logging procedures but was not called to testify.",
+    "He served as a branch staff member leading a financial literacy class."
+  ],
+  "justification": "The evidence set contains only neutral statements about Kevin Park’s routine teller responsibilities and community outreach. No negative or review‑flag evidence is present, so the overall sentiment is appropriately neutral.",
+  "evidence_examples": [
+    {
+      "source_id": "src_001",
+      "quote": "Park was not accused of any wrongdoing; auditors said he was interviewed as a standard part of confirming that till counts and transaction logs from his own window matched normal patterns, which they did.",
+      "sentiment": "neutral",
+      "why_selected": "Shows routine audit involvement and no accusations."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "Kevin Park, another teller who worked alongside Ortiz, had provided a short written statement earlier in the case describing how till counts were normally logged at the end of each shift; he was not called to testify in person and was not named as a witness to any of the specific transfers at issue.",
+      "sentiment": "neutral",
+      "why_selected": "Highlights his role as a witness and lack of direct involvement."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "The class was led by branch staff, including teller Kevin Park, who walked attendees through a sample monthly budget worksheet.",
+      "sentiment": "neutral",
+      "why_selected": "Illustrates his participation in community outreach."
+    }
+  ],
+  "negative_evidence": [],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "synthetic://synthetic_multiperson_misattribution_001/src_001",
+      "title": "Lakeside Credit Union Teller Diane Ortiz Charged With Embezzling $40,000"
+    },
+    {
+      "source_id": "src_002",
+      "url": "synthetic://synthetic_multiperson_misattribution_001/src_002",
+      "title": "Ortiz Sentenced to Probation in Credit Union Embezzlement Case"
+    },
+    {
+      "source_id": "src_003",
+      "url": "synthetic://synthetic_multiperson_misattribution_001/src_003",
+      "title": "Lakeside Credit Union Hosts Free Financial Literacy Class for Local Families"
+    }
+  ],
+  "limitations": [
+    "Evidence is limited to neutral statements; no additional context or corroborating sources are available.",
+    "The analysis is based solely on the supplied excerpts and does not include external verification."
+  ],
+  "report_generation_issues": [],
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42,
+    "max_evidence_examples": 7
+  }
+}
