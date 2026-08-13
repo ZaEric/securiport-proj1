@@ -1,0 +1,30 @@
+{
+  "run_id": "gptoss20b_same_name_marcus_bell",
+  "target_name": "Marcus Bell",
+  "chunks": [
+    {
+      "chunk_id": "src_001_chunk_001",
+      "source_id": "src_001",
+      "text": "Marcus Bell, 52, a former commercial banker at Harborview Capital, was sentenced Friday to 30 months in federal prison after pleading guilty to submitting false income information in support of a series of business-loan applications. Prosecutors said Bell, who worked in commercial lending for more than two decades, used altered financial statements to help several borrowers qualify for loans they otherwise would not have received.\n\nAt the hearing, the judge ordered Bell to pay $1.1 million in restitution and said the offense had damaged trust in the bank's lending process. Bell's attorney said he had accepted responsibility and had begun cooperating with efforts to recover funds. The sentencing followed a guilty plea entered earlier this year.\n\nHarborview Capital said Bell left the bank after the conduct was discovered and that it has since strengthened its document-review procedures. Court records list Bell's residence as Northfield and identify his occupation at the time of the offense as commercial banker.",
+      "word_count": 157
+    },
+    {
+      "chunk_id": "src_002_chunk_001",
+      "source_id": "src_002",
+      "text": "Riverton General Hospital has added Dr. Marcus Bell, 28, to its emergency department, where he will begin seeing patients this month after completing his emergency medicine residency at State University Medical Center. Hospital officials said Bell grew up in Riverton and returned to the area to be closer to family.\n\nBell said he was drawn to emergency medicine because of its mix of fast decisions and long-term relationships with a community. He will work a rotating schedule in the hospital's adult emergency unit and will also participate in its new-resident mentoring program.\n\nThe hospital announcement describes Bell as a physician licensed in the state and notes that he completed medical school in 2023. It did not discuss any prior employment outside health care.",
+      "word_count": 123
+    },
+    {
+      "chunk_id": "src_003_chunk_001",
+      "source_id": "src_003",
+      "text": "Dr. Marcus Bell, a 28-year-old emergency physician at Riverton General Hospital, spent Saturday volunteering at a free weekend clinic serving uninsured residents. Clinic organizers said Bell helped coordinate intake for patients seeking routine care and referrals.\n\nBell, who completed his residency last year, said the clinic gives him a chance to work with patients before a health concern becomes an emergency. More than 70 people attended the event, according to the nonprofit that operates the clinic.\n\nProgram director Lila Gomez said Bell has committed to returning once a month and has encouraged other early-career physicians to volunteer. 'He brings a calm, practical presence to a very busy day,' Gomez said.",
+      "word_count": 110
+    }
+  ],
+  "metadata": {
+    "chunking_strategy": "paragraph_aware",
+    "target_chunk_words": 3500,
+    "max_chunk_words": 4000,
+    "overlap_paragraphs": 1
+  }
+}

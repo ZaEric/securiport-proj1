@@ -1,0 +1,21 @@
+{
+  "run_id": "gptoss20b_weak_negative_alicia_monroe",
+  "created_at": "2026-08-13T06:37:13Z",
+  "target_name": "Alicia Monroe",
+  "input_mode": "synthetic",
+  "synthetic_case_file": "data/synthetic/passengers/synthetic_weak_negative_001.json",
+  "expected_overall_sentiment": "negative",
+  "difficulty_tags": [
+    "weak_negative",
+    "public_criticism",
+    "non_criminal_controversy",
+    "reputational_risk"
+  ],
+  "expected_failure_modes": [
+    "may label the sources neutral because they contain no criminal or legal issue",
+    "may mistake broad criticism of the redevelopment proposal for criticism directed at Alicia Monroe",
+    "may overstate the controversy as misconduct or legal wrongdoing",
+    "may let the target's routine professional accomplishments erase the criticism from the final report"
+  ],
+  "notes": "Tests a weak negative case based on criticism and controversy rather than crime, a legal allegation, or victimization. Alicia Monroe is criticized for the way she handled a public redevelopment proposal and later faces a no-confidence vote from a neighborhood advisory board. The negative result is a review flag for reputational controversy only; the sources explicitly contain no criminal charge, civil claim, or finding of legal wrongdoing."
+}

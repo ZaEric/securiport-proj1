@@ -1,0 +1,97 @@
+{
+  "run_id": "gptoss20b_unreliable_source_nora_patel",
+  "target_name": "Nora Patel",
+  "overall_sentiment": "negative",
+  "llm_sentiment": "negative",
+  "one_line_summary": "Nora Patel is flagged for potential misconduct due to allegations of diverting relief donations, despite receiving an award for emergency shelter coordination.",
+  "extended_summary": "The available evidence includes an anonymous blog post accusing Nora Patel, director of the Harborlight Relief Fund, of diverting flood‑recovery donations to personal use, and a statement that the fund’s financial disclosures do not address these claims. While the county awarded her for coordinating emergency shelters, the award does not verify or refute the allegations. Because negative evidence is present, the report is flagged for review.",
+  "key_findings": [
+    "Allegations that Nora Patel diverted donations intended for flood‑recovery families to personal use.",
+    "The fund’s financial release lacks transparency regarding the alleged diversion.",
+    "Nora Patel received a county award for emergency shelter coordination, but this does not address the allegations."
+  ],
+  "justification": "The evidence set contains two negative items that raise a review flag: an anonymous blog claim of donation diversion and a lack of financial transparency. According to the system rules, any negative evidence triggers a negative overall sentiment regardless of the presence of positive or neutral items. Therefore the report is marked negative to signal potential misconduct requiring further investigation.",
+  "evidence_examples": [
+    {
+      "source_id": "src_001",
+      "quote": "An unsigned post published Tuesday on the blog Civic Truth Watch claims that Nora Patel, director of the Harborlight Relief Fund, diverted donations intended for flood-recovery families to personal use.",
+      "sentiment": "negative",
+      "why_selected": "Direct allegation of misusing donations."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "The release contains no discussion of the anonymous online allegation concerning Patel and provides no information about the fund's finances beyond the amount available for this grant round.",
+      "sentiment": "negative",
+      "why_selected": "Shows lack of transparency about alleged diversion."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "Nora Patel received the County Volunteer Partnership Award on Wednesday for coordinating a network of emergency shelters during last spring's flooding.",
+      "sentiment": "positive",
+      "why_selected": "Highlights her recognized community service."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "Executive director Nora Patel said applicants can receive help with temporary housing, appliance replacement, and cleanup costs.",
+      "sentiment": "neutral",
+      "why_selected": "Provides context of her role but no evidence of wrongdoing."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "The county's award announcement did not address the unrelated anonymous blog claim and does not independently verify or disprove it.",
+      "sentiment": "neutral",
+      "why_selected": "Clarifies that the award does not resolve the allegations."
+    }
+  ],
+  "negative_evidence": [
+    {
+      "url": "synthetic://synthetic_unreliable_source_001/src_001",
+      "title": "Anonymous Blog Claims Nora Patel Misused Relief Donations",
+      "evidence": [
+        {
+          "quote": "An unsigned post published Tuesday on the blog Civic Truth Watch claims that Nora Patel, director of the Harborlight Relief Fund, diverted donations intended for flood-recovery families to personal use.",
+          "sentiment": "negative"
+        }
+      ]
+    },
+    {
+      "url": "synthetic://synthetic_unreliable_source_001/src_002",
+      "title": "Harborlight Relief Fund Opens Applications for Flood Recovery Grants",
+      "evidence": [
+        {
+          "quote": "The release contains no discussion of the anonymous online allegation concerning Patel and provides no information about the fund's finances beyond the amount available for this grant round.",
+          "sentiment": "negative"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "synthetic://synthetic_unreliable_source_001/src_001",
+      "title": "Anonymous Blog Claims Nora Patel Misused Relief Donations"
+    },
+    {
+      "source_id": "src_002",
+      "url": "synthetic://synthetic_unreliable_source_001/src_002",
+      "title": "Harborlight Relief Fund Opens Applications for Flood Recovery Grants"
+    },
+    {
+      "source_id": "src_003",
+      "url": "synthetic://synthetic_unreliable_source_001/src_003",
+      "title": "Nora Patel Recognized for Coordinating Emergency Shelter Network"
+    }
+  ],
+  "limitations": [
+    "The primary negative claim originates from an anonymous blog post, which may lack verifiability.",
+    "No independent audit or financial report is provided to confirm or refute the diversion allegation.",
+    "Positive recognition does not address the alleged misconduct, leaving uncertainty about the overall integrity of the individual."
+  ],
+  "report_generation_issues": [],
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42,
+    "max_evidence_examples": 7
+  }
+}

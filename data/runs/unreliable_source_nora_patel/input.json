@@ -1,0 +1,21 @@
+{
+  "run_id": "gptoss20b_unreliable_source_nora_patel",
+  "created_at": "2026-08-13T06:36:20Z",
+  "target_name": "Nora Patel",
+  "input_mode": "synthetic",
+  "synthetic_case_file": "data/synthetic/passengers/synthetic_unreliable_source_001.json",
+  "expected_overall_sentiment": "negative",
+  "difficulty_tags": [
+    "unreliable_source",
+    "unverified_allegation",
+    "source_quality",
+    "conflicting_coverage"
+  ],
+  "expected_failure_modes": [
+    "may state the anonymous allegation as a confirmed fact",
+    "may ignore source-quality signals and give the blog post the same weight as corroborated reporting",
+    "may miss the serious claim because it is presented without formal legal language",
+    "may conclude positive from the neutral and positive sources without noting the unverified allegation"
+  ],
+  "notes": "Tests a serious but weakly supported allegation from an unreliable source. One anonymous blog post claims that Nora Patel diverted charity funds but provides no documents, named witnesses, official-record reference, or response from the organization. Two other sources provide neutral or positive coverage and do not corroborate the claim. The overall result remains negative as a review flag so an immigration officer can investigate further, but the report must identify the claim as unverified, low-evidence, and uncorroborated rather than treating it as fact."
+}
