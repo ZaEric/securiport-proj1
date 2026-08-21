@@ -70,6 +70,12 @@ tests/
 ## JSON Schemas
 check schema.json
 
+## Testing Scripts
+- validate_run_artifacts.py: tests if pipeline correctly created all run artifacts, provides basic run summary for report
+```
+python scripts/validate_run_artifacts.py
+```
+
 ## Model Hosting
 
 Create an .env file in root to setup OLLAMA. Just go into their website, create an account and get a free api key. I'm using gpt-oss:20b for the model.

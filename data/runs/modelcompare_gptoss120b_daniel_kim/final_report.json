@@ -1,0 +1,112 @@
+{
+  "run_id": "modelcompare_gptoss120b_daniel_kim",
+  "target_name": "Daniel Kim",
+  "overall_sentiment": "negative",
+  "llm_sentiment": "negative",
+  "one_line_summary": "Daniel Kim is a victim of a recent home break-in, leading to ongoing emotional distress and cautious recovery.",
+  "extended_summary": "Recent evidence indicates that Daniel Kim experienced a disturbing break-in at his residence in March, which has left him shaken, on edge, and seeking counseling. He has taken practical steps such as installing new locks and a doorbell camera, and has adjusted his work schedule to attend recovery appointments. The community has rallied around him, but the incident continues to affect his wellbeing, marking this as a review‑flag case for potential victimization and safety concerns.",
+  "key_findings": [
+    "A break-in at Daniel Kim's home in March caused emotional distress and physical safety concerns.",
+    "Kim is actively seeking counseling and has made security upgrades and schedule adjustments to aid his recovery.",
+    "Neighbors and coworkers are providing support, yet the incident remains a significant source of anxiety for Kim."
+  ],
+  "justification": "Negative sentiment is required because the evidence contains multiple review‑flag items indicating that Daniel Kim was victimized by a home break‑in, resulting in ongoing emotional and safety concerns. The presence of such negative evidence triggers a negative overall sentiment, even though there are positive community support elements.",
+  "evidence_examples": [
+    {
+      "source_id": "src_001",
+      "quote": "Since an unsettling incident at his home back in March, he has been taking things one day at a time, leaning on a few close friends and a counselor he started seeing shortly afterward.",
+      "sentiment": "negative",
+      "why_selected": "Highlights the traumatic incident and need for professional support."
+    },
+    {
+      "source_id": "src_001",
+      "quote": "He declined to go into detail about exactly what happened that night, saying only that it involved someone who was not supposed to be there.",
+      "sentiment": "negative",
+      "why_selected": "Indicates a serious, unresolved incident involving an unauthorized individual."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "Residents of the Maple Street neighborhood are checking in on each other more often after a break-in at Daniel Kim's home last month left the longtime resident shaken but unharmed.",
+      "sentiment": "negative",
+      "why_selected": "Confirms a break‑in event and its emotional impact on Kim."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "Kim was home at the time and briefly confronted the intruder before the person fled through a back door.",
+      "sentiment": "negative",
+      "why_selected": "Shows direct confrontation with the intruder, underscoring personal risk."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "he has seemed more on edge than usual and has been taking some time before returning to his normal routine.",
+      "sentiment": "negative",
+      "why_selected": "Demonstrates ongoing anxiety and disruption to daily life."
+    }
+  ],
+  "negative_evidence": [
+    {
+      "url": "synthetic://synthetic_victim_subtle_001/src_001",
+      "title": "Daniel Kim Reflects on a Difficult Spring and the Path Back to Normal",
+      "evidence": [
+        {
+          "quote": "Since an unsettling incident at his home back in March, he has been taking things one day at a time, leaning on a few close friends and a counselor he started seeing shortly afterward.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "'I used to not think twice about falling asleep with a window cracked open. That's just different for me now,'",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "He declined to go into detail about exactly what happened that night, saying only that it involved someone who was not supposed to be there.",
+          "sentiment": "negative"
+        }
+      ]
+    },
+    {
+      "url": "synthetic://synthetic_victim_subtle_001/src_002",
+      "title": "Maple Street Neighbors Rally After Break-In Leaves Resident Shaken",
+      "evidence": [
+        {
+          "quote": "Residents of the Maple Street neighborhood are checking in on each other more often after a break-in at Daniel Kim's home last month left the longtime resident shaken but unharmed.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "Kim was home at the time and briefly confronted the intruder before the person fled through a back door.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "he has seemed more on edge than usual and has been taking some time before returning to his normal routine.",
+          "sentiment": "negative"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "synthetic://synthetic_victim_subtle_001/src_001",
+      "title": "Daniel Kim Reflects on a Difficult Spring and the Path Back to Normal"
+    },
+    {
+      "source_id": "src_002",
+      "url": "synthetic://synthetic_victim_subtle_001/src_002",
+      "title": "Maple Street Neighbors Rally After Break-In Leaves Resident Shaken"
+    },
+    {
+      "source_id": "src_003",
+      "url": "synthetic://synthetic_victim_subtle_001/src_003",
+      "title": "Daniel Kim Marks Third Year Volunteering at Westside Public Library"
+    }
+  ],
+  "limitations": [
+    "Information is limited to the provided synthetic sources and may not capture the full context of the incident.",
+    "No details are available about the perpetrator, legal outcome, or any ongoing investigations."
+  ],
+  "report_generation_issues": [],
+  "llm_metadata": {
+    "model_name": "gpt-oss:120b",
+    "temperature": 0.0,
+    "seed": 42,
+    "max_evidence_examples": 7
+  }
+}

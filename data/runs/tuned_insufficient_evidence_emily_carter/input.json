@@ -1,0 +1,19 @@
+{
+  "run_id": "2026-08-09_1609_emily_carter",
+  "created_at": "2026-08-09T23:09:33Z",
+  "target_name": "Emily Carter",
+  "input_mode": "synthetic",
+  "synthetic_case_file": "data/synthetic/passengers/synthetic_insufficient_evidence_001.json",
+  "expected_overall_sentiment": "neutral",
+  "difficulty_tags": [
+    "insufficient_evidence",
+    "target_not_mentioned",
+    "synthetic_bypasses_relevance_filtering"
+  ],
+  "expected_failure_modes": [
+    "may extract evidence about unrelated people or organizations as if it referred to the target",
+    "may generate a final report that implies target-specific findings despite no source mentioning the target",
+    "may assign positive, neutral, or negative sentiment based on article context rather than target-specific evidence"
+  ],
+  "notes": "Tests an insufficient evidence case where the provided synthetic sources do not mention the target person at all. Because synthetic input bypasses normal source relevance filtering, the evidence extraction stage should return no target-specific evidence and the final report should avoid overconfident conclusions."
+}

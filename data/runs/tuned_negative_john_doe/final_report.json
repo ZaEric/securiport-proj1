@@ -1,0 +1,154 @@
+{
+  "run_id": "2026-08-09_1620_john_doe",
+  "target_name": "John Doe",
+  "overall_sentiment": "negative",
+  "llm_sentiment": "negative",
+  "one_line_summary": "John Doe has been found guilty of fraud, poor management, and audit failures, resulting in legal sentencing and removal from leadership roles.",
+  "extended_summary": "The evidence indicates that John Doe engaged in fraudulent invoicing to obtain payments from a city contractor, was sentenced for submitting false records, and was removed from a project leadership position after an internal review highlighted repeated missed deadlines, unclear communication, and a pattern of poor management. Additionally, auditors discovered that he approved milestone reports without proper documentation and failed to address inspection concerns, weakening internal controls and increasing the risk of unsupported payments. These findings collectively demonstrate significant misconduct and a breach of public trust.",
+  "key_findings": [
+    "Doe was sentenced for submitting false records and overstated invoices to a city contractor.",
+    "An internal review removed Doe from a leadership role due to repeated missed reporting deadlines and unclear communication.",
+    "Auditors found that Doe approved milestone reports without supporting inspection records and failed to document reviews, compromising city controls."
+  ],
+  "justification": "The evidence statistics show 12 negative entries out of 15, with negative_evidence_present set to true. According to policy, any presence of negative evidence mandates a negative overall sentiment, regardless of the number of positive or neutral entries. The selected evidence demonstrates clear instances of fraud, management failures, and audit noncompliance, warranting a review flag.",
+  "evidence_examples": [
+    {
+      "source_id": "src_001",
+      "quote": "John Doe, a local businessman and former purchasing consultant, was sentenced Tuesday after admitting that he submitted false records to obtain payments from a city contractor.",
+      "sentiment": "negative",
+      "why_selected": "Shows legal conviction for fraud."
+    },
+    {
+      "source_id": "src_001",
+      "quote": "Doe prepared invoices that overstated the amount of work performed on a public maintenance project.",
+      "sentiment": "negative",
+      "why_selected": "Illustrates fraudulent invoicing."
+    },
+    {
+      "source_id": "src_001",
+      "quote": "The court also found that Doe attempted to conceal the problem by giving inconsistent explanations when auditors asked about the invoices.",
+      "sentiment": "negative",
+      "why_selected": "Demonstrates attempt to hide wrongdoing."
+    },
+    {
+      "source_id": "src_001",
+      "quote": "During the hearing, the judge said Doe's conduct damaged public trust and created unnecessary costs for the project.",
+      "sentiment": "negative",
+      "why_selected": "Highlights impact on public trust."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "John Doe has been removed from his leadership role on the Westbridge Housing Initiative after an internal review criticized his handling of project oversight, staff communication, and budget planning.",
+      "sentiment": "negative",
+      "why_selected": "Shows removal from leadership due to management failures."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "Auditors found that Doe approved several milestone reports even though supporting inspection records were missing or incomplete.",
+      "sentiment": "negative",
+      "why_selected": "Indicates audit noncompliance."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "Doe's failure to consistently document milestone reviews weakened the city's internal controls and increased the risk that unsupported payment requests would be approved.",
+      "sentiment": "negative",
+      "why_selected": "Shows systemic control failure."
+    }
+  ],
+  "negative_evidence": [
+    {
+      "url": "synthetic://synthetic_negative_001/src_001",
+      "title": "Local Businessman John Doe Sentenced After False Records Case",
+      "evidence": [
+        {
+          "quote": "John Doe, a local businessman and former purchasing consultant, was sentenced Tuesday after admitting that he submitted false records to obtain payments from a city contractor.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "Doe prepared invoices that overstated the amount of work performed on a public maintenance project.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "The court also found that Doe attempted to conceal the problem by giving inconsistent explanations when auditors asked about the invoices.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "During the hearing, the judge said Doe's conduct damaged public trust and created unnecessary costs for the project.",
+          "sentiment": "negative"
+        }
+      ]
+    },
+    {
+      "url": "synthetic://synthetic_negative_001/src_002",
+      "title": "John Doe Removed From Project Leadership After Internal Review",
+      "evidence": [
+        {
+          "quote": "John Doe has been removed from his leadership role on the Westbridge Housing Initiative after an internal review criticized his handling of project oversight, staff communication, and budget planning.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "The review found that Doe repeatedly missed reporting deadlines and failed to provide clear explanations for delays in vendor payments.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "Staff members told reviewers that Doe often changed project instructions without documenting the reasons, leaving several teams unsure which version of the plan they were expected to follow.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "Board members said the issue was not a single mistake, but a pattern of poor management that slowed the housing initiative and created tension with community partners.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "The review also said Doe was slow to respond when partner organizations asked for updated timelines.",
+          "sentiment": "negative"
+        }
+      ]
+    },
+    {
+      "url": "synthetic://synthetic_negative_001/src_003",
+      "title": "Audit Report Finds Oversight Failures in Rivergate Transit Expansion",
+      "evidence": [
+        {
+          "quote": "Auditors found that Doe approved several milestone reports even though supporting inspection records were missing or incomplete.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "Doe received at least four internal messages about unresolved inspection concerns but did not forward those concerns to senior project leadership.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "Doe's failure to consistently document milestone reviews weakened the city's internal controls and increased the risk that unsupported payment requests would be approved.",
+          "sentiment": "negative"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "synthetic://synthetic_negative_001/src_001",
+      "title": "Local Businessman John Doe Sentenced After False Records Case"
+    },
+    {
+      "source_id": "src_002",
+      "url": "synthetic://synthetic_negative_001/src_002",
+      "title": "John Doe Removed From Project Leadership After Internal Review"
+    },
+    {
+      "source_id": "src_003",
+      "url": "synthetic://synthetic_negative_001/src_003",
+      "title": "Audit Report Finds Oversight Failures in Rivergate Transit Expansion"
+    }
+  ],
+  "limitations": [
+    "Evidence is limited to the supplied sources and does not include external corroboration.",
+    "The report does not account for any mitigating circumstances or potential exculpatory evidence not present in the provided data."
+  ],
+  "report_generation_issues": [],
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42,
+    "max_evidence_examples": 7
+  }
+}

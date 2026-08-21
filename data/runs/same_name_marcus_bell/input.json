@@ -1,0 +1,21 @@
+{
+  "run_id": "gptoss20b_same_name_marcus_bell",
+  "created_at": "2026-08-13T06:35:42Z",
+  "target_name": "Marcus Bell",
+  "input_mode": "synthetic",
+  "synthetic_case_file": "data/synthetic/passengers/synthetic_same_name_001.json",
+  "expected_overall_sentiment": "negative",
+  "difficulty_tags": [
+    "same_name_collision",
+    "identity_ambiguity",
+    "conflicting_biographical_context",
+    "negative_review_flag"
+  ],
+  "expected_failure_modes": [
+    "may incorrectly treat the banker's fraud conviction as confirmed wrongdoing by the physician",
+    "may ignore the age and occupation details that distinguish the two people",
+    "may suppress the negative source because it cannot verify identity from a name alone",
+    "may overstate an identity match instead of clearly documenting the ambiguity"
+  ],
+  "notes": "Tests a same-name identity collision. Two local sources identify the target as a 28-year-old emergency physician, while the negative source identifies a 52-year-old commercial banker named Marcus Bell. Because the pipeline is given only a full name, a name-only relevance check may associate the fraud conviction with the target and should surface a negative review flag. The report must retain the conflicting age and occupation details and must not present the conviction as established fact about the 28-year-old physician."
+}

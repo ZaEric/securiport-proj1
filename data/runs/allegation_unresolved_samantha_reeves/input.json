@@ -1,0 +1,21 @@
+{
+  "run_id": "gptoss20b_allegation_unresolved_samantha_reeves",
+  "created_at": "2026-08-11T06:10:16Z",
+  "target_name": "Samantha Reeves",
+  "input_mode": "synthetic",
+  "synthetic_case_file": "data/synthetic/passengers/synthetic_allegation_unresolved_001.json",
+  "expected_overall_sentiment": "negative",
+  "difficulty_tags": [
+    "unresolved_allegation",
+    "no_confirmed_guilt",
+    "administrative_leave",
+    "pending_investigation"
+  ],
+  "expected_failure_modes": [
+    "may treat the allegation as neutral because guilt was never established",
+    "may soften or drop the flag in the final justification because there is no confirmed outcome",
+    "may overstate the allegation as confirmed wrongdoing rather than an open investigation",
+    "may let the positive prior-record source outweigh the unresolved allegation"
+  ],
+  "notes": "Tests an allegation that is investigated but never resolved within the available sources: no admission, no conviction, no clearance, and no timeline for when the matter will be resolved. Unlike the earlier conflicting-sources case (which included an exculpatory audit), this case deliberately withholds any resolution, since in this project negative sentiment functions as a review flag rather than a finding of guilt, an open, unresolved investigation should still produce an overall negative result. A prior-record source is included specifically to confirm that a single unresolved allegation still outweighs an otherwise strong track record."
+}

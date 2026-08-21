@@ -1,0 +1,63 @@
+{
+  "run_id": "tuned_neutral_angela_torres",
+  "target_name": "Angela Torres",
+  "evidence_extraction_method": "llm_quote_extraction",
+  "num_evidence": 6,
+  "num_evidence_extraction_issues": 0,
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42
+  },
+  "evidence": [
+    {
+      "evidence_id": "ev_001",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Torres told the council she had lived on Elm Street for six years and wanted more information about parking and traffic before the change was approved.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_002",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "She asked whether the city planned to add any new crosswalks near the affected blocks.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_003",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Owner Angela Torres said the shop will be open Tuesday through Sunday from 6 a.m. to 3 p.m.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_004",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Torres said she plans to source flour from a regional mill and rotate a few seasonal pastry options each month.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_005",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Torres said she chose the Fifth Avenue location because of its foot traffic and proximity to the elementary school.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_006",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "The business is owned and operated by Angela Torres, who previously worked as an accountant before opening the bakery.",
+      "sentiment": "neutral",
+      "confidence": null
+    }
+  ],
+  "evidence_extraction_issues": []
+}

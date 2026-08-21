@@ -1,0 +1,31 @@
+{
+  "run_id": "tuned_neutral_angela_torres",
+  "target_name": "Angela Torres",
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "synthetic://synthetic_neutral_001/src_001",
+      "title": "City Council Hears Public Comment on Proposed Elm Street Rezoning",
+      "expected_source_sentiment": "neutral",
+      "article_text": "The city council held a public hearing Wednesday on a proposed rezoning of a two-block stretch of Elm Street from residential to mixed commercial use. About a dozen residents spoke during the public comment period, including local resident Angela Torres.\n\nTorres told the council she had lived on Elm Street for six years and wanted more information about parking and traffic before the change was approved. She asked whether the city planned to add any new crosswalks near the affected blocks.\n\nCouncilmember David Kim thanked Torres and the other speakers for their input and said staff would prepare a traffic study before the item returns for a vote next month. No decision was made at Wednesday's meeting.\n\nThe rezoning proposal has been under review since the spring and has drawn a mix of comments from residents and business owners in the area."
+    },
+    {
+      "source_id": "src_002",
+      "url": "synthetic://synthetic_neutral_001/src_002",
+      "title": "Torres Family Bakery Opens on Fifth Avenue",
+      "expected_source_sentiment": "neutral",
+      "article_text": "Torres Family Bakery opened its doors on Fifth Avenue this week, offering bread, pastries, and coffee in the space formerly occupied by a dry cleaner. Owner Angela Torres said the shop will be open Tuesday through Sunday from 6 a.m. to 3 p.m.\n\nTorres said she plans to source flour from a regional mill and rotate a few seasonal pastry options each month. The bakery has seating for about a dozen customers and offers a small selection of grab-and-go sandwiches for lunch.\n\nTorres said she chose the Fifth Avenue location because of its foot traffic and proximity to the elementary school. She said the first week has been steady and that she is still adjusting staffing levels based on demand."
+    },
+    {
+      "source_id": "src_003",
+      "url": "synthetic://synthetic_neutral_001/src_003",
+      "title": "Neighborhood Business Directory Profile: Torres Family Bakery",
+      "expected_source_sentiment": "neutral",
+      "article_text": "Torres Family Bakery is a locally owned bakery located on Fifth Avenue, specializing in bread, pastries, and coffee. The business is owned and operated by Angela Torres, who previously worked as an accountant before opening the bakery.\n\nAccording to the directory listing, the bakery employs three part-time staff and is open six days a week. The listing notes that the business accepts online orders for pickup and offers a small punch-card loyalty program for regular customers.\n\nThe directory profile lists standard business information, including address, hours, and a general description of the bakery's offerings, and does not include any customer reviews or ratings."
+    }
+  ],
+  "metadata": {
+    "source_mode": "synthetic",
+    "source_count": 3
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "run_id": "gptoss20b_weak_negative_alicia_monroe",
+  "target_name": "Alicia Monroe",
+  "overall_sentiment": "negative",
+  "llm_sentiment": "negative",
+  "one_line_summary": "Alicia Monroe is flagged for negative community sentiment stemming from perceived inadequate communication and lack of confidence from local advisory groups.",
+  "extended_summary": "The evidence indicates that residents and the Market District Neighborhood Advisory Board have expressed dissatisfaction with Alicia Monroe’s outreach and communication practices. Multiple sources report that Monroe’s short notice for meetings, incomplete dissemination of plans, and the board’s vote of no confidence have led to calls for a different coordinator. While Monroe has apologized and promised additional documentation, the negative sentiment remains prominent, warranting a review flag.",
+  "key_findings": [
+    "The Market District Neighborhood Advisory Board voted 7‑2 no confidence in Monroe’s outreach plan.",
+    "Residents called for a different coordinator to oversee outreach after the meeting.",
+    "Criticism focused on inconsistent communication and insufficient notice for key meetings."
+  ],
+  "justification": "Negative evidence is present in three distinct sources, indicating community dissatisfaction and a formal loss of confidence. According to the system rules, any negative evidence triggers a negative overall sentiment regardless of the number of neutral or positive statements. The report therefore flags Alicia Monroe for review based on these concerns.",
+  "evidence_examples": [
+    {
+      "source_id": "src_001",
+      "quote": "Others questioned Monroe's decision to circulate only a summary of the plan rather than the full draft agreement.",
+      "sentiment": "negative",
+      "why_selected": "Shows community criticism of incomplete communication."
+    },
+    {
+      "source_id": "src_001",
+      "quote": "the meeting ended with residents calling for a different coordinator to oversee outreach.",
+      "sentiment": "negative",
+      "why_selected": "Direct evidence of residents demanding a change in leadership."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "The Market District Neighborhood Advisory Board voted 7-2 Thursday to express no confidence in redevelopment coordinator Alicia Monroe's public-outreach plan, citing what members described as inconsistent communication and insufficient notice for key meetings.",
+      "sentiment": "negative",
+      "why_selected": "Formal vote of no confidence highlighting systemic communication issues."
+    },
+    {
+      "source_id": "src_001",
+      "quote": "Alicia Monroe, the city's redevelopment coordinator, apologized for the short notice but said the meeting date had been set to keep a state grant application on schedule.",
+      "sentiment": "neutral",
+      "why_selected": "Provides context for the negative sentiment and Monroe’s response."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "Redevelopment coordinator Alicia Monroe presented a revised Market District timeline at Monday's city council meeting, adding two public workshops and extending the written-comment period by 30 days.",
+      "sentiment": "neutral",
+      "why_selected": "Shows an attempt to address concerns, but does not negate the negative sentiment."
+    }
+  ],
+  "negative_evidence": [
+    {
+      "url": "synthetic://synthetic_weak_negative_001/src_001",
+      "title": "Residents Fault Alicia Monroe Over Late Notice for Market District Meeting",
+      "evidence": [
+        {
+          "quote": "Others questioned Monroe's decision to circulate only a summary of the plan rather than the full draft agreement.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "the meeting ended with residents calling for a different coordinator to oversee outreach.",
+          "sentiment": "negative"
+        }
+      ]
+    },
+    {
+      "url": "synthetic://synthetic_weak_negative_001/src_002",
+      "title": "Advisory Board Votes No Confidence in Monroe's Outreach Plan",
+      "evidence": [
+        {
+          "quote": "The Market District Neighborhood Advisory Board voted 7-2 Thursday to express no confidence in redevelopment coordinator Alicia Monroe's public-outreach plan, citing what members described as inconsistent communication and insufficient notice for key meetings.",
+          "sentiment": "negative"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "synthetic://synthetic_weak_negative_001/src_001",
+      "title": "Residents Fault Alicia Monroe Over Late Notice for Market District Meeting"
+    },
+    {
+      "source_id": "src_002",
+      "url": "synthetic://synthetic_weak_negative_001/src_002",
+      "title": "Advisory Board Votes No Confidence in Monroe's Outreach Plan"
+    },
+    {
+      "source_id": "src_003",
+      "url": "synthetic://synthetic_weak_negative_001/src_003",
+      "title": "Alicia Monroe Presents Revised Market District Timeline"
+    }
+  ],
+  "limitations": [
+    "The evidence is limited to three sources and does not include any direct statements of wrongdoing by Alicia Monroe.",
+    "The negative sentiment focuses on communication and procedural concerns rather than legal or criminal misconduct."
+  ],
+  "report_generation_issues": [],
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42,
+    "max_evidence_examples": 7
+  }
+}

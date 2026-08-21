@@ -1,0 +1,9 @@
+{
+  "run_id": "2026-08-09_1454_osama_bin_laden",
+  "created_at": "2026-08-09T21:54:49Z",
+  "target_name": "Osama bin Laden",
+  "input_mode": "search_api",
+  "search_provider": "tavily",
+  "search_query": "\"Osama bin Laden\" news",
+  "max_urls": 10
+}

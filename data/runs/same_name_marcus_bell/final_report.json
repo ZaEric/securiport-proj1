@@ -1,0 +1,94 @@
+{
+  "run_id": "gptoss20b_same_name_marcus_bell",
+  "target_name": "Marcus Bell",
+  "overall_sentiment": "negative",
+  "llm_sentiment": "negative",
+  "one_line_summary": "Marcus Bell has a documented criminal record for loan fraud, resulting in a prison sentence and restitution, despite recent positive medical career developments.",
+  "extended_summary": "The evidence shows that Marcus Bell, a former commercial banker, pleaded guilty to submitting false income information for business‑loan applications and was sentenced to 30 months in federal prison, with a $1.1 million restitution order. The bank cited damage to trust in its lending process. While other sources note his recent appointment as an emergency physician and volunteer work, the negative legal findings dominate the assessment, warranting a review flag.",
+  "key_findings": [
+    "Sentenced to 30 months in federal prison for loan fraud.",
+    "Ordered to pay $1.1 million in restitution and cited as damaging trust in banking.",
+    "Recent positive medical career does not offset the documented criminal conduct."
+  ],
+  "justification": "Negative evidence is present (fraud conviction and prison sentence). According to policy, any negative evidence triggers a negative overall sentiment regardless of the number of positive or neutral items. The negative findings are clear, documented, and directly implicate Marcus Bell in wrongdoing, necessitating a review flag.",
+  "evidence_examples": [
+    {
+      "source_id": "src_001",
+      "quote": "Marcus Bell, 52, a former commercial banker at Harborview Capital, was sentenced Friday to 30 months in federal prison after pleading guilty to submitting false income information in support of a series of business-loan applications.",
+      "sentiment": "negative",
+      "why_selected": "Direct statement of criminal conviction and prison sentence."
+    },
+    {
+      "source_id": "src_001",
+      "quote": "At the hearing, the judge ordered Bell to pay $1.1 million in restitution and said the offense had damaged trust in the bank's lending process.",
+      "sentiment": "negative",
+      "why_selected": "Shows financial penalty and reputational impact."
+    },
+    {
+      "source_id": "src_001",
+      "quote": "Harborview Capital said Bell left the bank after the conduct was discovered and that it has since strengthened its document-review procedures.",
+      "sentiment": "negative",
+      "why_selected": "Confirms departure due to misconduct and institutional response."
+    },
+    {
+      "source_id": "src_002",
+      "quote": "Riverton General Hospital has added Dr. Marcus Bell, 28, to its emergency department, where he will begin seeing patients this month after completing his emergency medicine residency at State University Medical Center.",
+      "sentiment": "positive",
+      "why_selected": "Illustrates recent positive professional activity."
+    },
+    {
+      "source_id": "src_003",
+      "quote": "He brings a calm, practical presence to a very busy day,",
+      "sentiment": "positive",
+      "why_selected": "Highlights positive personal attributes in medical context."
+    }
+  ],
+  "negative_evidence": [
+    {
+      "url": "synthetic://synthetic_same_name_001/src_001",
+      "title": "Commercial Banker Marcus Bell Sentenced in Loan Fraud Case",
+      "evidence": [
+        {
+          "quote": "Marcus Bell, 52, a former commercial banker at Harborview Capital, was sentenced Friday to 30 months in federal prison after pleading guilty to submitting false income information in support of a series of business-loan applications.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "At the hearing, the judge ordered Bell to pay $1.1 million in restitution and said the offense had damaged trust in the bank's lending process.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "Harborview Capital said Bell left the bank after the conduct was discovered and that it has since strengthened its document-review procedures.",
+          "sentiment": "negative"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "synthetic://synthetic_same_name_001/src_001",
+      "title": "Commercial Banker Marcus Bell Sentenced in Loan Fraud Case"
+    },
+    {
+      "source_id": "src_002",
+      "url": "synthetic://synthetic_same_name_001/src_002",
+      "title": "Dr. Marcus Bell Joins Riverton General's Emergency Department"
+    },
+    {
+      "source_id": "src_003",
+      "url": "synthetic://synthetic_same_name_001/src_003",
+      "title": "Young Physician Marcus Bell Helps Lead Free Weekend Clinic"
+    }
+  ],
+  "limitations": [
+    "Evidence is limited to the supplied sources and may not reflect all aspects of Marcus Bell's background.",
+    "The name overlap between a banker and a physician could lead to conflated information; however, the negative evidence pertains to the banker identity."
+  ],
+  "report_generation_issues": [],
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42,
+    "max_evidence_examples": 7
+  }
+}

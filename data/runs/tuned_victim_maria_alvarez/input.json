@@ -1,0 +1,19 @@
+{
+  "run_id": "tuned_victim_maria_alvarez",
+  "created_at": "2026-08-03T00:17:54Z",
+  "target_name": "Maria Alvarez",
+  "input_mode": "synthetic",
+  "synthetic_case_file": "data/synthetic/passengers/synthetic_victim_001.json",
+  "expected_overall_sentiment": "negative",
+  "difficulty_tags": [
+    "victim_of_crime",
+    "sympathetic_tone",
+    "no_wrongdoing_by_target"
+  ],
+  "expected_failure_modes": [
+    "may label robbery/victim evidence as positive because the surrounding tone is supportive and community-focused",
+    "may label victim evidence as neutral because the target did nothing wrong",
+    "may fail to flag a financial scam/fraud victimization the same way as a violent crime victimization"
+  ],
+  "notes": "Tests whether the pipeline flags a target as negative (review flag) when the target is clearly a victim of crime, even though the surrounding coverage is sympathetic and supportive rather than critical of the target."
+}

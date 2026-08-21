@@ -1,0 +1,9 @@
+{
+  "run_id": "2026-08-09_1506_jingxuan_wu",
+  "created_at": "2026-08-09T22:06:06Z",
+  "target_name": "Jingxuan Wu",
+  "input_mode": "search_api",
+  "search_provider": "tavily",
+  "search_query": "\"Jingxuan Wu\" news",
+  "max_urls": 10
+}

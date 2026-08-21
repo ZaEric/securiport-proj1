@@ -1,0 +1,14 @@
+{
+  "run_id": "2026-08-09_1609_emily_carter",
+  "target_name": "Emily Carter",
+  "evidence_extraction_method": "llm_quote_extraction",
+  "num_evidence": 0,
+  "num_evidence_extraction_issues": 0,
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42
+  },
+  "evidence": [],
+  "evidence_extraction_issues": []
+}

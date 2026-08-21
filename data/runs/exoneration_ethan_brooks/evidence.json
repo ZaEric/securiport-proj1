@@ -1,0 +1,119 @@
+{
+  "run_id": "gptoss20b_exoneration_ethan_brooks",
+  "target_name": "Ethan Brooks",
+  "evidence_extraction_method": "llm_quote_extraction",
+  "num_evidence": 13,
+  "num_evidence_extraction_issues": 0,
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42
+  },
+  "evidence": [
+    {
+      "evidence_id": "ev_001",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Ethan Brooks, a volunteer coach at the Eastside Community Center, was charged Monday with misdemeanor assault following a dispute after a youth basketball practice, according to police.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_002",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "A parent told officers that Brooks pushed him during an argument in a hallway near the gym.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_003",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Brooks denied the allegation through an attorney, who said his client stepped between two adults after an argument became heated and did not strike or push anyone.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_004",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "The community center placed Brooks on temporary leave from coaching while the case was reviewed.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_005",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Prosecutors dismissed the misdemeanor assault charge against Eastside Community Center volunteer coach Ethan Brooks on Thursday after reviewing hallway video and additional witness statements, court records show.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_006",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "The video showed Brooks moving between two arguing adults and raising his hands to create space, according to a filing submitted with the dismissal.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_007",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Two witnesses told investigators that they did not see Brooks push or strike the parent who made the complaint.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_008",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Brooks's attorney said the dismissal confirmed that his client had acted to de-escalate the situation.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_009",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "The community center said Brooks had been cleared to return to coaching after its own review reached the same conclusion.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_010",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "The Eastside Community Center has restored Ethan Brooks to his volunteer youth coaching role following the dismissal of an assault charge connected to a dispute last month.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_011",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "In a statement, the center said its internal review of security video and witness accounts found no basis for disciplinary action against Brooks.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_012",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Brooks will return for the start of the summer basketball session, though the center said another staff member will handle parent check-ins at games while it revises its conflict-management procedures.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_013",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Brooks said he was grateful to be back with the team and hoped the attention could return to the students.",
+      "sentiment": "positive",
+      "confidence": null
+    }
+  ],
+  "evidence_extraction_issues": []
+}

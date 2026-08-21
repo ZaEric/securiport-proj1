@@ -1,0 +1,55 @@
+{
+  "run_id": "gptoss20b_multiperson_misattribution_kevin_park",
+  "target_name": "Kevin Park",
+  "evidence_extraction_method": "llm_quote_extraction",
+  "num_evidence": 5,
+  "num_evidence_extraction_issues": 0,
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42
+  },
+  "evidence": [
+    {
+      "evidence_id": "ev_001",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Park was not accused of any wrongdoing; auditors said he was interviewed as a standard part of confirming that till counts and transaction logs from his own window matched normal patterns, which they did.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_002",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Park told auditors he had not noticed anything unusual about Ortiz's till during the period covered by the investigation.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_003",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Kevin Park, another teller who worked alongside Ortiz, had provided a short written statement earlier in the case describing how till counts were normally logged at the end of each shift; he was not called to testify in person and was not named as a witness to any of the specific transfers at issue.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_004",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "The class was led by branch staff, including teller Kevin Park, who walked attendees through a sample monthly budget worksheet.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_005",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Park fielded questions from attendees about how to read a monthly account statement and answered a handful of questions about setting up automatic savings transfers.",
+      "sentiment": "neutral",
+      "confidence": null
+    }
+  ],
+  "evidence_extraction_issues": []
+}

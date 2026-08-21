@@ -1,0 +1,39 @@
+{
+  "run_id": "synthetic_mixed_majority_positive_001",
+  "target_name": "Robert Nguyen",
+  "expected_overall_sentiment": "negative",
+  "case_notes": "Tests whether a single brief negative/legal mention still flips the overall result to negative even when it is heavily outnumbered by strong positive evidence across multiple sources. The negative detail is deliberately brief, buried in an otherwise glowing article, and phrased in a way that could be read as exculpatory ('no charges were filed').",
+  "difficulty_tags": [
+    "majority_positive_evidence",
+    "single_minor_negative_mention",
+    "outweigh_test"
+  ],
+  "expected_failure_modes": [
+    "may average sentiment across sources and default to positive because negative evidence is a small minority",
+    "may skip extracting the minor incident entirely because the extraction prompt favors the 'strongest' evidence and this article's strongest evidence is positive",
+    "may label the incident as neutral rather than negative because no charges were filed"
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "synthetic://synthetic_mixed_majority_positive_001/src_001",
+      "title": "Coach Robert Nguyen Named District Teacher of the Year",
+      "expected_source_sentiment": "positive",
+      "article_text": "Robert Nguyen, a history teacher and boys' basketball coach at Roosevelt High School, was named District Teacher of the Year at Tuesday's school board meeting. Nguyen has taught at Roosevelt for twelve years and has led the basketball program to three conference titles.\n\nColleagues describe Nguyen as one of the most dedicated teachers in the district, frequently staying late to tutor students who are struggling and organizing weekend study sessions before state exams. Principal Karen Osei said Nguyen's classroom consistently posts some of the highest engagement scores in the school.\n\n'Mr. Nguyen has a way of making every student feel like they matter, on the court and in the classroom,' Osei said. Students who nominated Nguyen for the award cited his patience, humor, and willingness to go out of his way to check in on kids who seemed to be having a hard time.\n\nNguyen said he was honored by the recognition and credited his students for pushing him to keep improving as a teacher. He said he plans to use part of the award's small stipend to buy new equipment for the school's after-school tutoring room."
+    },
+    {
+      "source_id": "src_002",
+      "url": "synthetic://synthetic_mixed_majority_positive_001/src_002",
+      "title": "Robert Nguyen's Afterschool Program Credited With Cutting Roosevelt's Dropout Rate",
+      "expected_source_sentiment": "positive",
+      "article_text": "A district report released this month credits the afterschool tutoring program founded by teacher Robert Nguyen with helping cut Roosevelt High School's dropout rate nearly in half over the past four years. The program, which Nguyen started as a small volunteer effort, now serves more than 120 students each semester and is staffed by a mix of teachers and trained student mentors.\n\nDistrict officials said the program's success comes largely from Nguyen's insistence on personally checking in with every student who falls behind on attendance, rather than waiting for a formal intervention. 'Robert built relationships first and academics second, and it turned out that was exactly the right order,' said district superintendent Michael Alvarez.\n\nSeveral graduates credited Nguyen directly with keeping them in school. One former student, now in her second year of community college, said Nguyen drove her to a placement test himself after her car broke down. 'He just shows up for people. That's who he is,' she said.\n\nThe district announced it will expand the program to two additional high schools next year, using Nguyen's model as the template and asking him to help train staff at the new sites."
+    },
+    {
+      "source_id": "src_003",
+      "url": "synthetic://synthetic_mixed_majority_positive_001/src_003",
+      "title": "Roosevelt Fundraiser Led by Robert Nguyen Raises Record Amount for Music Program",
+      "expected_source_sentiment": "positive",
+      "article_text": "Roosevelt High School's annual fundraiser, organized this year by teacher and coach Robert Nguyen, raised a record $42,000 for the school's music program, more than double last year's total. The event featured a silent auction, a student talent showcase, and a raffle donated by local businesses.\n\nNguyen spent months lining up sponsors and recruiting student volunteers to help run the event, according to fellow organizers. Music teacher Patricia Wells said the funds will allow the program to replace aging instruments and send the marching band to a regional competition for the first time in six years.\n\nThe event came a few weeks after Nguyen was named in a police report following a heated exchange with a parent at a youth basketball game earlier in the season; officers responded to the gym but no charges were filed and the matter was closed. Organizers said the incident had no bearing on the fundraiser, which by all accounts was one of the best-attended events in the school's recent history.\n\nSchool board member Elena Garcia praised Nguyen's organizing work at Tuesday's meeting, calling the fundraiser 'a model of what one motivated teacher can pull off with enough community buy-in.' Nguyen said he was already planning ways to top this year's total."
+    }
+  ]
+}

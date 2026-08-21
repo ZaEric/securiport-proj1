@@ -1,0 +1,95 @@
+{
+  "run_id": "tuned_mixed_majority_positive_robert_nguyen",
+  "target_name": "Robert Nguyen",
+  "evidence_extraction_method": "llm_quote_extraction",
+  "num_evidence": 10,
+  "num_evidence_extraction_issues": 0,
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42
+  },
+  "evidence": [
+    {
+      "evidence_id": "ev_001",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Robert Nguyen, a history teacher and boys' basketball coach at Roosevelt High School, was named District Teacher of the Year at Tuesday's school board meeting.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_002",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Colleagues describe Nguyen as one of the most dedicated teachers in the district, frequently staying late to tutor students who are struggling and organizing weekend study sessions before state exams.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_003",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "'Mr. Nguyen has a way of making every student feel like they matter, on the court and in the classroom,' Osei said.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_004",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Nguyen said he was honored by the recognition and credited his students for pushing him to keep improving as a teacher.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_005",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "A district report released this month credits the afterschool tutoring program founded by teacher Robert Nguyen with helping cut Roosevelt High School's dropout rate nearly in half over the past four years.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_006",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "District officials said the program's success comes largely from Nguyen's insistence on personally checking in with every student who falls behind on attendance, rather than waiting for a formal intervention.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_007",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "The district announced it will expand the program to two additional high schools next year, using Nguyen's model as the template and asking him to help train staff at the new sites.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_008",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Roosevelt High School's annual fundraiser, organized this year by teacher and coach Robert Nguyen, raised a record $42,000 for the school's music program, more than double last year's total.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_009",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "School board member Elena Garcia praised Nguyen's organizing work at Tuesday's meeting, calling the fundraiser 'a model of what one motivated teacher can pull off with enough community buy-in.'",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_010",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "The event came a few weeks after Nguyen was named in a police report following a heated exchange with a parent at a youth basketball game earlier in the season; officers responded to the gym but no charges were filed and the matter was closed.",
+      "sentiment": "negative",
+      "confidence": null
+    }
+  ],
+  "evidence_extraction_issues": []
+}

@@ -1,0 +1,41 @@
+{
+  "run_id": "synthetic_unreliable_source_001",
+  "target_name": "Nora Patel",
+  "expected_overall_sentiment": "negative",
+  "case_notes": "Tests a serious but weakly supported allegation from an unreliable source. One anonymous blog post claims that Nora Patel diverted charity funds but provides no documents, named witnesses, official-record reference, or response from the organization. Two other sources provide neutral or positive coverage and do not corroborate the claim. The overall result remains negative as a review flag so an immigration officer can investigate further, but the report must identify the claim as unverified, low-evidence, and uncorroborated rather than treating it as fact.",
+  "difficulty_tags": [
+    "unreliable_source",
+    "unverified_allegation",
+    "source_quality",
+    "conflicting_coverage"
+  ],
+  "expected_failure_modes": [
+    "may state the anonymous allegation as a confirmed fact",
+    "may ignore source-quality signals and give the blog post the same weight as corroborated reporting",
+    "may miss the serious claim because it is presented without formal legal language",
+    "may conclude positive from the neutral and positive sources without noting the unverified allegation"
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "synthetic://synthetic_unreliable_source_001/src_001",
+      "title": "Anonymous Blog Claims Nora Patel Misused Relief Donations",
+      "expected_source_sentiment": "negative",
+      "article_text": "An unsigned post published Tuesday on the blog Civic Truth Watch claims that Nora Patel, director of the Harborlight Relief Fund, diverted donations intended for flood-recovery families to personal use. The post does not identify its author, cite financial records, name a source with firsthand knowledge, or provide a date for the alleged conduct.\n\nThe post says only that it received 'messages from concerned insiders' and asks readers to share the allegation. It does not include a response from Patel, Harborlight, law enforcement, regulators, or the charity's board, and it links to no complaint, audit, or public filing.\n\nCivic Truth Watch has no listed editor, ownership information, or contact address on the page. The claim could not be independently verified from the information in the post."
+    },
+    {
+      "source_id": "src_002",
+      "url": "synthetic://synthetic_unreliable_source_001/src_002",
+      "title": "Harborlight Relief Fund Opens Applications for Flood Recovery Grants",
+      "expected_source_sentiment": "neutral",
+      "article_text": "The Harborlight Relief Fund opened applications this week for a new round of small grants to residents whose homes were damaged in last spring's flooding. Executive director Nora Patel said applicants can receive help with temporary housing, appliance replacement, and cleanup costs.\n\nThe announcement lists application deadlines, eligibility requirements, and the locations of three assistance clinics. It says grant decisions will be reviewed by a volunteer committee and that recipients will be notified by mail and email.\n\nThe release contains no discussion of the anonymous online allegation concerning Patel and provides no information about the fund's finances beyond the amount available for this grant round."
+    },
+    {
+      "source_id": "src_003",
+      "url": "synthetic://synthetic_unreliable_source_001/src_003",
+      "title": "Nora Patel Recognized for Coordinating Emergency Shelter Network",
+      "expected_source_sentiment": "positive",
+      "article_text": "Nora Patel received the County Volunteer Partnership Award on Wednesday for coordinating a network of emergency shelters during last spring's flooding. County officials said Patel helped match more than 300 displaced residents with temporary beds, transportation, and meal services during the first week of the emergency.\n\nCounty emergency manager Luis Romero said Patel organized daily calls among nonprofit groups and kept an updated list of available shelter space as conditions changed. 'She made it easier for agencies and volunteers to work from the same information,' Romero said.\n\nPatel accepted the award on behalf of Harborlight Relief Fund staff and volunteers. The county's award announcement did not address the unrelated anonymous blog claim and does not independently verify or disprove it."
+    }
+  ]
+}

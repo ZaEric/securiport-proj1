@@ -1,0 +1,96 @@
+{
+  "run_id": "2026-08-09_1514_bofu_zou",
+  "target_name": "Bofu Zou",
+  "sources": [],
+  "metadata": {
+    "source_mode": "search_api",
+    "search_provider": "tavily",
+    "search_query": "\"Bofu Zou\" news",
+    "source_count": 0,
+    "requested_url_count": 10,
+    "failed_url_count": 10,
+    "blocked_url_count": 0,
+    "fetch_errors": [
+      {
+        "url": "/goto?url=CAESXQHuR6pNo1-1o9mEyRYV_-5RhA6vGrGEMX-led05azeXLO8o_7reKhVfUpTzPQdQWy5JSLUTEns0v6r0kiLP_5QHxJm5ktQNU5SKBfw2wlsikAyv9XLDsT9QCRbPIQ%3D%3D",
+        "source_type": "search_result",
+        "notes": "Bo Zou",
+        "status_code": null,
+        "content_type": "",
+        "error": "Invalid URL '/goto?url=CAESXQHuR6pNo1-1o9mEyRYV_-5RhA6vGrGEMX-led05azeXLO8o_7reKhVfUpTzPQdQWy5JSLUTEns0v6r0kiLP_5QHxJm5ktQNU5SKBfw2wlsikAyv9XLDsT9QCRbPIQ%3D%3D': No scheme supplied. Perhaps you meant https:///goto?url=CAESXQHuR6pNo1-1o9mEyRYV_-5RhA6vGrGEMX-led05azeXLO8o_7reKhVfUpTzPQdQWy5JSLUTEns0v6r0kiLP_5QHxJm5ktQNU5SKBfw2wlsikAyv9XLDsT9QCRbPIQ%3D%3D?"
+      },
+      {
+        "url": "/goto?url=CAESpQEB7keqTbwpMIG7qy4R_Yc39ko6JLtDPaEB8RzF2UjMzWWzSSv4UMG4RRrXlzN9zLFsXr7CyD48Qy4_NSJQbI0HgG8eUp6tEAHkvHZdb6Paxj3BreuXX4fqbENdnwNOU866vzbasoQJimA3XKD2IESf0PrbP-LJUDxO1PufweU6yuMmattnulx857VmsKHhdWDvoYnYmbyJb0bZepJiOyvJf6GP7BE%3D",
+        "source_type": "search_result",
+        "notes": "BO ZOU",
+        "status_code": null,
+        "content_type": "",
+        "error": "Invalid URL '/goto?url=CAESpQEB7keqTbwpMIG7qy4R_Yc39ko6JLtDPaEB8RzF2UjMzWWzSSv4UMG4RRrXlzN9zLFsXr7CyD48Qy4_NSJQbI0HgG8eUp6tEAHkvHZdb6Paxj3BreuXX4fqbENdnwNOU866vzbasoQJimA3XKD2IESf0PrbP-LJUDxO1PufweU6yuMmattnulx857VmsKHhdWDvoYnYmbyJb0bZepJiOyvJf6GP7BE%3D': No scheme supplied. Perhaps you meant https:///goto?url=CAESpQEB7keqTbwpMIG7qy4R_Yc39ko6JLtDPaEB8RzF2UjMzWWzSSv4UMG4RRrXlzN9zLFsXr7CyD48Qy4_NSJQbI0HgG8eUp6tEAHkvHZdb6Paxj3BreuXX4fqbENdnwNOU866vzbasoQJimA3XKD2IESf0PrbP-LJUDxO1PufweU6yuMmattnulx857VmsKHhdWDvoYnYmbyJb0bZepJiOyvJf6GP7BE%3D?"
+      },
+      {
+        "url": "/goto?url=CAESyAEB7keqTXILPghUC2CPjS92VMo8AGDzxiG_6i4eVQGpEzMPDdHMKgZlSNbyEG7bDYTPtRIrhokwMGdJYnflHqw01rxUJ3gCQVnAk4LYRHqf1f1hHq_ksW5HTxzji4YAQ-0iSaKo3RGAZ4pRnYY_3kT8XWMR-eqhnBSp7vFMOF3hh0v-rJT4l9muxQEGx3dXxKYdohKyyredmU_wfiZRPNnLDPdiXNXSe7w4lXqL3P0rq-9RhqGb58KYaZGwwkcx5-axn6ayueXx7A%3D%3D",
+        "source_type": "search_result",
+        "notes": "A Chinese student, Zhenhao Zou, has been found guilty of ...",
+        "status_code": null,
+        "content_type": "",
+        "error": "Invalid URL '/goto?url=CAESyAEB7keqTXILPghUC2CPjS92VMo8AGDzxiG_6i4eVQGpEzMPDdHMKgZlSNbyEG7bDYTPtRIrhokwMGdJYnflHqw01rxUJ3gCQVnAk4LYRHqf1f1hHq_ksW5HTxzji4YAQ-0iSaKo3RGAZ4pRnYY_3kT8XWMR-eqhnBSp7vFMOF3hh0v-rJT4l9muxQEGx3dXxKYdohKyyredmU_wfiZRPNnLDPdiXNXSe7w4lXqL3P0rq-9RhqGb58KYaZGwwkcx5-axn6ayueXx7A%3D%3D': No scheme supplied. Perhaps you meant https:///goto?url=CAESyAEB7keqTXILPghUC2CPjS92VMo8AGDzxiG_6i4eVQGpEzMPDdHMKgZlSNbyEG7bDYTPtRIrhokwMGdJYnflHqw01rxUJ3gCQVnAk4LYRHqf1f1hHq_ksW5HTxzji4YAQ-0iSaKo3RGAZ4pRnYY_3kT8XWMR-eqhnBSp7vFMOF3hh0v-rJT4l9muxQEGx3dXxKYdohKyyredmU_wfiZRPNnLDPdiXNXSe7w4lXqL3P0rq-9RhqGb58KYaZGwwkcx5-axn6ayueXx7A%3D%3D?"
+      },
+      {
+        "url": "/goto?url=CAESXgHuR6pNx30wNDASN_PxOLmfKQhHmmFfGk6qzPRTl6Ii6_-jv7tXIp3A2hNYBN6Xad9_46bO1MN9LqmP76TEGdlamsEuSDkeO0KFr8Muz8oQ9acukpls02BVrOpRrq4%3D",
+        "source_type": "search_result",
+        "notes": "Bo Zou - Institute of Transportation Studies - UC Berkeley",
+        "status_code": null,
+        "content_type": "",
+        "error": "Invalid URL '/goto?url=CAESXgHuR6pNx30wNDASN_PxOLmfKQhHmmFfGk6qzPRTl6Ii6_-jv7tXIp3A2hNYBN6Xad9_46bO1MN9LqmP76TEGdlamsEuSDkeO0KFr8Muz8oQ9acukpls02BVrOpRrq4%3D': No scheme supplied. Perhaps you meant https:///goto?url=CAESXgHuR6pNx30wNDASN_PxOLmfKQhHmmFfGk6qzPRTl6Ii6_-jv7tXIp3A2hNYBN6Xad9_46bO1MN9LqmP76TEGdlamsEuSDkeO0KFr8Muz8oQ9acukpls02BVrOpRrq4%3D?"
+      },
+      {
+        "url": "/goto?url=CAESlQEB7keqTWHmcp2zRXkKTwdaeDw1mY6k9gCNB3llBQex0xEobNX4rfv4m05o4ZSA_KSfwU9U6B0kkBMuCTcpb_q7zoQoEVksLscxaMMJRw7L_M1ReSbkhn9qDDYwwKpHdp11X510qNkV1jaMIwHTVaQw1RVA3MEA_8T6ctwWDk44Sa9SpHM2INZOHSdf5q846zeLWx4g3g%3D%3D",
+        "source_type": "search_result",
+        "notes": "Serial rapist Zhenhao Zou facing second trial as more ...",
+        "status_code": null,
+        "content_type": "",
+        "error": "Invalid URL '/goto?url=CAESlQEB7keqTWHmcp2zRXkKTwdaeDw1mY6k9gCNB3llBQex0xEobNX4rfv4m05o4ZSA_KSfwU9U6B0kkBMuCTcpb_q7zoQoEVksLscxaMMJRw7L_M1ReSbkhn9qDDYwwKpHdp11X510qNkV1jaMIwHTVaQw1RVA3MEA_8T6ctwWDk44Sa9SpHM2INZOHSdf5q846zeLWx4g3g%3D%3D': No scheme supplied. Perhaps you meant https:///goto?url=CAESlQEB7keqTWHmcp2zRXkKTwdaeDw1mY6k9gCNB3llBQex0xEobNX4rfv4m05o4ZSA_KSfwU9U6B0kkBMuCTcpb_q7zoQoEVksLscxaMMJRw7L_M1ReSbkhn9qDDYwwKpHdp11X510qNkV1jaMIwHTVaQw1RVA3MEA_8T6ctwWDk44Sa9SpHM2INZOHSdf5q846zeLWx4g3g%3D%3D?"
+      },
+      {
+        "url": "/goto?url=CAESqQEB7keqTY29lgYzbfhg1ZG47FIzhObdi9ri_9yBucdBr1yKNJGIKdgkUIzXIrNoqhae8UYIVd4QPwhnCqNZlJudmwNCJbIG9T1adUwKbeEL1NdLZeWqMkdhHpMhZNV4ayl1TgKNlCbPFbBBD64lPEqphbU5fbaBDPiprLqcs8lFr3se7wErIViHR8wLMFrW8527OG5QdqnN60-riC5rBNIM4be3fhzLN8ZZ",
+        "source_type": "search_result",
+        "notes": "UK court convicts Chinese PhD student of drugging, raping ...",
+        "status_code": null,
+        "content_type": "",
+        "error": "Invalid URL '/goto?url=CAESqQEB7keqTY29lgYzbfhg1ZG47FIzhObdi9ri_9yBucdBr1yKNJGIKdgkUIzXIrNoqhae8UYIVd4QPwhnCqNZlJudmwNCJbIG9T1adUwKbeEL1NdLZeWqMkdhHpMhZNV4ayl1TgKNlCbPFbBBD64lPEqphbU5fbaBDPiprLqcs8lFr3se7wErIViHR8wLMFrW8527OG5QdqnN60-riC5rBNIM4be3fhzLN8ZZ': No scheme supplied. Perhaps you meant https:///goto?url=CAESqQEB7keqTY29lgYzbfhg1ZG47FIzhObdi9ri_9yBucdBr1yKNJGIKdgkUIzXIrNoqhae8UYIVd4QPwhnCqNZlJudmwNCJbIG9T1adUwKbeEL1NdLZeWqMkdhHpMhZNV4ayl1TgKNlCbPFbBBD64lPEqphbU5fbaBDPiprLqcs8lFr3se7wErIViHR8wLMFrW8527OG5QdqnN60-riC5rBNIM4be3fhzLN8ZZ?"
+      },
+      {
+        "url": "/goto?url=CAESZgHuR6pNaBY3qkMnm-UdTTo2AXWg6Go75gAyHo39FbqM21oorfaN0XXWAKTittj1KdBgRcVZ-jolod7E43RS9panpZX5uqm2kYpwN-6pEErkLNTdiWXPJqkxqf4APwy_dKr9pjLTHw%3D%3D",
+        "source_type": "search_result",
+        "notes": "Student who raped 10 women jailed for 24 years",
+        "status_code": null,
+        "content_type": "",
+        "error": "Invalid URL '/goto?url=CAESZgHuR6pNaBY3qkMnm-UdTTo2AXWg6Go75gAyHo39FbqM21oorfaN0XXWAKTittj1KdBgRcVZ-jolod7E43RS9panpZX5uqm2kYpwN-6pEErkLNTdiWXPJqkxqf4APwy_dKr9pjLTHw%3D%3D': No scheme supplied. Perhaps you meant https:///goto?url=CAESZgHuR6pNaBY3qkMnm-UdTTo2AXWg6Go75gAyHo39FbqM21oorfaN0XXWAKTittj1KdBgRcVZ-jolod7E43RS9panpZX5uqm2kYpwN-6pEErkLNTdiWXPJqkxqf4APwy_dKr9pjLTHw%3D%3D?"
+      },
+      {
+        "url": "/goto?url=CAESnQEB7keqTVTUa_cq2shRQx9aeHEN0ddM-L9IR925dcjijpASDyskM7BAmvsj9ufVoFzGXMCcQ9cxl8tFkoPva7woT0bA45L5nWRlGHQpJ2_4Z8W7BZbfJv20W9yoxUNgfg4sk-oUui2OntGL7Q_cSd16KLIQLFeLcxnskhaJ7RCN0vGKSLUivtAP8TvbdNtJdi3oM2ydzePMyJb0FnkI",
+        "source_type": "search_result",
+        "notes": "London police say Zhenhao Zou, Chinese student ...",
+        "status_code": null,
+        "content_type": "",
+        "error": "Invalid URL '/goto?url=CAESnQEB7keqTVTUa_cq2shRQx9aeHEN0ddM-L9IR925dcjijpASDyskM7BAmvsj9ufVoFzGXMCcQ9cxl8tFkoPva7woT0bA45L5nWRlGHQpJ2_4Z8W7BZbfJv20W9yoxUNgfg4sk-oUui2OntGL7Q_cSd16KLIQLFeLcxnskhaJ7RCN0vGKSLUivtAP8TvbdNtJdi3oM2ydzePMyJb0FnkI': No scheme supplied. Perhaps you meant https:///goto?url=CAESnQEB7keqTVTUa_cq2shRQx9aeHEN0ddM-L9IR925dcjijpASDyskM7BAmvsj9ufVoFzGXMCcQ9cxl8tFkoPva7woT0bA45L5nWRlGHQpJ2_4Z8W7BZbfJv20W9yoxUNgfg4sk-oUui2OntGL7Q_cSd16KLIQLFeLcxnskhaJ7RCN0vGKSLUivtAP8TvbdNtJdi3oM2ydzePMyJb0FnkI?"
+      },
+      {
+        "url": "/goto?url=CAESngEB7keqTdd6oE1koq-2-UUt62_jmADz9JbDqv0uuMCVzwkVEU0tTT1IIgi_duhC1YKLuOcUvTrfpqMKNDXkaE4Ybku47mYgJpPRLT7Qd0KTwSNt--XNsmluMZylKj-y5WftJoYSke4BThLjP_-VlqN7Gj01LZhVlb7LHjjOgZAs6W444puW2JbzvTtvIRyGfRW_4mbmGxl3cZjARfL-fA%3D%3D",
+        "source_type": "search_result",
+        "notes": "Zhenhao Zou: Student who drugged and raped 10 women ...",
+        "status_code": null,
+        "content_type": "",
+        "error": "Invalid URL '/goto?url=CAESngEB7keqTdd6oE1koq-2-UUt62_jmADz9JbDqv0uuMCVzwkVEU0tTT1IIgi_duhC1YKLuOcUvTrfpqMKNDXkaE4Ybku47mYgJpPRLT7Qd0KTwSNt--XNsmluMZylKj-y5WftJoYSke4BThLjP_-VlqN7Gj01LZhVlb7LHjjOgZAs6W444puW2JbzvTtvIRyGfRW_4mbmGxl3cZjARfL-fA%3D%3D': No scheme supplied. Perhaps you meant https:///goto?url=CAESngEB7keqTdd6oE1koq-2-UUt62_jmADz9JbDqv0uuMCVzwkVEU0tTT1IIgi_duhC1YKLuOcUvTrfpqMKNDXkaE4Ybku47mYgJpPRLT7Qd0KTwSNt--XNsmluMZylKj-y5WftJoYSke4BThLjP_-VlqN7Gj01LZhVlb7LHjjOgZAs6W444puW2JbzvTtvIRyGfRW_4mbmGxl3cZjARfL-fA%3D%3D?"
+      },
+      {
+        "url": "/goto?url=CAESqwEB7keqTarTVRoQNEPSy7cYV7vG7KxgNCUJTTwRq2UsBaa9MRZXnwUCO203urTV5a1WUFVoXbTHzHScCi68htNxKPmbngjPDU3jzGCgeVuqFg6ybTnlGc4AMAJyotZcWSd0Gc6eFNHE67eidSbZPr9XRzgoT_1VEwvA2w9YbKLi38CX6a_PyhwbKf_WDhzcIIrWKwAg-LKWQTA_qMDSrp-g86vZIULh31NPE64%3D",
+        "source_type": "search_result",
+        "notes": "Chinese Ph.D. student sentenced to at least 24 years in ...",
+        "status_code": null,
+        "content_type": "",
+        "error": "Invalid URL '/goto?url=CAESqwEB7keqTarTVRoQNEPSy7cYV7vG7KxgNCUJTTwRq2UsBaa9MRZXnwUCO203urTV5a1WUFVoXbTHzHScCi68htNxKPmbngjPDU3jzGCgeVuqFg6ybTnlGc4AMAJyotZcWSd0Gc6eFNHE67eidSbZPr9XRzgoT_1VEwvA2w9YbKLi38CX6a_PyhwbKf_WDhzcIIrWKwAg-LKWQTA_qMDSrp-g86vZIULh31NPE64%3D': No scheme supplied. Perhaps you meant https:///goto?url=CAESqwEB7keqTarTVRoQNEPSy7cYV7vG7KxgNCUJTTwRq2UsBaa9MRZXnwUCO203urTV5a1WUFVoXbTHzHScCi68htNxKPmbngjPDU3jzGCgeVuqFg6ybTnlGc4AMAJyotZcWSd0Gc6eFNHE67eidSbZPr9XRzgoT_1VEwvA2w9YbKLi38CX6a_PyhwbKf_WDhzcIIrWKwAg-LKWQTA_qMDSrp-g86vZIULh31NPE64%3D?"
+      }
+    ]
+  }
+}

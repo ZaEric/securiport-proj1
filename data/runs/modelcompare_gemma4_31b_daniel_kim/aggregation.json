@@ -1,0 +1,81 @@
+{
+  "run_id": "modelcompare_gemma4_31b_daniel_kim",
+  "target_name": "Daniel Kim",
+  "aggregation_method": "negative_flag_priority",
+  "num_evidence": 9,
+  "mixed_evidence_threshold": 0.25,
+  "minimum_evidence_count": 1,
+  "source_results": [
+    {
+      "source_id": "src_001",
+      "baseline_sentiment": "negative",
+      "sentiment_counts": {
+        "positive": 1,
+        "neutral": 0,
+        "negative": 2
+      },
+      "negative_evidence_present": true,
+      "mixed_evidence": true,
+      "opposing_sentiment_ratio": 0.333,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_001",
+        "ev_002",
+        "ev_003"
+      ]
+    },
+    {
+      "source_id": "src_002",
+      "baseline_sentiment": "negative",
+      "sentiment_counts": {
+        "positive": 0,
+        "neutral": 0,
+        "negative": 3
+      },
+      "negative_evidence_present": true,
+      "mixed_evidence": false,
+      "opposing_sentiment_ratio": 0.0,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_004",
+        "ev_005",
+        "ev_006"
+      ]
+    },
+    {
+      "source_id": "src_003",
+      "baseline_sentiment": "positive",
+      "sentiment_counts": {
+        "positive": 3,
+        "neutral": 0,
+        "negative": 0
+      },
+      "negative_evidence_present": false,
+      "mixed_evidence": false,
+      "opposing_sentiment_ratio": 0.0,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_007",
+        "ev_008",
+        "ev_009"
+      ]
+    }
+  ],
+  "overall_result": {
+    "baseline_sentiment": "negative",
+    "sentiment_counts": {
+      "positive": 4,
+      "neutral": 0,
+      "negative": 5
+    },
+    "source_baseline_sentiment_counts": {
+      "positive": 1,
+      "neutral": 0,
+      "negative": 2
+    },
+    "negative_evidence_present": true,
+    "mixed_evidence": true,
+    "opposing_sentiment_ratio": 0.444,
+    "insufficient_evidence": false
+  }
+}

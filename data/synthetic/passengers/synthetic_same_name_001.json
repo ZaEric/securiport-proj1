@@ -1,0 +1,41 @@
+{
+  "run_id": "synthetic_same_name_001",
+  "target_name": "Marcus Bell",
+  "expected_overall_sentiment": "negative",
+  "case_notes": "Tests a same-name identity collision. Two local sources identify the target as a 28-year-old emergency physician, while the negative source identifies a 52-year-old commercial banker named Marcus Bell. Because the pipeline is given only a full name, a name-only relevance check may associate the fraud conviction with the target and should surface a negative review flag. The report must retain the conflicting age and occupation details and must not present the conviction as established fact about the 28-year-old physician.",
+  "difficulty_tags": [
+    "same_name_collision",
+    "identity_ambiguity",
+    "conflicting_biographical_context",
+    "negative_review_flag"
+  ],
+  "expected_failure_modes": [
+    "may incorrectly treat the banker's fraud conviction as confirmed wrongdoing by the physician",
+    "may ignore the age and occupation details that distinguish the two people",
+    "may suppress the negative source because it cannot verify identity from a name alone",
+    "may overstate an identity match instead of clearly documenting the ambiguity"
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "synthetic://synthetic_same_name_001/src_001",
+      "title": "Commercial Banker Marcus Bell Sentenced in Loan Fraud Case",
+      "expected_source_sentiment": "negative",
+      "article_text": "Marcus Bell, 52, a former commercial banker at Harborview Capital, was sentenced Friday to 30 months in federal prison after pleading guilty to submitting false income information in support of a series of business-loan applications. Prosecutors said Bell, who worked in commercial lending for more than two decades, used altered financial statements to help several borrowers qualify for loans they otherwise would not have received.\n\nAt the hearing, the judge ordered Bell to pay $1.1 million in restitution and said the offense had damaged trust in the bank's lending process. Bell's attorney said he had accepted responsibility and had begun cooperating with efforts to recover funds. The sentencing followed a guilty plea entered earlier this year.\n\nHarborview Capital said Bell left the bank after the conduct was discovered and that it has since strengthened its document-review procedures. Court records list Bell's residence as Northfield and identify his occupation at the time of the offense as commercial banker."
+    },
+    {
+      "source_id": "src_002",
+      "url": "synthetic://synthetic_same_name_001/src_002",
+      "title": "Dr. Marcus Bell Joins Riverton General's Emergency Department",
+      "expected_source_sentiment": "neutral",
+      "article_text": "Riverton General Hospital has added Dr. Marcus Bell, 28, to its emergency department, where he will begin seeing patients this month after completing his emergency medicine residency at State University Medical Center. Hospital officials said Bell grew up in Riverton and returned to the area to be closer to family.\n\nBell said he was drawn to emergency medicine because of its mix of fast decisions and long-term relationships with a community. He will work a rotating schedule in the hospital's adult emergency unit and will also participate in its new-resident mentoring program.\n\nThe hospital announcement describes Bell as a physician licensed in the state and notes that he completed medical school in 2023. It did not discuss any prior employment outside health care."
+    },
+    {
+      "source_id": "src_003",
+      "url": "synthetic://synthetic_same_name_001/src_003",
+      "title": "Young Physician Marcus Bell Helps Lead Free Weekend Clinic",
+      "expected_source_sentiment": "positive",
+      "article_text": "Dr. Marcus Bell, a 28-year-old emergency physician at Riverton General Hospital, spent Saturday volunteering at a free weekend clinic serving uninsured residents. Clinic organizers said Bell helped coordinate intake for patients seeking routine care and referrals.\n\nBell, who completed his residency last year, said the clinic gives him a chance to work with patients before a health concern becomes an emergency. More than 70 people attended the event, according to the nonprofit that operates the clinic.\n\nProgram director Lila Gomez said Bell has committed to returning once a month and has encouraged other early-career physicians to volunteer. 'He brings a calm, practical presence to a very busy day,' Gomez said."
+    }
+  ]
+}

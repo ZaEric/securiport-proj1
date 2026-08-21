@@ -1,0 +1,9 @@
+{
+  "run_id": "2026-08-04_1840_eric_wan",
+  "created_at": "2026-08-05T01:40:57Z",
+  "target_name": "Eric Wan",
+  "input_mode": "search_api",
+  "search_provider": "tavily",
+  "search_query": "\"Eric Wan\" news",
+  "max_urls": 10
+}

@@ -1,0 +1,5 @@
+{"event_type": "llm_call", "stage": "evidence_extraction", "model": "nemotron-3-nano:30b", "total_duration (nanoseconds)": 129642817641, "prompt_eval_count": 1034, "eval_count": 17678, "chunk_id": "src_001_chunk_001"}
+{"event_type": "llm_call", "stage": "evidence_extraction", "model": "nemotron-3-nano:30b", "total_duration (nanoseconds)": 11368970074, "prompt_eval_count": 999, "eval_count": 1625, "chunk_id": "src_002_chunk_001"}
+{"event_type": "llm_call", "stage": "evidence_extraction", "model": "nemotron-3-nano:30b", "total_duration (nanoseconds)": 19308590163, "prompt_eval_count": 1003, "eval_count": 2011, "chunk_id": "src_003_chunk_001"}
+{"event_type": "llm_call", "stage": "final_report", "model": "nemotron-3-nano:30b", "total_duration (nanoseconds)": 10533126382, "prompt_eval_count": 1559, "eval_count": 1934}
+{"event_type": "pipeline_summary", "total_runtime_seconds": 172.136, "source_count": 3, "chunk_count": 3, "evidence_count": 5, "negative_evidence_count": 2, "llm_call_count": 4}

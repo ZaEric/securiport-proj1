@@ -1,0 +1,78 @@
+{
+  "run_id": "tuned_neutral_angela_torres",
+  "target_name": "Angela Torres",
+  "aggregation_method": "negative_flag_priority",
+  "num_evidence": 6,
+  "mixed_evidence_threshold": 0.25,
+  "minimum_evidence_count": 1,
+  "source_results": [
+    {
+      "source_id": "src_001",
+      "baseline_sentiment": "neutral",
+      "sentiment_counts": {
+        "positive": 0,
+        "neutral": 2,
+        "negative": 0
+      },
+      "negative_evidence_present": false,
+      "mixed_evidence": false,
+      "opposing_sentiment_ratio": 0.0,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_001",
+        "ev_002"
+      ]
+    },
+    {
+      "source_id": "src_002",
+      "baseline_sentiment": "positive",
+      "sentiment_counts": {
+        "positive": 3,
+        "neutral": 0,
+        "negative": 0
+      },
+      "negative_evidence_present": false,
+      "mixed_evidence": false,
+      "opposing_sentiment_ratio": 0.0,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_003",
+        "ev_004",
+        "ev_005"
+      ]
+    },
+    {
+      "source_id": "src_003",
+      "baseline_sentiment": "neutral",
+      "sentiment_counts": {
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0
+      },
+      "negative_evidence_present": false,
+      "mixed_evidence": false,
+      "opposing_sentiment_ratio": 0.0,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_006"
+      ]
+    }
+  ],
+  "overall_result": {
+    "baseline_sentiment": "positive",
+    "sentiment_counts": {
+      "positive": 3,
+      "neutral": 3,
+      "negative": 0
+    },
+    "source_baseline_sentiment_counts": {
+      "positive": 1,
+      "neutral": 2,
+      "negative": 0
+    },
+    "negative_evidence_present": false,
+    "mixed_evidence": false,
+    "opposing_sentiment_ratio": 0.0,
+    "insufficient_evidence": false
+  }
+}

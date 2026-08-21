@@ -1,0 +1,18 @@
+{
+  "run_id": "tuned_neutral_angela_torres",
+  "created_at": "2026-08-03T00:20:10Z",
+  "target_name": "Angela Torres",
+  "input_mode": "synthetic",
+  "synthetic_case_file": "data/synthetic/passengers/synthetic_neutral_001.json",
+  "expected_overall_sentiment": "neutral",
+  "difficulty_tags": [
+    "pure_background",
+    "no_flag_control",
+    "mild_commercial_tone"
+  ],
+  "expected_failure_modes": [
+    "may over-flag mundane business ownership or civic participation as positive due to generally favorable framing",
+    "may falsely detect negative/review-flag sentiment where none exists due to overcorrection from negative-bias tuning"
+  ],
+  "notes": "Control case with purely factual, background-level coverage: no wrongdoing, no victimization, no notable achievements. Used to confirm that biasing the pipeline toward negative does not cause false positives on mundane civic/commercial coverage."
+}

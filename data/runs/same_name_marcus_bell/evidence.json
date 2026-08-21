@@ -1,0 +1,63 @@
+{
+  "run_id": "gptoss20b_same_name_marcus_bell",
+  "target_name": "Marcus Bell",
+  "evidence_extraction_method": "llm_quote_extraction",
+  "num_evidence": 6,
+  "num_evidence_extraction_issues": 0,
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42
+  },
+  "evidence": [
+    {
+      "evidence_id": "ev_001",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Marcus Bell, 52, a former commercial banker at Harborview Capital, was sentenced Friday to 30 months in federal prison after pleading guilty to submitting false income information in support of a series of business-loan applications.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_002",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "At the hearing, the judge ordered Bell to pay $1.1 million in restitution and said the offense had damaged trust in the bank's lending process.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_003",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Harborview Capital said Bell left the bank after the conduct was discovered and that it has since strengthened its document-review procedures.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_004",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Riverton General Hospital has added Dr. Marcus Bell, 28, to its emergency department, where he will begin seeing patients this month after completing his emergency medicine residency at State University Medical Center.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_005",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Dr. Marcus Bell, a 28-year-old emergency physician at Riverton General Hospital, spent Saturday volunteering at a free weekend clinic serving uninsured residents.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_006",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "He brings a calm, practical presence to a very busy day,",
+      "sentiment": "positive",
+      "confidence": null
+    }
+  ],
+  "evidence_extraction_issues": []
+}

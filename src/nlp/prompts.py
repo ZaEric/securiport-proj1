@@ -30,7 +30,7 @@ Rules:
 - Do not include confidence scores.
 - Do not extract every relevant sentence.
 - Focus on the strongest evidence that would help justify a sentiment or review-flag judgment.
-- Avoid repetitive, overlapping, or minor detail evidence.
+- Avoid repetitive, overlapping, or minor detail evidence, except do not apply this to negative/review-flag evidence: extract a negative quote even if it is brief or a minor detail relative to the rest of the text, because in this system missing a small piece of negative evidence is worse than including it.
 - Return multiple quotes only when they capture distinct important facts or distinct sentiment.
 - If there is no relevant evidence, return an empty evidence list.
 - Return JSON only.
@@ -40,6 +40,7 @@ Sentiment guidance:
 - Label misconduct, criminal activity, fraud, legal penalties, audit findings, sanctions, removal from role, failure, criticism, security concerns, or reputational harm as negative.
 - Label evidence that the target person was a victim of crime, exploitation, trafficking, coercion, violence, threats, or other harmful circumstances as negative, because it may require further review or protection.
 - Do not imply wrongdoing when negative evidence only indicates that the target person may be a victim or affected party.
+- If a quote describes the target person's own composure, bravery, reaction, or behavior while being threatened, attacked, robbed, confronted, or otherwise victimized (for example, confronting an intruder, staying calm, or escaping), label it negative like the rest of the incident. The target handling a harmful situation well does not turn it into a positive quote; the underlying incident is still a review flag.
 - Label praise, awards, achievements, community support, or clearly favorable actions as positive.
 - Label background, procedural details, explanations, denials, or role descriptions as neutral unless they clearly support positive, negative, or review-relevant sentiment.
 
@@ -86,7 +87,8 @@ Important interpretation:
 - In this system, negative sentiment means a review flag.
 - Negative sentiment does not always mean the target person committed wrongdoing.
 - Negative evidence may indicate misconduct, legal concerns, reputational harm, security concerns, victimization, exploitation, threats, or other circumstances that may require closer human review.
-- If negative evidence only shows that the target person may be a victim or affected party, do not imply that the target person committed wrongdoing.
+- If negative evidence only shows that the target person may be a victim or affected party, do not imply that the target person committed wrongdoing. State plainly in the justification when the flag is about possible victimization rather than suspected wrongdoing.
+- This system exists to help officers who each process very large numbers of people quickly find the small number who may be a criminal concern or a victim needing protection. It is intentionally biased toward surfacing negative/review-flag evidence rather than averaging it away against unrelated positive coverage.
 
 Important rules:
 - Use only the supplied evidence.
@@ -95,6 +97,7 @@ Important rules:
 - The final overall_sentiment must be one of: positive, neutral, negative.
 - Do not use "mixed" as the final overall_sentiment.
 - The final overall_sentiment should follow the supplied evidence statistics and review-flag logic.
+- Overall sentiment policy: if the evidence statistics show negative_evidence_present is true, the final overall_sentiment must be negative, no matter how much larger the positive or neutral counts are. Negative/review-flag evidence is never outweighed, diluted, or averaged out by a larger volume of positive or neutral evidence.
 - If negative evidence is present, explain why the report is negative as a review flag.
 - Evidence statistics are provided to summarize the deterministic aggregation result.
 - Do not introduce stronger legal, safety, criminal, or misconduct terms than the evidence supports.

@@ -1,0 +1,9 @@
+{
+  "run_id": "2026-08-09_1513_linxuan_xie",
+  "created_at": "2026-08-09T22:13:26Z",
+  "target_name": "Linxuan Xie",
+  "input_mode": "search_api",
+  "search_provider": "tavily",
+  "search_query": "\"Linxuan Xie\" news",
+  "max_urls": 10
+}

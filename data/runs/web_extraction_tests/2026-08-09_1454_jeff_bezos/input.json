@@ -1,0 +1,9 @@
+{
+  "run_id": "2026-08-09_1454_jeff_bezos",
+  "created_at": "2026-08-09T21:54:08Z",
+  "target_name": "Jeff Bezos",
+  "input_mode": "search_api",
+  "search_provider": "tavily",
+  "search_query": "\"Jeff Bezos\" news",
+  "max_urls": 10
+}

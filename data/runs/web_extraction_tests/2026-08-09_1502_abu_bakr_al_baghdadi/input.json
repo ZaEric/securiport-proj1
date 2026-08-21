@@ -1,0 +1,9 @@
+{
+  "run_id": "2026-08-09_1502_abu_bakr_al_baghdadi",
+  "created_at": "2026-08-09T22:02:33Z",
+  "target_name": "Abu Bakr al-Baghdadi",
+  "input_mode": "search_api",
+  "search_provider": "tavily",
+  "search_query": "\"Abu Bakr al-Baghdadi\" news",
+  "max_urls": 10
+}

@@ -1,0 +1,55 @@
+{
+  "run_id": "gptoss20b_unreliable_source_nora_patel",
+  "target_name": "Nora Patel",
+  "evidence_extraction_method": "llm_quote_extraction",
+  "num_evidence": 5,
+  "num_evidence_extraction_issues": 0,
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42
+  },
+  "evidence": [
+    {
+      "evidence_id": "ev_001",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "An unsigned post published Tuesday on the blog Civic Truth Watch claims that Nora Patel, director of the Harborlight Relief Fund, diverted donations intended for flood-recovery families to personal use.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_002",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Executive director Nora Patel said applicants can receive help with temporary housing, appliance replacement, and cleanup costs.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_003",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "The release contains no discussion of the anonymous online allegation concerning Patel and provides no information about the fund's finances beyond the amount available for this grant round.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_004",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Nora Patel received the County Volunteer Partnership Award on Wednesday for coordinating a network of emergency shelters during last spring's flooding.",
+      "sentiment": "positive",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_005",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "The county's award announcement did not address the unrelated anonymous blog claim and does not independently verify or disprove it.",
+      "sentiment": "neutral",
+      "confidence": null
+    }
+  ],
+  "evidence_extraction_issues": []
+}

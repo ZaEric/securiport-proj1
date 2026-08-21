@@ -1,0 +1,9 @@
+{
+  "run_id": "2026-08-09_1501_michael_jackson",
+  "created_at": "2026-08-09T22:01:14Z",
+  "target_name": "Michael Jackson",
+  "input_mode": "search_api",
+  "search_provider": "tavily",
+  "search_query": "\"Michael Jackson\" news",
+  "max_urls": 10
+}

@@ -1,0 +1,86 @@
+{
+  "run_id": "modelcompare_gptoss120b_daniel_kim",
+  "target_name": "Daniel Kim",
+  "aggregation_method": "negative_flag_priority",
+  "num_evidence": 14,
+  "mixed_evidence_threshold": 0.25,
+  "minimum_evidence_count": 1,
+  "source_results": [
+    {
+      "source_id": "src_001",
+      "baseline_sentiment": "negative",
+      "sentiment_counts": {
+        "positive": 1,
+        "neutral": 0,
+        "negative": 3
+      },
+      "negative_evidence_present": true,
+      "mixed_evidence": true,
+      "opposing_sentiment_ratio": 0.25,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_001",
+        "ev_002",
+        "ev_003",
+        "ev_004"
+      ]
+    },
+    {
+      "source_id": "src_002",
+      "baseline_sentiment": "negative",
+      "sentiment_counts": {
+        "positive": 1,
+        "neutral": 1,
+        "negative": 3
+      },
+      "negative_evidence_present": true,
+      "mixed_evidence": true,
+      "opposing_sentiment_ratio": 0.25,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_005",
+        "ev_006",
+        "ev_007",
+        "ev_008",
+        "ev_009"
+      ]
+    },
+    {
+      "source_id": "src_003",
+      "baseline_sentiment": "positive",
+      "sentiment_counts": {
+        "positive": 3,
+        "neutral": 2,
+        "negative": 0
+      },
+      "negative_evidence_present": false,
+      "mixed_evidence": false,
+      "opposing_sentiment_ratio": 0.0,
+      "insufficient_evidence": false,
+      "evidence_ids": [
+        "ev_010",
+        "ev_011",
+        "ev_012",
+        "ev_013",
+        "ev_014"
+      ]
+    }
+  ],
+  "overall_result": {
+    "baseline_sentiment": "negative",
+    "sentiment_counts": {
+      "positive": 5,
+      "neutral": 3,
+      "negative": 6
+    },
+    "source_baseline_sentiment_counts": {
+      "positive": 1,
+      "neutral": 0,
+      "negative": 2
+    },
+    "negative_evidence_present": true,
+    "mixed_evidence": true,
+    "opposing_sentiment_ratio": 0.455,
+    "insufficient_evidence": false
+  }
+}

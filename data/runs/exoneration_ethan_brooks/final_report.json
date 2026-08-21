@@ -1,0 +1,82 @@
+{
+  "run_id": "gptoss20b_exoneration_ethan_brooks",
+  "target_name": "Ethan Brooks",
+  "overall_sentiment": "negative",
+  "llm_sentiment": "negative",
+  "one_line_summary": "Ethan Brooks faced a misdemeanor assault charge that was later dismissed, but the initial allegations and temporary suspension indicate a review flag for potential misconduct.",
+  "extended_summary": "Ethan Brooks, a volunteer youth basketball coach at the Eastside Community Center, was charged with misdemeanor assault following a dispute during a practice. Police reports and a parent’s complaint described an alleged push, leading to Brooks’ temporary leave from coaching. Prosecutors subsequently dismissed the charge after reviewing video evidence and witness statements, and the community center cleared him to return to coaching. Despite the dismissal, the presence of initial negative allegations and the temporary suspension constitute a review flag for potential misconduct or victimization concerns.",
+  "key_findings": [
+    "Brooks was initially charged with misdemeanor assault based on a parent’s complaint.",
+    "The charge was dismissed after video and witness evidence showed no assault.",
+    "The community center temporarily suspended Brooks and later reinstated him following internal review."
+  ],
+  "justification": "The evidence set contains three negative items (charges, alleged push, temporary leave) that trigger a review flag. According to the system rules, any presence of negative evidence mandates a negative overall sentiment, regardless of the larger number of positive items. The negative evidence indicates potential misconduct or at least a serious allegation that warrants closer human review.",
+  "evidence_examples": [
+    {
+      "source_id": "src_001",
+      "quote": "Ethan Brooks, a volunteer coach at the Eastside Community Center, was charged Monday with misdemeanor assault following a dispute after a youth basketball practice, according to police.",
+      "sentiment": "negative",
+      "why_selected": "Shows formal legal charge against the target."
+    },
+    {
+      "source_id": "src_001",
+      "quote": "A parent told officers that Brooks pushed him during an argument in a hallway near the gym.",
+      "sentiment": "negative",
+      "why_selected": "Describes the alleged assault incident."
+    },
+    {
+      "source_id": "src_001",
+      "quote": "The community center placed Brooks on temporary leave from coaching while the case was reviewed.",
+      "sentiment": "negative",
+      "why_selected": "Indicates institutional action based on the allegations."
+    }
+  ],
+  "negative_evidence": [
+    {
+      "url": "synthetic://synthetic_exoneration_001/src_001",
+      "title": "Ethan Brooks Charged After Dispute at Eastside Community Center",
+      "evidence": [
+        {
+          "quote": "Ethan Brooks, a volunteer coach at the Eastside Community Center, was charged Monday with misdemeanor assault following a dispute after a youth basketball practice, according to police.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "A parent told officers that Brooks pushed him during an argument in a hallway near the gym.",
+          "sentiment": "negative"
+        },
+        {
+          "quote": "The community center placed Brooks on temporary leave from coaching while the case was reviewed.",
+          "sentiment": "negative"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src_001",
+      "url": "synthetic://synthetic_exoneration_001/src_001",
+      "title": "Ethan Brooks Charged After Dispute at Eastside Community Center"
+    },
+    {
+      "source_id": "src_002",
+      "url": "synthetic://synthetic_exoneration_001/src_002",
+      "title": "Prosecutors Drop Assault Charge Against Ethan Brooks After Video Review"
+    },
+    {
+      "source_id": "src_003",
+      "url": "synthetic://synthetic_exoneration_001/src_003",
+      "title": "Eastside Community Center Restores Brooks to Youth Coaching Role"
+    }
+  ],
+  "limitations": [
+    "All evidence originates from local news sources; no independent verification is provided.",
+    "The report covers only one incident; broader context of the target’s conduct is unknown."
+  ],
+  "report_generation_issues": [],
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42,
+    "max_evidence_examples": 7
+  }
+}

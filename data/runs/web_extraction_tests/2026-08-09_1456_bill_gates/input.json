@@ -1,0 +1,9 @@
+{
+  "run_id": "2026-08-09_1456_bill_gates",
+  "created_at": "2026-08-09T21:56:14Z",
+  "target_name": "Bill Gates",
+  "input_mode": "search_api",
+  "search_provider": "tavily",
+  "search_query": "\"Bill Gates\" news",
+  "max_urls": 10
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "gptoss20b_multiperson_misattribution_kevin_park",
+  "created_at": "2026-08-11T06:09:47Z",
+  "target_name": "Kevin Park",
+  "input_mode": "synthetic",
+  "synthetic_case_file": "data/synthetic/passengers/synthetic_multiperson_misattribution_001.json",
+  "expected_overall_sentiment": "neutral",
+  "difficulty_tags": [
+    "multi_person_misattribution",
+    "witness_not_perpetrator",
+    "ambiguous_neutral_vs_negative"
+  ],
+  "expected_failure_modes": [
+    "may incorrectly attribute Diane Ortiz's embezzlement charge or sentencing to Kevin Park",
+    "may merge quotes about Ortiz and Kevin Park into a single misattributed piece of evidence",
+    "may over-flag Kevin Park's incidental proximity to the investigation as equivalent to the underlying crime"
+  ],
+  "notes": "Tests multi-person misattribution: the target is a bystander/witness/routine interviewee in a workplace embezzlement case where a named coworker (Diane Ortiz) is the actual perpetrator. Nothing wrong is attributed to the target and the target is never harmed or threatened. Under a strict reading of the extraction rules ('ignore evidence about people other than the target') the correct result is neutral, but this case is intentionally included as an open question: a maximally cautious review-flag policy could reasonably argue that being interviewed as part of a financial-crime investigation is itself worth a closer look, in which case negative would also be defensible. This case is not meant to be scored strictly pass/fail against expected_overall_sentiment; both neutral and negative are acceptable outcomes as long as none of Ortiz's negative evidence gets attributed to Kevin Park."
+}

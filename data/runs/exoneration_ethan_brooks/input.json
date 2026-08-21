@@ -1,0 +1,21 @@
+{
+  "run_id": "gptoss20b_exoneration_ethan_brooks",
+  "created_at": "2026-08-13T06:34:54Z",
+  "target_name": "Ethan Brooks",
+  "input_mode": "synthetic",
+  "synthetic_case_file": "data/synthetic/passengers/synthetic_exoneration_001.json",
+  "expected_overall_sentiment": "negative",
+  "difficulty_tags": [
+    "exoneration",
+    "dismissed_charge",
+    "conflicting_evidence",
+    "negative_review_flag"
+  ],
+  "expected_failure_modes": [
+    "may report the initial charge without extracting the later dismissal",
+    "may treat dismissed charges as a conviction or confirmed wrongdoing",
+    "may label the later source purely positive and lose the contextual connection to the allegation",
+    "may let the exonerating information entirely suppress a review flag despite the serious public allegation"
+  ],
+  "notes": "Tests an allegation followed by exonerating information. Ethan Brooks is charged after an event at a community center, but later reporting says prosecutors dismissed the charge after video and witness evidence did not support the allegation. The overall result remains negative as a cautious review flag because a serious accusation appeared in public reporting, but any generated report must prominently state that the charge was dropped and must not characterize Brooks as guilty."
+}

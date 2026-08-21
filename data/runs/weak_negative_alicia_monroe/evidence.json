@@ -1,0 +1,71 @@
+{
+  "run_id": "gptoss20b_weak_negative_alicia_monroe",
+  "target_name": "Alicia Monroe",
+  "evidence_extraction_method": "llm_quote_extraction",
+  "num_evidence": 7,
+  "num_evidence_extraction_issues": 0,
+  "llm_metadata": {
+    "model_name": "gpt-oss:20b",
+    "temperature": 0.0,
+    "seed": 42
+  },
+  "evidence": [
+    {
+      "evidence_id": "ev_001",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Alicia Monroe, the city's redevelopment coordinator, apologized for the short notice but said the meeting date had been set to keep a state grant application on schedule.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_002",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Others questioned Monroe's decision to circulate only a summary of the plan rather than the full draft agreement.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_003",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "Monroe said the complete materials would be posted before the next workshop and that no final vote had been scheduled.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_004",
+      "source_id": "src_001",
+      "chunk_id": "src_001_chunk_001",
+      "quote": "the meeting ended with residents calling for a different coordinator to oversee outreach.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_005",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "The Market District Neighborhood Advisory Board voted 7-2 Thursday to express no confidence in redevelopment coordinator Alicia Monroe's public-outreach plan, citing what members described as inconsistent communication and insufficient notice for key meetings.",
+      "sentiment": "negative",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_006",
+      "source_id": "src_002",
+      "chunk_id": "src_002_chunk_001",
+      "quote": "Monroe said she accepted the criticism and would publish a calendar of meetings, documents, and decision points within two weeks.",
+      "sentiment": "neutral",
+      "confidence": null
+    },
+    {
+      "evidence_id": "ev_007",
+      "source_id": "src_003",
+      "chunk_id": "src_003_chunk_001",
+      "quote": "Redevelopment coordinator Alicia Monroe presented a revised Market District timeline at Monday's city council meeting, adding two public workshops and extending the written-comment period by 30 days.",
+      "sentiment": "neutral",
+      "confidence": null
+    }
+  ],
+  "evidence_extraction_issues": []
+}
